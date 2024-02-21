@@ -24,7 +24,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
-    canFuse: 1
   - _name: Roi noir
     _level: 0
     _pattern:
@@ -36,7 +35,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 1
   - _name: Dame blanche
     _level: 0
     _pattern:
@@ -48,7 +46,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
-    canFuse: 0
   - _name: Dame noire
     _level: 0
     _pattern:
@@ -60,7 +57,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 0
   - _name: Cavalier blanc
     _level: 0
     _pattern:
@@ -69,7 +65,6 @@ MonoBehaviour:
       distance2: 1
     _sprite: {fileID: 0}
     _isWhite: 1
-    canFuse: 0
   - _name: Cavalier noir
     _level: 0
     _pattern:
@@ -78,7 +73,6 @@ MonoBehaviour:
       distance2: 1
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 0
   - _name: Fou blanc
     _level: 0
     _pattern:
@@ -87,7 +81,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
-    canFuse: 0
   - _name: Fou noir
     _level: 0
     _pattern:
@@ -96,7 +89,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 0
   - _name: Tour blanche
     _level: 0
     _pattern:
@@ -105,7 +97,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
-    canFuse: 0
   - _name: Tour noire
     _level: 0
     _pattern:
@@ -114,7 +105,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 0
   - _name: Pion blanc
     _level: 0
     _pattern:
@@ -123,7 +113,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
-    canFuse: 1
   - _name: Pion noir
     _level: 0
     _pattern:
@@ -132,4 +121,3 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 1

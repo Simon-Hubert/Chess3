@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5755993342296155424}
-  - component: {fileID: 3934642630738203545}
   m_Layer: 0
   m_Name: Roi blanc
   m_TagString: Untagged
@@ -34,31 +33,6 @@ Transform:
   - {fileID: 1079659915611788311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3934642630738203545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359880982895338444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _name: Roi blanc
-    _level: 0
-    _pattern:
-    - moves: 1
-      distance: 1
-      distance2: 0
-    - moves: 7
-      distance: 1
-      distance2: 0
-    _sprite: {fileID: 0}
-    _isWhite: 1
-    canFuse: 1
 --- !u!1 &3599397099659267622
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +126,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1079659915611788311}
-  - component: {fileID: 2410398822228825469}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Untagged
@@ -175,16 +148,3 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5755993342296155424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2410398822228825469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9028531098654246560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c91be68bd17d4804798c7aab7de4d078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  piece: {fileID: 0}
