@@ -12,10 +12,6 @@ public class BDDPiece: ScriptableObject
 {
     public List<PieceData> pieces;
 
-    private void OnValidate()
-    {
-        GeneratePrefabs();
-    }
     [Button]
     public void GeneratePrefabs()
     {
@@ -36,6 +32,7 @@ public class BDDPiece: ScriptableObject
         brain.transform.parent = piece.transform;
         
         visual.AddComponent<SpriteRenderer>().sprite = pieceData.Sprite;
+        piece.AddComponent<Piece>().Data = pieceData;
 
         //------------------ADD BRAIN SCRIPTS -------------------------------
 
