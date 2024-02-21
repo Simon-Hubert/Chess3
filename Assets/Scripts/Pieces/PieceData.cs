@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-enum MOVES
+public enum MOVES
 {
     I,
     X,
@@ -29,9 +29,9 @@ public class PieceData
     [Serializable]
     public struct deplacement
     {
-        [SerializeField] MOVES moves;
-        [SerializeField] int distance;
-        [SerializeField, ShowIf("moves", MOVES.L), AllowNesting] int distance2;
+        public MOVES moves;
+        public int distance;
+        [ShowIf("moves", MOVES.L), AllowNesting]public int distance2;
 
     }
 
