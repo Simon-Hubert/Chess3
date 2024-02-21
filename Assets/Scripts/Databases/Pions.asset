@@ -15,73 +15,109 @@ MonoBehaviour:
   pieces:
   - _name: Roi blanc
     _level: 0
-    _patern: 0100000007000000
+    _pattern:
+    - moves: 1
+      distance: 1
+      distance2: 0
+    - moves: 7
+      distance: 1
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 1
     _isWhite: 1
   - _name: Roi noir
     _level: 0
-    _patern: 0100000007000000
+    _pattern:
+    - moves: 7
+      distance: 1
+      distance2: 0
+    - moves: 1
+      distance: 1
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 1
     _isWhite: 0
   - _name: Dame blanche
     _level: 0
-    _patern: 0100000007000000
+    _pattern:
+    - moves: 1
+      distance: 50
+      distance2: 0
+    - moves: 7
+      distance: 50
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 50
     _isWhite: 1
   - _name: Dame noire
     _level: 0
-    _patern: 0100000007000000
+    _pattern:
+    - moves: 1
+      distance: 50
+      distance2: 0
+    - moves: 7
+      distance: 50
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 50
     _isWhite: 0
   - _name: Cavalier blanc
     _level: 0
-    _patern: 02000000
+    _pattern:
+    - moves: 2
+      distance: 3
+      distance2: 1
     _sprite: {fileID: 0}
-    _distance: 4
     _isWhite: 1
   - _name: Cavalier noir
     _level: 0
-    _patern: 02000000
+    _pattern:
+    - moves: 2
+      distance: 3
+      distance2: 1
     _sprite: {fileID: 0}
-    _distance: 4
     _isWhite: 0
   - _name: Fou blanc
     _level: 0
-    _patern: 01000000
+    _pattern:
+    - moves: 1
+      distance: 50
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 50
     _isWhite: 1
   - _name: Fou noir
     _level: 0
-    _patern: 01000000
+    _pattern:
+    - moves: 1
+      distance: 50
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 50
     _isWhite: 0
   - _name: Tour blanche
     _level: 0
-    _patern: 07000000
+    _pattern:
+    - moves: 7
+      distance: 0
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 50
     _isWhite: 1
   - _name: Tour noire
     _level: 0
-    _patern: 07000000
+    _pattern:
+    - moves: 7
+      distance: 0
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 50
     _isWhite: 0
   - _name: Pion blanc
     _level: 0
-    _patern: 04000000
+    _pattern:
+    - moves: 4
+      distance: 1
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 1
     _isWhite: 1
   - _name: Pion noir
     _level: 0
-    _patern: 04000000
+    _pattern:
+    - moves: 4
+      distance: 1
+      distance2: 0
     _sprite: {fileID: 0}
-    _distance: 1
     _isWhite: 0

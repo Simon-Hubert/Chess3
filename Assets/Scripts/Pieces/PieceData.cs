@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,17 +12,7 @@ enum MOVES
     _,
     P,
     
-    IX,
-    IL,
     I_,
-    II,
-
-    XL,
-    X_,
-    XX,
-
-    L_,
-    LL
 }
 enum Names
 {
@@ -35,18 +26,25 @@ enum Names
 [Serializable]
 public class PieceData
 {
+    [Serializable]
+    public struct deplacement
+    {
+        [SerializeField] MOVES moves;
+        [SerializeField] int distance;
+        [SerializeField, ShowIf("moves", MOVES.L), AllowNesting] int distance2;
+
+    }
+
     [SerializeField] string _name;
     [SerializeField] int _level;
-    [SerializeField] MOVES[] _patern;
+    [SerializeField] List<deplacement> _pattern;
     [SerializeField] Sprite _sprite;
-    [SerializeField] int _distance;
     [SerializeField] bool _isWhite;
 
     public string Name { get => _name; }
-    public int Level { get => _level;}
-    public Sprite Sprite { get => _sprite;}
-    public int Distance { get => _distance;}
+    public int Level { get => _level; }
+    public Sprite Sprite { get => _sprite; }
+    public List<deplacement> Pattern { get => _pattern; }
     public bool IsWhite { get => _isWhite;}
-    internal MOVES[] Patern { get => _patern; }
 
 }
