@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,13 +6,35 @@ using UnityEngine;
 public class Fusion : MonoBehaviour
 {
     Piece piece;
+    PieceData pieceSave;
     private void Awake()
     {
-        piece = GetComponent<Piece>();
+        piece = GetComponentInParent<Piece>();
+        pieceSave = piece.Data;
     }
 
-    void Fuse (Piece pieceTarget)
+    public void Fuse (Piece pieceTarget)
     {
-        piece.Data.Pattern += pieceTarget.Data.Pattern;
+        for (int i = 0; i< pieceTarget.Data.Pattern.Count; i++)
+        {
+            var m = pieceTarget.Data.Pattern[i];
+            piece.Data.Pattern.Add(m);
+        }
+        Destroy(pieceTarget.gameObject);
+
+        // CHANGE LE SPRITE
+    }
+
+    public void Defuse ()
+    {
+        piece.Data.Pattern.Clear();
+        for (int i = 0; i < pieceSave.Pattern.Count; i++)
+        {
+            var m = pieceSave.Pattern[i];
+            piece.Data.Pattern.Add(m);
+        }
+
+
+        // CHANGE LE SPRITE
     }
 }

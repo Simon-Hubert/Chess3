@@ -124,6 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9034653892887029190}
+  - component: {fileID: 5485562356602189737}
   m_Layer: 0
   m_Name: Cavalier noir
   m_TagString: Untagged
@@ -148,3 +149,25 @@ Transform:
   - {fileID: 7991486326353999321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5485562356602189737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658925612912387455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _name: Cavalier noir
+    _level: 0
+    _pattern:
+    - moves: 2
+      distance: 3
+      distance2: 1
+    _sprite: {fileID: 0}
+    _isWhite: 0
+    canFuse: 0

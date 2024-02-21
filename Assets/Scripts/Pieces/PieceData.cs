@@ -39,12 +39,12 @@ public class PieceData
     [SerializeField] int _level;
     [SerializeField] List<deplacement> _pattern;
     [SerializeField] Sprite _sprite;
-    [SerializeField] bool _isWhite;
+    [SerializeField] bool _isWhite, canFuse;
 
     public string Name { get => _name; }
     public int Level { get => _level; }
     public Sprite Sprite { get => _sprite; }
     public List<deplacement> Pattern { get => _pattern; }
     public bool IsWhite { get => _isWhite;}
-
+    public bool CanFuse { get => canFuse; }
 }
