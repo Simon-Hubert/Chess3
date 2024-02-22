@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using Unity.VisualScripting;
+
 public class RuleController : MonoBehaviour
 {
     public enum RULES
@@ -14,6 +16,33 @@ public class RuleController : MonoBehaviour
     [SerializeField, ShowIf("rule", RULES.VIP)] Rule_VIP ruleVip;
     [SerializeField, ShowIf("rule", RULES.DESTROY)] Rule_Destroy ruleDestroy;
     [SerializeField, ShowIf("rule", RULES.ESCAPE)] Rule_Escape ruleEscape;
+    [SerializeField, ShowIf(EConditionOperator.Or, "renforts", "isEscape")] Renforts ruleRenforts;
+    [SerializeField] bool renforts = false;
+    bool isEscape = false;
+    private void OnValidate()
+    {
+        if (rule == RULES.ESCAPE)
+            isEscape = true;
+        else
+            isEscape = false;
+        if((isEscape || renforts) && ruleRenforts == null)
+        {
+            this.AddComponent<Renforts>();
+            ruleRenforts = GetComponent<Renforts>();
+        }
+        else
+        {
+            if(ruleRenforts != null)
+            {
+                UnityEditor.EditorApplication.delayCall += () =>
+                {
+                    DestroyImmediate(ruleRenforts);
+                };
+            }
+
+        }
+    }
+
 
     private void Awake()
     {

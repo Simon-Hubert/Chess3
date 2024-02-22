@@ -152,11 +152,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb2aa44f062bec48843f4c888042823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rule: 2
+  rule: 0
   ruleVip:
     BlackList: []
+    RoiBlanc: {fileID: 0}
   ruleDestroy:
-    allPieces: []
+    RoiBlanc: {fileID: 0}
+  ruleEscape:
+    RoiBlanc: {fileID: 0}
+    TourInactionMax: 9
+    Objectif: {fileID: 0}
+    tileGrid: {fileID: 0}
+  ruleRenforts: {fileID: 0}
+  renforts: 0
 --- !u!4 &1012017604
 Transform:
   m_ObjectHideFlags: 0
