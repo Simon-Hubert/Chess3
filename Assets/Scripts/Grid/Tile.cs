@@ -28,8 +28,8 @@ public class Tile : MonoBehaviour
         }
         else{
             transform.GetComponent<SpriteRenderer>().color = Color.white;
-
         }
+        HighlightRenderer.enabled = false;
     }
 
     private void Awake() {
