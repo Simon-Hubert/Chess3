@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3462001563709641872}
-  - component: {fileID: 2359455749591263176}
+  - component: {fileID: 4122473218150423313}
   m_Layer: 0
   m_Name: Dame noire
   m_TagString: Untagged
@@ -34,7 +34,7 @@ Transform:
   - {fileID: 1193714642167335673}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2359455749591263176
+--- !u!114 &4122473218150423313
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,7 +58,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 0
 --- !u!1 &7716170682059374544
 GameObject:
   m_ObjectHideFlags: 0

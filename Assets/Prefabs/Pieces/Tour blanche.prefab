@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8194954164911548465}
-  - component: {fileID: 697045190900933931}
+  - component: {fileID: 1969047906534572483}
   m_Layer: 0
   m_Name: Tour blanche
   m_TagString: Untagged
@@ -65,7 +65,7 @@ Transform:
   - {fileID: 7185823852850563950}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &697045190900933931
+--- !u!114 &1969047906534572483
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,6 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
-    canFuse: 0
 --- !u!1 &5179668764292419401
 GameObject:
   m_ObjectHideFlags: 0
