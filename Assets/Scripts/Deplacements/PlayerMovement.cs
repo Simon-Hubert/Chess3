@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour, IMovementBrain
@@ -19,12 +20,34 @@ public class PlayerMovement : MonoBehaviour, IMovementBrain
 
         Vector2Int coords = (Vector2Int)pos.Coords;
 
+        //HIGHLIGHT les cases ou on peut se déplacer
         if(initTargetting){
             tileGrid = gridManager;
             HighlightTiles(coords);
             initTargetting = false;
         }
 
+        //Request Input et output la tile
+        Tile targetTile = RequestTile();
+
+        if(targetTile){
+            tileGrid.ClearHighlights();
+            initTargetting = true;
+        }
+        return targetTile;
+    }
+
+    private Tile RequestTile(){
+        if(Input.GetMouseButtonDown(0)){
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int gridPos = tileGrid.transform.GetComponent<Grid>().WorldToCell(pos);
+            Tile tile = tileGrid.GetTileAt((Vector2Int)gridPos);
+            Debug.Log(tile.Coords);
+            if(tile!=null && tile.Highlighted){
+                Debug.Log("Deplacement demandé vers :" + tile.Coords);
+                return tile;
+            }
+        }
         return null;
     }
 
@@ -64,12 +87,15 @@ public class PlayerMovement : MonoBehaviour, IMovementBrain
 
     private void Highlight__(Vector2Int coords, int distance)
     {
-        foreach (Tile tile in tileGrid.Tiles)
-        {
-            for (int i = -distance; i <= distance; i++)
-            {
-                if((tile.Coords.x-i) == coords.x && tile.Coords.y == coords.y) tile.Highlighted = true;
-            }
+        for(int i=1; i<=distance; i++){
+            Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
+            if(t) t.Highlighted = true;
+            else break;
+        }
+        for(int i=-1; i>=-distance; i--){
+            Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
+            if(t) t.Highlighted = true;
+            else break;
         }
     }
 
@@ -87,25 +113,49 @@ public class PlayerMovement : MonoBehaviour, IMovementBrain
 
     private void Highlight_X(Vector2Int coords, int distance)
     {
-        foreach (Tile tile in tileGrid.Tiles)
-        {
-            for (int i = -distance, j = -distance; i <= distance; i++, j++)
-            {
-                bool a = (tile.Coords.y-i) == coords.y && (tile.Coords.x-j) == coords.x;
-                bool b = (tile.Coords.y-i) == coords.y && (tile.Coords.x+j) == coords.x;
-                if(a||b) tile.Highlighted = true;
-            }
+        // foreach (Tile tile in tileGrid.Tiles)
+        // {
+        //     for (int i = -distance, j = -distance; i <= distance; i++, j++)
+        //     {
+        //         bool a = (tile.Coords.y-i) == coords.y && (tile.Coords.x-j) == coords.x;
+        //         bool b = (tile.Coords.y-i) == coords.y && (tile.Coords.x+j) == coords.x;
+        //         if(a||b) tile.Highlighted = true;
+        //     }
+        // }
+
+        for(int i=1, j=1; i<=distance; i++,j++){
+            Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
+            if(t) t.Highlighted = true;
+            else break;
+        }
+        for(int i=1, j=-1; i<=distance; i++,j--){
+            Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
+            if(t) t.Highlighted = true;
+            else break;
+        }
+        for(int i=-1, j=1; i>=-distance; i--,j++){
+            Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
+            if(t) t.Highlighted = true;
+            else break;
+        }
+        for(int i=-1, j=-1; i>=-distance; i--,j--){
+            Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
+            if(t) t.Highlighted = true;
+            else break;
         }
     }
 
     private void Highlight_I(Vector2Int coords, int distance)
     {
-        foreach (Tile tile in tileGrid.Tiles)
-        {
-            for (int i = -distance; i <= distance; i++)
-            {
-                if((tile.Coords.y-i) == coords.y && tile.Coords.x == coords.x) tile.Highlighted = true;
-            }
+        for(int i=1; i<=distance; i++){
+            Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
+            if(t) t.Highlighted = true;
+            else break;
+        }
+        for(int i=-1; i>=-distance; i--){
+            Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
+            if(t) t.Highlighted = true;
+            else break;
         }
     }
 }

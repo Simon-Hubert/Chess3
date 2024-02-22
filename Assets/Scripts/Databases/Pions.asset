@@ -27,7 +27,7 @@ MonoBehaviour:
   - _name: Roi noir
     _level: 0
     _pattern:
-    - moves: 7
+    - moves: 5
       distance: 1
       distance2: 0
     - moves: 1

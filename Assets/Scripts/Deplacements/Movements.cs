@@ -19,13 +19,12 @@ public class Movements : MonoBehaviour
     }
 
     private void Update() {
-        if(Myturn && (brain != null)){
+        if(Myturn && (brain != null) && (target==null)){
             target = brain.GetTargetMovement(gridManager, pos);
         }
-    }
-
-    private void FixedUpdate() {
+        
         if(target){
+            Debug.Log("Moving to :"+target.Coords);
             MoveToTarget(target);
             Myturn = false;
             target = null;

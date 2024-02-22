@@ -11,4 +11,19 @@ public class GridManager : MonoBehaviour
     private void Awake() {
         tiles = GetComponentsInChildren<Tile>();
     }
+
+    public Tile GetTileAt(Vector2Int coordinates){
+        foreach (Tile tile in tiles)
+        {
+            if((Vector2Int)tile.Coords == coordinates) return tile;
+        }
+        return null;
+    }
+
+    public void ClearHighlights(){
+        foreach (Tile tile in tiles)
+        {
+            tile.Highlighted = false;
+        }
+    }
 }
