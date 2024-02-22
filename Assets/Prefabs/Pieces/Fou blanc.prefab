@@ -86,6 +86,7 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
+    canFuse: 0
 --- !u!1 &7793653880781548768
 GameObject:
   m_ObjectHideFlags: 0

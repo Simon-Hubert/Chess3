@@ -170,3 +170,4 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
+    canFuse: 0
