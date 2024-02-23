@@ -17,12 +17,15 @@ public class RuleController : MonoBehaviour
     [SerializeField, ShowIf("rule", RULES.DESTROY)] Rule_Destroy ruleDestroy;
     [SerializeField, ShowIf("rule", RULES.ESCAPE)] Rule_Escape ruleEscape;
     [SerializeField, ShowIf(EConditionOperator.Or, "renforts", "isEscape")] Renforts ruleRenforts;
-    [SerializeField] bool renforts = false;
+    [SerializeField, HideIf("rule", RULES.ESCAPE)] bool renforts = false;
     bool isEscape = false;
     private void OnValidate()
     {
         if (rule == RULES.ESCAPE)
+        {
             isEscape = true;
+            renforts = false;
+        }
         else
             isEscape = false;
         if((isEscape || renforts) && ruleRenforts == null)
