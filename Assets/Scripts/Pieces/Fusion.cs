@@ -12,6 +12,6 @@ public class Fusion : MonoBehaviour
 
     void Fuse (Piece pieceTarget)
     {
-        piece.Data.Pattern += pieceTarget.Data.Pattern;
+        //piece.Data.Pattern += pieceTarget.Data.Pattern;
     }
 }
