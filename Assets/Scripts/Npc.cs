@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Npc : MonoBehaviour, IInteractable
 {
     [SerializeField] private SpriteRenderer _interactSprite;
-    [SerializeField] private float _interactDist;
+    [SerializeField] private float _interactDist = 10f;
 
     private Transform _playerTransform;
 
@@ -18,18 +18,18 @@ public abstract class Npc : MonoBehaviour, IInteractable
     {
         if (Input.GetKeyDown(KeyCode.Space) && IsWithinInteractDistance()){
 
-            Interact();
+            Interact();// supposed to talk
         }
 
         if (!_interactSprite.gameObject.activeSelf && IsWithinInteractDistance())//si le sprite est desac mais player assez proche
         {
             _interactSprite.gameObject.SetActive(true);// active le sprite
         }
+
         else if(_interactSprite.gameObject.activeSelf && !IsWithinInteractDistance())
         {
             _interactSprite.gameObject.SetActive(false);
         }
-        Debug.Log("Distance pllayer, npc : " + _interactDist);
     }
 
 
@@ -37,11 +37,15 @@ public abstract class Npc : MonoBehaviour, IInteractable
     
     private bool IsWithinInteractDistance()
     {
-        if (Vector2.Distance(transform.position, _playerTransform.position) < _interactDist)
+        if (Vector2.Distance(_playerTransform.position, transform.position) < _interactDist)
         {
             return true;
         }
-        return false;
+        else
+        {
+            return false;
+        }
+        
     }
 
 }

@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface Italkable
 {
-    public void Talk();
+    public void Talk(DialoguePrompt convo);
 }
