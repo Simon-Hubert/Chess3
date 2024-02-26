@@ -10,11 +10,8 @@ public class GridManager : MonoBehaviour
 
     public Tile[] Tiles { get => tiles;}
 
-    private void Reset() {
+    private void OnValidate() {
         grid = GetComponent<Grid>();
-    }
-
-    private void Awake() {
         tiles = GetComponentsInChildren<Tile>();
     }
 
@@ -27,7 +24,7 @@ public class GridManager : MonoBehaviour
     }
 
     public Tile GetTileAt(Vector3 pos){
-        Vector2Int selfPos = (Vector2Int)grid.WorldToCell(transform.position);
+        Vector2Int selfPos = (Vector2Int)grid.WorldToCell(pos);
         return GetTileAt(selfPos);
     }
 
