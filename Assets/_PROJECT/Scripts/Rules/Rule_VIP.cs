@@ -14,6 +14,16 @@ public class Rule_VIP : IRules
         return RoiBlanc == null; // || RoiBlanc.Data.ECHEC;
     }
 
+    public void UpdateBlackList()
+    {
+        Piece[] allObj;
+        allObj = UnityEngine.Object.FindObjectsOfType<Piece>();
+        BlackList.Clear();
+        foreach (Piece piece in allObj)
+        {
+            if (!piece.Data.IsWhite && piece.enabled) BlackList.Add(piece);
+        }
+    }
     public bool IsWon()
     {
         return BlackList.Count < 1;

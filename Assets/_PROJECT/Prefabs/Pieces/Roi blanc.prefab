@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5755993342296155424}
   - component: {fileID: 3406936224258583708}
   - component: {fileID: 972006641828163987}
+  - component: {fileID: 525908145412423485}
   m_Layer: 0
   m_Name: Roi blanc
   m_TagString: Untagged
@@ -75,6 +76,18 @@ MonoBehaviour:
   gridManager: {fileID: 0}
   pos: {fileID: 0}
   myturn: 0
+--- !u!114 &525908145412423485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359880982895338444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c91be68bd17d4804798c7aab7de4d078, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3599397099659267622
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +182,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1079659915611788311}
   - component: {fileID: 5656726449006280818}
-  - component: {fileID: 5544502464062211243}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Untagged
@@ -202,17 +214,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4807aea5724db94b98c892a92bd7eeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5544502464062211243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9028531098654246560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c91be68bd17d4804798c7aab7de4d078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
