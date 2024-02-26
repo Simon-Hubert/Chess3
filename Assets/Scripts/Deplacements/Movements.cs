@@ -16,17 +16,16 @@ public class Movements : MonoBehaviour
 
     private void Awake() {
         brain = GetComponentInChildren<IMovementBrain>();
-        MoveToTarget(pos);
-    }
 
-    private void OnValidate() {
         // Setup GridManager
         gridManager = FindObjectOfType<GridManager>();
-
+        
         // Setup pos
         if(gridManager){
             pos = gridManager.GetTileAt(transform.position);
         }
+
+        MoveToTarget(pos);
     }
 
     private void Update() {
