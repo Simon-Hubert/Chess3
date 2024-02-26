@@ -49,6 +49,6 @@ public class RuleController : MonoBehaviour
 
     private void Awake()
     {
-        ruleDestroy.SetRule();
+        ruleDestroy.UpdateList();
     }
 }

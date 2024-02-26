@@ -8,6 +8,7 @@ public class Rule_Destroy : IRules
 {
     List<Piece> allPieces = new List<Piece>();
     [SerializeField] Piece RoiBlanc;
+    
 
     public bool IsLost()
     {
@@ -19,14 +20,14 @@ public class Rule_Destroy : IRules
         return allPieces.Count < 1;
     }
 
-    public void SetRule()
+    public void UpdateList()
     {
         Piece[] allObj;
         allObj = UnityEngine.Object.FindObjectsOfType<Piece>();
+        allPieces.Clear();
         foreach (Piece piece in allObj)
         {
-            if(!piece.Data.IsWhite)
-                allPieces.Add(piece);
+            if(!piece.Data.IsWhite && piece.enabled) allPieces.Add(piece);
         }
     }
 
