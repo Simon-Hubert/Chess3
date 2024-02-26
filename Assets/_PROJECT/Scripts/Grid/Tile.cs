@@ -14,7 +14,7 @@ public class Tile : MonoBehaviour
 
 
     public void onPaint(){
-        
+        Debug.Log("un truc genre un oui voilà voilà");
         if((Coords.x + Coords.y)%2 == 0){
             whiteTile = gridSettings.Inverted;
         }
