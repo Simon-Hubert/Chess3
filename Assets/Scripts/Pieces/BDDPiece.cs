@@ -35,7 +35,7 @@ public class BDDPiece: ScriptableObject
         piece.AddComponent<Piece>().Data = pieceData;
 
         //------------------ADD BRAIN SCRIPTS -------------------------------
-
+        piece.AddComponent<Movements>();
 
 
         PrefabUtility.SaveAsPrefabAsset(piece, "Assets/Prefabs/Pieces/" + piece.name + ".prefab");

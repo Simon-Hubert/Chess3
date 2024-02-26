@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2456782210585509963}
   - component: {fileID: 4070911043201657531}
+  - component: {fileID: 8297842139039737178}
   m_Layer: 0
   m_Name: Pion blanc
   m_TagString: Untagged
@@ -86,6 +87,21 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
+--- !u!114 &8297842139039737178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465811663697469994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
 --- !u!1 &7503745212163314975
 GameObject:
   m_ObjectHideFlags: 0
