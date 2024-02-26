@@ -57,8 +57,9 @@ MonoBehaviour:
     - moves: 1
       distance: 1
       distance2: 0
-    _sprite: {fileID: 0}
+    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
+    canFuse: 1
 --- !u!114 &4727945788864262867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,6 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2530799050788741585}
+  - component: {fileID: 8689645516261454180}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Untagged
@@ -105,6 +107,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4810878503187983521}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8689645516261454180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717629905788790257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77567ce74f9ffb440ab131168ef89ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: 0
+  patrols: []
 --- !u!1 &7711294484009428790
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,8 +193,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -186,6 +202,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

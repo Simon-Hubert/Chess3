@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
     [SerializeField] bool highlighted;
     [SerializeField] SpriteRenderer HighlightRenderer;
     
-    public Vector3Int Coords {get => grid.LocalToCell(transform.position);}
+    public Vector3Int Coords {get => grid.WorldToCell(transform.position);}
     public bool Highlighted { get => highlighted; set => highlighted = value; }
 
 

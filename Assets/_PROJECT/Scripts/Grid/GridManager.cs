@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Grid))]
 public class GridManager : MonoBehaviour
 {
+    [SerializeField] GameObject piecesParent;
+    [SerializeField] Piece[] pieces;
     [SerializeField] Tile[] tiles;
     Grid grid;
 
@@ -13,6 +15,7 @@ public class GridManager : MonoBehaviour
     private void OnValidate() {
         grid = GetComponent<Grid>();
         tiles = GetComponentsInChildren<Tile>();
+        pieces = piecesParent.GetComponentsInChildren<Piece>();
     }
 
     public Tile GetTileAt(Vector2Int coordinates){
@@ -28,6 +31,20 @@ public class GridManager : MonoBehaviour
         return GetTileAt(selfPos);
     }
 
+    public Piece GetPieceAt(Vector2Int coordinates)
+    {
+        foreach (Piece piece in pieces)
+        {
+            if ((Vector2Int)piece.Coords == coordinates) return piece;
+        }
+        return null;
+    }
+
+    public Piece GetPieceAt(Vector3 pos)
+    {
+        Vector2Int selfPos = (Vector2Int)grid.WorldToCell(pos);
+        return GetPieceAt(selfPos);
+    }
     public void ClearHighlights(){
         foreach (Tile tile in tiles)
         {

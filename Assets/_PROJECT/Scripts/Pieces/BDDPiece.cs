@@ -32,13 +32,26 @@ public class BDDPiece: ScriptableObject
         brain.transform.parent = piece.transform;
         
         visual.AddComponent<SpriteRenderer>().sprite = pieceData.Sprite;
+        visual.GetComponent<SpriteRenderer>().sortingOrder = 1;
         piece.AddComponent<Piece>().Data = pieceData;
 
         //------------------ADD BRAIN SCRIPTS -------------------------------
         piece.AddComponent<Movements>();
+        if(pieceData.IsWhite)
+        {
+            brain.AddComponent<PlayerMovement>();
+        }
+        else
+        {
+            brain.AddComponent<EnemyMovement>();
+        }
+        if(pieceData.Name == "Roi blanc")
+        {
+            piece.AddComponent<Fusion>();
+        }
 
 
-        PrefabUtility.SaveAsPrefabAsset(piece, "Assets/Prefabs/Pieces/" + piece.name + ".prefab");
+        PrefabUtility.SaveAsPrefabAsset(piece, "Assets/_PROJECT/Prefabs/Pieces/" + piece.name + ".prefab");
         GameObject.DestroyImmediate(piece);
 
     }

@@ -34,7 +34,11 @@ public class Movements : MonoBehaviour
         }
 
         if(target){
-            Debug.Log("Moving to :"+target.Coords);
+            Piece piece = gridManager.GetPieceAt(target.Coords);
+            if (piece)
+            {
+                GetComponent<Fusion>()?.Fuse(piece);
+            }
             MoveToTarget(target);
             Myturn = false;
             target = null;
