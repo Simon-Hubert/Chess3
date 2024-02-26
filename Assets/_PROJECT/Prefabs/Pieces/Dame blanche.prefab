@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971092422327864638}
   - component: {fileID: 3525524801638744687}
+  - component: {fileID: 3179646798788428975}
   m_Layer: 0
   m_Name: Dame blanche
   m_TagString: Untagged
@@ -89,7 +90,21 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 1
-    canFuse: 0
+--- !u!114 &3179646798788428975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8297588253513287797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
 --- !u!1 &8659019874444174690
 GameObject:
   m_ObjectHideFlags: 0

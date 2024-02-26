@@ -125,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8619366705241744767}
   - component: {fileID: 726445090568494988}
+  - component: {fileID: 4535822869264119467}
   m_Layer: 0
   m_Name: Tour noire
   m_TagString: Untagged
@@ -170,4 +171,18 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 0
+--- !u!114 &4535822869264119467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050082348520185760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0

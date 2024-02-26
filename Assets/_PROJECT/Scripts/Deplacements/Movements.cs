@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movements : MonoBehaviour
@@ -18,11 +19,21 @@ public class Movements : MonoBehaviour
         MoveToTarget(pos);
     }
 
+    private void OnValidate() {
+        // Setup GridManager
+        gridManager = FindObjectOfType<GridManager>();
+
+        // Setup pos
+        if(gridManager){
+            pos = gridManager.GetTileAt(transform.position);
+        }
+    }
+
     private void Update() {
         if(Myturn && (brain != null) && (target==null)){
             target = brain.GetTargetMovement(gridManager, pos);
         }
-        
+
         if(target){
             Debug.Log("Moving to :"+target.Coords);
             MoveToTarget(target);

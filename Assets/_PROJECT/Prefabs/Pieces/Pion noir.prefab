@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7514878562847712743}
   - component: {fileID: 3412793334347302825}
+  - component: {fileID: 8725374470039074835}
   m_Layer: 0
   m_Name: Pion noir
   m_TagString: Untagged
@@ -55,7 +56,21 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 1
+--- !u!114 &8725374470039074835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3247783639250752173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
 --- !u!1 &8112961226034161880
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +80,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4431660960033314737}
-  - component: {fileID: 1132283331722402616}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Untagged
@@ -88,18 +102,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7514878562847712743}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1132283331722402616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8112961226034161880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c91be68bd17d4804798c7aab7de4d078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8827219207340583006
 GameObject:
   m_ObjectHideFlags: 0

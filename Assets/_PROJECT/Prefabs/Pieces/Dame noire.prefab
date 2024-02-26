@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3462001563709641872}
   - component: {fileID: 4122473218150423313}
+  - component: {fileID: 8697186545674904319}
   m_Layer: 0
   m_Name: Dame noire
   m_TagString: Untagged
@@ -58,7 +59,21 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: 0}
     _isWhite: 0
-    canFuse: 0
+--- !u!114 &8697186545674904319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464229508439070943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
 --- !u!1 &7716170682059374544
 GameObject:
   m_ObjectHideFlags: 0
