@@ -574,22 +574,16 @@ public class CaseBrush : GridBrushBase
         }
 
         GameObject gameObject;
-        if (PrefabUtility.IsPartOfPrefabAsset(go))
+
+        gameObject = Instantiate(go, parent);
+        gameObject.name = go.name;
+        gameObject.SetActive(value: true);
+        Renderer[] componentsInChildren = gameObject.GetComponentsInChildren<Renderer>();
+        for (int i = 0; i < componentsInChildren.Length; i++)
         {
-            gameObject = (GameObject)PrefabUtility.InstantiatePrefab(go, (parent != null) ? parent.root.gameObject.scene : SceneManager.GetActiveScene());
-            gameObject.transform.parent = parent;
+            componentsInChildren[i].enabled = true;
         }
-        else
-        {
-            gameObject = Instantiate(go, parent);
-            gameObject.name = go.name;
-            gameObject.SetActive(value: true);
-            Renderer[] componentsInChildren = gameObject.GetComponentsInChildren<Renderer>();
-            for (int i = 0; i < componentsInChildren.Length; i++)
-            {
-                componentsInChildren[i].enabled = true;
-            }
-        }
+
 
         gameObject.hideFlags = HideFlags.None;
         Undo.RegisterCreatedObjectUndo(gameObject, "Paint GameObject");
