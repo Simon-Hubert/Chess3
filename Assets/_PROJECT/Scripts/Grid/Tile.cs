@@ -14,7 +14,7 @@ public class Tile : MonoBehaviour
 
 
     public void onPaint(){
-        Debug.Log("un truc genre un oui voilà voilà");
+        Debug.Log("un truc genre un oui voilï¿½ voilï¿½");
         if((Coords.x + Coords.y)%2 == 0){
             whiteTile = gridSettings.Inverted;
         }
@@ -24,10 +24,10 @@ public class Tile : MonoBehaviour
 
         //Set le Sprite
         if(!whiteTile){
-            transform.GetComponent<SpriteRenderer>().color = Color.black;
+            transform.GetComponentInChildren<SpriteRenderer>().color = Color.black;
         }
         else{
-            transform.GetComponent<SpriteRenderer>().color = Color.white;
+            transform.GetComponentInChildren<SpriteRenderer>().color = Color.white;
         }
         HighlightRenderer.enabled = false;
     }
