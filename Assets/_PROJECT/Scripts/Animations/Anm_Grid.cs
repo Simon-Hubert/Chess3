@@ -7,6 +7,7 @@ public class Anm_Grid : MonoBehaviour
 {
     Grid grid;
     [SerializeField] AnimationCurve speed;
+    [SerializeField, Range(0.1f, 1f)] float timeBetweenTiles;
     private void OnValidate()
     {
         grid = FindAnyObjectByType<Grid>();
@@ -34,7 +35,8 @@ public class Anm_Grid : MonoBehaviour
             Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 10.5f);
             Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
             //visual.transform.position = new Vector2(visual.transform.position.x, 5.5f);
-            yield return StartCoroutine(AnimTile(startPos.y, endPos.y, visual.transform));
+            StartCoroutine(AnimTile(startPos.y, endPos.y, visual.transform));
+            yield return new WaitForSeconds(timeBetweenTiles);
         }
     }
 
