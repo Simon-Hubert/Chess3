@@ -19,6 +19,9 @@ public class RuleController : MonoBehaviour
     [SerializeField, ShowIf(EConditionOperator.Or, "renforts", "isEscape")] Renforts ruleRenforts;
     [SerializeField, HideIf("rule", RULES.ESCAPE)] bool renforts = false;
     bool isEscape = false;
+
+    public Rule_Escape RuleEscape { get => ruleEscape; set => ruleEscape = value; }
+
     private void OnValidate()
     {
         if (rule == RULES.ESCAPE)
@@ -35,7 +38,7 @@ public class RuleController : MonoBehaviour
         }
         else
         {
-            if(ruleRenforts != null)
+            if(ruleRenforts != null && renforts == false)
             {
                 UnityEditor.EditorApplication.delayCall += () =>
                 {
