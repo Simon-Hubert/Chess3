@@ -35,6 +35,9 @@ public class MovementsEditor : Editor
             EditorGUILayout.HelpBox("Je n'ai pas de cerveau (faut mettre PlayerMovement ou EnemyMovement dans le Brain)", MessageType.Error, true);
         }
         GUI.color = Color.white;
-    }
 
+        if(GUILayout.Button("Myturn")){
+            obj.GetComponent<Movements>().Myturn = true;
+        }
+    }
 }
