@@ -7,8 +7,8 @@ public class Anm_Grid : MonoBehaviour
 {
     int count = 0;
     Grid grid;
-    [SerializeField] AnimationCurve speed;
-    [SerializeField, Range(0.01f, 0.1f)] float timeBetweenTiles;
+    [SerializeField] AnimationCurve speed = AnimationCurve.Linear(0f,0f,1f,1f);
+    [SerializeField, Range(0.01f, 0.1f)] float timeBetweenTiles = 0.01f;
     [SerializeField] GameObject piecesParent;
     List<Tile> tiles = new List<Tile>();
     private void OnValidate()
@@ -23,7 +23,7 @@ public class Anm_Grid : MonoBehaviour
     {
         foreach(Piece piece in piecesParent.GetComponentsInChildren<Piece>())
         {
-            GameObject visual = piece.GetComponentInChildren<SpriteRenderer>().gameObject;
+            GameObject visual = piece.transform.Find("Visuel").GetComponentInChildren<SpriteRenderer>().gameObject;
             visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
         }
         foreach(Tile tile in grid.GetComponentsInChildren<Tile>())
