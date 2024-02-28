@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class Anm_Grid : MonoBehaviour
 {
+    int count = 0;
     Grid grid;
     [SerializeField] AnimationCurve speed;
-    [SerializeField, Range(0.1f, 1f)] float timeBetweenTiles;
+    [SerializeField, Range(0.01f, 0.1f)] float timeBetweenTiles;
+    [SerializeField] GameObject piecesParent;
+    List<Tile> tiles = new List<Tile>();
     private void OnValidate()
     {
         grid = FindAnyObjectByType<Grid>();
@@ -18,23 +21,38 @@ public class Anm_Grid : MonoBehaviour
     }
     private void Start()
     {
+        foreach(Piece piece in piecesParent.GetComponentsInChildren<Piece>())
+        {
+            GameObject visual = piece.GetComponentInChildren<SpriteRenderer>().gameObject;
+            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
+        }
         foreach(Tile tile in grid.GetComponentsInChildren<Tile>())
         {
             GameObject visual = tile.GetComponentInChildren<SpriteRenderer>().gameObject;
             visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
+            tiles.Add(tile);
         }
+        count = tiles.Count;
         StartCoroutine(AnimateTiles());
     }
 
     private IEnumerator AnimateTiles()
     {
-        float t = 1;
-        foreach (Tile tile in grid.GetComponentsInChildren<Tile>())
+        for(int i = 0; i < count; i++)
         {
+            Tile tile = tiles[UnityEngine.Random.Range(0,tiles.Count - 1)];
             GameObject visual = tile.GetComponentInChildren<SpriteRenderer>().gameObject;
             Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 10.5f);
+            Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + UnityEngine.Random.Range(10.5f, 20.5f));
+            StartCoroutine(AnimTile(startPos.y, endPos.y, visual.transform));
+            tiles.Remove(tile);
+            yield return new WaitForSeconds(timeBetweenTiles);
+        }
+        foreach (Piece piece in piecesParent.GetComponentsInChildren<Piece>())
+        {
+            GameObject visual = piece.GetComponentInChildren<SpriteRenderer>().gameObject;
+            Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 10.5f);
             Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
-            //visual.transform.position = new Vector2(visual.transform.position.x, 5.5f);
             StartCoroutine(AnimTile(startPos.y, endPos.y, visual.transform));
             yield return new WaitForSeconds(timeBetweenTiles);
         }
@@ -51,8 +69,5 @@ public class Anm_Grid : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
-        // Ajoutez un petit délai entre chaque animation
-        //yield return new WaitForSeconds(0.1f);
     }
 }

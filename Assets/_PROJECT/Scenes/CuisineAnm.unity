@@ -3678,8 +3678,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 1.5006104
-      value: 3.3098068
+      time: 1.4972534
+      value: 4.208
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -3689,6 +3689,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  timeBetweenTiles: 0.02
+  piecesParent: {fileID: 1534396055}
 --- !u!1 &851279580
 GameObject:
   m_ObjectHideFlags: 0
