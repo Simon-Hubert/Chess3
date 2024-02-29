@@ -46,6 +46,14 @@ public class GridManager : MonoBehaviour
         Vector2Int selfPos = (Vector2Int)grid.WorldToCell(pos);
         return GetPieceAt(selfPos);
     }
+
+    public void ClearMoveToAble(){
+        foreach (Tile tile in tiles)
+        {
+            tile.UnMoveToAble();
+        }
+    }
+
     public void ClearHighlights(){
         foreach (Tile tile in tiles)
         {
