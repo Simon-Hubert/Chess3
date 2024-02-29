@@ -12,6 +12,7 @@ public class BDDPiece: ScriptableObject
 {
     public List<PieceData> pieces;
 
+    #if UNITY_EDITOR
     [Button]
     public void GeneratePrefabs()
     {
@@ -55,4 +56,5 @@ public class BDDPiece: ScriptableObject
         GameObject.DestroyImmediate(piece);
 
     }
+    #endif
 }
