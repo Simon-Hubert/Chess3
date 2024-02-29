@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f108af0f-04a4-47fb-971e-8f57c4a24eb3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Chess3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chess3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/DialSave.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/DialSave.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/Level1.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/Level1.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scripts/Menu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scripts/Menu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scripts/tuto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scripts/tuto.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
