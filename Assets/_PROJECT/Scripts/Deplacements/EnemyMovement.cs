@@ -40,8 +40,9 @@ public class EnemyMovement : MonoBehaviour, IMovementBrain
             return pos;
         }
         else{
+            Tile t = patrols[counter%patrols.Length];
             counter ++;
-            return patrols[counter%patrols.Length];
+            return t;
         }
     }
 

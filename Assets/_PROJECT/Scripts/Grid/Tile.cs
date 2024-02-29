@@ -8,10 +8,11 @@ public class Tile : MonoBehaviour
     [SerializeField] GridSettings gridSettings;
     [SerializeField] bool highlighted;
     [SerializeField] SpriteRenderer HighlightRenderer;
+    bool moveToAble;
     
     public Vector3Int Coords {get => grid.WorldToCell(transform.position);}
     public bool Highlighted { get => highlighted; set => highlighted = value; }
-
+    public bool MoveToAble { get => moveToAble;}
 
     public void onPaint(){
         if((Coords.x + Coords.y)%2 == 0){
@@ -35,7 +36,16 @@ public class Tile : MonoBehaviour
         Highlighted = false;
     }
 
+
+    private void Update() {
+        if(Highlighted) moveToAble = true;
+    }
+
     private void FixedUpdate() {
         HighlightRenderer.enabled = Highlighted;
+    }
+
+    public void UnMoveToAble(){
+        moveToAble = false;
     }
 }
