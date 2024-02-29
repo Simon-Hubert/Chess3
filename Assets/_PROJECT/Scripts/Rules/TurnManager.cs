@@ -20,6 +20,8 @@ public class TurnManager : MonoBehaviour
     List<Piece> whitePieces = new List<Piece>();
     int counterClassic = 0;
 
+    int playerCounter = 0;
+
     bool playerTurn = true;
     bool turnEnded = false;
 
@@ -28,6 +30,8 @@ public class TurnManager : MonoBehaviour
 
     public UnityEvent m_OnTurnEnd;
     public UnityEvent m_OnTurnBegin;
+
+    public int PlayerCounter { get => playerCounter; set => playerCounter = value; }
 
     private void Start() {
         if(_turnbase == turnbase.tousEnMmTemps){
@@ -75,6 +79,7 @@ public class TurnManager : MonoBehaviour
             }
             OnTurnEnd?.Invoke(playerTurn);
             m_OnTurnEnd?.Invoke();
+            if (playerTurn) PlayerCounter++;
             playerTurn = !playerTurn;
             turnEnded = true;
         }
