@@ -55,7 +55,7 @@ MonoBehaviour:
     - moves: 1
       distance: 1
       distance2: 0
-    - moves: 7
+    - moves: 5
       distance: 1
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
