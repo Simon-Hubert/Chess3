@@ -11,11 +11,12 @@ public class GridManager : MonoBehaviour
     Grid grid;
 
     public Tile[] Tiles { get => tiles;}
+    public GameObject PiecesParent { get => piecesParent; set => piecesParent = value; }
 
     private void OnValidate() {
         grid = GetComponent<Grid>();
         tiles = GetComponentsInChildren<Tile>();
-        pieces = piecesParent.GetComponentsInChildren<Piece>();
+        pieces = PiecesParent.GetComponentsInChildren<Piece>();
     }
 
     public Tile GetTileAt(Vector2Int coordinates){

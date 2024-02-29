@@ -21,7 +21,7 @@ public class Fusion : MonoBehaviour
             piece.Data.Pattern.Add(m);
         }
         Debug.Log("Fusion with " + pieceTarget.Data.Name);
-        Destroy(pieceTarget.gameObject);
+        pieceTarget.gameObject.SetActive(false);
 
         // CHANGE LE SPRITE
     }

@@ -8,7 +8,7 @@ public class Eat : MonoBehaviour
     public event Action<Piece> OnEat;
     public void Eating(Piece targetFood)
     {
-        targetFood.enabled = false;
+        targetFood.gameObject.SetActive(false);
         OnEat.Invoke(targetFood);
     }
 }
