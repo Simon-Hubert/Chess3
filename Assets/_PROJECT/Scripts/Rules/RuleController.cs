@@ -62,6 +62,17 @@ public class RuleController : MonoBehaviour
             Eat.OnEat += ruleDestroy.UpdateList;
         }
     }
+    private void OnDisable()
+    {
+        if (rule == RULES.VIP)
+        {
+            Eat.OnEat -= ruleVip.UpdateBlackList;
+        }
+        else if (rule == RULES.DESTROY)
+        {
+            Eat.OnEat -= ruleDestroy.UpdateList;
+        }
+    }
 
     public IRules GetCurrentRule() 
     {
