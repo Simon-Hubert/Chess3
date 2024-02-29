@@ -4,24 +4,18 @@ using UnityEngine;
 
 public class Scores : MonoBehaviour
 {
-    enum STARS
+    public enum STARS
     {
         One, Two, Three
     }
-    [SerializeField, Range(1, 20)] int turnPlayedFor1Star = 1;
     [SerializeField, Range(1, 20)] int turnPlayedFor2Stars = 1;
     [SerializeField, Range(1, 20)] int turnPlayedFor3Stars = 1;
     STARS currentScore;
-    TurnManager tm;
-    private void Awake()
+    public STARS SetStars(int playerCounter)
     {
-        tm = GetComponent<TurnManager>();
-        if (tm == null) Debug.LogWarning("il n'y a pas de TurnManager sur le MANAGER");
-
-    }
-
-    STARS SetStars()
-    {
+        if(playerCounter < turnPlayedFor2Stars) currentScore = STARS.One;
+        else if(playerCounter >= turnPlayedFor2Stars && playerCounter < turnPlayedFor3Stars) currentScore = STARS.Two;
+        else if(playerCounter >= turnPlayedFor3Stars) currentScore= STARS.Three;
         return currentScore;
     }
 }
