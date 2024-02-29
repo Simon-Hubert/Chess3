@@ -116,6 +116,9 @@ MonoBehaviour:
   gridManager: {fileID: 0}
   pos: {fileID: 0}
   myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6601325406599758012
 GameObject:
   m_ObjectHideFlags: 0
