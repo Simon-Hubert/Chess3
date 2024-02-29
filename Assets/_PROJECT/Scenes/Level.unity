@@ -5934,7 +5934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentPieces: {fileID: 943048688}
-  _turnbase: 0
+  _turnbase: 1
   blackPlayOrder:
   - {fileID: 1205599142}
   - {fileID: 436664270}
