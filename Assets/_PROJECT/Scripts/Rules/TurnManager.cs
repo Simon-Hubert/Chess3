@@ -93,8 +93,10 @@ public class TurnManager : MonoBehaviour
     }
 
     void ClassiChessTurn(){
-        blackPlayOrder[counterClassic%blackPlayOrder.Count].GetComponent<Movements>().Myturn = true;
+        Piece next = blackPlayOrder[counterClassic%blackPlayOrder.Count];
         counterClassic ++;
+        if(next.gameObject.activeSelf) next.GetComponent<Movements>().Myturn = true;
+        else ClassiChessTurn();
     }
 
     void TousEnMMtempsTurn(){
