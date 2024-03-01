@@ -47,7 +47,7 @@ public class Movements : MonoBehaviour
             bool eatOrFuse = false;
             if (piece) eatOrFuse = GetComponentInChildren<Eating>().EatinG(piece);
             MoveToTarget(target);
-            if (!piece || eatOrFuse)
+            if (!piece || (piece && eatOrFuse))
             {
                 turnManager.EndTurn();
                 Myturn = false;

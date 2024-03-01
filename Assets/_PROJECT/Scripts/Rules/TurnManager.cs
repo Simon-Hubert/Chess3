@@ -52,6 +52,7 @@ public class TurnManager : MonoBehaviour
     }
 
     void BeginTurn(){
+        Debug.Log("Beginning turn");
         OnTurnBegin?.Invoke(playerTurn);
         m_OnTurnBegin?.Invoke();
         turnEnded = false;
@@ -93,10 +94,13 @@ public class TurnManager : MonoBehaviour
     }
 
     void ClassiChessTurn(){
-        Piece next = blackPlayOrder[counterClassic%blackPlayOrder.Count];
-        counterClassic ++;
-        if(next.gameObject.activeSelf) next.GetComponent<Movements>().Myturn = true;
-        else ClassiChessTurn();
+        if(CheckForActiveEnemies()){
+            Piece next = blackPlayOrder[counterClassic%blackPlayOrder.Count];
+            counterClassic ++;
+            if(next.gameObject.activeSelf) next.GetComponent<Movements>().Myturn = true;
+            else ClassiChessTurn();
+        }
+        else EndTurn();
     }
 
     void TousEnMMtempsTurn(){
@@ -104,6 +108,14 @@ public class TurnManager : MonoBehaviour
         {
             piece.GetComponent<Movements>().Myturn = true;
         }
+    }
+
+    private bool CheckForActiveEnemies(){
+        foreach (Piece piece in blackPlayOrder)
+        {
+            if(piece.gameObject.activeSelf) return true;
+        }
+        return false;
     }
 
 
