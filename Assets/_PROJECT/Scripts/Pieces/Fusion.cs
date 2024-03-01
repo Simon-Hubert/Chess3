@@ -15,14 +15,20 @@ public class Fusion : MonoBehaviour
 
     public void Fuse (Piece pieceTarget)
     {
-        for (int i = 0; i< pieceTarget.Data.Pattern.Count; i++)
-        {
-            var m = pieceTarget.Data.Pattern[i];
-            piece.Data.Pattern.Add(m);
+        if (pieceTarget.Data.IsWhite)
+        { 
+            for (int i = 0; i < pieceTarget.Data.Pattern.Count; i++)
+            {
+                var m = pieceTarget.Data.Pattern[i];
+                piece.Data.Pattern.Add(m);
+            }
+            Debug.Log("Fusion with " + pieceTarget.Data.Name);
+            pieceTarget.gameObject.SetActive(false);
         }
-        Debug.Log("Fusion with " + pieceTarget.Data.Name);
-        pieceTarget.gameObject.SetActive(false);
-
+        else
+        {
+            Eat.Eating(pieceTarget);
+        }
         // CHANGE LE SPRITE
     }
 

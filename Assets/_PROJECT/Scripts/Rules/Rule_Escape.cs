@@ -16,7 +16,7 @@ public class Rule_Escape : IRules
 
     public bool IsLost()
     {
-        return RoiBlanc == null; // || RoiBlanc.Data.ECHEC;
+        return !RoiBlanc.gameObject.activeSelf; // || RoiBlanc.Data.ECHEC;
     }
 
     public bool IsWon()

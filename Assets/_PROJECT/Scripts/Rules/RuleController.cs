@@ -53,5 +53,27 @@ public class RuleController : MonoBehaviour
     private void Awake()
     {
         ruleDestroy.UpdateList();
+        if(rule == RULES.VIP)
+        {
+            Eat.OnEat += ruleVip.UpdateBlackList;
+        }
+        else if(rule == RULES.DESTROY)
+        {
+            Eat.OnEat += ruleDestroy.UpdateList;
+        }
+    }
+
+    public IRules GetCurrentRule() 
+    {
+        switch (rule)
+        {
+            case RULES.ESCAPE:
+                return ruleEscape;
+            default:
+            case RULES.DESTROY:
+                return ruleDestroy;
+            case RULES.VIP:
+                return ruleVip;
+        }
     }
 }

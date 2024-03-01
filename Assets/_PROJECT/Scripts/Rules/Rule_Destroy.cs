@@ -12,7 +12,7 @@ public class Rule_Destroy : IRules
 
     public bool IsLost()
     {
-        return RoiBlanc == null; // || RoiBlanc.Data.ECHEC;
+        return !RoiBlanc.gameObject.activeSelf; // || RoiBlanc.Data.ECHEC;
     }
 
     public bool IsWon()

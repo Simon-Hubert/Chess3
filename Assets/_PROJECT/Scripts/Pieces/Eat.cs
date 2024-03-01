@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eat : MonoBehaviour
+public class Eat
 {
-    public event Action<Piece> OnEat;
-    public void Eating(Piece targetFood)
+    public static event Action OnEat;
+    public static void Eating(Piece targetFood)
     {
         targetFood.gameObject.SetActive(false);
-        OnEat.Invoke(targetFood);
+        OnEat?.Invoke();
     }
 }
