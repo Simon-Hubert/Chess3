@@ -16,14 +16,14 @@ public class Anm_Grid : MonoBehaviour
         grid = FindAnyObjectByType<Grid>();
         if(grid == null )
         {
-            Debug.LogWarning("oh tié fada, y'a pas de grid dans la scène mon gaté");
+            Debug.LogWarning("oh tiï¿½ fada, y'a pas de grid dans la scï¿½ne mon gatï¿½");
         }
     }
     private void Start()
     {
         foreach(Piece piece in piecesParent.GetComponentsInChildren<Piece>())
         {
-            GameObject visual = piece.transform.Find("Visuel").GetComponentInChildren<SpriteRenderer>().gameObject;
+            GameObject visual = piece.transform.Find("Visual").GetComponentInChildren<SpriteRenderer>().gameObject;
             visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
         }
         foreach(Tile tile in grid.GetComponentsInChildren<Tile>())
