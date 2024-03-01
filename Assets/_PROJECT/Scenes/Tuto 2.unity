@@ -3746,8 +3746,8 @@ MonoBehaviour:
   parentPieces: {fileID: 943048688}
   _turnbase: 0
   blackPlayOrder:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1084460094}
+  - {fileID: 2146156243}
   m_OnTurnEnd:
     m_PersistentCalls:
       m_Calls: []

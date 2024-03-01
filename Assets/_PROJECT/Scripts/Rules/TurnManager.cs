@@ -109,6 +109,7 @@ public class TurnManager : MonoBehaviour
 
     [Button]
     void MettreToutesLesPieces(){
+        blackPlayOrder.Clear();
         Piece[] pieces = parentPieces.GetComponentsInChildren<Piece>();
         foreach (Piece piece in pieces){
             if(!piece.Data.IsWhite){
