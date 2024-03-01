@@ -45,7 +45,7 @@ public class Movements : MonoBehaviour
             m_OnMove?.Invoke();
             Piece piece = gridManager.GetPieceAt(target.Coords);
             bool eatOrFuse = false;
-            if (piece) eatOrFuse = GetComponent<Eat>().Eating(piece);
+            if (piece) eatOrFuse = GetComponentInChildren<Eat>().Eating(piece);
             MoveToTarget(target);
             if (!piece || eatOrFuse)
             {
