@@ -25,11 +25,11 @@ public class TurnManager : MonoBehaviour
     bool playerTurn = true;
     bool turnEnded = false;
 
-    public event Action<bool> OnTurnEnd;
-    public event Action<bool> OnTurnBegin;
+    public static event Action<bool> OnTurnEnd;
+    public static event Action<bool> OnTurnBegin;
 
-    public UnityEvent m_OnTurnEnd;
-    public UnityEvent m_OnTurnBegin;
+    public static UnityEvent m_OnTurnEnd;
+    public static UnityEvent m_OnTurnBegin;
 
     public int PlayerCounter { get => playerCounter; set => playerCounter = value; }
 
