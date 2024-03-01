@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467180286066402198}
+  - component: {fileID: 5213285866906405599}
   - component: {fileID: 5506626644781487628}
   m_Layer: 0
   m_Name: Brain
@@ -32,6 +33,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 971092422327864638}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5213285866906405599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917303822382445571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24ac9d4ba020fe44a5d9ce24c4104ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeSelected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5506626644781487628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +138,9 @@ MonoBehaviour:
   gridManager: {fileID: 0}
   pos: {fileID: 0}
   myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8659019874444174690
 GameObject:
   m_ObjectHideFlags: 0

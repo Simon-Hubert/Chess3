@@ -11,18 +11,12 @@ public class Rule_VIP : IRules
 
     public bool IsLost()
     {
-        return RoiBlanc == null; // || RoiBlanc.Data.ECHEC;
+        return !RoiBlanc.gameObject.activeSelf; // || RoiBlanc.Data.ECHEC;
     }
 
-    public void UpdateBlackList()
+    public void UpdateBlackList(Piece target)
     {
-        Piece[] allObj;
-        allObj = UnityEngine.Object.FindObjectsOfType<Piece>();
-        BlackList.Clear();
-        foreach (Piece piece in allObj)
-        {
-            if (!piece.Data.IsWhite && piece.enabled) BlackList.Add(piece);
-        }
+        BlackList.Remove(target);
     }
     public bool IsWon()
     {

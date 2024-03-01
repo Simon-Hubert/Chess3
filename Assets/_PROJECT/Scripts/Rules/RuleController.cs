@@ -19,6 +19,9 @@ public class RuleController : MonoBehaviour
     [SerializeField, ShowIf(EConditionOperator.Or, "renforts", "isEscape")] Renforts ruleRenforts;
     [SerializeField, HideIf("rule", RULES.ESCAPE)] bool renforts = false;
     bool isEscape = false;
+
+    public Rule_Escape RuleEscape { get => ruleEscape; set => ruleEscape = value; }
+
     private void OnValidate()
     {
         if (rule == RULES.ESCAPE)
@@ -35,7 +38,7 @@ public class RuleController : MonoBehaviour
         }
         else
         {
-            if(ruleRenforts != null)
+            if(ruleRenforts != null && renforts == false)
             {
                 UnityEditor.EditorApplication.delayCall += () =>
                 {
@@ -50,5 +53,38 @@ public class RuleController : MonoBehaviour
     private void Awake()
     {
         ruleDestroy.UpdateList();
+        if(rule == RULES.VIP)
+        {
+            Eat.OnEat += ruleVip.UpdateBlackList;
+        }
+        else if(rule == RULES.DESTROY)
+        {
+            Eat.OnEat += ruleDestroy.UpdateList;
+        }
+    }
+    private void OnDisable()
+    {
+        if (rule == RULES.VIP)
+        {
+            Eat.OnEat -= ruleVip.UpdateBlackList;
+        }
+        else if (rule == RULES.DESTROY)
+        {
+            Eat.OnEat -= ruleDestroy.UpdateList;
+        }
+    }
+
+    public IRules GetCurrentRule() 
+    {
+        switch (rule)
+        {
+            case RULES.ESCAPE:
+                return ruleEscape;
+            default:
+            case RULES.DESTROY:
+                return ruleDestroy;
+            case RULES.VIP:
+                return ruleVip;
+        }
     }
 }

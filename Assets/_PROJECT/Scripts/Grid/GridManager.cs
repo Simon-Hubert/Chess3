@@ -11,11 +11,12 @@ public class GridManager : MonoBehaviour
     Grid grid;
 
     public Tile[] Tiles { get => tiles;}
+    public GameObject PiecesParent { get => piecesParent; set => piecesParent = value; }
 
     private void OnValidate() {
         grid = GetComponent<Grid>();
         tiles = GetComponentsInChildren<Tile>();
-        pieces = piecesParent.GetComponentsInChildren<Piece>();
+        pieces = PiecesParent.GetComponentsInChildren<Piece>();
     }
 
     public Tile GetTileAt(Vector2Int coordinates){
@@ -35,7 +36,7 @@ public class GridManager : MonoBehaviour
     {
         foreach (Piece piece in pieces)
         {
-            if ((Vector2Int)piece.Coords == coordinates) return piece;
+            if ((Vector2Int)piece.Coords == coordinates && piece.gameObject.activeSelf) return piece;
         }
         return null;
     }
@@ -45,6 +46,15 @@ public class GridManager : MonoBehaviour
         Vector2Int selfPos = (Vector2Int)grid.WorldToCell(pos);
         return GetPieceAt(selfPos);
     }
+
+
+    public void ClearMoveToAble(){
+        foreach (Tile tile in tiles)
+        {
+            tile.UnMoveToAble();
+        }
+    }
+
     public void ClearHighlights(){
         foreach (Tile tile in tiles)
         {

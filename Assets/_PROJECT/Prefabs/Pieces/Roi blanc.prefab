@@ -55,7 +55,7 @@ MonoBehaviour:
     - moves: 1
       distance: 1
       distance2: 0
-    - moves: 7
+    - moves: 5
       distance: 1
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
@@ -76,6 +76,9 @@ MonoBehaviour:
   gridManager: {fileID: 0}
   pos: {fileID: 0}
   myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &525908145412423485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1079659915611788311}
+  - component: {fileID: 1903055968257503387}
   - component: {fileID: 5656726449006280818}
   m_Layer: 0
   m_Name: Brain
@@ -204,6 +208,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5755993342296155424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1903055968257503387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9028531098654246560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24ac9d4ba020fe44a5d9ce24c4104ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OnSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeSelected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5656726449006280818
 MonoBehaviour:
   m_ObjectHideFlags: 0
