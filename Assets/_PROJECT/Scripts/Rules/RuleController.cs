@@ -55,22 +55,22 @@ public class RuleController : MonoBehaviour
         ruleDestroy.UpdateList();
         if(rule == RULES.VIP)
         {
-            Eat.OnEat += ruleVip.UpdateBlackList;
+            Eating.OnEat += ruleVip.UpdateBlackList;
         }
         else if(rule == RULES.DESTROY)
         {
-            Eat.OnEat += ruleDestroy.UpdateList;
+            Eating.OnEat += ruleDestroy.UpdateList;
         }
     }
     private void OnDisable()
     {
         if (rule == RULES.VIP)
         {
-            Eat.OnEat -= ruleVip.UpdateBlackList;
+            Eating.OnEat -= ruleVip.UpdateBlackList;
         }
         else if (rule == RULES.DESTROY)
         {
-            Eat.OnEat -= ruleDestroy.UpdateList;
+            Eating.OnEat -= ruleDestroy.UpdateList;
         }
     }
 

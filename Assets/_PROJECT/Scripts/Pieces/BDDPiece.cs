@@ -46,7 +46,7 @@ public class BDDPiece: ScriptableObject
         {
             brain.AddComponent<EnemyMovement>();
         }
-            brain.AddComponent<Eat>();
+            brain.AddComponent<Eating>();
 
 
         PrefabUtility.SaveAsPrefabAsset(piece, "Assets/_PROJECT/Prefabs/Pieces/" + piece.name + ".prefab");
