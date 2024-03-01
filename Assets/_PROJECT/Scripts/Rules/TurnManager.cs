@@ -77,9 +77,9 @@ public class TurnManager : MonoBehaviour
             {
                 piece.GetComponent<Movements>().Myturn = false;
             }
+            if (playerTurn) PlayerCounter++;
             OnTurnEnd?.Invoke(playerTurn);
             m_OnTurnEnd?.Invoke();
-            if (playerTurn) PlayerCounter++;
             playerTurn = !playerTurn;
             turnEnded = true;
         }

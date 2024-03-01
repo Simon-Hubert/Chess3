@@ -36,7 +36,7 @@ public class GridManager : MonoBehaviour
     {
         foreach (Piece piece in pieces)
         {
-            if ((Vector2Int)piece.Coords == coordinates) return piece;
+            if ((Vector2Int)piece.Coords == coordinates && piece.gameObject.activeSelf) return piece;
         }
         return null;
     }
@@ -46,6 +46,7 @@ public class GridManager : MonoBehaviour
         Vector2Int selfPos = (Vector2Int)grid.WorldToCell(pos);
         return GetPieceAt(selfPos);
     }
+
 
     public void ClearMoveToAble(){
         foreach (Tile tile in tiles)

@@ -20,6 +20,7 @@ public class Movements : MonoBehaviour
     public bool Myturn { get => myturn; set => myturn = value; }
 
     private void Awake() {
+
         brain = GetComponentInChildren<IMovementBrain>();
 
         // Setup Managers
@@ -37,19 +38,20 @@ public class Movements : MonoBehaviour
     private void Update() {
         if(Myturn && (brain != null) && (target==null)){
             target = brain.GetTargetMovement(gridManager, pos);
-        }
+        } 
 
         if(target){
             OnMove?.Invoke();
             m_OnMove?.Invoke();
             Piece piece = gridManager.GetPieceAt(target.Coords);
-            if (piece)
-            {
-                GetComponent<Fusion>()?.Fuse(piece);
-            }
+            bool eatOrFuse = false;
+            if (piece) eatOrFuse = GetComponentInChildren<Eating>().EatinG(piece);
             MoveToTarget(target);
-            turnManager.EndTurn();
-            Myturn = false;
+            if (!piece || eatOrFuse)
+            {
+                turnManager.EndTurn();
+                Myturn = false;
+            }
             target = null;
         }
     }

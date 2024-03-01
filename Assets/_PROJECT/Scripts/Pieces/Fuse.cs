@@ -1,22 +1,16 @@
-using NaughtyAttributes;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fusion : MonoBehaviour
+public class Fuse
 {
-    Piece piece;
-    PieceData pieceSave;
-    private void Awake()
+    public static event Action<Piece> OnFuse;
+    public static void Fusing(Piece pieceTarget, Piece piece, PieceData pieceSave)
     {
-        piece = GetComponentInParent<Piece>();
-        pieceSave = piece.Data;
-    }
-
-    public void Fuse (Piece pieceTarget)
-    {
-        if (pieceTarget.Data.IsWhite)
-        { 
+        if (piece.Data.Name != "Roi blanc") return;
+        if(piece.Data.Level == 0)
+        {
             for (int i = 0; i < pieceTarget.Data.Pattern.Count; i++)
             {
                 var m = pieceTarget.Data.Pattern[i];
@@ -24,15 +18,17 @@ public class Fusion : MonoBehaviour
             }
             Debug.Log("Fusion with " + pieceTarget.Data.Name);
             pieceTarget.gameObject.SetActive(false);
+            piece.Data.Level++;
+            OnFuse?.Invoke(pieceTarget);
         }
         else
         {
-            Eat.Eating(pieceTarget);
+            Defusing(piece, pieceSave);
+            Fusing(pieceTarget, piece, pieceSave);
         }
-        // CHANGE LE SPRITE
-    }
 
-    public void Defuse ()
+    }
+    public static void Defusing(Piece piece, PieceData pieceSave)
     {
         piece.Data.Pattern.Clear();
         for (int i = 0; i < pieceSave.Pattern.Count; i++)
@@ -41,7 +37,7 @@ public class Fusion : MonoBehaviour
             piece.Data.Pattern.Add(m);
         }
 
-
+        piece.Data.Level--;
         // CHANGE LE SPRITE
     }
 }

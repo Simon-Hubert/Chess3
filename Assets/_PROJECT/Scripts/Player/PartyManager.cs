@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PartyManager : MonoBehaviour
 {
+    VictoryScreen vS;
     TurnManager tm;
     RuleController ruleController;
     Scores score;
@@ -13,9 +14,11 @@ public class PartyManager : MonoBehaviour
         tm = GetComponent<TurnManager>();
         ruleController = GetComponent<RuleController>();
         score = GetComponent<Scores>();
+        vS = GetComponent<VictoryScreen>();
         if(tm == null) Debug.LogWarning("il n'y a pas de TurnManager sur le MANAGER");
         if (ruleController == null) Debug.LogWarning("il n'y a pas de RuleController sur le MANAGER");
         if (ruleController == null) Debug.LogWarning("il n'y a pas de Scores sur le MANAGER");
+        if (vS == null) Debug.LogWarning("il n'y a pas de VictoryScreen sur le MANAGER");
         tm.OnTurnEnd += IsGameFinished;
     }
     void IsGameFinished(bool b)
@@ -23,17 +26,10 @@ public class PartyManager : MonoBehaviour
         if (ruleController.GetCurrentRule().IsWon())
         {
             panelVictory.SetActive(true);
-            switch (score.SetStars(tm.PlayerCounter))
-            {
-                case Scores.STARS.One:
-                    break;
-                case Scores.STARS.Two:
-                    break;
-                case Scores.STARS.Three:
-                    break;
-            }
+            vS.SetScreen(score.SetStars(tm.PlayerCounter));
         }
-        else if(ruleController.GetCurrentRule().IsLost())
+
+        else if (ruleController.GetCurrentRule().IsLost())
         {
             panelLose.SetActive(true);
         }
