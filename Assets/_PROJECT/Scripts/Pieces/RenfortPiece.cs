@@ -23,7 +23,9 @@ public class RenfortPiece : MonoBehaviour
     {
         visuel = transform.Find("Visual").GetComponentInChildren<SpriteRenderer>().gameObject;
         GetDir(dir)(visuel, -1); // 1 étant la hauteur d'une tile
-        this.gameObject.SetActive(false);
+        Debug.Log(transform.position);
+        Debug.Log(gameObject.name);
+        gameObject.SetActive(false);
     }
     private void OnEnable()
     {
@@ -44,7 +46,7 @@ public class RenfortPiece : MonoBehaviour
     }
 
     private FromDir GetDir(DIRECTION dir)
-    {
+    {   
         return dirArray[(int)dir];
     }
 
@@ -60,12 +62,12 @@ public class RenfortPiece : MonoBehaviour
     }
     private static void FromEast(GameObject visual, float l)
     {
-        visual.transform.localPosition = new Vector2(l, visual.transform.localPosition.y); // 1 étant la hauteur d'une tile
+        visual.transform.localPosition = new Vector2( - l, visual.transform.localPosition.y); // 1 étant la hauteur d'une tile
 
 
     }
     private static void FromWest(GameObject visual, float l)
     {
-        visual.transform.localPosition = new Vector2( - l, visual.transform.localPosition.y); // 1 étant la hauteur d'une tile
+        visual.transform.localPosition = new Vector2( l, visual.transform.localPosition.y); // 1 étant la hauteur d'une tile
     }
 }
