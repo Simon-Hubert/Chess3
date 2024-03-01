@@ -16,19 +16,19 @@ public class Anm_Grid : MonoBehaviour
         grid = FindAnyObjectByType<Grid>();
         if(grid == null )
         {
-            Debug.LogWarning("oh tié fada, y'a pas de grid dans la scène mon gaté");
+            Debug.LogWarning("oh tiï¿½ fada, y'a pas de grid dans la scï¿½ne mon gatï¿½");
         }
     }
     private void Start()
     {
         foreach(Piece piece in piecesParent.GetComponentsInChildren<Piece>())
         {
-            GameObject visual = piece.transform.Find("Visuel").GetComponentInChildren<SpriteRenderer>().gameObject;
+            GameObject visual = piece.transform.Find("Visual").GetComponent<SpriteRenderer>().gameObject;
             visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
         }
         foreach(Tile tile in grid.GetComponentsInChildren<Tile>())
         {
-            GameObject visual = tile.GetComponentInChildren<SpriteRenderer>().gameObject;
+            GameObject visual = tile.transform.Find("Visuel").GetComponent<SpriteRenderer>().gameObject;
             visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
             tiles.Add(tile);
         }
@@ -41,8 +41,8 @@ public class Anm_Grid : MonoBehaviour
         for(int i = 0; i < count; i++)
         {
             Tile tile = tiles[UnityEngine.Random.Range(0,tiles.Count - 1)];
-            GameObject visual = tile.GetComponentInChildren<SpriteRenderer>().gameObject;
-            Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 10.5f);
+            GameObject visual = tile.transform.Find("Visuel").GetComponent<SpriteRenderer>().gameObject;
+            Vector2 endPos = new Vector2(tile.transform.position.x, tile.transform.position.y);
             Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + UnityEngine.Random.Range(10.5f, 20.5f));
             StartCoroutine(AnimTile(startPos.y, endPos.y, visual.transform));
             tiles.Remove(tile);
@@ -50,7 +50,7 @@ public class Anm_Grid : MonoBehaviour
         }
         foreach (Piece piece in piecesParent.GetComponentsInChildren<Piece>())
         {
-            GameObject visual = piece.GetComponentInChildren<SpriteRenderer>().gameObject;
+            GameObject visual = piece.transform.Find("Visual").GetComponent<SpriteRenderer>().gameObject;
             Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 10.5f);
             Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
             StartCoroutine(AnimTile(startPos.y, endPos.y, visual.transform));
@@ -69,5 +69,6 @@ public class Anm_Grid : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+        obj.position = new Vector2(obj.position.x, targetPos);
     }
 }
