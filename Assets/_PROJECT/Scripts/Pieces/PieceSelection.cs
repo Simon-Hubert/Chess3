@@ -7,7 +7,9 @@ using UnityEngine.Events;
 public class PieceSelection : MonoBehaviour
 {
     GridManager gridManager;
-    public bool Selected {get; private set;}
+
+    bool selected = false;
+    public bool Selected {get => selected; private set => selected = value;}
     Piece thisPiece;
 
     public UnityEvent m_OnSelected;
@@ -22,14 +24,14 @@ public class PieceSelection : MonoBehaviour
         thisPiece.GetComponent<Movements>().OnMove += UnSelect;
     }
     private void OnDisable() {
-        thisPiece.GetComponent<Movements>().OnMove += UnSelect;
+        thisPiece.GetComponent<Movements>().OnMove -= UnSelect;
     }
 
     private void LateUpdate() {
         if(Input.GetMouseButtonDown(0)){
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Piece piece = gridManager.GetPieceAt(pos);
-            if(piece == thisPiece){
+            if (piece == thisPiece){
                 Select();
             }
             else{

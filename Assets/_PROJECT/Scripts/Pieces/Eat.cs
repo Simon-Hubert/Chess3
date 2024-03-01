@@ -1,14 +1,33 @@
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eat
+public class Eat : MonoBehaviour
 {
+    Piece piece;
+    PieceData pieceSave;
     public static event Action<Piece> OnEat;
-    public static void Eating(Piece targetFood)
+    private void Awake()
     {
-        targetFood.gameObject.SetActive(false);
-        OnEat?.Invoke(targetFood);
+        piece = GetComponentInParent<Piece>();
+        pieceSave = piece.Data;
+    }
+
+    public bool Eating (Piece pieceTarget)
+    {
+        if (piece.Data.IsWhite != pieceTarget.Data.IsWhite)
+        {
+            OnEat?.Invoke(pieceTarget);
+            pieceTarget.gameObject.SetActive(false);
+            return true;
+        }
+        else
+        {
+            Fuse.Fusing(pieceTarget, piece, pieceSave);
+            return false;
+        }
+        // CHANGE LE SPRITE
     }
 }

@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d4704ae86983b4384c7e87cd77d0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 0
+  dir: 3
 --- !u!114 &11761729 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
@@ -3735,7 +3735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d4704ae86983b4384c7e87cd77d0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 0
+  dir: 3
 --- !u!114 &841533988 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
@@ -4097,7 +4097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d4704ae86983b4384c7e87cd77d0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 0
+  dir: 3
 --- !u!114 &987170692 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
@@ -4826,6 +4826,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1448077474}
     m_Modifications:
+    - target: {fileID: 92414730357742630, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3247783639250752173, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
       propertyPath: m_Name
       value: Pion noir (1)
@@ -5461,7 +5465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d4704ae86983b4384c7e87cd77d0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 0
+  dir: 3
 --- !u!114 &1362808704 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
@@ -6096,7 +6100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d4704ae86983b4384c7e87cd77d0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 0
+  dir: 3
 --- !u!114 &1523455097 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
@@ -6833,7 +6837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d4704ae86983b4384c7e87cd77d0a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: 0
+  dir: 3
 --- !u!114 &1772589237 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
