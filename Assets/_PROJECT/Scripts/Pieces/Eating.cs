@@ -16,15 +16,16 @@ public class Eating : MonoBehaviour
 
     public bool EatinG(Piece pieceTarget)
     {
+        if(pieceTarget == piece) return true;
         if (piece.Data.IsWhite != pieceTarget.Data.IsWhite)
         {
-            OnEat?.Invoke(pieceTarget);
             pieceTarget.gameObject.SetActive(false);
+            OnEat?.Invoke(pieceTarget);
             return true;
         }
         else
         {
-            Fuse.Fusing(pieceTarget, piece, pieceSave);
+            if(piece.Data.CanFuse) Fuse.Fusing(pieceTarget, piece, pieceSave);
             return false;
         }
         // CHANGE LE SPRITE
