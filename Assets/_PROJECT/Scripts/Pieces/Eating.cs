@@ -14,7 +14,7 @@ public class Eating : MonoBehaviour
         pieceSave = piece.Data;
     }
 
-    public bool Eating(Piece pieceTarget)
+    public bool EatinG(Piece pieceTarget)
     {
         if (piece.Data.IsWhite != pieceTarget.Data.IsWhite)
         {
