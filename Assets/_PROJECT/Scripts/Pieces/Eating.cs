@@ -1,10 +1,9 @@
-using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eat : MonoBehaviour
+public class Eating : MonoBehaviour
 {
     Piece piece;
     PieceData pieceSave;
@@ -15,7 +14,7 @@ public class Eat : MonoBehaviour
         pieceSave = piece.Data;
     }
 
-    public bool Eating (Piece pieceTarget)
+    public bool Eating(Piece pieceTarget)
     {
         if (piece.Data.IsWhite != pieceTarget.Data.IsWhite)
         {
