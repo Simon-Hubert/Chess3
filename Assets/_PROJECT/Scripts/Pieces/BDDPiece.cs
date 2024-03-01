@@ -34,7 +34,6 @@ public class BDDPiece: ScriptableObject
         visual.AddComponent<SpriteRenderer>().sprite = pieceData.Sprite;
         visual.GetComponent<SpriteRenderer>().sortingOrder = 1;
         piece.AddComponent<Piece>().Data = pieceData;
-        brain.AddComponent<PieceSelection>();
 
         //------------------ADD BRAIN SCRIPTS -------------------------------
         piece.AddComponent<Movements>();
@@ -46,7 +45,10 @@ public class BDDPiece: ScriptableObject
         {
             brain.AddComponent<EnemyMovement>();
         }
-            brain.AddComponent<Eat>();
+        if(pieceData.Name == "Roi blanc")
+        {
+            piece.AddComponent<Fusion>();
+        }
 
 
         PrefabUtility.SaveAsPrefabAsset(piece, "Assets/_PROJECT/Prefabs/Pieces/" + piece.name + ".prefab");

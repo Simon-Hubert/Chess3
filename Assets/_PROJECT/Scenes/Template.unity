@@ -3400,7 +3400,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD
   m_Sprite: {fileID: 7482667652216324306, guid: cb6bbfe97bcde25428fffd9135fe6edd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4347,9 +4346,6 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: cb6bbfe97bcde25428fffd9135fe6edd, type: 3}
-=======
-  m_Sprite: {fileID: 7482667652216324306, guid: a3ebe801aba40964982d4139e6908e4c, type: 3}
->>>>>>> origin/dev
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4440,7 +4436,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 719329964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 5be0e850b180bff468e42ef1698ef269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -5853,20 +5848,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
-=======
-  m_Script: {fileID: 11500000, guid: 4d8731c15f867744b8cbebf9d195530c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentPieces: {fileID: 943048688}
-  _turnbase: 0
-  blackPlayOrder: []
-  m_OnTurnEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnTurnBegin:
-    m_PersistentCalls:
-      m_Calls: []
->>>>>>> origin/dev
 --- !u!1 &943048688
 GameObject:
   m_ObjectHideFlags: 0
@@ -7567,7 +7548,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 0.34528297, b: 0.34528297, a: 0.627451}
   m_FlipX: 0

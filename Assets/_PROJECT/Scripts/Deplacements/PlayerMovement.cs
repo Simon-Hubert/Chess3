@@ -8,23 +8,31 @@ public class PlayerMovement : MonoBehaviour, IMovementBrain
 {
 
     List<PieceData.deplacement> deplacements;
-    //bool initTargetting = true;
+    bool initTargetting = true;
     GridManager tileGrid;
-    PieceSelection pSelect;
 
     private void Awake() {
         deplacements = GetComponentInParent<Piece>().Data.Pattern;
-        pSelect = GetComponent<PieceSelection>();
-        tileGrid = FindObjectOfType<GridManager>();
     }
 
     public Tile GetTargetMovement(GridManager gridManager, Tile pos)
     {
+
+        Vector2Int coords = (Vector2Int)pos.Coords;
+
+        //HIGHLIGHT les cases ou on peut se déplacer
+        if(initTargetting){
+            tileGrid = gridManager;
+            Highlights.HighlightTiles(coords, deplacements, tileGrid);
+            initTargetting = false;
+        }
+
         //Request Input et output la tile
-        Tile targetTile = pSelect.Selected ? RequestTile() : null;
+        Tile targetTile = RequestTile();
 
         if(targetTile){
-            tileGrid.ClearMoveToAble();
+            tileGrid.ClearHighlights();
+            initTargetting = true;
         }
         return targetTile;
     }
@@ -32,13 +40,16 @@ public class PlayerMovement : MonoBehaviour, IMovementBrain
     private Tile RequestTile(){
         if(Input.GetMouseButtonDown(0)){
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Tile tile = tileGrid.GetTileAt(pos);
-            //Debug.Log(tile.Coords);
-            if(tile!=null && tile.MoveToAble){
-                //Debug.Log("Deplacement demandé vers :" + tile.Coords);
+            Vector3Int gridPos = tileGrid.transform.GetComponent<Grid>().WorldToCell(pos);
+            Tile tile = tileGrid.GetTileAt((Vector2Int)gridPos);
+            Debug.Log(tile.Coords);
+            if(tile!=null && tile.Highlighted){
+                Debug.Log("Deplacement demandé vers :" + tile.Coords);
                 return tile;
             }
         }
         return null;
-    }  
+    }
+
+  
 }
