@@ -4975,13 +4975,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb2aa44f062bec48843f4c888042823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rule: 0
+  rule: 2
   ruleVip:
     BlackList:
     - {fileID: 0}
     RoiBlanc: {fileID: 0}
   ruleDestroy:
-    RoiBlanc: {fileID: 0}
+    RoiBlanc: {fileID: 1241231291}
   ruleEscape:
     RoiBlanc: {fileID: 0}
     TourInactionMax: 0
