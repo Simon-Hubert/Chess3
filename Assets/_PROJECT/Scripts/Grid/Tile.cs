@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel;
 using UnityEngine;
 
@@ -9,7 +10,8 @@ public class Tile : MonoBehaviour
     [SerializeField] bool highlighted;
     [SerializeField] SpriteRenderer HighlightRenderer;
     bool moveToAble;
-    
+
+    public event Action<GameObject> onMovedTo;
     public Vector3Int Coords {get => grid.WorldToCell(transform.position);}
     public bool Highlighted { get => highlighted; set => highlighted = value; }
     public bool MoveToAble { get => moveToAble;}
@@ -47,5 +49,9 @@ public class Tile : MonoBehaviour
 
     public void UnMoveToAble(){
         moveToAble = false;
+    }
+    public void OnMovedTo(GameObject g)
+    {
+        onMovedTo?.Invoke(g);
     }
 }
