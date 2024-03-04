@@ -15,6 +15,7 @@ public class Movements : MonoBehaviour
     TurnManager turnManager;
 
     public event Action OnMove;
+    public event Action OnTeleport;
     public UnityEvent m_OnMove;
 
     public bool Myturn { get => myturn; set => myturn = value; }
@@ -44,9 +45,10 @@ public class Movements : MonoBehaviour
             OnMove?.Invoke();
             m_OnMove?.Invoke();
             Piece piece = gridManager.GetPieceAt(target.Coords);
-            bool eatOrFuse = false;
+            bool eatOrFuse = false; 
             if (piece) eatOrFuse = GetComponentInChildren<Eating>().EatinG(piece);
             MoveToTarget(target);
+
             if (!piece || (piece && eatOrFuse))
             {
                 turnManager.EndTurn();
@@ -58,6 +60,10 @@ public class Movements : MonoBehaviour
 
     private void MoveToTarget(Tile tile)
     {
+        if(tile != pos)
+        {
+            tile.OnMovedTo(gameObject);
+        }
         transform.position = tile.transform.position;
         pos = tile;
     }
