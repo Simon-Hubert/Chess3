@@ -25,22 +25,35 @@ public class Teleporter : MonoBehaviour
 
     public void Teleport(GameObject g)
     {
-        
+        StartCoroutine(Teleportation(g));
     }
     IEnumerator Teleportation(GameObject g)
     {
-
         float elapsedTime = 0f;
+        float e2 = 0f;
         Vector2 pos = g.transform.position;
         while(elapsedTime < timeLimit)
         {
-            if(pos.y < 8)
+            if (pos.y > 8)
             {
-                pos.y = Mathf.Lerp(thisTile.transform.position.y, teleporter.transform.position.y, speed.Evaluate(elapsedTime));
+                g.transform.position = new Vector2(teleporter.transform.position.x, g.transform.position.x);
+            }
+            if (g.transform.position.x != teleporter.transform.position.x)
+            {
+                pos.y = Mathf.Lerp(thisTile.transform.position.y, 8.5f, speed.Evaluate(elapsedTime));
                 g.transform.position = new Vector2(g.transform.position.x, pos.y);
                 elapsedTime += Time.deltaTime;
+                yield return null;
             }
+            else
+            {
+                pos.y = Mathf.Lerp(8.5f, teleporter.transform.position.y, speed.Evaluate(e2));
+                g.transform.position = new Vector2(g.transform.position.x, pos.y);
+                elapsedTime += Time.deltaTime;
+                e2 += Time.deltaTime;
+                yield return null;
+            }
+
         }
-        return null;
     }
 }
