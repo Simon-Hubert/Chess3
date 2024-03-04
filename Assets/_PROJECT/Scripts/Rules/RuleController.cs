@@ -40,10 +40,12 @@ public class RuleController : MonoBehaviour
         {
             if(ruleRenforts != null && renforts == false)
             {
+#if UNITY_EDITOR
                 UnityEditor.EditorApplication.delayCall += () =>
                 {
                     DestroyImmediate(ruleRenforts);
                 };
+#endif
             }
 
         }
