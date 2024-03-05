@@ -17,6 +17,6 @@ public class PathFinding : MonoBehaviour
     public void Path()
     {
         Tile start = gm.GetTileAt(transform.position);
-
+        CheckMovements.CheckMove((Vector2Int)start.Coords, queen.Data.Pattern, gm);
     }
 }
