@@ -6,27 +6,28 @@ using UnityEngine;
 public class Anm_Grid : MonoBehaviour
 {
     int count = 0;
-    Grid grid;
+    GridManager gm;
     [SerializeField] AnimationCurve speed = AnimationCurve.Linear(0f,0f,1f,1f);
     [SerializeField, Range(0.01f, 0.1f)] float timeBetweenTiles = 0.01f;
     [SerializeField] GameObject piecesParent;
     List<Tile> tiles = new List<Tile>();
     private void OnValidate()
     {
-        grid = FindAnyObjectByType<Grid>();
-        if(grid == null )
+        gm = FindObjectOfType<GridManager>();
+        if(gm == null )
         {
-            Debug.LogWarning("oh ti� fada, y'a pas de grid dans la sc�ne mon gat�");
+            Debug.LogWarning("oh ti� fada, y'a pas de gridmanager dans la sc�ne mon gat�");
         }
     }
     private void Start()
     {
-        foreach(Piece piece in piecesParent.GetComponentsInChildren<Piece>())
+        gm = FindObjectOfType<GridManager>(); // je pense que le onValidate s'execute pas en build
+        foreach(Piece piece in gm.Pieces)
         {
             GameObject visual = piece.transform.Find("Visual").GetComponent<SpriteRenderer>().gameObject;
             visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
         }
-        foreach(Tile tile in grid.GetComponentsInChildren<Tile>())
+        foreach(Tile tile in gm.Tiles)
         {
             GameObject visual = tile.transform.Find("Visuel").GetComponent<SpriteRenderer>().gameObject;
             visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
@@ -48,7 +49,7 @@ public class Anm_Grid : MonoBehaviour
             tiles.Remove(tile);
             yield return new WaitForSeconds(timeBetweenTiles);
         }
-        foreach (Piece piece in piecesParent.GetComponentsInChildren<Piece>())
+        foreach (Piece piece in gm.Pieces)
         {
             GameObject visual = piece.transform.Find("Visual").GetComponent<SpriteRenderer>().gameObject;
             Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 10.5f);
