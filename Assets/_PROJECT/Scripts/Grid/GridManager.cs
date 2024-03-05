@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(Grid))]
@@ -8,7 +9,8 @@ public class GridManager : MonoBehaviour
     [SerializeField] GameObject piecesParent;
     [SerializeField] List<Piece> pieces;
     [SerializeField] Tile[] tiles;
-    Grid grid;
+    [SerializeField] Grid grid;
+    [SerializeField] GridSettings gs;
 
     public Tile[] Tiles { get => tiles;}
     public List<Piece> Pieces { get => pieces; private set => pieces = value; }
@@ -17,6 +19,7 @@ public class GridManager : MonoBehaviour
 
     private void Awake() {
         grid = GetComponent<Grid>();
+        gs = GetComponent<GridSettings>();
         tiles = GetComponentsInChildren<Tile>();
         Pieces = new List<Piece>();
         BlackPieces = new List<Piece>();
@@ -99,10 +102,25 @@ public class GridManager : MonoBehaviour
         return (Vector2Int)GetTileAt(piece.transform.position).Coords;
     }
 
-    public void InstanciateInGrid(GameObject gameObject, Transform position){
-        GameObject go = GameObject.Instantiate(gameObject, transform);
-        go.transform.position += new Vector3(0.5f,0.5f,0.5f);
-        go.GetComponent<Tile>()?.onPaint();
-        //WIP
+    public void InstanciateInGrid(GameObject gameObject, Vector3Int position){
+        GameObject go = GameObject.Instantiate(gameObject, grid.CellToWorld(position), Quaternion.identity, transform);
+        go.transform.position += new Vector3(0.5f,0.5f,0f);
+
+        Tile tile = go.GetComponent<Tile>();
+        if(tile){
+            tile.Grid = grid;
+            tile.GridSettings = gs;
+            tile.onPaint();
+        }
+        tiles = GetComponentsInChildren<Tile>();
+    }
+
+    public void ClearGrid(){
+        if(Tiles.Length >= 1){
+            foreach (Tile tile in Tiles)
+            {
+                DestroyImmediate(tile.gameObject);
+            }
+        }
     }
 }
