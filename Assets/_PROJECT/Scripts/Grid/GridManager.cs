@@ -94,4 +94,15 @@ public class GridManager : MonoBehaviour
             tile.Highlighted = false;
         }
     }
+
+    public Vector2Int GetCoords(Piece piece){
+        return (Vector2Int)GetTileAt(piece.transform.position).Coords;
+    }
+
+    public void InstanciateInGrid(GameObject gameObject, Transform position){
+        GameObject go = GameObject.Instantiate(gameObject, transform);
+        go.transform.position += new Vector3(0.5f,0.5f,0.5f);
+        go.GetComponent<Tile>()?.onPaint();
+        //WIP
+    }
 }
