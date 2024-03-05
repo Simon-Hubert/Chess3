@@ -16,14 +16,14 @@ public class Renforts : MonoBehaviour
     private void OnValidate()
     {
         if (piecesParent == null)
-            Debug.LogWarning("He ! Tu peux mettre le gameobject PIECE dans pieceParent stp :,) sinon ça peut pas fonctionner haha");
+            Debug.LogWarning("He ! Tu peux mettre le gameobject PIECE dans pieceParent stp :,) sinon ï¿½a peut pas fonctionner haha");
         gridManager = FindObjectOfType<GridManager>();
         if(gridManager == null )
-            Debug.LogWarning("Il n'y a pas de GridManager dans la scène");
+            Debug.LogWarning("Il n'y a pas de GridManager dans la scï¿½ne");
         pieces.Clear();
-        foreach (RenfortPiece renfort in gridManager.PiecesParent.GetComponentsInChildren<RenfortPiece>())
+        foreach (Piece piece in gridManager.Pieces)
         {
-            pieces.Add(renfort.gameObject);
+            if(piece.GetComponentInChildren<RenfortPiece>()) pieces.Add(piece.gameObject);
         }
     }
     private void OnEnable()
@@ -39,7 +39,7 @@ public class Renforts : MonoBehaviour
     [Button]
     void CallRenfort()
     {
-        // active les pièces et play animtion
+        // active les piï¿½ces et play animtion
         foreach(GameObject renfort in pieces)
         {
             if(!renfort.gameObject.activeSelf)
