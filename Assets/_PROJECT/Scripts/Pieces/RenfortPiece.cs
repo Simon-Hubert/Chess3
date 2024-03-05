@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class RenfortPiece : MonoBehaviour
 {
@@ -22,9 +21,7 @@ public class RenfortPiece : MonoBehaviour
     private void Awake()
     {
         visuel = transform.Find("Visual").GetComponentInChildren<SpriteRenderer>().gameObject;
-        GetDir(dir)(visuel, -1); // 1 étant la hauteur d'une tile
-        Debug.Log(transform.position);
-        Debug.Log(gameObject.name);
+        GetDir(dir)(visuel, -1); // 1 ï¿½tant la hauteur d'une tile
         gameObject.SetActive(false);
     }
     private void OnEnable()
@@ -52,22 +49,22 @@ public class RenfortPiece : MonoBehaviour
 
     private static void FromNorth(GameObject visual, float l)
     {
-        visual.transform.localPosition = new Vector2(visual.transform.localPosition.x, - l) ; // 1 étant la hauteur d'une tile
+        visual.transform.localPosition = new Vector2(visual.transform.localPosition.x, - l) ; // 1 ï¿½tant la hauteur d'une tile
 
     }
     private static void FromSouth(GameObject visual, float l)
     {
-        visual.transform.localPosition = new Vector2(visual.transform.localPosition.x, l); // 1 étant la hauteur d'une tile
+        visual.transform.localPosition = new Vector2(visual.transform.localPosition.x, l); // 1 ï¿½tant la hauteur d'une tile
 
     }
     private static void FromEast(GameObject visual, float l)
     {
-        visual.transform.localPosition = new Vector2( - l, visual.transform.localPosition.y); // 1 étant la hauteur d'une tile
+        visual.transform.localPosition = new Vector2( - l, visual.transform.localPosition.y); // 1 ï¿½tant la hauteur d'une tile
 
 
     }
     private static void FromWest(GameObject visual, float l)
     {
-        visual.transform.localPosition = new Vector2( l, visual.transform.localPosition.y); // 1 étant la hauteur d'une tile
+        visual.transform.localPosition = new Vector2( l, visual.transform.localPosition.y); // 1 ï¿½tant la hauteur d'une tile
     }
 }
