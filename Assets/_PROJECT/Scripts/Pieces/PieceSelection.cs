@@ -18,16 +18,13 @@ public class PieceSelection : MonoBehaviour
     public event Action OnSelected;
     public event Action OnDeSelected;
 
-    private void Awake() {
+    private void OnEnable() {
         thisPiece = GetComponentInParent<Piece>();
         gridManager = FindObjectOfType<GridManager>();
-    }
-
-    private void Start() {
-        thisPiece.Movement.OnMove += UnSelect;
+        thisPiece.GetComponent<Movements>().OnMove += UnSelect;
     }
     private void OnDisable() {
-        thisPiece.Movement.OnMove -= UnSelect;
+        thisPiece.GetComponent<Movements>().OnMove -= UnSelect;
     }
 
     private void LateUpdate() {

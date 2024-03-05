@@ -22,13 +22,13 @@ public class Rule_Destroy : IRules
 
     public void UpdateList(Piece target = null)
     {
-        Piece[] allObj;
-        allObj = UnityEngine.Object.FindObjectsOfType<Piece>();
-        allPieces.Clear();
-        foreach (Piece piece in allObj)
-        {
-            if (!piece.Data.IsWhite && piece.gameObject.activeSelf) allPieces.Add(piece);
-        }
+            Piece[] allObj;
+            allObj = UnityEngine.Object.FindObjectsOfType<Piece>();
+            allPieces.Clear();
+            foreach (Piece piece in allObj)
+            {
+                if (!piece.Data.IsWhite && piece.gameObject.activeSelf) allPieces.Add(piece);
+            }
     }
 
 }

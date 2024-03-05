@@ -6,51 +6,18 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     [SerializeField] GameObject piecesParent;
-    [SerializeField] List<Piece> pieces;
+    [SerializeField] Piece[] pieces;
     [SerializeField] Tile[] tiles;
     Grid grid;
 
     public Tile[] Tiles { get => tiles;}
-    public List<Piece> Pieces { get => pieces; private set => pieces = value; }
-    public List<Piece> BlackPieces{ get; private set;}
-    public List<Piece> WhitePieces{ get; private set;}
+    public GameObject PiecesParent { get => piecesParent; set => piecesParent = value; }
 
-    private void Awake() {
+    private void OnValidate() {
         grid = GetComponent<Grid>();
         tiles = GetComponentsInChildren<Tile>();
-        Pieces = new List<Piece>();
-        BlackPieces = new List<Piece>();
-        WhitePieces = new List<Piece>();
-
-        foreach (Piece piece in piecesParent.GetComponentsInChildren<Piece>())
-        {
-            Pieces.Add(piece);
-            if(piece.Data.IsWhite) WhitePieces.Add(piece);
-            else BlackPieces.Add(piece);
-        }
+        pieces = PiecesParent.GetComponentsInChildren<Piece>();
     }
-
-    private List<Piece> ActivePieces(List<Piece> listPieces){
-        List<Piece> pieces = new List<Piece>();
-        foreach (Piece piece in listPieces)
-        {
-            if (piece.gameObject.activeSelf) pieces.Add(piece);
-        }
-        return pieces;
-    }
-
-    public List<Piece> GetAllActivePieces(){
-        return ActivePieces(Pieces);
-    }
-
-    public List<Piece> GetAllActiveBlackPieces(){
-        return ActivePieces(BlackPieces);
-    }
-
-    public List<Piece> GetAllActiveWhitePieces(){
-        return ActivePieces(WhitePieces);
-    }
-
 
     public Tile GetTileAt(Vector2Int coordinates){
         foreach (Tile tile in tiles)
@@ -67,7 +34,7 @@ public class GridManager : MonoBehaviour
 
     public Piece GetPieceAt(Vector2Int coordinates)
     {
-        foreach (Piece piece in Pieces)
+        foreach (Piece piece in pieces)
         {
             if ((Vector2Int)piece.Coords == coordinates && piece.gameObject.activeSelf) return piece;
         }

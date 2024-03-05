@@ -3,7 +3,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-#if UNITY_EDITOR
 
 [CustomGridBrush(true, false, false, "Case Brush")]
 public class CaseBrush : GridBrushBase
@@ -340,9 +339,7 @@ public class CaseBrush : GridBrushBase
         Vector3 vector3 = grid.LocalToWorld(vector + vector2);
         if (gameObject != null)
         {
-#if UNITY_EDITOR
             UnityEngine.Object correspondingObjectFromSource = PrefabUtility.GetCorrespondingObjectFromSource(gameObject);
-#endif
             if ((bool)correspondingObjectFromSource)
             {
                 SetGameObject(brushPosition, (GameObject)correspondingObjectFromSource);
@@ -405,12 +402,11 @@ public class CaseBrush : GridBrushBase
         BrushCell[] array = m_Cells;
         foreach (BrushCell brushCell in array)
         {
-#if UNITY_EDITOR
             if (brushCell.gameObject != null && !EditorUtility.IsPersistent(brushCell.gameObject))
             {
                 UnityEngine.Object.DestroyImmediate(brushCell.gameObject);
             }
-#endif
+
             brushCell.gameObject = null;
         }
 
@@ -640,4 +636,3 @@ public class CaseBrush : GridBrushBase
         hiddenGridLayout.cellLayout = component.cellLayout;
     }
 }
-#endif

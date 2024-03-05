@@ -12,11 +12,11 @@ public class TurnManager : MonoBehaviour
         tousEnMmTemps
     }
 
+    [SerializeField] GameObject parentPieces;
     [SerializeField] turnbase _turnbase;
 
     [SerializeField, ShowIf("_turnbase", turnbase.classicChess)] List<Piece> blackPlayOrder;
 
-    GridManager gm;
     List<Piece> whitePieces = new List<Piece>();
     int counterClassic = 0;
 
@@ -34,13 +34,16 @@ public class TurnManager : MonoBehaviour
     public int PlayerCounter { get => playerCounter; set => playerCounter = value; }
 
     private void Start() {
-        gm = FindObjectOfType<GridManager>();
         if(_turnbase == turnbase.tousEnMmTemps){
             MettreToutesLesPieces();
         }
 
-        whitePieces = gm.GetAllActiveWhitePieces();
-
+        Piece[] pieces = parentPieces.GetComponentsInChildren<Piece>();
+        foreach (Piece piece in pieces){
+            if(piece.Data.IsWhite){
+                whitePieces.Add(piece);
+            }
+        }
         BeginTurn();
     }
 
@@ -49,6 +52,7 @@ public class TurnManager : MonoBehaviour
     }
 
     void BeginTurn(){
+        Debug.Log("Beginning turn");
         OnTurnBegin?.Invoke(playerTurn);
         m_OnTurnBegin?.Invoke();
         turnEnded = false;
@@ -72,7 +76,7 @@ public class TurnManager : MonoBehaviour
         if(!turnEnded){
             foreach (Piece piece in whitePieces)
             {
-                piece.Movement.Myturn = false;
+                piece.GetComponent<Movements>().Myturn = false;
             }
             if (playerTurn) PlayerCounter++;
             OnTurnEnd?.Invoke(playerTurn);
@@ -93,7 +97,7 @@ public class TurnManager : MonoBehaviour
         if(CheckForActiveEnemies()){
             Piece next = blackPlayOrder[counterClassic%blackPlayOrder.Count];
             counterClassic ++;
-            if(next.gameObject.activeSelf) next.Movement.Myturn = true;
+            if(next.gameObject.activeSelf) next.GetComponent<Movements>().Myturn = true;
             else ClassiChessTurn();
         }
         else EndTurn();
@@ -102,18 +106,27 @@ public class TurnManager : MonoBehaviour
     void TousEnMMtempsTurn(){
         foreach (Piece piece in blackPlayOrder)
         {
-            piece.Movement.Myturn = true;
+            piece.GetComponent<Movements>().Myturn = true;
         }
     }
 
     private bool CheckForActiveEnemies(){
-        return gm.GetAllActiveBlackPieces().Count > 0;
+        foreach (Piece piece in blackPlayOrder)
+        {
+            if(piece.gameObject.activeSelf) return true;
+        }
+        return false;
     }
 
 
     [Button]
     void MettreToutesLesPieces(){
-        blackPlayOrder = gm.GetAllActiveBlackPieces();
+        Piece[] pieces = parentPieces.GetComponentsInChildren<Piece>();
+        foreach (Piece piece in pieces){
+            if(!piece.Data.IsWhite){
+                blackPlayOrder.Add(piece);
+            }
+        }
     }
 
 }
