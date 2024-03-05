@@ -16,7 +16,7 @@ public class TurnManager : MonoBehaviour
 
     [SerializeField, ShowIf("_turnbase", turnbase.classicChess)] List<Piece> blackPlayOrder;
 
-    GridManager gm;
+    [SerializeField] GridManager gm;
     List<Piece> whitePieces = new List<Piece>();
     int counterClassic = 0;
 
@@ -100,6 +100,11 @@ public class TurnManager : MonoBehaviour
     }
 
     void TousEnMMtempsTurn(){
+        if (!CheckForActiveEnemies())
+        {
+            EndTurn();
+            return;
+        }
         foreach (Piece piece in blackPlayOrder)
         {
             piece.Movement.Myturn = true;
