@@ -59,7 +59,7 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
-    canFuse: 1
+    canFuse: 0
 --- !u!114 &4727945788864262867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 2530799050788741585}
   - component: {fileID: 1801152131353208272}
   - component: {fileID: 8689645516261454180}
+  - component: {fileID: 8355826348962034775}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Untagged
@@ -143,6 +144,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: 0
   patrols: []
+--- !u!114 &8355826348962034775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5717629905788790257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5807aa8efefa0ae4889aec79ce28b31c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7711294484009428790
 GameObject:
   m_ObjectHideFlags: 0

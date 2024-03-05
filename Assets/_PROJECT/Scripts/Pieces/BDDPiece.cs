@@ -12,6 +12,7 @@ public class BDDPiece: ScriptableObject
 {
     public List<PieceData> pieces;
 
+    #if UNITY_EDITOR
     [Button]
     public void GeneratePrefabs()
     {
@@ -46,14 +47,12 @@ public class BDDPiece: ScriptableObject
         {
             brain.AddComponent<EnemyMovement>();
         }
-        if(pieceData.Name == "Roi blanc")
-        {
-            piece.AddComponent<Fusion>();
-        }
+            brain.AddComponent<Eating>();
 
 
         PrefabUtility.SaveAsPrefabAsset(piece, "Assets/_PROJECT/Prefabs/Pieces/" + piece.name + ".prefab");
         GameObject.DestroyImmediate(piece);
 
     }
+    #endif
 }

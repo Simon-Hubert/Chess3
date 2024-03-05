@@ -40,10 +40,12 @@ public class RuleController : MonoBehaviour
         {
             if(ruleRenforts != null && renforts == false)
             {
+#if UNITY_EDITOR
                 UnityEditor.EditorApplication.delayCall += () =>
                 {
                     DestroyImmediate(ruleRenforts);
                 };
+#endif
             }
 
         }
@@ -55,11 +57,22 @@ public class RuleController : MonoBehaviour
         ruleDestroy.UpdateList();
         if(rule == RULES.VIP)
         {
-            Eat.OnEat += ruleVip.UpdateBlackList;
+            Eating.OnEat += ruleVip.UpdateBlackList;
         }
         else if(rule == RULES.DESTROY)
         {
-            Eat.OnEat += ruleDestroy.UpdateList;
+            Eating.OnEat += ruleDestroy.UpdateList;
+        }
+    }
+    private void OnDisable()
+    {
+        if (rule == RULES.VIP)
+        {
+            Eating.OnEat -= ruleVip.UpdateBlackList;
+        }
+        else if (rule == RULES.DESTROY)
+        {
+            Eating.OnEat -= ruleDestroy.UpdateList;
         }
     }
 

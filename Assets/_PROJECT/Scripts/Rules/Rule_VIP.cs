@@ -14,12 +14,9 @@ public class Rule_VIP : IRules
         return !RoiBlanc.gameObject.activeSelf; // || RoiBlanc.Data.ECHEC;
     }
 
-    public void UpdateBlackList()
+    public void UpdateBlackList(Piece target)
     {
-        foreach (Piece piece in BlackList)
-        {
-            if (!piece.gameObject.activeSelf) BlackList.Remove(piece);
-        }
+        BlackList.Remove(target);
     }
     public bool IsWon()
     {

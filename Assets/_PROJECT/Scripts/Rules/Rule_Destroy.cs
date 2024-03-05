@@ -20,14 +20,14 @@ public class Rule_Destroy : IRules
         return allPieces.Count < 1;
     }
 
-    public void UpdateList()
+    public void UpdateList(Piece target = null)
     {
         Piece[] allObj;
         allObj = UnityEngine.Object.FindObjectsOfType<Piece>();
         allPieces.Clear();
         foreach (Piece piece in allObj)
         {
-            if(!piece.Data.IsWhite && piece.enabled) allPieces.Add(piece);
+            if (!piece.Data.IsWhite && piece.gameObject.activeSelf) allPieces.Add(piece);
         }
     }
 
