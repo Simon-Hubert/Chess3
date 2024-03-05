@@ -6,36 +6,76 @@ using UnityEngine;
 public class Renforts : MonoBehaviour
 {
     [SerializeField] GameObject piecesParent;
-    Rule_Escape ruleController;
-    [SerializeField]List<GameObject> pieces = new List<GameObject>();
+    [SerializeField] List<GameObject> pieces = new List<GameObject>();
     GridManager gridManager;
 
+    [SerializeField, Range(0, 10)] int TourInactionMax;
+    int currentInactions = 0;
+    bool hasEatenOrFused = false;
     private void OnValidate()
     {
         if (piecesParent == null)
-            Debug.LogWarning("He ! Tu peux mettre le gameobject PIECE dans pieceParent stp :,) sinon �a peut pas fonctionner haha");
+            Debug.LogWarning("He ! Tu peux mettre le gameobject PIECE dans pieceParent stp :,) sinon ça peut pas fonctionner haha");
         gridManager = FindObjectOfType<GridManager>();
-        if(gridManager == null )
-            Debug.LogWarning("Il n'y a pas de GridManager dans la sc�ne");
+        if (gridManager == null)
+            Debug.LogWarning("Il n'y a pas de GridManager dans la scène");
         pieces.Clear();
         foreach (Piece piece in gridManager.Pieces)
         {
             if(piece.GetComponentInChildren<RenfortPiece>()) pieces.Add(piece.gameObject);
         }
     }
-    private void Awake()
+    private void OnEnable()
     {
-        ruleController = GetComponent<RuleController>().RuleEscape;
-        ruleController.OnInaction += CallRenfort;
+        Eating.OnEat += OnEat;
+        TurnManager.OnTurnEnd += OnEndTurn;
+    }
+    private void OnDisable()
+    {
+        Eating.OnEat -= OnEat;
+        TurnManager.OnTurnEnd -= OnEndTurn;
     }
     [Button]
     void CallRenfort()
     {
-        // active les pi�ces et play animtion
-        foreach(GameObject renfort in pieces)
+        // active les pièces et play animtion
+        foreach (GameObject renfort in pieces)
         {
-            if(!renfort.gameObject.activeSelf)
-            renfort.gameObject.SetActive(true);
+            if (!renfort.gameObject.activeSelf)
+                renfort.gameObject.SetActive(true);
         }
+    }
+    public void Inacting()
+    {
+        currentInactions++;
+        if (currentInactions >= TourInactionMax)
+        {
+            CallRenfort();
+        }
+    }
+
+    public void Acting()
+    {
+        currentInactions = 0;
+    }
+
+    public void OnEndTurn(bool isPlayerTurn)
+    {
+        if (isPlayerTurn && hasEatenOrFused)
+        {
+            Acting();
+        }
+        else
+        {
+            if (isPlayerTurn)
+            {
+                Inacting();
+            }
+        }
+        hasEatenOrFused = false;
+    }
+    public void OnEat(Piece piece = null)
+    {
+        hasEatenOrFused = true;
     }
 }
