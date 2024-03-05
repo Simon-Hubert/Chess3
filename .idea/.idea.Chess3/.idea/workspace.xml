@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f108af0f-04a4-47fb-971e-8f57c4a24eb3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Chess3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Chess3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pieces.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pieces/Fusion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pieces/Fusion.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/LevelSelection.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/LevelSelection.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/LevelTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/LevelTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_PROJECT/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scripts/Ui/Menu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_PROJECT/Scripts/Ui/Menu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/bitoAiDiff/PieceData_9986.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_PROJECT/Scripts/Ui/LevelSelection.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -131,6 +133,8 @@
       <workItem from="1708540475789" duration="3078000" />
       <workItem from="1708545862276" duration="28000" />
       <workItem from="1708687000529" duration="196000" />
+      <workItem from="1709288896923" duration="1380000" />
+      <workItem from="1709290464816" duration="3518000" />
     </task>
     <servers />
   </component>
