@@ -11,8 +11,10 @@ public class Movements : MonoBehaviour
     [SerializeField] Tile pos;
     [SerializeField] bool myturn;
     IMovementBrain brain;
-    Tile target;
     TurnManager turnManager;
+    Piece thisPiece;
+
+    Tile target;
 
     public event Action OnMove;
     public UnityEvent m_OnMove;
@@ -20,14 +22,17 @@ public class Movements : MonoBehaviour
     public bool Myturn { get => myturn; set => myturn = value; }
 
     private void Awake() {
-
+        thisPiece = GetComponent<Piece>();
         brain = GetComponentInChildren<IMovementBrain>();
 
         // Setup Managers
         gridManager = FindObjectOfType<GridManager>();
         turnManager = FindObjectOfType<TurnManager>();
         
-        // Setup pos
+
+    }
+
+    private void Start() {
         if(gridManager){
             pos = gridManager.GetTileAt(transform.position);
         }
@@ -45,9 +50,9 @@ public class Movements : MonoBehaviour
             m_OnMove?.Invoke();
             Piece piece = gridManager.GetPieceAt(target.Coords);
             bool eatOrFuse = false;
-            if (piece) eatOrFuse = GetComponentInChildren<Eating>().EatinG(piece);
+            if (piece) eatOrFuse = thisPiece.EatS.EatinG(piece);
             MoveToTarget(target);
-            if (!piece || eatOrFuse)
+            if (!piece || (piece && eatOrFuse))
             {
                 turnManager.EndTurn();
                 Myturn = false;

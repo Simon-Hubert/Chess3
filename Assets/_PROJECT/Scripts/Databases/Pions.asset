@@ -36,7 +36,7 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
-    canFuse: 1
+    canFuse: 0
   - _name: Dame blanche
     _level: 0
     _pattern:
@@ -123,7 +123,7 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
-    canFuse: 1
+    canFuse: 0
   - _name: Pion noir
     _level: 0
     _pattern:
@@ -132,4 +132,4 @@ MonoBehaviour:
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
-    canFuse: 1
+    canFuse: 0

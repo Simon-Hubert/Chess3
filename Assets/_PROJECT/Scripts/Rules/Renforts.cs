@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,25 +7,34 @@ public class Renforts : MonoBehaviour
 {
     [SerializeField] GameObject piecesParent;
     Rule_Escape ruleController;
+    [SerializeField]List<GameObject> pieces = new List<GameObject>();
+    GridManager gridManager;
+
     private void OnValidate()
     {
         if (piecesParent == null)
-            Debug.LogWarning("He ! Tu peux mettre le gameobject PIECE dans pieceParent stp :,) sinon ça peut pas fonctionner haha");
+            Debug.LogWarning("He ! Tu peux mettre le gameobject PIECE dans pieceParent stp :,) sinon ï¿½a peut pas fonctionner haha");
+        gridManager = FindObjectOfType<GridManager>();
+        if(gridManager == null )
+            Debug.LogWarning("Il n'y a pas de GridManager dans la scï¿½ne");
+        pieces.Clear();
+        foreach (Piece piece in gridManager.Pieces)
+        {
+            if(piece.GetComponentInChildren<RenfortPiece>()) pieces.Add(piece.gameObject);
+        }
     }
     private void Awake()
     {
-        ruleController = GetComponent<Rule_Escape>();
+        ruleController = GetComponent<RuleController>().RuleEscape;
         ruleController.OnInaction += CallRenfort;
-        foreach (RenfortPiece renfort in piecesParent.GetComponents<RenfortPiece>())
-        {
-            renfort.gameObject.SetActive(false);
-        }
     }
+    [Button]
     void CallRenfort()
     {
-        // active les pièces et play animtion
-        foreach(RenfortPiece renfort in piecesParent.GetComponents<RenfortPiece>())
+        // active les piï¿½ces et play animtion
+        foreach(GameObject renfort in pieces)
         {
+            if(!renfort.gameObject.activeSelf)
             renfort.gameObject.SetActive(true);
         }
     }
