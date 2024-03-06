@@ -44,6 +44,7 @@ public class PathFinding
         }
         tilesChecked.Clear();
         toCheck.Clear();
+        Map.Clear();
         Tile start = gm.GetTileAt(queen.transform.position);
         Tile end = gm.GetTileAt(king.transform.position);
         List<Tile> list = new List<Tile>();
