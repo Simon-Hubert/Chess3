@@ -38,13 +38,13 @@ public class PathFinding
     [Button]
     public static Tile Path(GridManager gm, Piece queen, Piece king)
     {
+        Map.Clear();
         foreach (Tile tile in gm.Tiles)
         {
             Map.Add(tile.GetInstanceID(), new Properties(Vector3.zero, null));
         }
         tilesChecked.Clear();
         toCheck.Clear();
-        Map.Clear();
         Tile start = gm.GetTileAt(queen.transform.position);
         Tile end = gm.GetTileAt(king.transform.position);
         List<Tile> list = new List<Tile>();
