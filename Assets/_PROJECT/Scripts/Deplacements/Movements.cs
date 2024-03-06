@@ -17,6 +17,7 @@ public class Movements : MonoBehaviour
     Tile target;
 
     public event Action OnMove;
+    public event Action OnTeleport;
     public UnityEvent m_OnMove;
 
     public bool Myturn { get => myturn; set => myturn = value; }
@@ -52,6 +53,7 @@ public class Movements : MonoBehaviour
             bool eatOrFuse = false;
             if (piece) eatOrFuse = thisPiece.EatS.EatinG(piece);
             MoveToTarget(target);
+
             if (!piece || (piece && eatOrFuse))
             {
                 turnManager.EndTurn();
@@ -63,6 +65,10 @@ public class Movements : MonoBehaviour
 
     private void MoveToTarget(Tile tile)
     {
+        if(tile != pos)
+        {
+            tile.OnMovedTo(gameObject);
+        }
         transform.position = tile.transform.position;
         pos = tile;
     }

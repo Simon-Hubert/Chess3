@@ -4760,6 +4760,7 @@ GameObject:
   m_Component:
   - component: {fileID: 583254542}
   - component: {fileID: 583254543}
+  - component: {fileID: 583254544}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -4801,6 +4802,46 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 705852274}
+--- !u!114 &583254544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583254541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee5a93368bec6942be57a154732243b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleporter: {fileID: 1953476187}
+  timeLimit: 2
+  speed:
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  thisTile: {fileID: 0}
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
 --- !u!1 &583734856
 GameObject:
   m_ObjectHideFlags: 0
@@ -6233,7 +6274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8731c15f867744b8cbebf9d195530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentPieces: {fileID: 943048688}
   _turnbase: 0
   blackPlayOrder:
   - {fileID: 1205599142}
@@ -14815,6 +14855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953476185}
   - component: {fileID: 1953476186}
+  - component: {fileID: 1953476187}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -14856,6 +14897,46 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1658469653}
+--- !u!114 &1953476187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953476184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee5a93368bec6942be57a154732243b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleporter: {fileID: 583254544}
+  timeLimit: 2
+  speed:
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  thisTile: {fileID: 0}
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
 --- !u!1 &1966310351
 GameObject:
   m_ObjectHideFlags: 0

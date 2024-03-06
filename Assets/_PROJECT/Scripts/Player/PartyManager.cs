@@ -19,7 +19,7 @@ public class PartyManager : MonoBehaviour
         if (ruleController == null) Debug.LogWarning("il n'y a pas de RuleController sur le MANAGER");
         if (ruleController == null) Debug.LogWarning("il n'y a pas de Scores sur le MANAGER");
         if (vS == null) Debug.LogWarning("il n'y a pas de VictoryScreen sur le MANAGER");
-        tm.OnTurnEnd += IsGameFinished;
+        TurnManager.OnTurnEnd += IsGameFinished;
     }
     void IsGameFinished(bool b)
     {
