@@ -38,8 +38,8 @@ public class GridGenLibrary
 
     private static void GenerateSquare(GridManager gm, GameObject tilePrefab)
     {
-        Vector2Int a = new Vector2Int(Range(-4, 4), Range(-4, 4));
-        Vector2Int c = new Vector2Int(Range(-4, 4), Range(-4, 4));
+        Vector2Int a = new Vector2Int(Range(-3, 3), Range(-7, 6));
+        Vector2Int c = new Vector2Int(Range(-3, 3), Range(-7, 6));
 
         for (int i = 0; i < Abs(a.x - c.x); i++)
         {
