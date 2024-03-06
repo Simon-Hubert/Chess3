@@ -19,32 +19,17 @@ public class PathFinding
             this.parent = parent;
         }
     }
-    static Dictionary<int, Properties> Map = new Dictionary<int, Properties>();
-    GridManager gm;
-    static List<Tile> tilesChecked = new List<Tile>();
-    static List<Tile> toCheck = new List<Tile>();
-    static int n = 10;
-
-
-/*    private void Awake()
-    {
-        gm = FindObjectOfType<GridManager>();
-        queen = GetComponent<Piece>();
-        foreach(Tile tile in gm.Tiles)
-        {
-            Map.Add(tile.GetInstanceID(), new Properties(Vector3.zero, null));
-        }
-    }*/
     [Button]
     public static Tile Path(GridManager gm, Piece queen, Piece king)
     {
-        Map.Clear();
+        int n = 10;
+        Dictionary<int, Properties> Map = new Dictionary<int, Properties>();
         foreach (Tile tile in gm.Tiles)
         {
             Map.Add(tile.GetInstanceID(), new Properties(Vector3.zero, null));
         }
-        tilesChecked.Clear();
-        toCheck.Clear();
+        List<Tile> tilesChecked = new List<Tile>();
+        List<Tile> toCheck = new List<Tile>();
         Tile start = gm.GetTileAt(queen.transform.position);
         Tile end = gm.GetTileAt(king.transform.position);
         List<Tile> list = new List<Tile>();
@@ -54,7 +39,7 @@ public class PathFinding
             List<Tile> newList = new List<Tile>();
             foreach(Tile tile in list)
             {
-                foreach(Tile newtile in CheckTile(tile, n, end, queen, gm)){
+                foreach(Tile newtile in CheckTile(tile, n, end, queen, gm, tilesChecked, Map)){
                     newList.Add(newtile);
                 }
             }
@@ -83,7 +68,6 @@ public class PathFinding
                     Debug.Log(tile.GetInstanceID());
                     current = tile;
                     tilesChecked.Add(current);
-                    //toCheck.Remove(current);
                     newList.Remove(current);
                     foreach(Tile currentNeighbour in CheckMovements.CheckMove((Vector2Int)current.Coords, queen.Data.Pattern, gm))
                     {
@@ -121,19 +105,21 @@ public class PathFinding
 
         }
         List<Tile> path = new List<Tile>();
+        path.Add(end);
         while (current != start)
         {
             path.Add(Map[current.GetInstanceID()].parent);
             current = Map[current.GetInstanceID()].parent;
         }
-        Debug.Log(path.Count);
-        Debug.Log(path[1]);
-        queen.transform.position = path[1].transform.position;
-        
-        return path[1];
+        Tile target = null;
+        if(path.Count >= 2) target = path[path.Count - 2];
+        if (path.Count < 2) target = path[0];
+        queen.transform.position = target.transform.position;
+
+        return target;
     }
 
-    static List<Tile> CheckTile(Tile start, int n, Tile end, Piece queen, GridManager gm)
+    static List<Tile> CheckTile(Tile start, int n, Tile end, Piece queen, GridManager gm, List<Tile> tilesChecked, Dictionary<int, Properties> Map)
     {
         List<Tile> newTiles = new List<Tile>();
         foreach (Tile tile in CheckMovements.CheckMove((Vector2Int)start.Coords, queen.Data.Pattern, gm))
