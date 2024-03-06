@@ -16,6 +16,8 @@ public class Movements : MonoBehaviour
 
     Tile target;
 
+    AudioManager audioManager;
+
     public event Action OnMove;
     public UnityEvent m_OnMove;
 
@@ -28,6 +30,7 @@ public class Movements : MonoBehaviour
         // Setup Managers
         gridManager = FindObjectOfType<GridManager>();
         turnManager = FindObjectOfType<TurnManager>();
+        audioManager = FindObjectOfType<AudioManager>();
         
 
     }
@@ -65,5 +68,6 @@ public class Movements : MonoBehaviour
     {
         transform.position = tile.transform.position;
         pos = tile;
+        audioManager.PlaySfx("Move");
     }
 }

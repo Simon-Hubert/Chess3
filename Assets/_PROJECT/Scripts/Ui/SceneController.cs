@@ -15,17 +15,25 @@ public class SceneController : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
+        /*else
         {
             Destroy(gameObject);
-        }
+        }*/
     }
-    #region MAINMENU
-    /*public void Play()
-    {
-        SceneManager.LoadScene("Level");
 
-    }*/
+    public void LoadNextLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        _transitionAnim.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync(levelIndex);
+        _transitionAnim.SetTrigger("End");
+    }
 
     public void SelectLevel()
     {
@@ -40,21 +48,6 @@ public class SceneController : MonoBehaviour
 #else
             Application.Quit();// en jeu
 #endif
-    }
-    #endregion
-
-    public void LoadNextLevel()
-    {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-
-    }
-
-    IEnumerator LoadLevel(int levelIndex)
-    {
-        _transitionAnim.SetTrigger("Start");
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(levelIndex);
-        _transitionAnim.SetTrigger("End");
     }
 
 }
