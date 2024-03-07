@@ -159,6 +159,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.Goodness.Chess3
+    Standalone: com.Goodness.Chess3
   buildNumber:
     Standalone: 0
     VisionOS: 0

@@ -5,21 +5,50 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
+    public static Pause instance;
 
-    public GameObject pauseMenu;
-    // Start is called before the first frame update
+    public GameObject _settingsMenu;
+    public GameObject _settingsOnButton;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     void Start()
     {
-        pauseMenu.SetActive(false);
+        _settingsMenu.SetActive(false);
+        _settingsOnButton.SetActive(true);
 
 
     }
 
+    private void Reset()
+    {
+        if (_settingsOnButton == null)
+        {
+            _settingsOnButton = GameObject.Find("SettingsOnBtn");
+        }
+
+        if (_settingsMenu == null)
+        {
+            _settingsMenu = GameObject.Find("SettingsMenu");
+        }
+    }
+
     public void PauseOn()
     {
-        if (!pauseMenu.activeSelf)
+        if (!_settingsMenu.activeSelf)
         {
-            pauseMenu.SetActive(true);
+            _settingsOnButton.SetActive(false);
+            _settingsMenu.SetActive(true);
             Time.timeScale = 0f;
 
         }
@@ -28,9 +57,10 @@ public class Pause : MonoBehaviour
 
     public void PauseOff()
     {
-        if (pauseMenu.activeSelf)// si le menu est activ� on le d�sac
+        if (_settingsMenu.activeSelf)// si le menu est activ� on le d�sac
         {
-            pauseMenu.SetActive(false);
+            _settingsOnButton.SetActive(true);
+            _settingsMenu.SetActive(false);
             Time.timeScale = 1f;
 
         }

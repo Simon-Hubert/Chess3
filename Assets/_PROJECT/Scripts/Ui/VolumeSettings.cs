@@ -29,7 +29,7 @@ public class VolumeSettings : MonoBehaviour
     public void SetMusicVolume()
     {
         float volume = _musicSlider.value;
-        _audioMixer.SetFloat("music", Mathf.Log10(_musicSlider.value) * 20);
+        _audioMixer.SetFloat("Music", Mathf.Log10(_musicSlider.value) * 20);
 
         //save parameters
         PlayerPrefs.SetFloat("musicVolume", volume);
@@ -39,6 +39,8 @@ public class VolumeSettings : MonoBehaviour
     public void SetSFXVolume()
     {
         float volume = _SFXSlider.value;
+        //convertit la valeur linéaire du slider en une valeur logarithmique en dB.
+        //Chaque incrément de 20 dB correspond à un facteur de 10 dans l’intensité.
         _audioMixer.SetFloat("SFX", Mathf.Log10(_musicSlider.value) * 20);
 
         //save parameters
