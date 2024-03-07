@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class QueenMovement : MonoBehaviour, IMovementBrain
 {
-    bool playTurn = true;
+    bool playTurn = false;
     Piece thisPiece;
+    [SerializeField] Piece king;
 
     private void OnEnable() {
         thisPiece = GetComponentInParent<Piece>();
@@ -13,12 +14,12 @@ public class QueenMovement : MonoBehaviour, IMovementBrain
 
     public Tile GetTargetMovement(GridManager gridManager, Tile pos)
     {
+        playTurn = !playTurn;
         if(playTurn){
-            //return Pathfinding.Path()
+            return PathFinding.Path(gridManager, thisPiece, king);
         }
         else{
             return pos;
         }
-        return pos;
     }
 }

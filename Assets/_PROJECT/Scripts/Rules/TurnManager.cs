@@ -92,7 +92,7 @@ public class TurnManager : MonoBehaviour
                 }
             }
         }
-        VipOuReine.Movement.Myturn = true;
+        if(VipOuReine) VipOuReine.Movement.Myturn = true;
     }
 
     void InitPlayerTurn(){
