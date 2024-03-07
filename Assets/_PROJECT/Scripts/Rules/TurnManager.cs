@@ -30,6 +30,7 @@ public class TurnManager : MonoBehaviour
 
     public static UnityEvent m_OnTurnEnd;
     public static UnityEvent m_OnTurnBegin;
+    public UnityEvent OnStartDialogue;
 
     public int PlayerCounter { get => playerCounter; set => playerCounter = value; }
 
@@ -40,7 +41,7 @@ public class TurnManager : MonoBehaviour
         }
 
         whitePieces = gm.GetAllActiveWhitePieces();
-
+        OnStartDialogue.Invoke();
         BeginTurn();
     }
 
