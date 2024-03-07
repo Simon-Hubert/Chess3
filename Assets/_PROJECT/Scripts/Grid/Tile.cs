@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour
     [SerializeField] GridSettings gridSettings;
     [SerializeField] bool highlighted;
     [SerializeField] SpriteRenderer HighlightRenderer;
+    [SerializeField] Sprite whiteRenderer, blackRenderer;
     bool moveToAble;
 
     public event Action<GameObject> onMovedTo;
@@ -26,10 +27,10 @@ public class Tile : MonoBehaviour
 
         //Set le Sprite
         if(!whiteTile){
-            transform.Find("Visuel").GetComponentInChildren<SpriteRenderer>().color = Color.black;
+            transform.Find("Visuel").GetComponentInChildren<SpriteRenderer>().sprite = blackRenderer;
         }
         else{
-            transform.Find("Visuel").GetComponentInChildren<SpriteRenderer>().color = Color.white;
+            transform.Find("Visuel").GetComponentInChildren<SpriteRenderer>().sprite = whiteRenderer;
         }
         HighlightRenderer.enabled = false;
     }
