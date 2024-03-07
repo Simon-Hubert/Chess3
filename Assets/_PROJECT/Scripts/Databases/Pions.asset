@@ -58,7 +58,7 @@ MonoBehaviour:
     - moves: 7
       distance: 50
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: eb8e767cbad1a4c4b9eaf2abc5fa0941, type: 3}
     _isWhite: 0
     canFuse: 0
   - _name: Cavalier blanc
@@ -85,7 +85,7 @@ MonoBehaviour:
     - moves: 1
       distance: 50
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: acb54522a4ff80b42a5694fa05db8b65, type: 3}
     _isWhite: 1
     canFuse: 0
   - _name: Fou noir
@@ -103,7 +103,7 @@ MonoBehaviour:
     - moves: 7
       distance: 0
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: e1f008449222ab547a53a0b6f5b7cdc6, type: 3}
     _isWhite: 1
     canFuse: 0
   - _name: Tour noire

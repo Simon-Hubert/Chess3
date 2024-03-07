@@ -41,7 +41,7 @@ public class TurnManager : MonoBehaviour
         }
 
         whitePieces = gm.GetAllActiveWhitePieces();
-        OnStartDialogue.Invoke();
+        OnStartDialogue?.Invoke();
         BeginTurn();
     }
 
