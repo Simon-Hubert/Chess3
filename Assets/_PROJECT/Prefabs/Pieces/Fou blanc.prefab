@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Fou blanc
     _level: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
     _sprite: {fileID: 21300000, guid: acb54522a4ff80b42a5694fa05db8b65, type: 3}
     _isWhite: 1
     canFuse: 0
+    canBreak: 0
 --- !u!114 &8413582126807121921
 MonoBehaviour:
   m_ObjectHideFlags: 0

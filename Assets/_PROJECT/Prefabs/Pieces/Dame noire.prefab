@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Dame noire
     _level: 0
@@ -73,12 +74,13 @@ MonoBehaviour:
     - moves: 1
       distance: 50
       distance2: 0
-    - moves: 7
+    - moves: 5
       distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: eb8e767cbad1a4c4b9eaf2abc5fa0941, type: 3}
     _isWhite: 0
     canFuse: 0
+    canBreak: 0
 --- !u!114 &1397438502433651252
 MonoBehaviour:
   m_ObjectHideFlags: 0

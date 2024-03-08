@@ -142,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Pion blanc
     _level: 0
@@ -152,6 +153,7 @@ MonoBehaviour:
     _sprite: {fileID: 21300000, guid: 7c430264149bd8c40bc2b302a84069ff, type: 3}
     _isWhite: 1
     canFuse: 0
+    canBreak: 0
 --- !u!114 &3418935039617739774
 MonoBehaviour:
   m_ObjectHideFlags: 0
