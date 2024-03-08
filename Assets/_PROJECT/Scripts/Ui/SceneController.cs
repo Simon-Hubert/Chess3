@@ -54,9 +54,10 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
 
     }
-    public void LoadLevel1()
+    public void LoadLevel(string nameScene)
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(nameScene);
     }
+    
 
 }
