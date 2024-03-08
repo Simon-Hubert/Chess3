@@ -133,3 +133,15 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
+  - _name: Roi Fou Noir
+    _level: 0
+    _pattern:
+    - moves: 5
+      distance: 1
+      distance2: 0
+    - moves: 1
+      distance: 50
+      distance2: 0
+    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _isWhite: 0
+    canFuse: 0
