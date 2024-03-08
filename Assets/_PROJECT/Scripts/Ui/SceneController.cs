@@ -1,24 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
     [SerializeField] private Animator _transitionAnim;
     public static SceneController instance;
-
     private void Awake()
     {
-        /*if (instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        }*/
-        /*else
-        {
-            Destroy(gameObject);
-        }*/
+        }
+        
     }
 
     public void LoadNextLevel()
@@ -48,6 +46,17 @@ public class SceneController : MonoBehaviour
 #else
             Application.Quit();// en jeu
 #endif
+    }
+
+
+    public void Return()
+    {
+        SceneManager.LoadScene("MainMenu");
+
+    }
+    public void LoadLevel1()
+    {
+        SceneManager.LoadScene("Level1");
     }
 
 }

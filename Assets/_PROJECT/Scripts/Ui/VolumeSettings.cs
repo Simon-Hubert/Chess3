@@ -12,7 +12,12 @@ public class VolumeSettings : MonoBehaviour
     public bool _musicOn;
     public bool _SFXOff;
 
-
+    private void Awake()
+    {
+        _musicSlider = GameObject.Find("MusicSlider").GetComponent<Slider>();
+        _SFXSlider = GameObject.Find("SFXSlider").GetComponent<Slider>();
+    }
+   
     private void Start()
     {
         if (PlayerPrefs.HasKey("musicVolume"))

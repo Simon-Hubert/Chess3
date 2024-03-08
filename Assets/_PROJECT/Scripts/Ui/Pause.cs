@@ -5,23 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public static Pause instance;
 
     public GameObject _settingsMenu;
     public GameObject _settingsOnButton;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
     void Start()
     {
         _settingsMenu.SetActive(false);
