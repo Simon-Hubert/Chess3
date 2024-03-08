@@ -148,8 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77567ce74f9ffb440ab131168ef89ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: 0
-  patrols: []
 --- !u!114 &6174357840297332518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,8 +169,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9034653892887029190}
-  - component: {fileID: 5950365567985201904}
   - component: {fileID: 3160939092292720613}
+  - component: {fileID: 5950365567985201904}
+  - component: {fileID: 2328326007384433240}
   m_Layer: 0
   m_Name: Cavalier noir
   m_TagString: Untagged
@@ -197,6 +196,24 @@ Transform:
   - {fileID: 7991486326353999321}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3160939092292720613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8658925612912387455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5950365567985201904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Cavalier noir
     _level: 0
@@ -219,7 +237,8 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
---- !u!114 &3160939092292720613
+    canBreak: 0
+--- !u!114 &2328326007384433240
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

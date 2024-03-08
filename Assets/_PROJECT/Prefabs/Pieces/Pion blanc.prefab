@@ -85,8 +85,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2456782210585509963}
-  - component: {fileID: 4070911043201657531}
   - component: {fileID: 8297842139039737178}
+  - component: {fileID: 4070911043201657531}
+  - component: {fileID: 4870940170143139157}
   m_Layer: 0
   m_Name: Pion blanc
   m_TagString: Untagged
@@ -111,6 +112,24 @@ Transform:
   - {fileID: 8630711874427069510}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8297842139039737178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6465811663697469994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4070911043201657531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Pion blanc
     _level: 0
@@ -133,7 +153,8 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 0
---- !u!114 &8297842139039737178
+    canBreak: 0
+--- !u!114 &4870940170143139157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

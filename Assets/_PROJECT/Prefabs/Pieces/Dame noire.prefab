@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3462001563709641872}
-  - component: {fileID: 4122473218150423313}
   - component: {fileID: 8697186545674904319}
+  - component: {fileID: 4122473218150423313}
+  - component: {fileID: 4369798780657222191}
   m_Layer: 0
   m_Name: Dame noire
   m_TagString: Untagged
@@ -35,6 +36,24 @@ Transform:
   - {fileID: 1193714642167335673}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8697186545674904319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464229508439070943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4122473218150423313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Dame noire
     _level: 0
@@ -54,13 +74,14 @@ MonoBehaviour:
     - moves: 1
       distance: 50
       distance2: 0
-    - moves: 7
+    - moves: 5
       distance: 50
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
---- !u!114 &8697186545674904319
+    canBreak: 0
+--- !u!114 &4369798780657222191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,8 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77567ce74f9ffb440ab131168ef89ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: 0
-  patrols: []
 --- !u!114 &276079531046765390
 MonoBehaviour:
   m_ObjectHideFlags: 0

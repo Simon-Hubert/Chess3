@@ -25,6 +25,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 1
+    canBreak: 0
   - _name: Roi noir
     _level: 0
     _pattern:
@@ -37,30 +38,33 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
+    canBreak: 0
   - _name: Dame blanche
     _level: 0
     _pattern:
     - moves: 1
       distance: 50
       distance2: 0
-    - moves: 7
+    - moves: 5
       distance: 50
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 0
+    canBreak: 0
   - _name: Dame noire
     _level: 0
     _pattern:
     - moves: 1
       distance: 50
       distance2: 0
-    - moves: 7
+    - moves: 5
       distance: 50
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
+    canBreak: 0
   - _name: Cavalier blanc
     _level: 0
     _pattern:
@@ -70,6 +74,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 0
+    canBreak: 0
   - _name: Cavalier noir
     _level: 0
     _pattern:
@@ -79,6 +84,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
+    canBreak: 0
   - _name: Fou blanc
     _level: 0
     _pattern:
@@ -88,6 +94,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 0
+    canBreak: 0
   - _name: Fou noir
     _level: 0
     _pattern:
@@ -97,6 +104,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
+    canBreak: 0
   - _name: Tour blanche
     _level: 0
     _pattern:
@@ -106,6 +114,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 0
+    canBreak: 1
   - _name: Tour noire
     _level: 0
     _pattern:
@@ -115,6 +124,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
+    canBreak: 1
   - _name: Pion blanc
     _level: 0
     _pattern:
@@ -124,6 +134,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 0
+    canBreak: 0
   - _name: Pion noir
     _level: 0
     _pattern:
@@ -133,3 +144,14 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
+    canBreak: 0
+  - _name: Mur
+    _level: 0
+    _pattern:
+    - moves: 0
+      distance: 0
+      distance2: 0
+    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _isWhite: 0
+    canFuse: 0
+    canBreak: 0

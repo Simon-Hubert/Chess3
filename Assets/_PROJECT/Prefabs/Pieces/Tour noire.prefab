@@ -148,8 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77567ce74f9ffb440ab131168ef89ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: 0
-  patrols: []
 --- !u!114 &560142947571628216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,8 +169,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8619366705241744767}
-  - component: {fileID: 726445090568494988}
   - component: {fileID: 4535822869264119467}
+  - component: {fileID: 726445090568494988}
+  - component: {fileID: 2293150059130329956}
   m_Layer: 0
   m_Name: Tour noire
   m_TagString: Untagged
@@ -197,6 +196,24 @@ Transform:
   - {fileID: 948314396213469733}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4535822869264119467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050082348520185760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &726445090568494988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Tour noire
     _level: 0
@@ -219,7 +237,8 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
---- !u!114 &4535822869264119467
+    canBreak: 1
+--- !u!114 &2293150059130329956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

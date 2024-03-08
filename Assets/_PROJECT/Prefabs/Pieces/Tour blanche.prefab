@@ -85,8 +85,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8194954164911548465}
-  - component: {fileID: 1969047906534572483}
   - component: {fileID: 951333212880273128}
+  - component: {fileID: 1969047906534572483}
+  - component: {fileID: 2490358730977507017}
   m_Layer: 0
   m_Name: Tour blanche
   m_TagString: Untagged
@@ -111,6 +112,24 @@ Transform:
   - {fileID: 7185823852850563950}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &951333212880273128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4831620837765340082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1969047906534572483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Tour blanche
     _level: 0
@@ -133,7 +153,8 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 0
---- !u!114 &951333212880273128
+    canBreak: 1
+--- !u!114 &2490358730977507017
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

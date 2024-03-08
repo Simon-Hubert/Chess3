@@ -49,20 +49,56 @@ public class CheckMovements
 
     private static List<Tile> Move_P(Vector2Int coords, int distance, GridManager tileGrid)
     {
-        throw new NotImplementedException();
+        List<Tile> tiles = new List<Tile>();
+        tiles = Add(tiles, Move_I(coords, distance, tileGrid));
+        tiles = Add(tiles, Move__(coords, distance, tileGrid));
+        List<Tile> checkDiag = new List<Tile>();
+        checkDiag = Add(checkDiag, Move_X(coords, distance, tileGrid));
+        foreach (Tile tile in checkDiag)
+        {
+            if(tileGrid.GetPieceAt(tile.Coords)) tiles.Add(tile);
+        }
+        return tiles;
     }
 
     private static List<Tile> Move__(Vector2Int coords, int distance, GridManager tileGrid)
     {
         List<Tile> tiles = new List<Tile>();
+        bool thisPieceColor = tileGrid.GetPieceAt(coords).Data.IsWhite;
+        bool thisPieceCanBreak =tileGrid.GetPieceAt(coords).Data.CanBreak; //Insert 5 min breakdance video
+
 
         for(int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
+            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,0));
+            if(p){
+                if(p.IsWall && thisPieceCanBreak){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                else{
+                    tiles.Add(t);
+                    break;
+                }
+            }
             if(t) tiles.Add(t);
             else break;
         }
         for(int i=-1; i>=-distance; i--){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
+            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,0));
+            if(p){
+                if(p.IsWall && thisPieceCanBreak){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                else{
+                    tiles.Add(t);
+                    break;
+                }
+            }
             if(t) tiles.Add(t);
             else break;
         }
@@ -86,27 +122,78 @@ public class CheckMovements
         return tiles;
     }
 
-    private static List<Tile> Move_X(Vector2Int coords, int distance, GridManager tileGrid)
+    public static List<Tile> Move_X(Vector2Int coords, int distance, GridManager tileGrid)
     {
+        bool thisPieceColor = tileGrid.GetPieceAt(coords).Data.IsWhite;
+        bool thisPieceCanBreak =tileGrid.GetPieceAt(coords).Data.CanBreak; //Insert 5 min breakdance video
+
         List<Tile> tiles = new List<Tile>();
 
         for(int i=1, j=1; i<=distance; i++,j++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
+            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
+            if(p){
+                if(p.IsWall && thisPieceCanBreak){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                else{
+                    tiles.Add(t);
+                    break;
+                }
+            }
             if(t) tiles.Add(t);
             else break;
         }
         for(int i=1, j=-1; i<=distance; i++,j--){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
+            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
+            if(p){
+                if(p.IsWall && thisPieceCanBreak){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                else{
+                    tiles.Add(t);
+                    break;
+                }
+            }
             if(t) tiles.Add(t);
             else break;
         }
         for(int i=-1, j=1; i>=-distance; i--,j++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
+            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
+            if(p){
+                if(p.IsWall && thisPieceCanBreak){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                else{
+                    tiles.Add(t);
+                    break;
+                }
+            }
             if(t) tiles.Add(t);
             else break;
         }
         for(int i=-1, j=-1; i>=-distance; i--,j--){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
+            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
+            if(p){
+                if(p.IsWall && thisPieceCanBreak){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                else{
+                    tiles.Add(t);
+                    break;
+                }
+            }
             if(t) tiles.Add(t);
             else break;
         }
@@ -116,13 +203,39 @@ public class CheckMovements
     private static List<Tile> Move_I(Vector2Int coords, int distance, GridManager tileGrid)
     {
         List<Tile> tiles = new List<Tile>();
+        bool thisPieceColor = tileGrid.GetPieceAt(coords).Data.IsWhite;
+        bool thisPieceCanBreak =tileGrid.GetPieceAt(coords).Data.CanBreak; //Insert 5 min breakdance video
         for(int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
+            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(0,i));
+            if(p){
+                if(p.IsWall && thisPieceCanBreak){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                else{
+                    tiles.Add(t);
+                    break;
+                }
+            }
             if(t) tiles.Add(t);
             else break;
         }
         for(int i=-1; i>=-distance; i--){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
+            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(0,i));
+            if(p){
+                if(p.IsWall && thisPieceCanBreak){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                else{
+                    tiles.Add(t);
+                    break;
+                }
+            }
             if(t) tiles.Add(t);
             else break;
         }
