@@ -24,10 +24,10 @@ public class PieceSelection : MonoBehaviour
     }
 
     private void Start() {
-        thisPiece.Movement.OnMove += UnSelect;
+        Movements.OnMove += UnSelect;
     }
     private void OnDisable() {
-        thisPiece.Movement.OnMove -= UnSelect;
+        Movements.OnMove -= UnSelect;
     }
 
     private void LateUpdate() {

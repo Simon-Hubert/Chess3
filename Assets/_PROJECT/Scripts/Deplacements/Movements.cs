@@ -16,7 +16,7 @@ public class Movements : MonoBehaviour
 
     Tile target;
 
-    public event Action OnMove;
+    public static event Action OnMove;
     public event Action OnTeleport;
     public UnityEvent m_OnMove;
 
@@ -47,12 +47,12 @@ public class Movements : MonoBehaviour
         } 
 
         if(target){
-            OnMove?.Invoke();
-            m_OnMove?.Invoke();
             Piece piece = gridManager.GetPieceAt(target.Coords);
             bool eatOrFuse = false;
             if (piece) eatOrFuse = thisPiece.EatS.EatinG(piece);
             MoveToTarget(target);
+            OnMove?.Invoke();
+            m_OnMove?.Invoke();
 
             if (!piece || (piece && eatOrFuse))
             {
