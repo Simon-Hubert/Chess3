@@ -47,7 +47,7 @@ public class CheckMovements
 
     }
 
-    private static List<Tile> Move_P(Vector2Int coords, int distance, GridManager tileGrid)
+    public static List<Tile> Move_P(Vector2Int coords, int distance, GridManager tileGrid)
     {
         List<Tile> tiles = new List<Tile>();
         tiles = Add(tiles, Move_I(coords, distance, tileGrid));
@@ -61,22 +61,24 @@ public class CheckMovements
         return tiles;
     }
 
-    private static List<Tile> Move__(Vector2Int coords, int distance, GridManager tileGrid)
+    public static List<Tile> Move__(Vector2Int coords, int distance, GridManager tileGrid)
     {
         List<Tile> tiles = new List<Tile>();
-        bool thisPieceColor = tileGrid.GetPieceAt(coords).Data.IsWhite;
-        bool thisPieceCanBreak =tileGrid.GetPieceAt(coords).Data.CanBreak; //Insert 5 min breakdance video
-
+        Piece thisPiece = tileGrid.GetPieceAt(coords);
 
         for(int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,0));
             if(p){
-                if(p.IsWall && thisPieceCanBreak){
+                if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
                     break;
                 }
-                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
                 else{
                     tiles.Add(t);
                     break;
@@ -89,11 +91,15 @@ public class CheckMovements
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,0));
             if(p){
-                if(p.IsWall && thisPieceCanBreak){
+                if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
                     break;
                 }
-                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
                 else{
                     tiles.Add(t);
                     break;
@@ -105,7 +111,7 @@ public class CheckMovements
         return tiles;
     }
 
-    private static List<Tile> Move_L(Vector2Int coords, int distance, int distance2, GridManager tileGrid)
+    public static List<Tile> Move_L(Vector2Int coords, int distance, int distance2, GridManager tileGrid)
     {
         List<Tile> tiles = new List<Tile>();
 
@@ -124,20 +130,22 @@ public class CheckMovements
 
     public static List<Tile> Move_X(Vector2Int coords, int distance, GridManager tileGrid)
     {
-        bool thisPieceColor = tileGrid.GetPieceAt(coords).Data.IsWhite;
-        bool thisPieceCanBreak =tileGrid.GetPieceAt(coords).Data.CanBreak; //Insert 5 min breakdance video
-
         List<Tile> tiles = new List<Tile>();
+        Piece thisPiece = tileGrid.GetPieceAt(coords);
 
         for(int i=1, j=1; i<=distance; i++,j++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
             if(p){
-                if(p.IsWall && thisPieceCanBreak){
+                if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
                     break;
                 }
-                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
                 else{
                     tiles.Add(t);
                     break;
@@ -150,11 +158,15 @@ public class CheckMovements
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
             if(p){
-                if(p.IsWall && thisPieceCanBreak){
+                if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
                     break;
                 }
-                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
                 else{
                     tiles.Add(t);
                     break;
@@ -167,11 +179,15 @@ public class CheckMovements
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
             if(p){
-                if(p.IsWall && thisPieceCanBreak){
+                if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
                     break;
                 }
-                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
                 else{
                     tiles.Add(t);
                     break;
@@ -184,11 +200,15 @@ public class CheckMovements
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
             if(p){
-                if(p.IsWall && thisPieceCanBreak){
+                if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
                     break;
                 }
-                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
                 else{
                     tiles.Add(t);
                     break;
@@ -200,20 +220,23 @@ public class CheckMovements
         return tiles;
     }
 
-    private static List<Tile> Move_I(Vector2Int coords, int distance, GridManager tileGrid)
+    public static List<Tile> Move_I(Vector2Int coords, int distance, GridManager tileGrid)
     {
         List<Tile> tiles = new List<Tile>();
-        bool thisPieceColor = tileGrid.GetPieceAt(coords).Data.IsWhite;
-        bool thisPieceCanBreak =tileGrid.GetPieceAt(coords).Data.CanBreak; //Insert 5 min breakdance video
+        Piece thisPiece = tileGrid.GetPieceAt(coords);
         for(int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(0,i));
             if(p){
-                if(p.IsWall && thisPieceCanBreak){
+                if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
                     break;
                 }
-                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
                 else{
                     tiles.Add(t);
                     break;
@@ -226,11 +249,15 @@ public class CheckMovements
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(0,i));
             if(p){
-                if(p.IsWall && thisPieceCanBreak){
+                if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
                     break;
                 }
-                if(p.Data.IsWhite == thisPieceColor || p.IsWall) break;
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(t);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
                 else{
                     tiles.Add(t);
                     break;
