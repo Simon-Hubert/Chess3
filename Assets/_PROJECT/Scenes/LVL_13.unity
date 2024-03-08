@@ -5741,6 +5741,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
+--- !u!114 &715954446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3406936224258583708, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
+  m_PrefabInstance: {fileID: 715954445}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &715954447 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5755993342296155424, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
@@ -5799,7 +5810,7 @@ MonoBehaviour:
     - {fileID: 0}
     RoiBlanc: {fileID: 0}
   ruleDestroy:
-    RoiBlanc: {fileID: 0}
+    RoiBlanc: {fileID: 715954446}
   ruleEscape:
     RoiBlanc: {fileID: 0}
     Objectif: {fileID: 0}
@@ -10518,6 +10529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pion noir (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
+      propertyPath: _data._pattern.Array.data[0].moves
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7514878562847712743, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.84
@@ -13268,7 +13283,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1730180999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15974,7 +15989,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.8263283
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -15999,7 +16014,7 @@ Transform:
   m_GameObject: {fileID: 2036622346}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.55, y: 1.6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
