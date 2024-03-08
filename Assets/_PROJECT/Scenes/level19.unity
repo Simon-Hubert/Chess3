@@ -395,8 +395,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  grid: {fileID: 0}
-  gs: {fileID: 0}
+  grid: {fileID: 23330429}
+  gs: {fileID: 23330427}
 --- !u!156049354 &23330429
 Grid:
   m_ObjectHideFlags: 0
@@ -8692,11 +8692,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4728569526554972423, guid: cb428fa837335c645a50130c71432a54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.9105797
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 4728569526554972423, guid: cb428fa837335c645a50130c71432a54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.48130727
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 4728569526554972423, guid: cb428fa837335c645a50130c71432a54, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8733,6 +8733,10 @@ PrefabInstance:
     - target: {fileID: 8015355376879014610, guid: cb428fa837335c645a50130c71432a54, type: 3}
       propertyPath: m_Name
       value: Mur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922069183825640242, guid: cb428fa837335c645a50130c71432a54, type: 3}
+      propertyPath: isWall
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

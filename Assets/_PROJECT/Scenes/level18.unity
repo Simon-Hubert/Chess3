@@ -366,8 +366,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  grid: {fileID: 0}
-  gs: {fileID: 0}
+  grid: {fileID: 23330429}
+  gs: {fileID: 23330427}
 --- !u!156049354 &23330429
 Grid:
   m_ObjectHideFlags: 0
