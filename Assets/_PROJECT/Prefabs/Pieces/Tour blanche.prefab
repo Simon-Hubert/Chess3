@@ -147,8 +147,8 @@ MonoBehaviour:
     _name: Tour blanche
     _level: 0
     _pattern:
-    - moves: 7
-      distance: 0
+    - moves: 5
+      distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: e1f008449222ab547a53a0b6f5b7cdc6, type: 3}
     _isWhite: 1
