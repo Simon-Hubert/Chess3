@@ -85,8 +85,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2917982835879559385}
-  - component: {fileID: 7807484163711519429}
   - component: {fileID: 5177096307009348289}
+  - component: {fileID: 7807484163711519429}
+  - component: {fileID: 6886977368433747125}
   m_Layer: 0
   m_Name: Cavalier blanc
   m_TagString: Untagged
@@ -111,6 +112,24 @@ Transform:
   - {fileID: 803623327495021615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5177096307009348289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037294655448085238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 0}
+  pos: {fileID: 0}
+  myturn: 0
+  m_OnMove:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7807484163711519429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,10 +149,10 @@ MonoBehaviour:
     - moves: 2
       distance: 3
       distance2: 1
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: e97c18caf8001984594fc1be6040ca0a, type: 3}
     _isWhite: 1
     canFuse: 0
---- !u!114 &5177096307009348289
+--- !u!114 &6886977368433747125
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,14 +240,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e97c18caf8001984594fc1be6040ca0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0

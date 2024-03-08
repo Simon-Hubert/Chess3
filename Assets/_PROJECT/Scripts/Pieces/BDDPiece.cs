@@ -34,6 +34,7 @@ public class BDDPiece: ScriptableObject
         
         visual.AddComponent<SpriteRenderer>().sprite = pieceData.Sprite;
         visual.GetComponent<SpriteRenderer>().sortingOrder = 1;
+        visual.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
         piece.AddComponent<Piece>().Data = pieceData;
         brain.AddComponent<PieceSelection>();
 

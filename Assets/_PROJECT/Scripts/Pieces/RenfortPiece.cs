@@ -22,11 +22,14 @@ public class RenfortPiece : MonoBehaviour
     {
         visuel = transform.Find("Visual").GetComponentInChildren<SpriteRenderer>().gameObject;
         GetDir(dir)(visuel, -1); // 1 �tant la hauteur d'une tile
-        gameObject.SetActive(false);
     }
     private void OnEnable()
     {
         StartCoroutine(Arriving());
+    }
+
+    private void Start() {
+        gameObject.SetActive(false);
     }
 
     IEnumerator Arriving()
