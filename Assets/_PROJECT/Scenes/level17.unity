@@ -4427,7 +4427,6 @@ MonoBehaviour:
     RoiBlanc: {fileID: 1072069484}
   ruleEscape:
     RoiBlanc: {fileID: 1072069484}
-    TourInactionMax: 10
     Objectif: {fileID: 0}
     tileGrid: {fileID: 23330428}
   ruleRenforts: {fileID: 0}
@@ -4459,7 +4458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8731c15f867744b8cbebf9d195530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentPieces: {fileID: 943048688}
   _turnbase: 1
   blackPlayOrder:
   - {fileID: 1162516484}
@@ -4469,12 +4467,6 @@ MonoBehaviour:
   - {fileID: 1842125197}
   - {fileID: 947651080}
   - {fileID: 732768441}
-  m_OnTurnEnd:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnTurnBegin:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &719329969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4567,6 +4559,10 @@ PrefabInstance:
     - target: {fileID: 3247783639250752173, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
       propertyPath: m_Name
       value: Pion noir (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
+      propertyPath: _data._pattern.Array.data[0].moves
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6389180420386797166, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
       propertyPath: m_Color.b
@@ -5974,6 +5970,10 @@ PrefabInstance:
     - target: {fileID: 3247783639250752173, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
       propertyPath: m_Name
       value: Pion noir
+      objectReference: {fileID: 0}
+    - target: {fileID: 3412793334347302825, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
+      propertyPath: _data._pattern.Array.data[0].moves
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6389180420386797166, guid: 65bb384be2fa3db4d99e523ccdcd700f, type: 3}
       propertyPath: m_Color.b
