@@ -227,6 +227,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  grid: {fileID: 0}
+  gs: {fileID: 0}
 --- !u!156049354 &23330429
 Grid:
   m_ObjectHideFlags: 0
@@ -840,6 +842,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1240385550}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!4 &59040270
 Transform:
   m_ObjectHideFlags: 0
@@ -1076,6 +1082,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 778482795}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &121289918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,6 +1293,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1734238646}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &141572783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1334,6 +1348,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1659057141}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &143788039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2621,6 +2639,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 680275598}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &395924028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,6 +2934,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1663527424}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &449713516
 GameObject:
   m_ObjectHideFlags: 0
@@ -3131,6 +3157,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1094029616}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &493846304
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,6 +3632,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1050194117}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &631756362
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,6 +3687,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1641402565}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &680275596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,6 +3910,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 282337364}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &711191316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3923,6 +3965,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 368844936}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &711702652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3974,6 +4020,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 301913800}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &713640908
 GameObject:
   m_ObjectHideFlags: 0
@@ -4164,15 +4214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8731c15f867744b8cbebf9d195530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _turnbase: 1
-  blackPlayOrder:
-  - {fileID: 1162516484}
-  - {fileID: 901178250}
-  - {fileID: 0}
-  - {fileID: 1825822858}
-  - {fileID: 1842125197}
-  - {fileID: 947651080}
-  - {fileID: 732768441}
+  blackPieces: []
+  VipOuReine: {fileID: 0}
+  OnStartDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &719329969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4305,6 +4351,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1416316360}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &729686546
 GameObject:
   m_ObjectHideFlags: 0
@@ -4781,6 +4831,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1998732215}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &763493458
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,6 +4886,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1792271897}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &775964384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,6 +5093,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 437951013}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &814638780
 GameObject:
   m_ObjectHideFlags: 0
@@ -5086,6 +5148,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1890579041}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1001 &822386668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5105,6 +5171,10 @@ PrefabInstance:
     - target: {fileID: 124097760649091448, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
       propertyPath: m_Color.r
       value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969047906534572483, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: _data.canBreak
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1969047906534572483, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
       propertyPath: _data._pattern.Array.data[0].moves
@@ -5230,6 +5300,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1787040672}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &859429740
 GameObject:
   m_ObjectHideFlags: 0
@@ -5776,6 +5850,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1946148209}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &923050162
 GameObject:
   m_ObjectHideFlags: 0
@@ -6043,6 +6121,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1570809034}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &978244260
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,6 +6176,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 565014134}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1021159322
 GameObject:
   m_ObjectHideFlags: 0
@@ -6145,6 +6231,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 2088486478}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1050194115
 GameObject:
   m_ObjectHideFlags: 0
@@ -6449,6 +6539,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 75216518}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1089858167
 GameObject:
   m_ObjectHideFlags: 0
@@ -6742,6 +6836,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 373560727}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1108761536
 GameObject:
   m_ObjectHideFlags: 0
@@ -6877,6 +6975,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 43907487}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!114 &1162516484 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6611599004844913211, guid: 033cca33e48ef9f41bb17cf0635d572c, type: 3}
@@ -7191,6 +7293,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 923050164}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1240385549
 GameObject:
   m_ObjectHideFlags: 0
@@ -7326,6 +7432,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1799208852}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1289477750
 GameObject:
   m_ObjectHideFlags: 0
@@ -7461,6 +7571,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1799490005}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1316680206
 GameObject:
   m_ObjectHideFlags: 0
@@ -7680,6 +7794,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 2072878495}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1349197926
 GameObject:
   m_ObjectHideFlags: 0
@@ -7815,6 +7933,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1108761538}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1375231049
 GameObject:
   m_ObjectHideFlags: 0
@@ -7866,6 +7988,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 903377977}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1408890994
 GameObject:
   m_ObjectHideFlags: 0
@@ -8169,6 +8295,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 198276572}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1433895644
 GameObject:
   m_ObjectHideFlags: 0
@@ -8724,6 +8854,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1421002352}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1545010208
 GameObject:
   m_ObjectHideFlags: 0
@@ -8859,6 +8993,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1460789004}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1570809032
 GameObject:
   m_ObjectHideFlags: 0
@@ -9078,6 +9216,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 121289920}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1641402563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9549,6 +9691,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1289477752}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1730180998
 GameObject:
   m_ObjectHideFlags: 0
@@ -9930,6 +10076,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1730272581}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1787040670
 GameObject:
   m_ObjectHideFlags: 0
@@ -10653,6 +10803,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1803106731}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1820349638
 GameObject:
   m_ObjectHideFlags: 0
@@ -10704,6 +10858,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 859429742}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!114 &1825822858 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 726445090568494988, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
@@ -10861,6 +11019,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1688783705}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1868294337
 GameObject:
   m_ObjectHideFlags: 0
@@ -10996,6 +11158,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1178761816}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1881607507
 GameObject:
   m_ObjectHideFlags: 0
@@ -11215,6 +11381,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1470730928}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1922632058
 GameObject:
   m_ObjectHideFlags: 0
@@ -11760,6 +11930,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 590388174}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1973489715
 GameObject:
   m_ObjectHideFlags: 0
@@ -11979,6 +12153,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 493846306}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1998732213
 GameObject:
   m_ObjectHideFlags: 0
@@ -12114,6 +12292,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 370746497}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &1999871843
 GameObject:
   m_ObjectHideFlags: 0
@@ -12324,6 +12506,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1522367278}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &2006459756
 GameObject:
   m_ObjectHideFlags: 0
@@ -12375,6 +12561,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1771815780}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &2019102481
 GameObject:
   m_ObjectHideFlags: 0
@@ -12426,6 +12616,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 143788041}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &2036622346
 GameObject:
   m_ObjectHideFlags: 0
@@ -12614,6 +12808,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1855785415}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &2055272751
 GameObject:
   m_ObjectHideFlags: 0
@@ -12887,6 +13085,10 @@ PrefabInstance:
       value: 0.74509805
       objectReference: {fileID: 0}
     - target: {fileID: 1969047906534572483, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: _data.canBreak
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969047906534572483, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
       propertyPath: _data._pattern.Array.data[0].moves
       value: 5
       objectReference: {fileID: 0}
@@ -13010,6 +13212,10 @@ MonoBehaviour:
   gridSettings: {fileID: 23330427}
   highlighted: 0
   HighlightRenderer: {fileID: 1433895646}
+  whiteRenderer: {fileID: 0}
+  blackRenderer: {fileID: 0}
+  whiteHighlight: {fileID: 0}
+  blackHighlight: {fileID: 0}
 --- !u!1 &2106505434
 GameObject:
   m_ObjectHideFlags: 0
