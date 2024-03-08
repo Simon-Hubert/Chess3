@@ -48,10 +48,14 @@ public class GridManager : MonoBehaviour
     private void OnEnable() {
         TurnManager.OnTurnBegin += UpdateTileGrid;
         TurnManager.OnTurnBegin += UpdatePieceGrid;
+        Movements.OnMove += UpdateTileGrid_M;
+        Movements.OnMove += UpdatePieceGrid_M;
     }
     private void OnDisable() {
         TurnManager.OnTurnBegin -= UpdateTileGrid;
         TurnManager.OnTurnBegin -= UpdatePieceGrid;
+        Movements.OnMove -= UpdateTileGrid_M;
+        Movements.OnMove -= UpdatePieceGrid_M;
     }
 
     private List<Piece> ActivePieces(List<Piece> listPieces){
@@ -194,5 +198,13 @@ public class GridManager : MonoBehaviour
             Vector2Int c = (Vector2Int)grid.WorldToCell(tile.transform.position) - centralVector;
             tileGrid[c.x,c.y] = tile;
         }
+    }
+
+    private void UpdateTileGrid_M(){
+        UpdateTileGrid();
+    }
+
+    private void UpdatePieceGrid_M(){
+        UpdatePieceGrid();
     }
 }
