@@ -11,6 +11,7 @@ public enum MOVES
     L,
     _,
     P,
+    
     I_,
 }
 enum Names
@@ -38,7 +39,9 @@ public class PieceData
     [SerializeField] int _level = 0;
     [SerializeField] List<deplacement> _pattern;
     [SerializeField] Sprite _sprite;
-    [SerializeField] bool _isWhite, canFuse, canBreak;
+    [SerializeField] bool _isWhite, canFuse;
+    [SerializeField] AnimationCurve speed = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+    [SerializeField] float timeLimit = 2f;
 
     public string Name { get => _name; }
     public Sprite Sprite { get => _sprite; }
@@ -46,5 +49,6 @@ public class PieceData
     public bool IsWhite { get => _isWhite;}
     public bool CanFuse { get => canFuse; }
     public int Level { get => _level; set => _level = value; }
-    public bool CanBreak { get => canBreak; set => canBreak = value; }
+    public AnimationCurve Speed { get => speed; set => speed = value; }
+    public float TimeLimit { get => timeLimit; set => timeLimit = value; }
 }
