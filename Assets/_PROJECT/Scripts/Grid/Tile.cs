@@ -16,13 +16,15 @@ public class Tile : MonoBehaviour
     public Vector3Int Coords {get => grid.WorldToCell(transform.position);}
     public bool Highlighted { get => highlighted; set => highlighted = value; }
     public bool MoveToAble { get => moveToAble;}
+    public Grid Grid { get => grid; set => grid = value; }
+    public GridSettings GridSettings { get => gridSettings; set => gridSettings = value; }
 
     public void onPaint(){
         if((Coords.x + Coords.y)%2 == 0){
-            whiteTile = gridSettings.Inverted;
+            whiteTile = GridSettings.Inverted;
         }
         else{
-            whiteTile = !gridSettings.Inverted;
+            whiteTile = !GridSettings.Inverted;
         }
 
         //Set le Sprite

@@ -1,26 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class TurnManager : MonoBehaviour
 {
-    public enum turnbase{
-        classicChess,
-        tousEnMmTemps
-    }
+    // public enum turnbase{
+    //     classicChess,
+    //     tousEnMmTemps
+    // }
 
-    [SerializeField] turnbase _turnbase;
+    // [SerializeField] turnbase _turnbase;
 
-    [SerializeField, ShowIf("_turnbase", turnbase.classicChess)] List<Piece> blackPlayOrder;
+    [SerializeField] List<Piece> blackPieces;
+    [SerializeField] Piece VipOuReine;
 
     GridManager gm;
     List<Piece> whitePieces = new List<Piece>();
     int counterClassic = 0;
 
     int playerCounter = 0;
+
 
     bool playerTurn = true;
     bool turnEnded = false;
@@ -35,10 +38,13 @@ public class TurnManager : MonoBehaviour
     public int PlayerCounter { get => playerCounter; set => playerCounter = value; }
 
     private void Start() {
+        //RuleController rc = GetComponent<RuleController>();
         gm = FindObjectOfType<GridManager>();
-        if(_turnbase == turnbase.tousEnMmTemps){
-            MettreToutesLesPieces();
-        }
+        // if(_turnbase == turnbase.tousEnMmTemps){
+        //     MettreToutesLesPieces();
+        // }
+
+        blackPieces = gm.GetAllActiveBlackPieces();
 
         whitePieces = gm.GetAllActiveWhitePieces();
         OnStartDialogue?.Invoke();
@@ -57,15 +63,7 @@ public class TurnManager : MonoBehaviour
             InitPlayerTurn();
         }
         else{
-            switch (_turnbase) //Au cas ou on rajoute
-            {
-                case turnbase.classicChess:
-                    ClassiChessTurn();
-                    break;
-                case turnbase.tousEnMmTemps:
-                    TousEnMMtempsTurn();
-                    break;
-            }
+            InitEnemyTurn();
         }
     }
 
@@ -83,6 +81,21 @@ public class TurnManager : MonoBehaviour
         }
     }
 
+    void InitEnemyTurn(){
+        foreach (Piece piece in blackPieces)
+        {
+            foreach (Tile tile in CheckMovements.CheckMove((Vector2Int)piece.Coords, piece.Data.Pattern, gm))
+            {
+                Piece cible = gm.GetPieceAt(tile.Coords);
+                if(cible!=null && cible!=piece){
+                    piece.Movement.Myturn = true;
+                    return;
+                }
+            }
+        }
+        if(VipOuReine) VipOuReine.Movement.Myturn = true;
+    }
+
     void InitPlayerTurn(){
         foreach (Piece piece in whitePieces)
         {
@@ -90,31 +103,32 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    void ClassiChessTurn(){
-        if(CheckForActiveEnemies()){
-            Piece next = blackPlayOrder[counterClassic%blackPlayOrder.Count];
-            counterClassic ++;
-            if(next.gameObject.activeSelf) next.Movement.Myturn = true;
-            else ClassiChessTurn();
-        }
-        else EndTurn();
-    }
-
-    void TousEnMMtempsTurn(){
-        foreach (Piece piece in blackPlayOrder)
-        {
-            piece.Movement.Myturn = true;
-        }
-    }
-
     private bool CheckForActiveEnemies(){
         return gm.GetAllActiveBlackPieces().Count > 0;
     }
 
+    // void ClassiChessTurn(){
+    //     if(CheckForActiveEnemies()){
+    //         Piece next = blackPlayOrder[counterClassic%blackPlayOrder.Count];
+    //         counterClassic ++;
+    //         if(next.gameObject.activeSelf) next.Movement.Myturn = true;
+    //         else ClassiChessTurn();
+    //     }
+    //     else EndTurn();
+    // }
 
-    [Button]
-    void MettreToutesLesPieces(){
-        blackPlayOrder = gm.GetAllActiveBlackPieces();
-    }
+    // void TousEnMMtempsTurn(){
+    //     foreach (Piece piece in blackPlayOrder)
+    //     {
+    //         piece.Movement.Myturn = true;
+    //     }
+    // }
+
+
+
+    //[Button]
+    // void MettreToutesLesPieces(){
+    //     blackPieces = gm.GetAllActiveBlackPieces();
+    // }
 
 }
