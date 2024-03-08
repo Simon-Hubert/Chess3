@@ -66,6 +66,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Pion noir
     _level: 0
@@ -76,6 +77,7 @@ MonoBehaviour:
     _sprite: {fileID: 21300000, guid: 199023801633dbc418317bac5e9981de, type: 3}
     _isWhite: 0
     canFuse: 0
+    canBreak: 0
 --- !u!114 &1133885897959841361
 MonoBehaviour:
   m_ObjectHideFlags: 0
