@@ -118,8 +118,8 @@ MonoBehaviour:
   - _name: Tour noire
     _level: 0
     _pattern:
-    - moves: 7
-      distance: 0
+    - moves: 5
+      distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: 290a97c7258021147873eea7841d4b31, type: 3}
     _isWhite: 0
