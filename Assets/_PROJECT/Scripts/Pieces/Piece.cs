@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Movements))]
 public class Piece : MonoBehaviour
 {
+    [SerializeField] bool isWall = false;
     [SerializeField] PieceData _data;
     Grid grid;
     Movements movement;
@@ -14,6 +15,7 @@ public class Piece : MonoBehaviour
     public PieceData Data { get => _data; set => _data = value; }
     public Movements Movement { get => movement; set => movement = value; }
     public Eating EatS { get => eatS; set => eatS = value; }
+    public bool IsWall { get => isWall;}
 
     private void Awake()
     {

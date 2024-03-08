@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2456782210585509963}
   - component: {fileID: 8297842139039737178}
   - component: {fileID: 4070911043201657531}
-  - component: {fileID: 1234179374675598255}
+  - component: {fileID: 3418935039617739774}
   m_Layer: 0
   m_Name: Pion blanc
   m_TagString: Untagged
@@ -149,10 +149,10 @@ MonoBehaviour:
     - moves: 4
       distance: 1
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: 7c430264149bd8c40bc2b302a84069ff, type: 3}
     _isWhite: 1
     canFuse: 0
---- !u!114 &1234179374675598255
+--- !u!114 &3418935039617739774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,14 +243,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c430264149bd8c40bc2b302a84069ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0

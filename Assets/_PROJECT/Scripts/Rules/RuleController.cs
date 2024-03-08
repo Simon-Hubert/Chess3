@@ -21,10 +21,11 @@ public class RuleController : MonoBehaviour
     bool isEscape = false;
 
     public Rule_Escape RuleEscape { get => ruleEscape; set => ruleEscape = value; }
+    public RULES Rule { get => rule; set => rule = value; }
 
     private void OnValidate()
     {
-        if (rule == RULES.ESCAPE)
+        if (Rule == RULES.ESCAPE)
         {
             isEscape = true;
             renforts = false;
@@ -55,22 +56,22 @@ public class RuleController : MonoBehaviour
     private void Awake()
     {
         ruleDestroy.UpdateList();
-        if(rule == RULES.VIP)
+        if(Rule == RULES.VIP)
         {
             Eating.OnEat += ruleVip.UpdateBlackList;
         }
-        else if(rule == RULES.DESTROY)
+        else if(Rule == RULES.DESTROY)
         {
             Eating.OnEat += ruleDestroy.UpdateList;
         }
     }
     private void OnDisable()
     {
-        if (rule == RULES.VIP)
+        if (Rule == RULES.VIP)
         {
             Eating.OnEat -= ruleVip.UpdateBlackList;
         }
-        else if (rule == RULES.DESTROY)
+        else if (Rule == RULES.DESTROY)
         {
             Eating.OnEat -= ruleDestroy.UpdateList;
         }
@@ -78,7 +79,7 @@ public class RuleController : MonoBehaviour
 
     public IRules GetCurrentRule() 
     {
-        switch (rule)
+        switch (Rule)
         {
             case RULES.ESCAPE:
                 return ruleEscape;

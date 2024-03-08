@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4810878503187983521}
   - component: {fileID: 4727945788864262867}
   - component: {fileID: 4114518484421872772}
-  - component: {fileID: 2071185228699085819}
+  - component: {fileID: 7371451277656719919}
   m_Layer: 0
   m_Name: Roi noir
   m_TagString: Untagged
@@ -79,7 +79,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
     canFuse: 0
---- !u!114 &2071185228699085819
+--- !u!114 &7371451277656719919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,5 +255,5 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0

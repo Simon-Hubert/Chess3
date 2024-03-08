@@ -172,6 +172,8 @@ MonoBehaviour:
   pieces: []
   tiles:
   - {fileID: 0}
+  grid: {fileID: 23330429}
+  gs: {fileID: 23330427}
 --- !u!156049354 &23330429
 Grid:
   m_ObjectHideFlags: 0
@@ -215,7 +217,8 @@ MonoBehaviour:
   size: {x: 8, y: 8}
   thershold: 0.01
   number: 5
-  tilePrefab: {fileID: 8006582758400375192, guid: b6f260e155f73064d8cbf7645d69a555, type: 3}
+  tilePrefab: {fileID: 1787791534670284063, guid: b6f260e155f73064d8cbf7645d69a555, type: 3}
+  gm: {fileID: 23330428}
 --- !u!1 &126502080
 GameObject:
   m_ObjectHideFlags: 0

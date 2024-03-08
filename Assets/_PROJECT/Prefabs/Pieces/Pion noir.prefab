@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7514878562847712743}
   - component: {fileID: 8725374470039074835}
   - component: {fileID: 3412793334347302825}
-  - component: {fileID: 8244128034649647441}
+  - component: {fileID: 1133885897959841361}
   m_Layer: 0
   m_Name: Pion noir
   m_TagString: Untagged
@@ -73,10 +73,10 @@ MonoBehaviour:
     - moves: 4
       distance: 1
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: 199023801633dbc418317bac5e9981de, type: 3}
     _isWhite: 0
     canFuse: 0
---- !u!114 &8244128034649647441
+--- !u!114 &1133885897959841361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,14 +243,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 199023801633dbc418317bac5e9981de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0

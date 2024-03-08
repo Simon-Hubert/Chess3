@@ -73,16 +73,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 460fea763e01a164caadd3cd85f9136c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &5228089726745220129
 GameObject:
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 9034653892887029190}
   - component: {fileID: 3160939092292720613}
   - component: {fileID: 5950365567985201904}
-  - component: {fileID: 5761994572325563766}
+  - component: {fileID: 6886038572979022480}
   m_Layer: 0
   m_Name: Cavalier noir
   m_TagString: Untagged
@@ -231,12 +231,12 @@ MonoBehaviour:
     _level: 0
     _pattern:
     - moves: 2
-      distance: 2
+      distance: 3
       distance2: 1
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: 460fea763e01a164caadd3cd85f9136c, type: 3}
     _isWhite: 0
     canFuse: 0
---- !u!114 &5761994572325563766
+--- !u!114 &6886038572979022480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

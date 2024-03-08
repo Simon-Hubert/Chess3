@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4855134163951490268}
   - component: {fileID: 2931493245418261084}
   - component: {fileID: 6611599004844913211}
-  - component: {fileID: 7704922042351968935}
+  - component: {fileID: 5957280321954488479}
   m_Layer: 0
   m_Name: Fou noir
   m_TagString: Untagged
@@ -73,10 +73,10 @@ MonoBehaviour:
     - moves: 1
       distance: 50
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: d70e969cee06aad4db581355a2247b84, type: 3}
     _isWhite: 0
     canFuse: 0
---- !u!114 &7704922042351968935
+--- !u!114 &5957280321954488479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -243,14 +243,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d70e969cee06aad4db581355a2247b84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0

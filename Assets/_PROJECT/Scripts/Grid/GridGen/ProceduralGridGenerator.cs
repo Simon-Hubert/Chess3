@@ -9,12 +9,12 @@ public class ProceduralGridGenerator : MonoBehaviour
     [SerializeField, ShowIf("generationMethod", GridGenLibrary.FunctionName.SingleBlob)] Vector2Int size = new Vector2Int(8,8);
     [SerializeField, ShowIf("generationMethod", GridGenLibrary.FunctionName.PerlinNoise)] float thershold = 0.01f;
     [SerializeField, ShowIf("generationMethod", GridGenLibrary.FunctionName.MultipleSquares)] int number = 1;
-    [SerializeField] Tile tilePrefab;
+    [SerializeField] GameObject tilePrefab;
+    [SerializeField] GridManager gm;
 
-
-    private void Start() {
-        GridManager gm = GetComponent<GridManager>();
-
+    [Button]
+    private void Generate() {
+        gm.ClearGrid();
         GridGenLibrary.GetFunction(generationMethod)(gm, tilePrefab, size, thershold, number);
     }
 }

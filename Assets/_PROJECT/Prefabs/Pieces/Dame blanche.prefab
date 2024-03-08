@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 971092422327864638}
   - component: {fileID: 3179646798788428975}
   - component: {fileID: 3525524801638744687}
-  - component: {fileID: 7682594095741509398}
+  - component: {fileID: 6071708000606747471}
   m_Layer: 0
   m_Name: Dame blanche
   m_TagString: Untagged
@@ -155,7 +155,7 @@ MonoBehaviour:
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 1
     canFuse: 0
---- !u!114 &7682594095741509398
+--- !u!114 &6071708000606747471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,5 +255,5 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
