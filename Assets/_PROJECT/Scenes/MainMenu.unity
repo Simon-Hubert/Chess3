@@ -346,6 +346,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleSettingsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 7535480563019901940, guid: 5b0ea95470f3c594dac06dcf776a3a8c, type: 3}
+      propertyPath: m_MinValue
+      value: 0.0001
+      objectReference: {fileID: 0}
     - target: {fileID: 8321131203857709573, guid: 5b0ea95470f3c594dac06dcf776a3a8c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -912,6 +916,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1501808590}
     m_Modifications:
+    - target: {fileID: 718779963619631357, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: sc
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3626196159806431332, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1047,4 +1055,3 @@ SceneRoots:
   - {fileID: 1501808590}
   - {fileID: 773336659877589688}
   - {fileID: 1943545113}
-  - {fileID: 352699453}

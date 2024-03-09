@@ -16,6 +16,11 @@ public class VolumeSettings : MonoBehaviour
         _musicSlider = GameObject.Find("MusicSlider").GetComponent<Slider>();
         _SFXSlider = GameObject.Find("SFXSlider").GetComponent<Slider>();
 
+        
+    }
+   
+    private void Start()
+    {
         if (PlayerPrefs.HasKey("musicVolume"))
         {
             LoadVolume();
@@ -25,11 +30,6 @@ public class VolumeSettings : MonoBehaviour
             SetMusicVolume();
             SetSFXVolume();
         }
-    }
-   
-    private void Start()
-    {
-        
 
     }
     public void SetMusicVolume()
