@@ -183,7 +183,7 @@ public class GridManager : MonoBehaviour
                 pieceGrid[i,j] = null;
             }
         }
-        foreach (Piece piece in Pieces)
+        foreach (Piece piece in GetAllActivePieces())
         {
             Vector2Int c = (Vector2Int)grid.WorldToCell(piece.transform.position) - centralVector;
             pieceGrid[c.x,c.y] = piece;
