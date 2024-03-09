@@ -1,37 +1,41 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
     [SerializeField] private Animator _transitionAnim;
+    [SerializeField] GameObject childToPreserve;
     public static SceneController instance;
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            childToPreserve = GameObject.Find("CircleWipeTransition");
+            childToPreserve.transform.SetParent(null); // Détache l'enfant
+            DontDestroyOnLoad(childToPreserve);
+            //Si ça marche pas c que le script getButton récupere pas le sceneController
         }
-        
-    }
+<<<<<<< Updated upstream
+        else
+        {
+            Destroy(gameObject);
+        }
+=======
 
-    public void LoadNextLevel()
+        //GetComponent<Button>().onClick.AddListener(instance.LoadNextLevel);
+
+>>>>>>> Stashed changes
+    }
+    #region MAINMENU
+    /*public void Play()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        SceneManager.LoadScene("Level");
 
-    }
-
-    IEnumerator LoadLevel(int levelIndex)
-    {
-        _transitionAnim.SetTrigger("Start");
-        yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(levelIndex);
-        _transitionAnim.SetTrigger("End");
-    }
+    }*/
 
     public void SelectLevel()
     {
@@ -47,17 +51,20 @@ public class SceneController : MonoBehaviour
             Application.Quit();// en jeu
 #endif
     }
+    #endregion
 
-
-    public void Return()
+    public void LoadNextLevel()
     {
-        SceneManager.LoadScene("MainMenu");
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
 
     }
-    public void LoadLevel(string nameScene)
+
+    IEnumerator LoadLevel(int levelIndex)
     {
-        SceneManager.LoadScene(nameScene);
+        _transitionAnim.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadSceneAsync(levelIndex);
+        _transitionAnim.SetTrigger("End");
     }
-    
 
 }
