@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     [SerializeField] private Animator _transitionAnim;
+    [SerializeField] GameObject childToPreserve;
     public static SceneController instance;
 
     private void Awake()
@@ -13,12 +14,21 @@ public class SceneController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            childToPreserve = GameObject.Find("CircleWipeTransition");
+            childToPreserve.transform.SetParent(null); // Détache l'enfant
+            DontDestroyOnLoad(childToPreserve);
+            //Si ça marche pas c que le script getButton récupere pas le sceneController
         }
+<<<<<<< Updated upstream
         else
         {
             Destroy(gameObject);
         }
+=======
+
+        //GetComponent<Button>().onClick.AddListener(instance.LoadNextLevel);
+
+>>>>>>> Stashed changes
     }
     #region MAINMENU
     /*public void Play()
