@@ -113,7 +113,8 @@ public class CheckMovements
 
     public static List<Tile> Move_L(Vector2Int coords, int distance, int distance2, GridManager tileGrid)
     {
-        List<Tile> tiles = new List<Tile>();
+        List<Tile> tilesTemp = new List<Tile>();
+        Piece thisPiece = tileGrid.GetPieceAt(coords);
 
         foreach (Tile tile in tileGrid.Tiles)
         {
@@ -121,8 +122,29 @@ public class CheckMovements
             bool b = Mathf.Abs(tile.Coords.y - coords.y) == distance;
             bool c = Mathf.Abs(tile.Coords.x - coords.x) == distance2;
             bool d = Mathf.Abs(tile.Coords.y - coords.y) == distance2;
-            if((a&&d)||(b&&c)) tiles.Add(tile);
-;
+            if((a&&d)||(b&&c)) tilesTemp.Add(tile);
+        }
+        List<Tile> tiles = new List<Tile>();
+
+        foreach (Tile tile in tilesTemp)
+        {
+            Piece p = tileGrid.GetPieceAt(tile.Coords);
+
+            if(p){
+                if(p.IsWall && thisPiece.Data.CanBreak){
+                    tiles.Add(tile);
+                    break;
+                }
+                if(p.Data.CanFuse || thisPiece.Data.CanFuse){
+                    tiles.Add(tile);
+                    break;
+                }
+                if(p.Data.IsWhite == thisPiece.Data.IsWhite || p.IsWall) break;
+                else{
+                    tiles.Add(tile);
+                    break;
+                }
+            }
         }
 
         return tiles;
