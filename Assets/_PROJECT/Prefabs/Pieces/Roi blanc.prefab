@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5755993342296155424}
   - component: {fileID: 972006641828163987}
   - component: {fileID: 3406936224258583708}
-  - component: {fileID: 7034458392507520166}
   m_Layer: 0
   m_Name: Roi blanc
   m_TagString: Untagged
@@ -81,24 +80,6 @@ MonoBehaviour:
     _isWhite: 1
     canFuse: 1
     canBreak: 0
---- !u!114 &7034458392507520166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 359880982895338444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridManager: {fileID: 0}
-  pos: {fileID: 0}
-  myturn: 0
-  m_OnMove:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &3599397099659267622
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,9 +12,12 @@ public class Teleporter : MonoBehaviour
     [SerializeField] UnityEvent onTeleport;
     [SerializeField] Animator portal;
     [SerializeField] GameObject Portal;
+
+    public Teleporter TP { get => teleporter; private set => teleporter = value; }
+
     private void Awake()
     {
-        Portal = GameObject.Find("Téléporteur");
+        Portal = GameObject.Find("Teleporteur");
         portal = Portal.GetComponent<Animator>();
         thisTile = GetComponent<Tile>();
     }

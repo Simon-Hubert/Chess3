@@ -51,8 +51,7 @@ public class Movements : MonoBehaviour
             bool eatOrFuse = false;
             if (piece) eatOrFuse = thisPiece.EatS.EatinG(piece);
             MoveToTarget(target);
-            OnMove?.Invoke();
-            m_OnMove?.Invoke();
+            
 
             if (!piece || (piece && eatOrFuse))
             {
@@ -63,13 +62,17 @@ public class Movements : MonoBehaviour
         }
     }
 
-    private void MoveToTarget(Tile tile)
+    public void MoveToTarget(Tile tile)
     {
         if(tile != pos)
         {
             tile.OnMovedTo(gameObject);
         }
+        Teleporter tp = tile.GetComponent<Teleporter>();
+        if(tp) tile = tp.TP.GetComponent<Tile>();
         transform.position = tile.transform.position;
         pos = tile;
+        OnMove?.Invoke();
+        m_OnMove?.Invoke();
     }
 }
