@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -48,12 +49,16 @@ public class GridManager : MonoBehaviour
     private void OnEnable() {
         TurnManager.OnTurnBegin += UpdateTileGrid;
         TurnManager.OnTurnBegin += UpdatePieceGrid;
+        TurnManager.OnTurnEnd += UpdateTileGrid;
+        TurnManager.OnTurnEnd += UpdatePieceGrid;
         Movements.OnMove += UpdateTileGrid_M;
         Movements.OnMove += UpdatePieceGrid_M;
     }
     private void OnDisable() {
         TurnManager.OnTurnBegin -= UpdateTileGrid;
         TurnManager.OnTurnBegin -= UpdatePieceGrid;
+        TurnManager.OnTurnEnd -= UpdateTileGrid;
+        TurnManager.OnTurnEnd -= UpdatePieceGrid;
         Movements.OnMove -= UpdateTileGrid_M;
         Movements.OnMove -= UpdatePieceGrid_M;
     }
@@ -178,7 +183,7 @@ public class GridManager : MonoBehaviour
                 pieceGrid[i,j] = null;
             }
         }
-        foreach (Piece piece in Pieces)
+        foreach (Piece piece in GetAllActivePieces())
         {
             Vector2Int c = (Vector2Int)grid.WorldToCell(piece.transform.position) - centralVector;
             pieceGrid[c.x,c.y] = piece;
@@ -200,10 +205,12 @@ public class GridManager : MonoBehaviour
         }
     }
 
+    
     private void UpdateTileGrid_M(){
         UpdateTileGrid();
     }
 
+    
     private void UpdatePieceGrid_M(){
         UpdatePieceGrid();
     }

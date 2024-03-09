@@ -82,18 +82,22 @@ public class TurnManager : MonoBehaviour
     }
 
     void InitEnemyTurn(){
-        foreach (Piece piece in blackPieces)
-        {
-            foreach (Tile tile in CheckMovements.CheckMove((Vector2Int)piece.Coords, piece.Data.Pattern, gm))
+        if(CheckForActiveEnemies()){
+            foreach (Piece piece in gm.GetAllActiveBlackPieces())
             {
-                Piece cible = gm.GetPieceAt(tile.Coords);
-                if(cible!=null && cible!=piece){
-                    piece.Movement.Myturn = true;
-                    return;
+                foreach (Tile tile in CheckMovements.CheckMove((Vector2Int)piece.Coords, piece.Data.Pattern, gm))
+                {
+                    Piece cible = gm.GetPieceAt(tile.Coords);
+                    if(cible!=null && cible!=piece){
+                        piece.Movement.Myturn = true;
+                        return;
+                    }
                 }
             }
+            if(VipOuReine) VipOuReine.Movement.Myturn = true;
+            else EndTurn();
         }
-        if(VipOuReine) VipOuReine.Movement.Myturn = true;
+        
         else EndTurn();
     }
 
