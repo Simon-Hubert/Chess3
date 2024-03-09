@@ -19,16 +19,9 @@ public class SceneController : MonoBehaviour
             DontDestroyOnLoad(childToPreserve);
             //Si ça marche pas c que le script getButton récupere pas le sceneController
         }
-<<<<<<< Updated upstream
-        else
-        {
-            Destroy(gameObject);
-        }
-=======
 
         //GetComponent<Button>().onClick.AddListener(instance.LoadNextLevel);
 
->>>>>>> Stashed changes
     }
     #region MAINMENU
     /*public void Play()
@@ -65,6 +58,23 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(levelIndex);
         _transitionAnim.SetTrigger("End");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("MainMenu");
+
+    }
+
+    public void LoadLevel(string nameScene)
+    {
+       
+        SceneManager.LoadScene(nameScene);
     }
 
 }
