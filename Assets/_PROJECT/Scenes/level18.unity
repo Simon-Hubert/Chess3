@@ -3437,6 +3437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461852175}
   - component: {fileID: 461852176}
+  - component: {fileID: 461852177}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -3482,6 +3483,50 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+--- !u!114 &461852177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461852174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee5a93368bec6942be57a154732243b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleporter: {fileID: 633411184}
+  timeLimit: 2
+  speed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  thisTile: {fileID: 0}
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls: []
+  portal: {fileID: 1675212220}
+  Portal: {fileID: 1675212219}
 --- !u!1 &462337255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,6 +3863,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &511569578
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 940264266048901659, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4153188720585261440, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133990381214371967, guid: f2dbc0d30d1837842924495505474510, type: 3}
+      propertyPath: m_Name
+      value: "T\xE9l\xE9porteur"
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f2dbc0d30d1837842924495505474510, type: 3}
 --- !u!1 &526079942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4581,6 +4687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633411182}
   - component: {fileID: 633411183}
+  - component: {fileID: 633411184}
   m_Layer: 0
   m_Name: Tile(Clone)
   m_TagString: Untagged
@@ -4626,6 +4733,50 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+--- !u!114 &633411184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633411181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee5a93368bec6942be57a154732243b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleporter: {fileID: 461852177}
+  timeLimit: 2
+  speed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  thisTile: {fileID: 0}
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls: []
+  portal: {fileID: 1675212220}
+  Portal: {fileID: 1675212219}
 --- !u!1 &650772912
 GameObject:
   m_ObjectHideFlags: 0
@@ -11943,6 +12094,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1675212219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8133990381214371967, guid: f2dbc0d30d1837842924495505474510, type: 3}
+  m_PrefabInstance: {fileID: 511569578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1675212220 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7614648704634108867, guid: f2dbc0d30d1837842924495505474510, type: 3}
+  m_PrefabInstance: {fileID: 511569578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1692442749
 GameObject:
   m_ObjectHideFlags: 0
@@ -14878,3 +15039,4 @@ SceneRoots:
   - {fileID: 713640912}
   - {fileID: 775964387}
   - {fileID: 13709984}
+  - {fileID: 511569578}
