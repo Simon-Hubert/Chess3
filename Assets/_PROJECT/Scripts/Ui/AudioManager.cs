@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
         Sound sound = Array.Find(musicSounds, s => s.name == name);//vérifie si la propriété name de chaque élément s dans le tableau est égale au paramètre name fourni.
         if (sound == null)
         {
-            Debug.Log("Sound not found !");
+            Debug.Log("Music not found !");
         }
         else
         {
@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySfx(string name, float volume)
+    public void PlaySfx(string name)
     {
         Sound sound = Array.Find(sfxSounds, s => s.name == name);//vérifie si la propriété name de chaque élément s dans le tableau est égale au paramètre name fourni.
         if (sound == null)

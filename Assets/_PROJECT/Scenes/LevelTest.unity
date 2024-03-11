@@ -6684,7 +6684,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8731c15f867744b8cbebf9d195530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentPieces: {fileID: 943048688}
   _turnbase: 0
   blackPlayOrder:
   - {fileID: 1205599142}
@@ -12393,7 +12392,7 @@ GameObject:
   - component: {fileID: 1393561787}
   - component: {fileID: 1393561786}
   m_Layer: 5
-  m_Name: PauseMenu
+  m_Name: SettingsMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

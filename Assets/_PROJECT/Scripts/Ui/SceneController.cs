@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     [SerializeField] private Animator _transitionAnim;
+    [SerializeField] GameObject childToPreserve;
     public static SceneController instance;
 
     private void Awake()
@@ -13,12 +14,14 @@ public class SceneController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            childToPreserve = GameObject.Find("CircleWipeTransition");
+            childToPreserve.transform.SetParent(null); // Détache l'enfant
+            DontDestroyOnLoad(childToPreserve);
+            //Si ça marche pas c que le script getButton récupere pas le sceneController
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+
+        //GetComponent<Button>().onClick.AddListener(instance.LoadNextLevel);
+
     }
     #region MAINMENU
     /*public void Play()
@@ -55,6 +58,23 @@ public class SceneController : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadSceneAsync(levelIndex);
         _transitionAnim.SetTrigger("End");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Return()
+    {
+        SceneManager.LoadScene("MainMenu");
+
+    }
+
+    public void LoadLevel(string nameScene)
+    {
+       
+        SceneManager.LoadScene(nameScene);
     }
 
 }

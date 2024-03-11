@@ -603,6 +603,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &59040270
 Transform:
   m_ObjectHideFlags: 0
@@ -1167,6 +1170,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &177963222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,6 +1396,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &208567059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1454,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &210780376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,6 +1512,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &214210068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,6 +1654,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &216694776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,6 +1784,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &238397050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2257,6 +2278,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &318162653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2572,6 +2596,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &358524821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,6 +3734,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &545450762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,6 +3876,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &549758234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4069,6 +4102,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &604257049
 GameObject:
   m_ObjectHideFlags: 0
@@ -4376,6 +4412,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &700379529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4431,6 +4470,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &713640908
 GameObject:
   m_ObjectHideFlags: 0
@@ -4762,6 +4804,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &740259010
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,6 +4946,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &775964384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5024,6 +5072,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &792210279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5163,6 +5214,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &844241096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5303,6 +5357,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &845463895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5990,6 +6047,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &929381771
 GameObject:
   m_ObjectHideFlags: 0
@@ -6107,6 +6167,8 @@ Transform:
   - {fileID: 256095429}
   - {fileID: 1205599140}
   - {fileID: 1129515802}
+  - {fileID: 2004105612}
+  - {fileID: 1214785487}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &945119567
@@ -6248,6 +6310,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &947220722
 GameObject:
   m_ObjectHideFlags: 0
@@ -6387,6 +6452,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &958215940
 GameObject:
   m_ObjectHideFlags: 0
@@ -6862,6 +6930,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1021664763
 GameObject:
   m_ObjectHideFlags: 0
@@ -6917,6 +6988,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1041215002
 GameObject:
   m_ObjectHideFlags: 0
@@ -7197,6 +7271,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1075506824
 GameObject:
   m_ObjectHideFlags: 0
@@ -7420,6 +7497,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1107664646
 GameObject:
   m_ObjectHideFlags: 0
@@ -7840,6 +7920,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1172204052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7900,6 +7983,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1214785486
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 943048689}
+    m_Modifications:
+    - target: {fileID: 1969047906534572483, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: _data._pattern.Array.data[0].moves
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969047906534572483, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: _data._pattern.Array.data[0].distance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831620837765340082, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_Name
+      value: Tour blanche
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+--- !u!4 &1214785487 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8194954164911548465, guid: 64ef88bdcf6df6743b119c8cb98b3294, type: 3}
+  m_PrefabInstance: {fileID: 1214785486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1221009866
 GameObject:
   m_ObjectHideFlags: 0
@@ -8039,6 +8192,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1233337255
 GameObject:
   m_ObjectHideFlags: 0
@@ -8094,6 +8250,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1240383468
 GameObject:
   m_ObjectHideFlags: 0
@@ -8485,6 +8644,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1274459058
 GameObject:
   m_ObjectHideFlags: 0
@@ -8624,6 +8786,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1323686514
 GameObject:
   m_ObjectHideFlags: 0
@@ -8679,6 +8844,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1337195016
 GameObject:
   m_ObjectHideFlags: 0
@@ -8734,6 +8902,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1358123606
 GameObject:
   m_ObjectHideFlags: 0
@@ -9124,6 +9295,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1447057817
 GameObject:
   m_ObjectHideFlags: 0
@@ -9179,6 +9353,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1459873675
 GameObject:
   m_ObjectHideFlags: 0
@@ -9318,6 +9495,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1466876794
 GameObject:
   m_ObjectHideFlags: 0
@@ -9373,6 +9553,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1478143151
 GameObject:
   m_ObjectHideFlags: 0
@@ -9512,6 +9695,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1482183945
 GameObject:
   m_ObjectHideFlags: 0
@@ -10243,6 +10429,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1602965018
 GameObject:
   m_ObjectHideFlags: 0
@@ -10880,6 +11069,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1768688587
 GameObject:
   m_ObjectHideFlags: 0
@@ -11019,6 +11211,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1803025635
 GameObject:
   m_ObjectHideFlags: 0
@@ -11074,6 +11269,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1823135953
 GameObject:
   m_ObjectHideFlags: 0
@@ -11297,6 +11495,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1899731264
 GameObject:
   m_ObjectHideFlags: 0
@@ -11352,6 +11553,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1925135568
 GameObject:
   m_ObjectHideFlags: 0
@@ -11659,6 +11863,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1970779067
 GameObject:
   m_ObjectHideFlags: 0
@@ -11898,6 +12105,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1999871843
 GameObject:
   m_ObjectHideFlags: 0
@@ -11973,6 +12183,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999871843}
   m_CullTransparentMesh: 1
+--- !u!1001 &2004105611
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 943048689}
+    m_Modifications:
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037294655448085238, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+      propertyPath: m_Name
+      value: Cavalier blanc
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+--- !u!4 &2004105612 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2917982835879559385, guid: 5f21d993d14146541ab18a4dcf0d7958, type: 3}
+  m_PrefabInstance: {fileID: 2004105611}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031824082
 GameObject:
   m_ObjectHideFlags: 0
@@ -12249,6 +12521,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2044807899
 GameObject:
   m_ObjectHideFlags: 0
@@ -12388,6 +12663,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2051047644
 GameObject:
   m_ObjectHideFlags: 0
@@ -12634,6 +12912,9 @@ MonoBehaviour:
   blackRenderer: {fileID: 21300000, guid: 1a7b13fe2a6af9740bd0a7b01cb330ae, type: 3}
   whiteHighlight: {fileID: 21300000, guid: 0dd4dcd664d630f4a84e69fe1f179e4a, type: 3}
   blackHighlight: {fileID: 21300000, guid: 168efbba68f18984bb865894fbc0e1c0, type: 3}
+  m_OnMovedTo:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2126320922
 GameObject:
   m_ObjectHideFlags: 0
