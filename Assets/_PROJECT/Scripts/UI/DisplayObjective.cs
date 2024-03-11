@@ -13,11 +13,12 @@ public class DisplayObjective : MonoBehaviour
         StartCoroutine(ShowObjective());
     }
 
-    private IEnumerator ShowObjective()
+    public IEnumerator ShowObjective()
     {
         _panel.SetActive(true);
         yield return new WaitForSeconds(3);
         _panel.SetActive(false);
+
     }
 
     private void OnValidate()

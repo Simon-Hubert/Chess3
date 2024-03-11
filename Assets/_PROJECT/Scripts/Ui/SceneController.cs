@@ -9,6 +9,8 @@ public class SceneController : MonoBehaviour
     [SerializeField] GameObject childToPreserve;
     public static SceneController instance;
 
+    [SerializeField] DisplayObjective _displayObjective;
+
     private void Awake()
     {
         if (instance == null)
@@ -63,6 +65,7 @@ public class SceneController : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        _displayObjective.StartCoroutine(_displayObjective.ShowObjective());
     }
 
     public void Return()
