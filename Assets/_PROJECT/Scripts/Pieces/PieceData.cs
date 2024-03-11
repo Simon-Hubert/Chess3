@@ -37,6 +37,7 @@ public class PieceData
     [SerializeField] string _name;
     [SerializeField] int _level = 0;
     [SerializeField] List<deplacement> _pattern;
+    List<deplacement> _patternSave;
     [SerializeField] Sprite _sprite;
     [SerializeField] bool _isWhite, canFuse, canBreak;
 
@@ -47,4 +48,5 @@ public class PieceData
     public bool CanFuse { get => canFuse; }
     public int Level { get => _level; set => _level = value; }
     public bool CanBreak { get => canBreak; set => canBreak = value; }
+    public List<deplacement> PatternSave { get => _patternSave; set => _patternSave = value; }
 }
