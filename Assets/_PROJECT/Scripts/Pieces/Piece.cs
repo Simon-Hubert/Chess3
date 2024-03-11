@@ -19,6 +19,7 @@ public class Piece : MonoBehaviour
 
     private void Awake()
     {
+        _data.PatternSave = _data.Pattern;
         eatS = GetComponentInChildren<Eating>();
         movement = transform.GetComponent<Movements>();
         grid = FindObjectOfType<Grid>();

@@ -33,7 +33,7 @@ public class Fuse
         piece.Data.Pattern.Clear();
         for (int i = 0; i < pieceSave.Pattern.Count; i++)
         {
-            var m = pieceSave.Pattern[i];
+            var m = pieceSave.PatternSave[i];
             piece.Data.Pattern.Add(m);
         }
 
