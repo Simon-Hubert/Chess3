@@ -39,6 +39,7 @@ public class PieceData
     [SerializeField] List<deplacement> _pattern;
     [SerializeField] Sprite _sprite;
     [SerializeField] bool _isWhite, canFuse, canBreak;
+    
 
     public string Name { get => _name; }
     public Sprite Sprite { get => _sprite; }

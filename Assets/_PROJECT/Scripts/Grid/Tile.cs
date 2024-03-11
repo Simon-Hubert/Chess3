@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Tile : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Tile : MonoBehaviour
     [SerializeField] bool highlighted;
     [SerializeField] SpriteRenderer HighlightRenderer;
     [SerializeField] Sprite whiteRenderer, blackRenderer, whiteHighlight, blackHighlight;
+    [SerializeField] UnityEvent m_OnMovedTo;
     bool moveToAble;
 
     public event Action<GameObject> onMovedTo;
@@ -58,5 +60,6 @@ public class Tile : MonoBehaviour
     public void OnMovedTo(GameObject g)
     {
         onMovedTo?.Invoke(g);
+        m_OnMovedTo?.Invoke();
     }
 }
