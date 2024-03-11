@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CheckMovements
 {
-    public static List<Tile> CheckMove(Vector2Int coords, List<PieceData.deplacement> deplacements, GridManager tileGrid)
+    public static List<Tile> CheckMove(Vector2Int coords, List<PieceData.deplacement> deplacements, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> allTiles = new List<Tile>();
         foreach (PieceData.deplacement deplacement in deplacements)
@@ -13,23 +13,23 @@ public class CheckMovements
             switch (deplacement.moves)
             {
                 case MOVES.I:
-                    Add(allTiles, Move_I(coords, deplacement.distance, tileGrid));
+                    Add(allTiles, Move_I(coords, deplacement.distance, tileGrid, thisPiece));
                     break;
                 case MOVES.X:
-                    Add(allTiles, Move_X(coords, deplacement.distance, tileGrid));
+                    Add(allTiles, Move_X(coords, deplacement.distance, tileGrid, thisPiece));
                     break;
                 case MOVES.L:
                     Add(allTiles, Move_L(coords, deplacement.distance, deplacement.distance2, tileGrid));
                     break;
                 case MOVES._:
-                    Add(allTiles,  Move__(coords, deplacement.distance, tileGrid));
+                    Add(allTiles,  Move__(coords, deplacement.distance, tileGrid, thisPiece));
                     break;
                 case MOVES.P:
                     Add(allTiles, Move_P(coords, deplacement.distance, tileGrid));
                     break;
                 case MOVES.I_:
-                    Add(allTiles, Move_I(coords, deplacement.distance, tileGrid));
-                    Add(allTiles, Move__(coords, deplacement.distance, tileGrid));
+                    Add(allTiles, Move_I(coords, deplacement.distance, tileGrid, thisPiece));
+                    Add(allTiles, Move__(coords, deplacement.distance, tileGrid, thisPiece));
                     break;
             }
         }
@@ -59,10 +59,10 @@ public class CheckMovements
         return tiles;
     }
 
-    public static List<Tile> Move__(Vector2Int coords, int distance, GridManager tileGrid)
+    public static List<Tile> Move__(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        Piece thisPiece = tileGrid.GetPieceAt(coords);
+        if(!thisPiece) thisPiece = tileGrid.GetPieceAt(coords);
 
         for(int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
@@ -159,10 +159,10 @@ public class CheckMovements
         return tiles;
     }
 
-    public static List<Tile> Move_X(Vector2Int coords, int distance, GridManager tileGrid)
+    public static List<Tile> Move_X(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        Piece thisPiece = tileGrid.GetPieceAt(coords);
+        if(!thisPiece) thisPiece = tileGrid.GetPieceAt(coords);
 
         for(int i=1, j=1; i<=distance; i++,j++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
@@ -271,10 +271,11 @@ public class CheckMovements
         return tiles;
     }
 
-    public static List<Tile> Move_I(Vector2Int coords, int distance, GridManager tileGrid)
+    public static List<Tile> Move_I(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        Piece thisPiece = tileGrid.GetPieceAt(coords);
+        if(!thisPiece) thisPiece = tileGrid.GetPieceAt(coords);
+
         for(int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(0,i));
