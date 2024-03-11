@@ -8,7 +8,7 @@ public class Teleporter : MonoBehaviour
     [SerializeField] Teleporter teleporter;
     [SerializeField] float timeLimit = 2.0f;
     [SerializeField] AnimationCurve speed = AnimationCurve.Linear(0f, 0f, 1f, 1f);
-    Tile thisTile;
+    [SerializeField] Tile thisTile;
     [SerializeField] UnityEvent onTeleport;
     [SerializeField] Animator portal;
     [SerializeField] GameObject Portal;
@@ -32,7 +32,8 @@ public class Teleporter : MonoBehaviour
 
     void Teleport(GameObject g)
     {
-        StartCoroutine(Teleportation(g));
+        GameObject visual = g.transform.Find("Visual").gameObject;
+        StartCoroutine(Teleportation(visual));
     }
     IEnumerator Teleportation(GameObject g)
     {
@@ -54,15 +55,7 @@ public class Teleporter : MonoBehaviour
                 a = true;
                 b = true;
             }
-            if (g.transform.position.x != teleporter.transform.position.x && !a)
-            {
-                Debug.Log("if2");
-                pos.y = Mathf.Lerp(thisTile.transform.position.y, 8.5f, speed.Evaluate(elapsedTime));
-                g.transform.position = new Vector2(g.transform.position.x, pos.y);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-            else
+            if (a && b)
             {
                 Debug.Log("else");
                 pos.y = Mathf.Lerp(g.transform.position.y, teleporter.transform.position.y, speed.Evaluate(e2));
@@ -71,6 +64,15 @@ public class Teleporter : MonoBehaviour
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
+            else 
+            {
+                Debug.Log("if2");
+                pos.y = Mathf.Lerp(thisTile.transform.position.y, 8.5f, speed.Evaluate(elapsedTime));
+                g.transform.position = new Vector2(thisTile.transform.position.x, pos.y);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
 
         }
     }
