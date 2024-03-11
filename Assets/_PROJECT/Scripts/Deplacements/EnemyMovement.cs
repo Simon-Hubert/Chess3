@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
-using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour, IMovementBrain

@@ -31,9 +31,9 @@ public class Fuse
     public static void Defusing(Piece piece, PieceData pieceSave)
     {
         piece.Data.Pattern.Clear();
-        for (int i = 0; i < pieceSave.Pattern.Count; i++)
+        for (int i = 0; i < piece.PatternSave.Count; i++)
         {
-            var m = pieceSave.PatternSave[i];
+            var m = piece.PatternSave[i];
             piece.Data.Pattern.Add(m);
         }
 
