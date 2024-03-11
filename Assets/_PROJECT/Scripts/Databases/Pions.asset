@@ -108,8 +108,8 @@ MonoBehaviour:
   - _name: Tour blanche
     _level: 0
     _pattern:
-    - moves: 7
-      distance: 0
+    - moves: 5
+      distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: e1f008449222ab547a53a0b6f5b7cdc6, type: 3}
     _isWhite: 1
@@ -138,7 +138,7 @@ MonoBehaviour:
   - _name: Pion noir
     _level: 0
     _pattern:
-    - moves: 4
+    - moves: 1
       distance: 1
       distance2: 0
     _sprite: {fileID: 21300000, guid: 199023801633dbc418317bac5e9981de, type: 3}
