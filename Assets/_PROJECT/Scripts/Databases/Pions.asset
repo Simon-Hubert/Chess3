@@ -155,7 +155,7 @@ MonoBehaviour:
     _isWhite: 0
     canFuse: 0
     canBreak: 0
-  - _name: Tour/Roi Noire_VIP
+  - _name: Tour_Roi Noire_VIP
     _level: 0
     _pattern:
     - moves: 1
