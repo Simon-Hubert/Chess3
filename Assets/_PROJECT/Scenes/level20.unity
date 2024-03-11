@@ -6637,11 +6637,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb2aa44f062bec48843f4c888042823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rule: 2
+  rule: 0
   ruleVip:
     BlackList:
-    - {fileID: 0}
-    RoiBlanc: {fileID: 0}
+    - {fileID: 723290393}
+    RoiBlanc: {fileID: 1072069484}
   ruleDestroy:
     RoiBlanc: {fileID: 1072069484}
   ruleEscape:
