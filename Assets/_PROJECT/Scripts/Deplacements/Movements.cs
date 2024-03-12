@@ -67,6 +67,7 @@ public class Movements : MonoBehaviour
         if(tile != pos)
         {
             tile.OnMovedTo(gameObject);
+            Anm_piece.Move(transform.position, tile.transform.position, this.gameObject); // Play Animation
         }
         Teleporter tp = tile.GetComponent<Teleporter>();
         if(tp) tile = tp.TP.GetComponent<Tile>();
