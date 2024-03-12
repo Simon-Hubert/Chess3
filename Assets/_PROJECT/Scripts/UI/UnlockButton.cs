@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class UnlockButton : MonoBehaviour
 {
      [SerializeField]    bool isUnlocked = false;
+
+    public bool IsUnlocked { get => isUnlocked; set => isUnlocked = value; }
+
     private void Start()
     {
-        if (!isUnlocked)
+        if (!IsUnlocked)
         {
-            GetComponent<Button>().enabled = isUnlocked;
+            GetComponent<Button>().enabled = IsUnlocked;
         }
         else
         {
@@ -20,7 +23,7 @@ public class UnlockButton : MonoBehaviour
 
     public void Unlocking()
     {
-        isUnlocked = true;
-        GetComponent<Button>().enabled = isUnlocked;
+        IsUnlocked = true;
+        GetComponent<Button>().enabled = IsUnlocked;
     }
 }

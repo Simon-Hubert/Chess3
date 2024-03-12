@@ -3,39 +3,42 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.UI;
+using System;
 
 public class SaveData: MonoBehaviour
 {
+    struct levelData
+    {
+        public int stars;
+        public bool isUnlocked;
+    }
     public static SaveData instance;
-    int _level = 1;
-    [SerializeField] List<UnlockButton> buttons = new List<UnlockButton>();
+    public IDataServices services = new JSonDataService();
+    List<UnlockButton> buttons = new List<UnlockButton>();
+    levelData[] levelsData = new levelData[20];
     SceneController sc;
-    public int Level { get => _level; set => _level = value; }
+
     private void OnEnable()
     {
         sc = GetComponent<SceneController>();
-        sc.OnLoadSelect += SetListButton;
+        sc.OnLoadSelect += SetData;
     }
     private void OnDisable()
     {
-        sc.OnLoadSelect -= SetListButton;
-    }
-    private void Start()
-    {
-       if(PlayerPrefs.GetInt("Level") != 0)
-        {
-            Level = PlayerPrefs.GetInt("Level");
-            Debug.Log("You have unlocked " + Level +" levels");
-        }
-        Debug.LogWarning("There is no Level Stored !");
+        sc.OnLoadSelect -= SetData;
     }
     [Button]
-    public void Saving()
+    public void UpdateLEVEL(int level, int stars)
     {
-        Level++;
-        PlayerPrefs.SetInt("Level", Level);
+        levelsData[level].isUnlocked = true;
+        levelsData[level].stars = stars;
+        Save();
     }
-    public void SetListButton(GameObject parentB)
+    public void Save()
+    {
+        services.SaveData("/levelsData.json", levelsData, false);
+    }
+    public void SetData(GameObject parentB)
     {
         buttons.Clear();
         foreach(Button button in parentB.GetComponentsInChildren<Button>())
@@ -44,6 +47,28 @@ public class SaveData: MonoBehaviour
             {
                 buttons.Add(button.GetComponent<UnlockButton>());
             }
+        }
+        for(int i=0; i<buttons.Count; i++)
+        {
+            levelData data = levelsData[i];
+            data.isUnlocked = buttons[i].IsUnlocked;
+        }
+    }
+    public void Load()
+    {
+        try
+        {
+            levelsData = services.LoadData<levelData[]>("/levelsData.json", false);
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                levelData data = levelsData[i];
+                //buttons[i].IsUnlocked = data.isUnlocked;
+                if (data.isUnlocked) buttons[i].Unlocking();
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Could not read file !");
         }
     }
 }

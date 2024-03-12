@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PartyManager : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class PartyManager : MonoBehaviour
         {
             panelVictory.SetActive(true);
             vS.SetScreen(score.SetStars(tm.PlayerCounter));
+            Scene currentScene = SceneManager.GetActiveScene();
+            int index = currentScene.buildIndex - 1;
+            SaveData.instance.UpdateLEVEL(index, score.SetStars(tm.PlayerCounter));
         }
 
         else if (ruleController.GetCurrentRule().IsLost())
