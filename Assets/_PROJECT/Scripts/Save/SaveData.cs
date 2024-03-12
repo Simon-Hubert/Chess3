@@ -2,34 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-public class SaveData : MonoBehaviour
+public class SaveData
 {
     public static SaveData instance;
     int _level = 1;
-    private void Awake()
-    {
-        if(instance != null)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            instance = this;
-        }
-    }
+
+    public int Level { get => _level; set => _level = value; }
+
     private void Start()
     {
        if(PlayerPrefs.GetInt("Level") != 0)
         {
-            _level = PlayerPrefs.GetInt("Level");
-            Debug.Log("You have unlocked " + _level +" levels");
+            Level = PlayerPrefs.GetInt("Level");
+            Debug.Log("You have unlocked " + Level +" levels");
         }
         Debug.LogWarning("There is no Level Stored !");
     }
     [Button]
     public void Saving()
     {
-        _level++;
-        PlayerPrefs.SetInt("Level", _level);
+        Level++;
+        PlayerPrefs.SetInt("Level", Level);
     }
 }
