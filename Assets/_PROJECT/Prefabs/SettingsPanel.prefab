@@ -298,8 +298,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4394340142459015170}
-        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+      - m_Target: {fileID: 2699737694383767935}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
@@ -1943,6 +1943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159630583083879040}
   - component: {fileID: 301005216807077718}
+  - component: {fileID: 4680202770617527780}
   m_Layer: 5
   m_Name: SettingsPanel
   m_TagString: Untagged
@@ -1980,6 +1981,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6078701854792263797}
   m_CullTransparentMesh: 1
+--- !u!114 &4680202770617527780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078701854792263797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0463ce1f8fcae34aaeac14dc5bc9e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 0}
+  _displayTime: 3
 --- !u!1 &6409952510001354152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,6 +2568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _settingsMenu: {fileID: 8197915052731083836}
   _settingsOnButton: {fileID: 3877566424370467254}
+  _displayObjective: {fileID: 4680202770617527780}
 --- !u!222 &8213214380632144775
 CanvasRenderer:
   m_ObjectHideFlags: 0

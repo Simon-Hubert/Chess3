@@ -9,8 +9,6 @@ public class SceneController : MonoBehaviour
     [SerializeField] GameObject childToPreserve;
     public static SceneController instance;
 
-    [SerializeField] DisplayObjective _displayObjective;
-
     private void Awake()
     {
         if (instance == null)
@@ -22,9 +20,8 @@ public class SceneController : MonoBehaviour
             //Si ça marche pas c que le script getButton récupere pas le sceneController
         }
 
-        //GetComponent<Button>().onClick.AddListener(instance.LoadNextLevel);
-
     }
+
     #region MAINMENU
     /*public void Play()
     {
@@ -62,11 +59,7 @@ public class SceneController : MonoBehaviour
         _transitionAnim.SetTrigger("End");
     }
 
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        _displayObjective.StartCoroutine(_displayObjective.ShowObjective());
-    }
+   
 
     public void Return()
     {
