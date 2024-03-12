@@ -1896,6 +1896,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1464229508439070943, guid: 7df382ce7f0251c41aa0afe4677782fe, type: 3}
   m_PrefabInstance: {fileID: 122072509}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &236676922 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4122473218150423313, guid: 7df382ce7f0251c41aa0afe4677782fe, type: 3}
+  m_PrefabInstance: {fileID: 122072509}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236676920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &245567099
 GameObject:
   m_ObjectHideFlags: 0
@@ -3426,13 +3437,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 719329964}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 719329968}
+        m_TargetAssemblyTypeName: TurnManager, Assembly-CSharp
+        m_MethodName: ChangeReine_VIP
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 236676922}
+          m_ObjectArgumentAssemblyTypeName: Piece, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
