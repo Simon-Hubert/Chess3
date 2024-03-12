@@ -28,7 +28,7 @@ public class Eating : MonoBehaviour
                 gameObject.transform.parent.gameObject.SetActive(false);
             }
             OnEat?.Invoke(pieceTarget);
-            audioManager.PlaySfx("Eat");
+            //audioManager.PlaySfx("Eat");
             return true;
         }
         else
