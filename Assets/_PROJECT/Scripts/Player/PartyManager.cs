@@ -8,8 +8,11 @@ public class PartyManager : MonoBehaviour
     VictoryScreen vS;
     TurnManager tm;
     RuleController ruleController;
-    Scores score;
+    [SerializeField] Scores score;
     [SerializeField] GameObject panelVictory, panelLose;
+
+    public GameObject PanelVictory { get => panelVictory; }
+
     private void Awake()
     {
         tm = GetComponent<TurnManager>();
@@ -26,10 +29,11 @@ public class PartyManager : MonoBehaviour
     {
         if (ruleController.GetCurrentRule().IsWon())
         {
-            panelVictory.SetActive(true);
+            PanelVictory.SetActive(true);
             vS.SetScreen(score.SetStars(tm.PlayerCounter));
             Scene currentScene = SceneManager.GetActiveScene();
             int index = currentScene.buildIndex - 1;
+            Debug.Log(SaveData.instance);
             SaveData.instance.UpdateLEVEL(index, score.SetStars(tm.PlayerCounter));
         }
 

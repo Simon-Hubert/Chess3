@@ -14,24 +14,29 @@ public class SaveData: MonoBehaviour
     }
     public static SaveData instance;
     public IDataServices services = new JSonDataService();
-    List<UnlockButton> buttons = new List<UnlockButton>();
+    [SerializeField] List<UnlockButton> buttons = new List<UnlockButton>();
     levelData[] levelsData = new levelData[20];
-    SceneController sc;
-
+    [SerializeField] SceneController sc;
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
     private void OnEnable()
     {
         sc = GetComponent<SceneController>();
         sc.OnLoadSelect += SetData;
+        sc.OnLoadSelect += Load;
     }
     private void OnDisable()
     {
         sc.OnLoadSelect -= SetData;
+        sc.OnLoadSelect += Load;
     }
-    [Button]
+    //[Button]
     public void UpdateLEVEL(int level, int stars)
     {
         levelsData[level].isUnlocked = true;
-        levelsData[level].stars = stars;
+        levelsData[level - 1].stars = stars;
         Save();
     }
     public void Save()
@@ -54,7 +59,7 @@ public class SaveData: MonoBehaviour
             data.isUnlocked = buttons[i].IsUnlocked;
         }
     }
-    public void Load()
+    public void Load(GameObject balek = null)
     {
         try
         {
