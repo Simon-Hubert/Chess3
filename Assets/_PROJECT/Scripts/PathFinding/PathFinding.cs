@@ -69,7 +69,7 @@ public class PathFinding
                     current = tile;
                     tilesChecked.Add(current);
                     newList.Remove(current);
-                    foreach(Tile currentNeighbour in CheckMovements.CheckMove((Vector2Int)current.Coords, queen.Data.Pattern, gm))
+                    foreach(Tile currentNeighbour in CheckMovements.CheckMove((Vector2Int)current.Coords, queen.Data.Pattern, gm, queen))
                     {
                         if(!tilesChecked.Contains(currentNeighbour))
                         {
@@ -122,7 +122,7 @@ public class PathFinding
     static List<Tile> CheckTile(Tile start, int n, Tile end, Piece queen, GridManager gm, List<Tile> tilesChecked, Dictionary<int, Properties> Map)
     {
         List<Tile> newTiles = new List<Tile>();
-        foreach (Tile tile in CheckMovements.CheckMove((Vector2Int)start.Coords, queen.Data.Pattern, gm))
+        foreach (Tile tile in CheckMovements.CheckMove((Vector2Int)start.Coords, queen.Data.Pattern, gm, queen))
         {
             if(!tilesChecked.Contains(tile))
             {
