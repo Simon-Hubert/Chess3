@@ -5993,7 +5993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackPieces: []
-  VipOuReine: {fileID: 0}
+  VipOuReine: {fileID: 854463193}
   OnStartDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -6919,13 +6919,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: V.I.P Jval
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1911415351590463962, guid: 192df39dc84f0234a95a137dfa2999a0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4653687733559860396, guid: 192df39dc84f0234a95a137dfa2999a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 854463191}
+    - targetCorrespondingSourceObject: {fileID: 730336066361679463, guid: 192df39dc84f0234a95a137dfa2999a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1044897917}
   m_SourcePrefab: {fileID: 100100000, guid: 192df39dc84f0234a95a137dfa2999a0, type: 3}
 --- !u!4 &854463189 stripped
 Transform:
@@ -6955,6 +6959,17 @@ MonoBehaviour:
   - {fileID: 2083708110}
   - {fileID: 4817126}
   roiBlanc: {fileID: 0}
+--- !u!114 &854463193 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7023047927214931243, guid: 192df39dc84f0234a95a137dfa2999a0, type: 3}
+  m_PrefabInstance: {fileID: 854463188}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854463190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &865957275
 GameObject:
   m_ObjectHideFlags: 0
@@ -8273,6 +8288,29 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1044897915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 730336066361679463, guid: 192df39dc84f0234a95a137dfa2999a0, type: 3}
+  m_PrefabInstance: {fileID: 854463188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1044897917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044897915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e1c2710c757914ba6545c0bb9bb936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrol:
+  - {fileID: 1867082837}
+  - {fileID: 2083708110}
+  - {fileID: 4817126}
+  - {fileID: 1518656296}
+  roiBlanc: {fileID: 373848401}
 --- !u!1001 &1066332638
 PrefabInstance:
   m_ObjectHideFlags: 0
