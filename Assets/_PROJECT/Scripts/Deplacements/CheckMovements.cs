@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CheckMovements
 {
-    public static List<Tile> CheckMove(Vector2Int coords, List<PieceData.deplacement> deplacements, GridManager tileGrid, Piece thisPiece = null)
+    public static List<Tile> CheckMove(Vector2Int coords, List<PieceData.deplacement> deplacements, GridManager tileGrid, Piece thisPiece = null )
     {
         List<Tile> allTiles = new List<Tile>();
         foreach (PieceData.deplacement deplacement in deplacements)
@@ -19,13 +19,13 @@ public class CheckMovements
                     Add(allTiles, Move_X(coords, deplacement.distance, tileGrid, thisPiece));
                     break;
                 case MOVES.L:
-                    Add(allTiles, Move_L(coords, deplacement.distance, deplacement.distance2, tileGrid));
+                    Add(allTiles, Move_L(coords, deplacement.distance, deplacement.distance2, tileGrid, thisPiece));
                     break;
                 case MOVES._:
                     Add(allTiles,  Move__(coords, deplacement.distance, tileGrid, thisPiece));
                     break;
                 case MOVES.P:
-                    Add(allTiles, Move_P(coords, deplacement.distance, tileGrid));
+                    Add(allTiles, Move_P(coords, deplacement.distance, tileGrid, thisPiece));
                     break;
                 case MOVES.I_:
                     Add(allTiles, Move_I(coords, deplacement.distance, tileGrid, thisPiece));
@@ -45,7 +45,7 @@ public class CheckMovements
 
     }
 
-    public static List<Tile> Move_P(Vector2Int coords, int distance, GridManager tileGrid)
+    public static List<Tile> Move_P(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
         tiles = Add(tiles, Move_I(coords, distance, tileGrid));
@@ -62,7 +62,7 @@ public class CheckMovements
     public static List<Tile> Move__(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        if(!thisPiece) thisPiece = tileGrid.GetPieceAt(coords);
+        if(thisPiece == null) thisPiece = tileGrid.GetPieceAt(coords);
 
         for(int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
@@ -115,10 +115,10 @@ public class CheckMovements
         return tiles;
     }
 
-    public static List<Tile> Move_L(Vector2Int coords, int distance, int distance2, GridManager tileGrid)
+    public static List<Tile> Move_L(Vector2Int coords, int distance, int distance2, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tilesTemp = new List<Tile>();
-        Piece thisPiece = tileGrid.GetPieceAt(coords);
+        if (thisPiece == null) thisPiece = tileGrid.GetPieceAt(coords);
 
         foreach (Tile tile in tileGrid.Tiles)
         {
@@ -162,9 +162,9 @@ public class CheckMovements
     public static List<Tile> Move_X(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        if(!thisPiece) thisPiece = tileGrid.GetPieceAt(coords);
+        if (thisPiece == null) thisPiece = tileGrid.GetPieceAt(coords);
 
-        for(int i=1, j=1; i<=distance; i++,j++){
+        for (int i=1, j=1; i<=distance; i++,j++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
             if (p)
@@ -274,9 +274,8 @@ public class CheckMovements
     public static List<Tile> Move_I(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        if(!thisPiece) thisPiece = tileGrid.GetPieceAt(coords);
-
-        for(int i=1; i<=distance; i++){
+        if (thisPiece == null) thisPiece = tileGrid.GetPieceAt(coords);
+        for (int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
             Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(0,i));
             if (p)
