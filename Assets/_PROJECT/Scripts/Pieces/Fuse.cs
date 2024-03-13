@@ -18,6 +18,7 @@ public class Fuse
             }
             Debug.Log("Fusion with " + pieceTarget.Data.Name);
             pieceTarget.gameObject.SetActive(false);
+            piece.GetComponentInChildren<SpriteRenderer>().sprite = pieceTarget.Data.SpriteFusion;
             piece.Data.Level++;
             OnFuse?.Invoke(pieceTarget);
         }
@@ -36,7 +37,7 @@ public class Fuse
             var m = piece.PatternSave[i];
             piece.Data.Pattern.Add(m);
         }
-
+        piece.GetComponentInChildren<SpriteRenderer>().sprite = piece.Data.Sprite;
         piece.Data.Level--;
         // CHANGE LE SPRITE
     }

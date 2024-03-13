@@ -23,6 +23,7 @@ MonoBehaviour:
       distance: 1
       distance2: 0
     _sprite: {fileID: 21300000, guid: 2641522a74371a24ca73b633450712da, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 1
     canFuse: 1
     canBreak: 0
@@ -35,7 +36,8 @@ MonoBehaviour:
     - moves: 1
       distance: 1
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: a315e31141f194944b368b20cb7f967e, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
@@ -49,6 +51,7 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 1
     canFuse: 0
     canBreak: 0
@@ -62,6 +65,7 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: eb8e767cbad1a4c4b9eaf2abc5fa0941, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
@@ -72,6 +76,7 @@ MonoBehaviour:
       distance: 2
       distance2: 1
     _sprite: {fileID: 21300000, guid: e97c18caf8001984594fc1be6040ca0a, type: 3}
+    _spriteFusion: {fileID: 21300000, guid: c75887cf29ce8e24eb5fa2541358e56f, type: 3}
     _isWhite: 1
     canFuse: 0
     canBreak: 0
@@ -82,6 +87,7 @@ MonoBehaviour:
       distance: 2
       distance2: 1
     _sprite: {fileID: 21300000, guid: 460fea763e01a164caadd3cd85f9136c, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
@@ -92,6 +98,7 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: acb54522a4ff80b42a5694fa05db8b65, type: 3}
+    _spriteFusion: {fileID: 21300000, guid: 3aabf4eba008db446a35555d865890ae, type: 3}
     _isWhite: 1
     canFuse: 0
     canBreak: 0
@@ -102,6 +109,7 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: d70e969cee06aad4db581355a2247b84, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
@@ -112,6 +120,7 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: e1f008449222ab547a53a0b6f5b7cdc6, type: 3}
+    _spriteFusion: {fileID: 21300000, guid: d0458c962d0585c479651946b30236b9, type: 3}
     _isWhite: 1
     canFuse: 0
     canBreak: 1
@@ -122,6 +131,7 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: 290a97c7258021147873eea7841d4b31, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 1
@@ -132,6 +142,7 @@ MonoBehaviour:
       distance: 1
       distance2: 0
     _sprite: {fileID: 21300000, guid: 7c430264149bd8c40bc2b302a84069ff, type: 3}
+    _spriteFusion: {fileID: 21300000, guid: 8de542942c8d082448e6a3ffaf7aed25, type: 3}
     _isWhite: 1
     canFuse: 0
     canBreak: 0
@@ -142,6 +153,7 @@ MonoBehaviour:
       distance: 1
       distance2: 0
     _sprite: {fileID: 21300000, guid: 199023801633dbc418317bac5e9981de, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
@@ -152,6 +164,7 @@ MonoBehaviour:
       distance: 0
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
@@ -164,7 +177,8 @@ MonoBehaviour:
     - moves: 4
       distance: 2
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: 1fae902275ba62a4c932eb63e49dd002, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
@@ -177,7 +191,8 @@ MonoBehaviour:
     - moves: 1
       distance: 1
       distance2: 0
-    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _sprite: {fileID: 21300000, guid: 37b940becd3640f41983276170d3ceb3, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0

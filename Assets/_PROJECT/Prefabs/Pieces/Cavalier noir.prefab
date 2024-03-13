@@ -235,6 +235,7 @@ MonoBehaviour:
       distance: 2
       distance2: 1
     _sprite: {fileID: 21300000, guid: 460fea763e01a164caadd3cd85f9136c, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
