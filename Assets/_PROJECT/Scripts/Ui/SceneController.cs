@@ -34,11 +34,6 @@ public class SceneController : MonoBehaviour
     }
 
     #region MAINMENU
-    /*public void Play()
-    {
-        SceneManager.LoadScene("Level");
-
-    }*/
     void Set(Scene scene, LoadSceneMode mode)
     {
         if (scene.name != "LevelSelection") return;
@@ -63,15 +58,21 @@ public class SceneController : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-
+        StartCoroutine(LoadLevelRoutine(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevelRoutine(int levelIndex = 0, string name = null)
     {
         _transitionAnim.SetTrigger("Start");
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(levelIndex);
+        if(levelIndex == 0)
+        {
+            SceneManager.LoadScene(name);
+        }
+        else
+        {
+            SceneManager.LoadScene(levelIndex);
+        }
         _transitionAnim.SetTrigger("End");
     }
 
@@ -80,13 +81,36 @@ public class SceneController : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("MainMenu");
-
+        AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
-    public void LoadLevel(string nameScene)
+    public static void LoadLevel(string nameScene)
     {
-       
+        Debug.Log(instance);
         SceneManager.LoadScene(nameScene);
+        instance.StartCoroutine(instance.LoadLevelRoutine(0,nameScene));
+        switch (nameScene)
+        {
+            case "MainMenu":
+                Debug.Log("Mainmenu music");
+                AudioManager.Instance.PlayMusic("MainMenuMusic");
+                break;
+            case "Level":
+                Debug.Log("Level music");
+                AudioManager.Instance.PlayMusic("LevelMusic");
+                break;
+            case "LevelSelection":
+                AudioManager.Instance.PlayMusic("LevelSelectionMusic");
+                break;
+            case "Victory":
+                AudioManager.Instance.PlayMusic("Victory");
+                break;
+            case "Defeat":
+                AudioManager.Instance.PlayMusic("Defeat");
+                break;
+            default:
+                break;
+        }
     }
 
 }

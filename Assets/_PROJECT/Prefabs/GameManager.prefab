@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transitionAnim: {fileID: 9129845619067461699}
   childToPreserve: {fileID: 0}
+  parent: {fileID: 0}
 --- !u!114 &2204749344309756832
 MonoBehaviour:
   m_ObjectHideFlags: 0

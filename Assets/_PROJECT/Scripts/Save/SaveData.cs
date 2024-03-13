@@ -24,14 +24,14 @@ public class SaveData: MonoBehaviour
     }
     private void OnEnable()
     {
-        sc = GetComponent<SceneController>();
+        //sc = GetComponent<SceneController>();
         sc.OnLoadSelect += SetData;
         sc.OnLoadSelect += Load;
     }
     private void OnDisable()
     {
         sc.OnLoadSelect -= SetData;
-        sc.OnLoadSelect += Load;
+        sc.OnLoadSelect -= Load;
     }
     //[Button]
     public void UpdateLEVEL(int level, int stars)

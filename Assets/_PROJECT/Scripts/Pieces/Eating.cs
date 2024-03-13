@@ -33,7 +33,11 @@ public class Eating : MonoBehaviour
         }
         else
         {
-            if(piece.Data.CanFuse || pieceTarget.Data.CanFuse) Fuse.Fusing(pieceTarget, piece, pieceSave);
+            if (piece.Data.CanFuse || pieceTarget.Data.CanFuse)
+            {
+                Fuse.Fusing(pieceTarget, piece, pieceSave);
+                audioManager?.PlaySfx("Fusion");
+            }
             return false;
         }
         // CHANGE LE SPRITE
