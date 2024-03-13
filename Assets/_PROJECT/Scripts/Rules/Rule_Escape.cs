@@ -13,7 +13,7 @@ public class Rule_Escape : IRules
 
     public bool IsLost(GameObject King)
     {
-        return !King.activeSelf; // || RoiBlanc.Data.ECHEC;
+        return !King.GetComponent<Piece>().IsAlive; // || RoiBlanc.Data.ECHEC;
     }
 
     public bool IsWon()

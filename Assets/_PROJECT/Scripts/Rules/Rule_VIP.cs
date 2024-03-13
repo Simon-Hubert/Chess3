@@ -11,7 +11,7 @@ public class Rule_VIP : IRules
 
     public bool IsLost(GameObject King)
     {
-        return !King.activeSelf; // || RoiBlanc.Data.ECHEC;
+        return !King.GetComponent<Piece>().IsAlive; // || RoiBlanc.Data.ECHEC;
     }
 
     public void UpdateBlackList(Piece target)

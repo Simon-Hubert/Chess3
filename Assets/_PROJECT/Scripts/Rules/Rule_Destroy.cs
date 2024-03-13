@@ -12,7 +12,7 @@ public class Rule_Destroy : IRules
 
     public bool IsLost(GameObject King)
     {
-        return !King.activeSelf; // || RoiBlanc.Data.ECHEC;
+        return !King.GetComponent<Piece>().IsAlive; // || RoiBlanc.Data.ECHEC;
     }
 
     public bool IsWon()
@@ -27,7 +27,7 @@ public class Rule_Destroy : IRules
         allPieces.Clear();
         foreach (Piece piece in allObj)
         {
-            if (!piece.Data.IsWhite && piece.gameObject.activeSelf) allPieces.Add(piece);
+            if (!piece.Data.IsWhite && piece.IsAlive) allPieces.Add(piece);
         }
     }
 

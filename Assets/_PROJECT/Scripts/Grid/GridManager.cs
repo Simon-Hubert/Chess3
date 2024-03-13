@@ -67,7 +67,7 @@ public class GridManager : MonoBehaviour
         List<Piece> pieces = new List<Piece>();
         foreach (Piece piece in listPieces)
         {
-            if (piece.gameObject.activeSelf) pieces.Add(piece);
+            if (piece.IsAlive) pieces.Add(piece);
         }
         return pieces;
     }
