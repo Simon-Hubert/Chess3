@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -12,6 +12,7 @@ public class Teleporter : MonoBehaviour
     [SerializeField] UnityEvent onTeleport;
     [SerializeField] Animator portal;
     [SerializeField] GameObject Portal;
+    bool isPassed = false;
 
     public Teleporter TP { get => teleporter; private set => teleporter = value; }
 
@@ -33,7 +34,8 @@ public class Teleporter : MonoBehaviour
     void Teleport(GameObject g)
     {
         GameObject visual = g.transform.Find("Visual").gameObject;
-        StartCoroutine(Teleportation(visual));
+        if(!isPassed)StartCoroutine(Teleportation(visual));
+        isPassed = true;
     }
     IEnumerator Teleportation(GameObject g)
     {
