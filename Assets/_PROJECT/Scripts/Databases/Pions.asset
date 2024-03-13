@@ -108,8 +108,8 @@ MonoBehaviour:
   - _name: Tour blanche
     _level: 0
     _pattern:
-    - moves: 7
-      distance: 0
+    - moves: 5
+      distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: e1f008449222ab547a53a0b6f5b7cdc6, type: 3}
     _isWhite: 1
@@ -150,6 +150,32 @@ MonoBehaviour:
     _pattern:
     - moves: 0
       distance: 0
+      distance2: 0
+    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _isWhite: 0
+    canFuse: 0
+    canBreak: 0
+  - _name: V.I.P Pion
+    _level: 0
+    _pattern:
+    - moves: 1
+      distance: 1
+      distance2: 0
+    - moves: 4
+      distance: 2
+      distance2: 0
+    _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _isWhite: 0
+    canFuse: 0
+    canBreak: 0
+  - _name: V.I.P Jval
+    _level: 0
+    _pattern:
+    - moves: 2
+      distance: 2
+      distance2: 1
+    - moves: 1
+      distance: 1
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
     _isWhite: 0
