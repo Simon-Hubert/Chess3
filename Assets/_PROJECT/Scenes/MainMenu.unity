@@ -1188,8 +1188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5.6507, y: 0}
+  m_SizeDelta: {x: 33.9045, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575989100
 MonoBehaviour:
@@ -3433,7 +3433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: BackgroundMusic
-    clip: {fileID: 8300000, guid: 7eed7cda1779f684f8809d495bfbac08, type: 3}
+    clip: {fileID: 8300000, guid: f705515cab4920443ac7f3764ffa31fc, type: 3}
   sfxSounds:
   - name: Move
     clip: {fileID: 8300000, guid: bebd122524708e049918f2b6251a8a90, type: 3}
@@ -3446,6 +3446,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3626196159806431332, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
   m_PrefabInstance: {fileID: 8669115983655795341}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3348450089089148104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9076130959110880586, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+  m_PrefabInstance: {fileID: 8669115983655795341}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab58a1ba5506d674b8f3d370b56f9f64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3729796184675585968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3550,7 +3561,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 131860615492102287, guid: 9b222f4377b70a143841be648af7162b, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 7eed7cda1779f684f8809d495bfbac08, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f705515cab4920443ac7f3764ffa31fc, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3791,6 +3802,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1501808590}
     m_Modifications:
+    - target: {fileID: 348252486448005609, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3348450089089148104}
+    - target: {fileID: 348252486448005609, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 718779963619631357, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
       propertyPath: sc
       value: 

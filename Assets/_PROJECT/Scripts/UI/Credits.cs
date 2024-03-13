@@ -8,7 +8,7 @@ public class Credits : MonoBehaviour
     [SerializeField] GameObject _creditsOffBtn;
     [SerializeField] Animator _creditAnim;
 
-    private void Awake()
+    private void Start()
     {
         _creditsPanel.SetActive(false);
         _creditsOffBtn.SetActive(false);

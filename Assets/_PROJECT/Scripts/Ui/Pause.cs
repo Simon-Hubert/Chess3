@@ -9,8 +9,16 @@ public class Pause : MonoBehaviour
     public GameObject _settingsMenu;
     public GameObject _settingsOnButton;
 
+    [SerializeField] DisplayObjective _displayObjective;
+
+    private void Awake()
+    {
+        _displayObjective = GetComponent<DisplayObjective>();
+    }
+
     void Start()
     {
+        PauseOff();
         _settingsMenu.SetActive(false);
         _settingsOnButton.SetActive(true);
 
@@ -36,7 +44,7 @@ public class Pause : MonoBehaviour
         {
             _settingsOnButton.SetActive(false);
             _settingsMenu.SetActive(true);
-            Time.timeScale = 0f;
+            
 
         }
 
@@ -48,9 +56,18 @@ public class Pause : MonoBehaviour
         {
             _settingsOnButton.SetActive(true);
             _settingsMenu.SetActive(false);
-            Time.timeScale = 1f;
+            //Time.timeScale = 1.0f;
+            
 
         }
 
     }
+
+    public void Restart()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
+        StartCoroutine(_displayObjective.ShowObjective());
+
+    }
+
 }

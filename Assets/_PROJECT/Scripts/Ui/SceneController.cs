@@ -31,9 +31,8 @@ public class SceneController : MonoBehaviour
             //Si ça marche pas c que le script getButton récupere pas le sceneController
         }
 
-        //GetComponent<Button>().onClick.AddListener(instance.LoadNextLevel);
-
     }
+
     #region MAINMENU
     /*public void Play()
     {
@@ -76,10 +75,7 @@ public class SceneController : MonoBehaviour
         _transitionAnim.SetTrigger("End");
     }
 
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+   
 
     public void Return()
     {
