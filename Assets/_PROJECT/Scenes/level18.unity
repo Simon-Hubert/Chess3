@@ -369,7 +369,7 @@ Transform:
   m_GameObject: {fileID: 13709982}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0.51, y: 0, z: 1}
   m_LocalScale: {x: 1.1893878, y: 1.0600022, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5232,8 +5232,6 @@ MonoBehaviour:
     BlackList:
     - {fileID: 0}
     RoiBlanc: {fileID: 0}
-  ruleDestroy:
-    RoiBlanc: {fileID: 1072069484}
   ruleEscape:
     RoiBlanc: {fileID: 1072069484}
     Objectif: {fileID: 0}
@@ -5284,9 +5282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b133fc5c714063479a87c1577b21bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Star1: {fileID: 0}
-  Star2: {fileID: 0}
-  Star3: {fileID: 0}
+  Star1: {fileID: 1302284666}
+  Star2: {fileID: 1302284665}
+  Star3: {fileID: 1302284664}
 --- !u!114 &719329970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5313,8 +5311,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3357bc716e7dae24d9cb052b2a6064ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ruleController: {fileID: 0}
+  score: {fileID: 0}
   panelVictory: {fileID: 1302284663}
   panelLose: {fileID: 878639030}
+  parentPiece: {fileID: 0}
+  king: {fileID: 0}
 --- !u!114 &719329972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9696,6 +9698,21 @@ RectTransform:
 --- !u!1 &1302284663 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1148455270099935627, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
+  m_PrefabInstance: {fileID: 1302284661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1302284664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7367670987044749818, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
+  m_PrefabInstance: {fileID: 1302284661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1302284665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4366646919876446318, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
+  m_PrefabInstance: {fileID: 1302284661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1302284666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5651568328287113747, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
   m_PrefabInstance: {fileID: 1302284661}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1317211197
@@ -14295,7 +14312,7 @@ Transform:
   m_GameObject: {fileID: 2036622346}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.49, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
