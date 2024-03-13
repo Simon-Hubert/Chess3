@@ -28,4 +28,13 @@ public class Piece : MonoBehaviour
         grid = FindObjectOfType<Grid>();
     }
 
+    public void Destroy(){
+        StartCoroutine(WaitForDestroy());
+    }
+
+    IEnumerator WaitForDestroy(){
+        yield return new WaitForSeconds(1f);
+        gameObject.SetActive(false);
+    }
+
 }
