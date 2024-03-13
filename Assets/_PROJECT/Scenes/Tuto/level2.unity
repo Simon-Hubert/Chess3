@@ -1272,17 +1272,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &261958107 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3406936224258583708, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
-  m_PrefabInstance: {fileID: 2085383448}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &261958109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5755993342296155424, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
@@ -2801,8 +2790,6 @@ MonoBehaviour:
     BlackList:
     - {fileID: 0}
     RoiBlanc: {fileID: 0}
-  ruleDestroy:
-    RoiBlanc: {fileID: 261958107}
   ruleEscape:
     RoiBlanc: {fileID: 0}
     Objectif: {fileID: 0}
@@ -2882,8 +2869,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3357bc716e7dae24d9cb052b2a6064ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 719329970}
   panelVictory: {fileID: 1637279036}
   panelLose: {fileID: 893956386}
+  parentPiece: {fileID: 0}
+  king: {fileID: 0}
 --- !u!114 &719329972
 MonoBehaviour:
   m_ObjectHideFlags: 0

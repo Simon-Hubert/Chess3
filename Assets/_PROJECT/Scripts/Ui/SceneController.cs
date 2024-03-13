@@ -72,7 +72,7 @@ public class SceneController : MonoBehaviour
     {
         _transitionAnim.SetTrigger("Start");
         yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(levelIndex);
+        SceneManager.LoadScene(levelIndex);
         _transitionAnim.SetTrigger("End");
     }
 

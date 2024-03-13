@@ -5,5 +5,5 @@ using UnityEngine;
 public interface IRules
 {
     bool IsWon();
-    bool IsLost();
+    bool IsLost(GameObject King);
 }

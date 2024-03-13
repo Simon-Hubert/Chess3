@@ -11,9 +11,9 @@ public class Rule_Escape : IRules
     [SerializeField] Tile Objectif;
     [SerializeField] GridManager tileGrid;
 
-    public bool IsLost()
+    public bool IsLost(GameObject King)
     {
-        return !RoiBlanc.gameObject.activeSelf; // || RoiBlanc.Data.ECHEC;
+        return !King.activeSelf; // || RoiBlanc.Data.ECHEC;
     }
 
     public bool IsWon()

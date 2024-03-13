@@ -7,14 +7,17 @@ public class PartyManager : MonoBehaviour
 {
     VictoryScreen vS;
     TurnManager tm;
-    RuleController ruleController;
+    [SerializeField] RuleController ruleController;
     [SerializeField] Scores score;
     [SerializeField] GameObject panelVictory, panelLose;
+    [SerializeField] GameObject parentPiece;
+    [SerializeField] GameObject king;
 
     public GameObject PanelVictory { get => panelVictory; }
 
-    private void Awake()
+    private void Start()
     {
+        parentPiece = GameObject.Find("PIECES");
         tm = GetComponent<TurnManager>();
         ruleController = GetComponent<RuleController>();
         score = GetComponent<Scores>();
@@ -23,7 +26,14 @@ public class PartyManager : MonoBehaviour
         if (ruleController == null) Debug.LogWarning("il n'y a pas de RuleController sur le MANAGER");
         if (ruleController == null) Debug.LogWarning("il n'y a pas de Scores sur le MANAGER");
         if (vS == null) Debug.LogWarning("il n'y a pas de VictoryScreen sur le MANAGER");
+        king = parentPiece.transform.Find("Roi blanc").gameObject;
+
         TurnManager.OnTurnEnd += IsGameFinished;
+    }
+
+    private void OnDisable()
+    {
+        TurnManager.OnTurnEnd -= IsGameFinished;
     }
     void IsGameFinished(bool b)
     {
@@ -37,7 +47,7 @@ public class PartyManager : MonoBehaviour
             SaveData.instance.UpdateLEVEL(index, score.SetStars(tm.PlayerCounter));
         }
 
-        else if (ruleController.GetCurrentRule().IsLost())
+        else if (ruleController.GetCurrentRule().IsLost(king))
         {
             panelLose.SetActive(true);
         }

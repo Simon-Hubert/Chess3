@@ -9,9 +9,9 @@ public class Rule_VIP : IRules
     [SerializeField] List<Piece> BlackList = new List<Piece>();
     [SerializeField] Piece RoiBlanc;
 
-    public bool IsLost()
+    public bool IsLost(GameObject King)
     {
-        return !RoiBlanc.gameObject.activeSelf; // || RoiBlanc.Data.ECHEC;
+        return !King.activeSelf; // || RoiBlanc.Data.ECHEC;
     }
 
     public void UpdateBlackList(Piece target)
