@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5755993342296155424}
   - component: {fileID: 972006641828163987}
   - component: {fileID: 3406936224258583708}
-  - component: {fileID: 1365585843336496926}
+  - component: {fileID: 1729547415839140537}
   m_Layer: 0
   m_Name: Roi blanc
   m_TagString: Untagged
@@ -78,10 +78,11 @@ MonoBehaviour:
       distance: 1
       distance2: 0
     _sprite: {fileID: 21300000, guid: 2641522a74371a24ca73b633450712da, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 1
     canFuse: 1
     canBreak: 0
---- !u!114 &1365585843336496926
+--- !u!114 &1729547415839140537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

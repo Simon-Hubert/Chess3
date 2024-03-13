@@ -111,6 +111,10 @@ public class TurnManager : MonoBehaviour
     private bool CheckForActiveEnemies(){
         return gm.GetAllActiveBlackPieces().Count > 0;
     }
+    public void ChangeReine_VIP(Piece Reine)
+    {
+        VipOuReine = Reine;
+    }
 
     // void ClassiChessTurn(){
     //     if(CheckForActiveEnemies()){

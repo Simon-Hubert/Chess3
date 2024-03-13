@@ -23,7 +23,7 @@ public class Eating : MonoBehaviour
         if (piece.Data.IsWhite != pieceTarget.Data.IsWhite)
         {
             pieceTarget.gameObject.SetActive(false);
-            if(piece.Data.IsWhite && !piece.Data.CanFuse)
+            if((piece.Data.IsWhite && !piece.Data.CanFuse) || (!piece.Data.IsWhite && !piece.Data.CanFuse))
             {
                 gameObject.transform.parent.gameObject.SetActive(false);
             }

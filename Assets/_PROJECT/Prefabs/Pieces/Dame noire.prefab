@@ -78,6 +78,7 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: 21300000, guid: eb8e767cbad1a4c4b9eaf2abc5fa0941, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
