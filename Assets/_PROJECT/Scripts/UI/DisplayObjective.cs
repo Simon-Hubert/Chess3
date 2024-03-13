@@ -11,7 +11,7 @@ public class DisplayObjective : MonoBehaviour
     [Range(0,5)] public float _displayTime = 3f;
     private float elapsedTime = 0f;
 
-    private void Awake()
+    /*private void Awake()
     {
         if (instance == null)
         {
@@ -22,7 +22,7 @@ public class DisplayObjective : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }*/
 
     private void Start()
     {

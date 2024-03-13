@@ -22,13 +22,6 @@ public class SceneController : MonoBehaviour
 
     }
 
-    #region MAINMENU
-    /*public void Play()
-    {
-        SceneManager.LoadScene("Level");
-
-    }*/
-
     public void SelectLevel()
     {
         SceneManager.LoadScene("LevelSelection");
@@ -43,19 +36,42 @@ public class SceneController : MonoBehaviour
             Application.Quit();// en jeu
 #endif
     }
-    #endregion
 
-    public void LoadNextLevel()
+
+    public void LoadLevel(string nameScene)
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        AudioManager.Instance.GetComponent<AudioSource>();
 
+        switch (nameScene)
+        {
+            case "MainMenu":
+                Debug.Log("Mainmenu music");
+                AudioManager.Instance.PlayMusic("MainMenuMusic");
+                break;
+            case "Level":
+                Debug.Log("Level music");
+                AudioManager.Instance.PlayMusic("LevelMusic");
+                break;
+            case "LevelSelection":
+                AudioManager.Instance.PlayMusic("LevelSelectionMusic");
+                break;
+            case "Victory":
+                AudioManager.Instance.PlayMusic("Victory");
+                break;
+            case "Defeat":
+                AudioManager.Instance.PlayMusic("Defeat");
+                break;
+            default:
+                break;
+        }
+        StartCoroutine(LoadLevelRoutine(nameScene));
     }
 
-    IEnumerator LoadLevel(int levelIndex)
+    IEnumerator LoadLevelRoutine(string levelName)
     {
         _transitionAnim.SetTrigger("Start");
         yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(levelIndex);
+        SceneManager.LoadSceneAsync(levelName);
         _transitionAnim.SetTrigger("End");
     }
 
@@ -64,13 +80,10 @@ public class SceneController : MonoBehaviour
     public void Return()
     {
         SceneManager.LoadScene("MainMenu");
+        AudioManager.Instance.PlayMusic("MainMenuMusic");
 
     }
 
-    public void LoadLevel(string nameScene)
-    {
-       
-        SceneManager.LoadScene(nameScene);
-    }
+    
 
 }
