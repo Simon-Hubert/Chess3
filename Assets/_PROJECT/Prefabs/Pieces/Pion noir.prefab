@@ -71,7 +71,7 @@ MonoBehaviour:
     _name: Pion noir
     _level: 0
     _pattern:
-    - moves: 4
+    - moves: 1
       distance: 1
       distance2: 0
     _sprite: {fileID: 21300000, guid: 199023801633dbc418317bac5e9981de, type: 3}
