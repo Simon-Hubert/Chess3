@@ -1684,6 +1684,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &151533383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132717247517785864, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_Name
+      value: PieceAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
 --- !u!1 &162270096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6270,8 +6327,6 @@ MonoBehaviour:
     BlackList:
     - {fileID: 1284043523}
     RoiBlanc: {fileID: 1072069484}
-  ruleDestroy:
-    RoiBlanc: {fileID: 1072069484}
   ruleEscape:
     RoiBlanc: {fileID: 1072069484}
     Objectif: {fileID: 0}
@@ -6322,9 +6377,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b133fc5c714063479a87c1577b21bf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Star1: {fileID: 0}
-  Star2: {fileID: 0}
-  Star3: {fileID: 0}
+  Star1: {fileID: 1978008653}
+  Star2: {fileID: 1978008652}
+  Star3: {fileID: 1978008651}
 --- !u!114 &719329970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6351,8 +6406,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3357bc716e7dae24d9cb052b2a6064ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ruleController: {fileID: 0}
+  score: {fileID: 0}
   panelVictory: {fileID: 1978008650}
   panelLose: {fileID: 1978103239}
+  parentPiece: {fileID: 0}
+  king: {fileID: 0}
 --- !u!114 &719329972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11922,6 +11981,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4538891571154594894, guid: 297a83628ea43da4c817b969b545db82, type: 3}
+      propertyPath: _data._sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: da8fb1e2a625a0740b3fdd3190767c7c, type: 3}
     - target: {fileID: 5368722730277677726, guid: 297a83628ea43da4c817b969b545db82, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.88
@@ -11966,6 +12029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roi Fou Noir
       objectReference: {fileID: 0}
+    - target: {fileID: 7953286516179808404, guid: 297a83628ea43da4c817b969b545db82, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: da8fb1e2a625a0740b3fdd3190767c7c, type: 3}
     - target: {fileID: 7953286516179808404, guid: 297a83628ea43da4c817b969b545db82, type: 3}
       propertyPath: m_Color.b
       value: 0.454902
@@ -17617,6 +17684,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1148455270099935627, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
   m_PrefabInstance: {fileID: 1978008648}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1978008651 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7367670987044749818, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
+  m_PrefabInstance: {fileID: 1978008648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1978008652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4366646919876446318, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
+  m_PrefabInstance: {fileID: 1978008648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1978008653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5651568328287113747, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
+  m_PrefabInstance: {fileID: 1978008648}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1978103237
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19157,3 +19239,4 @@ SceneRoots:
   - {fileID: 713640912}
   - {fileID: 775964387}
   - {fileID: 345846379}
+  - {fileID: 151533383}
