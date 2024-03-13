@@ -1188,8 +1188,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5.6507, y: 0}
+  m_SizeDelta: {x: 33.9045, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575989100
 MonoBehaviour:
@@ -3470,7 +3470,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transitionAnim: {fileID: 8814526173044612836}
   childToPreserve: {fileID: 0}
-  _displayObjective: {fileID: 0}
 --- !u!4 &3992929970775845513
 Transform:
   m_ObjectHideFlags: 0
