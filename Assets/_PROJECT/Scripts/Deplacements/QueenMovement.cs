@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class QueenMovement : MonoBehaviour, IMovementBrain
 {
-    bool playTurn = false;
     int turnWaiting = 0;
     Piece thisPiece;
     [SerializeField] Piece king;
@@ -22,13 +21,7 @@ public class QueenMovement : MonoBehaviour, IMovementBrain
     {
         if(turnWaiting <= 0)
         {
-            playTurn = !playTurn;
-            if(playTurn){
-                return PathFinding.Path(gridManager, thisPiece, king);
-            }
-            else{
-                return pos;
-            }
+            return PathFinding.Path(gridManager, thisPiece, king);
         }
         else
         {
