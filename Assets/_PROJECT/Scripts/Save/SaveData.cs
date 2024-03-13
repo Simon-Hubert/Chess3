@@ -4,6 +4,7 @@ using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.UI;
 using System;
+using GooglePlayGames;
 
 public class SaveData: MonoBehaviour
 {
@@ -37,6 +38,17 @@ public class SaveData: MonoBehaviour
     {
         levelsData[level].isUnlocked = true;
         levelsData[level - 1].stars = stars;
+        int tStars = 0;
+        foreach(levelData levelData in levelsData)
+        {
+            tStars += levelData.stars;
+        }
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAA", (tStars / 10) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAQ", (tStars / 20) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAg", (tStars / 30) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAW", (tStars / 40) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQBA", (tStars / 50) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQBQ", (tStars / 60) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
         Save();
     }
     public void Save()

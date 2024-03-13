@@ -4749,7 +4749,7 @@ MonoBehaviour:
     RoiBlanc: {fileID: 861513567}
     Objectif: {fileID: 150694756}
     tileGrid: {fileID: 23330428}
-  ruleRenforts: {fileID: 719329973}
+  ruleRenforts: {fileID: 0}
   renforts: 0
 --- !u!4 &719329967
 Transform:
@@ -4877,12 +4877,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 719329964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bb65f604dcf5048bf05f82a21201f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f1f443020b2d5c49bf64b0c52671286, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  piecesParent: {fileID: 0}
-  pieces: []
-  TourInactionMax: 0
+  _successID: Cgkli7nLgfQPEAIQBw
+  _pM: {fileID: 719329971}
 --- !u!1 &765164758
 GameObject:
   m_ObjectHideFlags: 0
