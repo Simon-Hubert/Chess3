@@ -196,17 +196,3 @@ MonoBehaviour:
     _isWhite: 0
     canFuse: 0
     canBreak: 0
-  - _name: V.I.P Tour
-    _level: 0
-    _pattern:
-    - moves: 2
-      distance: 2
-      distance2: 1
-    - moves: 1
-      distance: 1
-      distance2: 0
-    _sprite: {fileID: 21300000, guid: 37b940becd3640f41983276170d3ceb3, type: 3}
-    _spriteFusion: {fileID: 0}
-    _isWhite: 0
-    canFuse: 0
-    canBreak: 0
