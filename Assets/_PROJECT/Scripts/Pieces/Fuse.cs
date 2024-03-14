@@ -17,6 +17,7 @@ public class Fuse
             Fusing(piece, pieceTarget, pieceTarget.Data);
             return;
         }
+        
         if(piece.Data.Level == 0)
         {
             for (int i = 0; i < pieceTarget.Data.Pattern.Count; i++)
@@ -25,7 +26,7 @@ public class Fuse
                 piece.Data.Pattern.Add(m);
             }
             Debug.Log("Fusion with " + pieceTarget.Data.Name);
-            pieceTarget.gameObject.SetActive(false);
+            pieceTarget.Destroy();
             piece.GetComponentInChildren<SpriteRenderer>().sprite = pieceTarget.Data.SpriteFusion;
             piece.Data.Level++;
             OnFuse?.Invoke(pieceTarget);
