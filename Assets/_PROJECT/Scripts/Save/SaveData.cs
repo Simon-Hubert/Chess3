@@ -24,7 +24,7 @@ public class SaveData: MonoBehaviour
     }
     private void OnEnable()
     {
-        //sc = GetComponent<SceneController>();
+        sc = GetComponent<SceneController>();
         sc.OnLoadSelect += SetData;
         sc.OnLoadSelect += Load;
     }
@@ -43,12 +43,12 @@ public class SaveData: MonoBehaviour
         {
             tStars += levelData.stars;
         }
-        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAA", (tStars / 10) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
-        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAQ", (tStars / 20) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
-        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAg", (tStars / 30) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
-        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAW", (tStars / 40) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
-        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQBA", (tStars / 50) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
-        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQBQ", (tStars / 60) * 100, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAA", (tStars / 10) * 100, (bool success) => { if (success) Debug.Log("succï¿½s dï¿½bloquï¿½ !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAQ", (tStars / 20) * 100, (bool success) => { if (success) Debug.Log("succï¿½s dï¿½bloquï¿½ !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAg", (tStars / 30) * 100, (bool success) => { if (success) Debug.Log("succï¿½s dï¿½bloquï¿½ !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAW", (tStars / 40) * 100, (bool success) => { if (success) Debug.Log("succï¿½s dï¿½bloquï¿½ !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQBA", (tStars / 50) * 100, (bool success) => { if (success) Debug.Log("succï¿½s dï¿½bloquï¿½ !"); });
+        PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQBQ", (tStars / 60) * 100, (bool success) => { if (success) Debug.Log("succï¿½s dï¿½bloquï¿½ !"); });
         Save();
     }
     public void Save()
