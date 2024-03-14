@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,9 +106,715 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: EauTrou_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 2455
+        width: 1207
+        height: 327
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65afc9efdff62dd4e8fd9048379c1c6d
+      internalID: -1349883578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_1
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 2718
+        width: 154
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98843a0d4c70fbe49a6424c524ed1716
+      internalID: -209867386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_2
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 2718
+        width: 130
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44de0f4ae25d6f441b1c57943badc710
+      internalID: 1620249588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_3
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 2718
+        width: 130
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e29475726975a6478922af12d191d80
+      internalID: -930493961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_4
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 2692
+        width: 129
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0363feb01b20e4fa0cb366b22dfda9
+      internalID: -841665290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_5
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 2535
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9545ef52a0145f349a44602acfd3f8a6
+      internalID: -1450619618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_6
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 2535
+        width: 130
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520ab25a6e40e8941b0bb2dbb3627e73
+      internalID: 1320024793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_7
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 2535
+        width: 130
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e26ea263d219e48a63fab3d2d0e00a
+      internalID: -642388140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_8
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2035
+        width: 327
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42ffe08fdb884e45b2208fcf42abe91
+      internalID: 1234120175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_9
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 2035
+        width: 339
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2073ec2503a05204aa3abe0adc7e81e8
+      internalID: -574744795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_10
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 2343
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef2f55c63c94394c837642e1f51b66e
+      internalID: -2038233072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_11
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 2343
+        width: 130
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52d684802eca9e4e8c576ec8f80a96a
+      internalID: -1746294403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_12
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 2343
+        width: 130
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212bdd4690669ad4ebb3de180e3a8f91
+      internalID: 1374275845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_13
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 2152
+        width: 154
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0642e84239d19c04294cc0a5c81187c8
+      internalID: 2012773645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_14
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 2143
+        width: 130
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b88d9ef0ddf3047b0288f1f0bdc78d
+      internalID: 1533056246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_15
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 2152
+        width: 130
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dabc61dbae833c42b0772330e1756c2
+      internalID: -541153056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_16
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1794
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97389b21edf9ffe4589db70cf9a13cdb
+      internalID: 56382829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_17
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1794
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a79a58c389e78d54e840c3890fa2a8f6
+      internalID: -219875892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_18
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1794
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79961458b1df2f74795082b6c86ee507
+      internalID: 459142583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_19
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1794
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d06aa0e98dcd03c4cb50d780d8ff8a02
+      internalID: -2015111168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_20
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1792
+        width: 120
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7573a982d2ac04fa6f63cb09dd3c7a
+      internalID: 960611595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_21
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 1794
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6444cbd7d77d741b4effd4f2c2e342
+      internalID: -1329297344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_22
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1603
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85c955e995862043a3b7f43eac03352
+      internalID: -2002615655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_23
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1603
+        width: 251
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0684a81c12abedb428cb846fcef60de3
+      internalID: 800075247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_24
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1603
+        width: 120
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be84b0e538c59be4b9b1ca08e12918ab
+      internalID: 214550437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_25
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1603
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59fc386c08ae7343b02bb8baa7ac6d9
+      internalID: -1226789097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_26
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 1423
+        width: 346
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 257b572805221ff4cb6ffaf84069bc66
+      internalID: 1955407154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_27
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 1410
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f19d41afc655e54f92887a3b92fcf7e
+      internalID: -2018947468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_28
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1410
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80931fdc3cf9ef4ea3c76e5000658a4
+      internalID: -1706678855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_29
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 1410
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8160c7f35b2944a4a9fc89bce474857a
+      internalID: 614395993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_30
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1410
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a108f709f2444e47863e9487fe26be0
+      internalID: -854485941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_31
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1410
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b734fdd6328ee4a940112ac1f0bfa7
+      internalID: 1657866393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EauTrou_32
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 1410
+        width: 120
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986693913050b8444aaea1def0448340
+      internalID: -407171427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +825,40 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EauTrou_0: -1349883578
+      EauTrou_1: -209867386
+      EauTrou_10: -2038233072
+      EauTrou_11: -1746294403
+      EauTrou_12: 1374275845
+      EauTrou_13: 2012773645
+      EauTrou_14: 1533056246
+      EauTrou_15: -541153056
+      EauTrou_16: 56382829
+      EauTrou_17: -219875892
+      EauTrou_18: 459142583
+      EauTrou_19: -2015111168
+      EauTrou_2: 1620249588
+      EauTrou_20: 960611595
+      EauTrou_21: -1329297344
+      EauTrou_22: -2002615655
+      EauTrou_23: 800075247
+      EauTrou_24: 214550437
+      EauTrou_25: -1226789097
+      EauTrou_26: 1955407154
+      EauTrou_27: -2018947468
+      EauTrou_28: -1706678855
+      EauTrou_29: 614395993
+      EauTrou_3: -930493961
+      EauTrou_30: -854485941
+      EauTrou_31: 1657866393
+      EauTrou_32: -407171427
+      EauTrou_4: -841665290
+      EauTrou_5: -1450619618
+      EauTrou_6: 1320024793
+      EauTrou_7: -642388140
+      EauTrou_8: 1234120175
+      EauTrou_9: -574744795
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
