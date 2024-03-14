@@ -54,7 +54,7 @@ public class CheckMovements
         checkDiag = Add(checkDiag, Move_X(coords, distance, tileGrid));
         foreach (Tile tile in checkDiag)
         {
-            if(tileGrid.GetPieceAt(tile.Coords)) tiles.Add(tile);
+            if(tileGrid.GetActivePieceAt(tile.Coords)) tiles.Add(tile);
         }
         return tiles;
     }
@@ -62,11 +62,11 @@ public class CheckMovements
     public static List<Tile> Move__(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        if(thisPiece == null) thisPiece = tileGrid.GetPieceAt(coords);
+        if(thisPiece == null) thisPiece = tileGrid.GetActivePieceAt(coords);
 
         for(int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
-            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,0));
+            Piece p = tileGrid.GetActivePieceAt(coords + new Vector2Int(i,0));
             if(p){
                 if(p.IsWall && thisPiece.Data.CanBreak){
                     tiles.Add(t);
@@ -88,7 +88,7 @@ public class CheckMovements
         }
         for(int i=-1; i>=-distance; i--){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,0));
-            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,0));
+            Piece p = tileGrid.GetActivePieceAt(coords + new Vector2Int(i,0));
             if (p)
             {
                 if (p.IsWall && thisPiece.Data.CanBreak)
@@ -118,7 +118,7 @@ public class CheckMovements
     public static List<Tile> Move_L(Vector2Int coords, int distance, int distance2, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tilesTemp = new List<Tile>();
-        if (thisPiece == null) thisPiece = tileGrid.GetPieceAt(coords);
+        if (thisPiece == null) thisPiece = tileGrid.GetActivePieceAt(coords);
 
         foreach (Tile tile in tileGrid.Tiles)
         {
@@ -132,7 +132,7 @@ public class CheckMovements
 
         foreach (Tile tile in tilesTemp)
         {
-            Piece p = tileGrid.GetPieceAt(tile.Coords);
+            Piece p = tileGrid.GetActivePieceAt(tile.Coords);
 
             if (p)
             {
@@ -162,11 +162,11 @@ public class CheckMovements
     public static List<Tile> Move_X(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        if (thisPiece == null) thisPiece = tileGrid.GetPieceAt(coords);
+        if (thisPiece == null) thisPiece = tileGrid.GetActivePieceAt(coords);
 
         for (int i=1, j=1; i<=distance; i++,j++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
-            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
+            Piece p = tileGrid.GetActivePieceAt(coords + new Vector2Int(i,j));
             if (p)
             {
                 if (p.IsWall && thisPiece.Data.CanBreak)
@@ -192,7 +192,7 @@ public class CheckMovements
         }
         for(int i=1, j=-1; i<=distance; i++,j--){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
-            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
+            Piece p = tileGrid.GetActivePieceAt(coords + new Vector2Int(i,j));
             if (p)
             {
                 if (p.IsWall && thisPiece.Data.CanBreak)
@@ -218,7 +218,7 @@ public class CheckMovements
         }
         for(int i=-1, j=1; i>=-distance; i--,j++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
-            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
+            Piece p = tileGrid.GetActivePieceAt(coords + new Vector2Int(i,j));
             if (p)
             {
                 if (p.IsWall && thisPiece.Data.CanBreak)
@@ -244,7 +244,7 @@ public class CheckMovements
         }
         for(int i=-1, j=-1; i>=-distance; i--,j--){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(i,j));
-            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(i,j));
+            Piece p = tileGrid.GetActivePieceAt(coords + new Vector2Int(i,j));
             if (p)
             {
                 if (p.IsWall && thisPiece.Data.CanBreak)
@@ -274,10 +274,10 @@ public class CheckMovements
     public static List<Tile> Move_I(Vector2Int coords, int distance, GridManager tileGrid, Piece thisPiece = null)
     {
         List<Tile> tiles = new List<Tile>();
-        if (thisPiece == null) thisPiece = tileGrid.GetPieceAt(coords);
+        if (thisPiece == null) thisPiece = tileGrid.GetActivePieceAt(coords);
         for (int i=1; i<=distance; i++){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
-            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(0,i));
+            Piece p = tileGrid.GetActivePieceAt(coords + new Vector2Int(0,i));
             if (p)
             {
                 if (p.IsWall && thisPiece.Data.CanBreak)
@@ -303,7 +303,7 @@ public class CheckMovements
         }
         for(int i=-1; i>=-distance; i--){
             Tile t = tileGrid.GetTileAt(coords + new Vector2Int(0,i));
-            Piece p = tileGrid.GetPieceAt(coords + new Vector2Int(0,i));
+            Piece p = tileGrid.GetActivePieceAt(coords + new Vector2Int(0,i));
             if (p)
             {
                 if (p.IsWall && thisPiece.Data.CanBreak)
