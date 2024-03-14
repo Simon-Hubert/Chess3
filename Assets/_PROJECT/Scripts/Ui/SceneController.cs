@@ -80,6 +80,7 @@ public class SceneController : MonoBehaviour
 
     public void Return()
     {
+        AudioManager.Instance.PlaySfx("Retour");
         SceneManager.LoadScene("MainMenu");
         AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
@@ -92,15 +93,13 @@ public class SceneController : MonoBehaviour
         switch (nameScene)
         {
             case "MainMenu":
+            case "LevelSelection":
                 Debug.Log("Mainmenu music");
                 AudioManager.Instance.PlayMusic("MainMenuMusic");
                 break;
             case "Level":
                 Debug.Log("Level music");
                 AudioManager.Instance.PlayMusic("LevelMusic");
-                break;
-            case "LevelSelection":
-                AudioManager.Instance.PlayMusic("LevelSelectionMusic");
                 break;
             case "Victory":
                 AudioManager.Instance.PlayMusic("Victory");
