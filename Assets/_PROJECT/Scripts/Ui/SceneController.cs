@@ -11,7 +11,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] GameObject childToPreserve;
     [SerializeField] private GameObject parent;
     public static SceneController instance;
-    public event Action<GameObject> OnLoadSelect;
+    public event Action<GameObject, Image> OnLoadSelect;
     private void OnEnable()
     {
         SceneManager.sceneLoaded += Set;
@@ -25,7 +25,7 @@ public class SceneController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            childToPreserve = GameObject.Find("CircleWipeTransition");
+            //childToPreserve = GameObject.Find("CircleWipeTransition");
             childToPreserve.transform.SetParent(null); // Détache l'enfant
             DontDestroyOnLoad(childToPreserve);
             //Si ça marche pas c que le script getButton récupere pas le sceneController
@@ -38,11 +38,13 @@ public class SceneController : MonoBehaviour
     {
         if (scene.name != "LevelSelection") return;
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
-        OnLoadSelect?.Invoke(parent);
+        OnLoadSelect?.Invoke(parent, null);
     }
     public void SelectLevel()
     {
         SceneManager.LoadScene("LevelSelection");
+        parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
+        OnLoadSelect?.Invoke(parent, null);
     }
 
 
@@ -51,7 +53,7 @@ public class SceneController : MonoBehaviour
 #if UNITY_EDITOR //dans l'editeur
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();// en jeu
+        Application.Quit();// en jeu
 #endif
     }
     #endregion
