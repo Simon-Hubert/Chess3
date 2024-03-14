@@ -25,7 +25,7 @@ public class Eating : MonoBehaviour
             pieceTarget.Destroy();
             if(piece.Data.IsWhite && !piece.Data.CanFuse)
             {
-                gameObject.transform.parent.gameObject.SetActive(false);
+                this.Destroy();
             }
             OnEat?.Invoke(pieceTarget);
             audioManager?.PlaySfx("Eat");
