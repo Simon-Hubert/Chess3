@@ -13,6 +13,11 @@ public class Fuse
     public static event Action<Piece> OnFuse;
     public static void Fusing(Piece pieceTarget, Piece piece, PieceData pieceSave)
     {
+        if(!piece.Data.CanFuse){
+            Fusing(piece, pieceTarget, pieceTarget.Data);
+            return;
+        }
+        
         if(piece.Data.Level == 0)
         {
             for (int i = 0; i < pieceTarget.Data.Pattern.Count; i++)
