@@ -1,16 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PartyManager : MonoBehaviour
 {
     VictoryScreen vS;
     TurnManager tm;
-    RuleController ruleController;
-    Scores score;
+    [SerializeField] RuleController ruleController;
+    [SerializeField] Scores score;
     [SerializeField] GameObject panelVictory, panelLose;
-    private void Awake()
+    [SerializeField] GameObject parentPiece;
+    [SerializeField] GameObject king;
+    public event Action onWin;
+
+    public GameObject PanelVictory { get => panelVictory; }
+
+    private void Start()
     {
+        parentPiece = GameObject.Find("PIECES");
         tm = GetComponent<TurnManager>();
         ruleController = GetComponent<RuleController>();
         score = GetComponent<Scores>();
@@ -19,17 +28,29 @@ public class PartyManager : MonoBehaviour
         if (ruleController == null) Debug.LogWarning("il n'y a pas de RuleController sur le MANAGER");
         if (ruleController == null) Debug.LogWarning("il n'y a pas de Scores sur le MANAGER");
         if (vS == null) Debug.LogWarning("il n'y a pas de VictoryScreen sur le MANAGER");
+        king = parentPiece.transform.Find("Roi blanc").gameObject;
+
         TurnManager.OnTurnEnd += IsGameFinished;
+    }
+
+    private void OnDisable()
+    {
+        TurnManager.OnTurnEnd -= IsGameFinished;
     }
     void IsGameFinished(bool b)
     {
         if (ruleController.GetCurrentRule().IsWon())
         {
-            panelVictory.SetActive(true);
+            onWin?.Invoke();
+            PanelVictory.SetActive(true);
             vS.SetScreen(score.SetStars(tm.PlayerCounter));
+            Scene currentScene = SceneManager.GetActiveScene();
+            int index = currentScene.buildIndex - 2;
+            Debug.Log(SaveData.instance);
+            SaveData.instance.UpdateLEVEL(index, score.SetStars(tm.PlayerCounter));
         }
 
-        else if (ruleController.GetCurrentRule().IsLost())
+        else if (ruleController.GetCurrentRule().IsLost(king))
         {
             panelLose.SetActive(true);
         }

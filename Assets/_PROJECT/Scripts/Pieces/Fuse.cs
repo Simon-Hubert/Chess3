@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Fuse
 {
+    /*private AudioClip GetRandomClip()
+    {
+        return clips[Random.Range(0, clips.Length)];
+    }*/
+
     public static event Action<Piece> OnFuse;
     public static void Fusing(Piece pieceTarget, Piece piece, PieceData pieceSave)
     {
@@ -17,8 +22,10 @@ public class Fuse
             }
             Debug.Log("Fusion with " + pieceTarget.Data.Name);
             pieceTarget.gameObject.SetActive(false);
+            piece.GetComponentInChildren<SpriteRenderer>().sprite = pieceTarget.Data.SpriteFusion;
             piece.Data.Level++;
             OnFuse?.Invoke(pieceTarget);
+
         }
         else
         {
@@ -35,7 +42,7 @@ public class Fuse
             var m = piece.PatternSave[i];
             piece.Data.Pattern.Add(m);
         }
-
+        piece.GetComponentInChildren<SpriteRenderer>().sprite = piece.Data.Sprite;
         piece.Data.Level--;
         // CHANGE LE SPRITE
     }
