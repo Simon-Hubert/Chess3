@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -25,9 +26,40 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        //PlayMusic("MainMenuMusic");
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        switch (scene.name)
+        {
+            
+            case "level1":
+            case "level2":
+                // ... autres cas ...
+                PlayMusic("Destroy");
+                break;
+            case "level4":
+                // ... autres cas ...
+                PlayMusic("Vip");
+                break;
+            case "level5":
+                // ... autres cas ...
+                PlayMusic("Escape");
+                break;
+            case "Launcher":
+                PlaySfx("Lancement");
+                break;
+            default:
+                break;
+        }
     }
 
     public void PlayMusic(string name)
@@ -57,4 +89,6 @@ public class AudioManager : MonoBehaviour
             sfxSource.PlayOneShot(sound.clip);
         }
     }
+
+
 }

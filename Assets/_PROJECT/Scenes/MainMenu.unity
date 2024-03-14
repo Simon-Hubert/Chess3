@@ -3437,10 +3437,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 684707fd737aa0a4c9c49b2b7ad40578, type: 3}
   - name: LevelEscape
     clip: {fileID: 8300000, guid: 690774fe9328adf4085062a54b8c603f, type: 3}
-  - name: LevelFinal
+  - name: Final
     clip: {fileID: 8300000, guid: d468424b015c9d843991392566964c94, type: 3}
-  - name: LevelVip
+  - name: Vip
     clip: {fileID: 8300000, guid: 7430a9f01558a1342babecaf5d14c1b8, type: 3}
+  - name: Destroy
+    clip: {fileID: 8300000, guid: 684707fd737aa0a4c9c49b2b7ad40578, type: 3}
+  - name: Escape
+    clip: {fileID: 8300000, guid: 690774fe9328adf4085062a54b8c603f, type: 3}
   sfxSounds:
   - name: Move
     clip: {fileID: 8300000, guid: bebd122524708e049918f2b6251a8a90, type: 3}
@@ -3909,9 +3913,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4452948428805434141, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3348450089089148104}
+    - target: {fileID: 4452948428805434141, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
     - target: {fileID: 5879847713583596573, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
       propertyPath: m_Name
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730950952375033843, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2413806693520163455, guid: e8b8136b81a8dba4bab5c79de3022611, type: 3}
+    - target: {fileID: 6846307663852807997, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3348450089089148104}
+    - target: {fileID: 6846307663852807997, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,13 +12,13 @@ public class Laucher : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.Instance.PlaySfx("Lancement");
         LoadLauncher();
     }
 
     public void LoadLauncher()
     {
         StartCoroutine(LoadAsync(SceneManager.GetActiveScene().buildIndex + 1));
+        
     }
 
     IEnumerator LoadAsync(int sceneIndex)
@@ -33,6 +33,7 @@ public class Laucher : MonoBehaviour
             _slider.value = progress;
 
             yield return null;
+            AudioManager.Instance.PlayMusic("MainMenuMusic");
         }
     }
 }
