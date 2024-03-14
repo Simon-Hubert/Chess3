@@ -6488,6 +6488,8 @@ Transform:
   - {fileID: 218367378}
   - {fileID: 907112001}
   - {fileID: 1215211731}
+  - {fileID: 1004237302}
+  - {fileID: 1322747455}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &954468136
@@ -7110,6 +7112,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1004237301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 943048689}
+    m_Modifications:
+    - target: {fileID: 6050082348520185760, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_Name
+      value: Tour noire
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+--- !u!4 &1004237302 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+  m_PrefabInstance: {fileID: 1004237301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1018252735
 GameObject:
   m_ObjectHideFlags: 0
@@ -10007,6 +10071,68 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &1322747454
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 943048689}
+    m_Modifications:
+    - target: {fileID: 6050082348520185760, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_Name
+      value: Tour noire (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+--- !u!4 &1322747455 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
+  m_PrefabInstance: {fileID: 1322747454}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1361098440
 GameObject:
   m_ObjectHideFlags: 0
@@ -11316,7 +11442,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c0c3e9c90f36e624c97d45c81b64f7e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
