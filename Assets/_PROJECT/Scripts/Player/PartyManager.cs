@@ -45,7 +45,7 @@ public class PartyManager : MonoBehaviour
             PanelVictory.SetActive(true);
             vS.SetScreen(score.SetStars(tm.PlayerCounter));
             Scene currentScene = SceneManager.GetActiveScene();
-            int index = currentScene.buildIndex - 3;
+            int index = currentScene.buildIndex - 4;
             Debug.Log(SaveData.instance);
             SaveData.instance.UpdateLEVEL(index, score.SetStars(tm.PlayerCounter));
         }

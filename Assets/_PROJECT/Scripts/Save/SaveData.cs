@@ -36,8 +36,9 @@ public class SaveData: MonoBehaviour
     //[Button]
     public void UpdateLEVEL(int level, int stars)
     {
-        levelsData[level].isUnlocked = true;
-        levelsData[level - 1].stars = stars;
+        Debug.Log(level);
+        levelsData[level + 1].isUnlocked = true;
+        levelsData[level].stars = stars;
         int tStars = 0;
         foreach(levelData levelData in levelsData)
         {
@@ -53,6 +54,7 @@ public class SaveData: MonoBehaviour
     }
     public void Save()
     {
+        levelsData[0].isUnlocked = true;
         services.SaveData("/levelsData.json", levelsData, false);
     }
     public void SetData(GameObject parentB)
@@ -73,6 +75,7 @@ public class SaveData: MonoBehaviour
     }
     public void Load(GameObject balek = null)
     {
+        Debug.Log("on a load en sah");
         try
         {
             levelsData = services.LoadData<levelData[]>("/levelsData.json", false);
@@ -82,8 +85,7 @@ public class SaveData: MonoBehaviour
                 //buttons[i].IsUnlocked = data.isUnlocked;
                 if (data.isUnlocked)
                 {
-                    buttons[i].Unlocking();
-                    if (data.stars == 3) buttons[i].SetGold();
+                    buttons[i].Unlocking(data.stars);
                 }
 
             }
