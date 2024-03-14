@@ -25,7 +25,7 @@ public class SceneController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            childToPreserve = GameObject.Find("CircleWipeTransition");
+            //childToPreserve = GameObject.Find("CircleWipeTransition");
             childToPreserve.transform.SetParent(null); // Détache l'enfant
             DontDestroyOnLoad(childToPreserve);
             //Si ça marche pas c que le script getButton récupere pas le sceneController
@@ -43,6 +43,8 @@ public class SceneController : MonoBehaviour
     public void SelectLevel()
     {
         SceneManager.LoadScene("LevelSelection");
+        parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
+        OnLoadSelect?.Invoke(parent);
     }
 
 
@@ -51,7 +53,7 @@ public class SceneController : MonoBehaviour
 #if UNITY_EDITOR //dans l'editeur
         UnityEditor.EditorApplication.isPlaying = false;
 #else
-            Application.Quit();// en jeu
+        Application.Quit();// en jeu
 #endif
     }
     #endregion

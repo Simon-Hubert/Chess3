@@ -5,6 +5,7 @@ using NaughtyAttributes;
 using UnityEngine.UI;
 using System;
 using GooglePlayGames;
+using TMPro;
 
 public class SaveData: MonoBehaviour
 {
@@ -13,11 +14,13 @@ public class SaveData: MonoBehaviour
         public int stars;
         public bool isUnlocked;
     }
+    int tStars = 0;
     public static SaveData instance;
     public IDataServices services = new JSonDataService();
     [SerializeField] List<UnlockButton> buttons = new List<UnlockButton>();
     levelData[] levelsData = new levelData[20];
     [SerializeField] SceneController sc;
+    [SerializeField] TextMeshProUGUI starsT;
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -36,9 +39,10 @@ public class SaveData: MonoBehaviour
     //[Button]
     public void UpdateLEVEL(int level, int stars)
     {
-        levelsData[level].isUnlocked = true;
-        levelsData[level - 1].stars = stars;
-        int tStars = 0;
+        Debug.Log(level);
+        levelsData[level + 1].isUnlocked = true;
+        levelsData[level].stars = stars;
+        tStars = 0;
         foreach(levelData levelData in levelsData)
         {
             tStars += levelData.stars;
@@ -53,6 +57,7 @@ public class SaveData: MonoBehaviour
     }
     public void Save()
     {
+        levelsData[0].isUnlocked = true;
         services.SaveData("/levelsData.json", levelsData, false);
     }
     public void SetData(GameObject parentB)
@@ -73,6 +78,9 @@ public class SaveData: MonoBehaviour
     }
     public void Load(GameObject balek = null)
     {
+        Debug.Log("on a load en sah");
+        starsT = GameObject.Find("NSTars").GetComponent<TextMeshProUGUI>();
+        starsT.text = tStars.ToString();
         try
         {
             levelsData = services.LoadData<levelData[]>("/levelsData.json", false);
@@ -82,8 +90,7 @@ public class SaveData: MonoBehaviour
                 //buttons[i].IsUnlocked = data.isUnlocked;
                 if (data.isUnlocked)
                 {
-                    buttons[i].Unlocking();
-                    if (data.stars == 3) buttons[i].SetGold();
+                    buttons[i].Unlocking(data.stars);
                 }
 
             }

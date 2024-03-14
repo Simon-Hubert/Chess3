@@ -3350,6 +3350,7 @@ GameObject:
   - component: {fileID: 719329969}
   - component: {fileID: 719329971}
   - component: {fileID: 719329973}
+  - component: {fileID: 719329974}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -3378,7 +3379,7 @@ MonoBehaviour:
     RoiBlanc: {fileID: 1927273039}
     Objectif: {fileID: 80854908}
     tileGrid: {fileID: 23330428}
-  ruleRenforts: {fileID: 0}
+  ruleRenforts: {fileID: 719329974}
   renforts: 0
 --- !u!4 &719329967
 Transform:
@@ -3439,8 +3440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7aa52afb118dc4aa8dd9a21fa1355d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnPlayedFor2Stars: 2
-  turnPlayedFor3Stars: 1
+  turnPlayedFor2Stars: 26
+  turnPlayedFor3Stars: 6
 --- !u!114 &719329971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3511,6 +3512,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _successID: Cgkli7nLgfQPEAIQBg
   _pM: {fileID: 719329971}
+--- !u!114 &719329974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719329964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2bb65f604dcf5048bf05f82a21201f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piecesParent: {fileID: 0}
+  pieces: []
+  TourInactionMax: 0
 --- !u!1 &755992019
 GameObject:
   m_ObjectHideFlags: 0

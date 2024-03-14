@@ -4119,8 +4119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7aa52afb118dc4aa8dd9a21fa1355d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnPlayedFor2Stars: 2
-  turnPlayedFor3Stars: 1
+  turnPlayedFor2Stars: 16
+  turnPlayedFor3Stars: 14
 --- !u!114 &719329971
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,20 +16,18 @@ public class UnlockButton : MonoBehaviour
         {
             GetComponent<Button>().enabled = IsUnlocked;
         }
-        else
-        {
-            Unlocking();
-        }
     }
 
-    public void Unlocking()
+    public void Unlocking(int stars)
     {
         IsUnlocked = true;
         GetComponent<Button>().enabled = IsUnlocked;
         GetComponent<Image>().sprite = tamponUnlocked;
+        if (stars == 3) SetGold();
     }
     public void SetGold()
     {
         GetComponent<Image>().sprite = tamponGold;
+        Debug.Log("de l'or et des pailettes");
     }
 }
