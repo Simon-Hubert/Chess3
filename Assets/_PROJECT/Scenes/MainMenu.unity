@@ -2797,6 +2797,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1159630583083879040, guid: 5b0ea95470f3c594dac06dcf776a3a8c, type: 3}
   m_PrefabInstance: {fileID: 1693725259}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1894619201 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4394672326614184457, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+  m_PrefabInstance: {fileID: 8669115983655795341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1894619206 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8904052730877631949, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+  m_PrefabInstance: {fileID: 8669115983655795341}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1916935778
 GameObject:
   m_ObjectHideFlags: 0
@@ -3386,6 +3396,7 @@ GameObject:
   - component: {fileID: 773336659877589688}
   - component: {fileID: 1907293362650807559}
   - component: {fileID: 3729796184675585969}
+  - component: {fileID: 3729796184675585970}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3432,18 +3443,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSounds:
   - name: MainMenuMusic
-    clip: {fileID: 8300000, guid: f705515cab4920443ac7f3764ffa31fc, type: 3}
-  - name: LevelMusic
-    clip: {fileID: 8300000, guid: 360fe99387c2ed542a76362dd623839b, type: 3}
-  - name: LevelSelectionMusic
-    clip: {fileID: 8300000, guid: 8528740c0458a444481c190c58fbd6cc, type: 3}
+    clip: {fileID: 8300000, guid: 1e1696021c33e4845b411b87bace2377, type: 3}
+  - name: LevelDestroy
+    clip: {fileID: 8300000, guid: 684707fd737aa0a4c9c49b2b7ad40578, type: 3}
+  - name: LevelEscape
+    clip: {fileID: 8300000, guid: 690774fe9328adf4085062a54b8c603f, type: 3}
+  - name: LevelFinal
+    clip: {fileID: 8300000, guid: d468424b015c9d843991392566964c94, type: 3}
+  - name: LevelVip
+    clip: {fileID: 8300000, guid: 7430a9f01558a1342babecaf5d14c1b8, type: 3}
   sfxSounds:
   - name: Move
     clip: {fileID: 8300000, guid: bebd122524708e049918f2b6251a8a90, type: 3}
   - name: Eat
     clip: {fileID: 8300000, guid: 8e84029b74101cd45b56cfe9d97c7c78, type: 3}
   - name: Fusion
-    clip: {fileID: 8300000, guid: 8e84029b74101cd45b56cfe9d97c7c78, type: 3}
+    clip: {fileID: 8300000, guid: 115536e5373fd494692a36a16e95961b, type: 3}
+  - name: Retour
+    clip: {fileID: 8300000, guid: 149243d9593dfd14f9c5fba7bd0367e9, type: 3}
+  - name: Confirmer
+    clip: {fileID: 8300000, guid: 10a741394af60fa43bc14d85785dde23, type: 3}
+  - name: SelectionPion
+    clip: {fileID: 8300000, guid: ac887a55a6dfb11419e252e2b5c9d9af, type: 3}
+  - name: PionDeath
+    clip: {fileID: 8300000, guid: 67a7b222aaa508a45aef78e1067e59b0, type: 3}
+  - name: Win
+    clip: {fileID: 8300000, guid: 42c0151c4a4e0c7449d76cde35d8f597, type: 3}
+  - name: Gameover
+    clip: {fileID: 8300000, guid: 6c3b00a1400106f46a9009dcab7986a8, type: 3}
+  - name: LevelStart
+    clip: {fileID: 8300000, guid: 0c25b257ad6ada74da78715ffabd7b16, type: 3}
+  - name: Lancement
+    clip: {fileID: 8300000, guid: ac81640367b7bb5479b8337b45a7c827, type: 3}
   musicSource: {fileID: 4355999697019386807}
   sfxSource: {fileID: 4953579956571778260}
 --- !u!224 &3348450089089148103 stripped
@@ -3451,17 +3482,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3626196159806431332, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
   m_PrefabInstance: {fileID: 8669115983655795341}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3348450089089148104 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9076130959110880586, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
-  m_PrefabInstance: {fileID: 8669115983655795341}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab58a1ba5506d674b8f3d370b56f9f64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3729796184675585969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3475,7 +3495,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
-  sc: {fileID: 3348450089089148104}
+  sc: {fileID: 3729796184675585970}
+--- !u!114 &3729796184675585970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565379401566646544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab58a1ba5506d674b8f3d370b56f9f64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transitionAnim: {fileID: 1894619206}
+  childToPreserve: {fileID: 1894619201}
+  parent: {fileID: 0}
 --- !u!4 &3992929970775845513
 Transform:
   m_ObjectHideFlags: 0
@@ -3796,7 +3831,7 @@ PrefabInstance:
     - target: {fileID: 348252486448005609, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3348450089089148104}
+      objectReference: {fileID: 3729796184675585970}
     - target: {fileID: 348252486448005609, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadNextLevel
@@ -3893,7 +3928,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9076130959110880586, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -8485,9 +8485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _turnbase: 0
-  blackPlayOrder:
-  - {fileID: 1205599142}
-  - {fileID: 436664270}
+  blackPlayOrder: []
 --- !u!114 &719329969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14030,7 +14028,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 14.4, y: 28.8}
+  m_Size: {x: 7.0588236, y: 14.117647}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

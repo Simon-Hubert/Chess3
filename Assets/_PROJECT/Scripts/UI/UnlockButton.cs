@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UnlockButton : MonoBehaviour
 {
      [SerializeField]    bool isUnlocked = false;
+    [SerializeField] Sprite tamponUnlocked, tamponGold;
 
     public bool IsUnlocked { get => isUnlocked; set => isUnlocked = value; }
 
@@ -25,5 +26,10 @@ public class UnlockButton : MonoBehaviour
     {
         IsUnlocked = true;
         GetComponent<Button>().enabled = IsUnlocked;
+        GetComponent<Image>().sprite = tamponUnlocked;
+    }
+    public void SetGold()
+    {
+        GetComponent<Image>().sprite = tamponGold;
     }
 }
