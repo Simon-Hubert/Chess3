@@ -26,7 +26,7 @@ public class Fuse
                 piece.Data.Pattern.Add(m);
             }
             Debug.Log("Fusion with " + pieceTarget.Data.Name);
-            pieceTarget.gameObject.SetActive(false);
+            pieceTarget.Destroy();
             piece.GetComponentInChildren<SpriteRenderer>().sprite = pieceTarget.Data.SpriteFusion;
             piece.Data.Level++;
             OnFuse?.Invoke(pieceTarget);
