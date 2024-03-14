@@ -80,7 +80,12 @@ public class SaveData: MonoBehaviour
             {
                 levelData data = levelsData[i];
                 //buttons[i].IsUnlocked = data.isUnlocked;
-                if (data.isUnlocked) buttons[i].Unlocking();
+                if (data.isUnlocked)
+                {
+                    buttons[i].Unlocking();
+                    if (data.stars == 3) buttons[i].SetGold();
+                }
+
             }
         }
         catch (Exception e)
