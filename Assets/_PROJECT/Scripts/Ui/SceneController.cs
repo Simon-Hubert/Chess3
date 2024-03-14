@@ -11,7 +11,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] GameObject childToPreserve;
     [SerializeField] private GameObject parent;
     public static SceneController instance;
-    public event Action<GameObject, Image> OnLoadSelect;
+    public event Action<GameObject> OnLoadSelect;
     private void OnEnable()
     {
         SceneManager.sceneLoaded += Set;
@@ -38,13 +38,13 @@ public class SceneController : MonoBehaviour
     {
         if (scene.name != "LevelSelection") return;
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
-        OnLoadSelect?.Invoke(parent, null);
+        OnLoadSelect?.Invoke(parent);
     }
     public void SelectLevel()
     {
         SceneManager.LoadScene("LevelSelection");
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
-        OnLoadSelect?.Invoke(parent, null);
+        OnLoadSelect?.Invoke(parent);
     }
 
 
