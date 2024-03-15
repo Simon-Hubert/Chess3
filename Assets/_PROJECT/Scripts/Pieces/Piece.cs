@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Movements))]
 public class Piece : MonoBehaviour
@@ -13,6 +14,7 @@ public class Piece : MonoBehaviour
     Movements movement;
     Eating eatS;
     bool isAlive = true;
+    public UnityEvent m_OnDeath; 
 
     public Vector3Int Coords { get => grid.WorldToCell(transform.position); }
     public PieceData Data { get => _data; set => _data = value; }
@@ -31,6 +33,7 @@ public class Piece : MonoBehaviour
     }
 
     public void Destroy(){
+        m_OnDeath.Invoke();
         IsAlive = false;
         StartCoroutine(WaitForDestroy());
     }
