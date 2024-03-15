@@ -43,17 +43,36 @@ public class AudioManager : MonoBehaviour
             
             case "level1":
             case "level2":
-                // ... autres cas ...
+            case "level3":
+            case "level6":
+            case "level7":
+            case "level8":
+            case "level11":
+            case "level12":
+            case "level13":
+            case "level16":
+            case "level17":
+            case "level18":
                 PlayMusic("Destroy");
                 break;
+                
             case "level4":
-                // ... autres cas ...
+            case "level9":
+            case "level14":
+            case "level19":
                 PlayMusic("Vip");
                 break;
+                
             case "level5":
-                // ... autres cas ...
+            case "level10":
+            case "level15":
                 PlayMusic("Escape");
                 break;
+                
+            case "level20":
+                PlayMusic("Final");
+                break;
+                
             case "Launcher":
                 PlaySfx("Lancement");
                 break;
@@ -61,6 +80,7 @@ public class AudioManager : MonoBehaviour
                 break;
         }
     }
+
 
     public void PlayMusic(string name)
     {
