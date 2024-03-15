@@ -47,6 +47,10 @@ public class Authenticate : MonoBehaviour
             PlayGamesPlatform.Instance.ManuallyAuthenticate(SignIn);
         }
     }
+    public void LD()
+    {
+        SceneManager.LoadScene(1);
+    }
     //void Connect(SignInStatus state)
     //{
     //    square.color = Color.yellow;
