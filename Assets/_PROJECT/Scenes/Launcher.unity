@@ -163,11 +163,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d468424b015c9d843991392566964c94, type: 3}
   - name: LevelVip
     clip: {fileID: 8300000, guid: 7430a9f01558a1342babecaf5d14c1b8, type: 3}
+  - name: Destroy
+    clip: {fileID: 8300000, guid: 684707fd737aa0a4c9c49b2b7ad40578, type: 3}
+  - name: Escape
+    clip: {fileID: 8300000, guid: 690774fe9328adf4085062a54b8c603f, type: 3}
+  - name: Final
+    clip: {fileID: 8300000, guid: d468424b015c9d843991392566964c94, type: 3}
   sfxSounds:
   - name: Move
     clip: {fileID: 8300000, guid: bebd122524708e049918f2b6251a8a90, type: 3}
   - name: Eat
-    clip: {fileID: 8300000, guid: 8e84029b74101cd45b56cfe9d97c7c78, type: 3}
+    clip: {fileID: 8300000, guid: 67a7b222aaa508a45aef78e1067e59b0, type: 3}
   - name: Fusion
     clip: {fileID: 8300000, guid: 115536e5373fd494692a36a16e95961b, type: 3}
   - name: Retour

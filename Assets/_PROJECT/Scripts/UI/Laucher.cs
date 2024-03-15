@@ -23,7 +23,7 @@ public class Laucher : MonoBehaviour
 
     IEnumerator LoadAsync(int sceneIndex)
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(4);
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneIndex);
 
 

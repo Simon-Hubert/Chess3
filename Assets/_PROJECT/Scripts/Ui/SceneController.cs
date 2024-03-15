@@ -12,6 +12,10 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject parent;
     public static SceneController instance;
     public event Action<GameObject> OnLoadSelect;
+
+    public Animator _animatorPlay;
+    public Animator _animatorSelect;
+    public Animator _animatorQuit;
     private void OnEnable()
     {
         SceneManager.sceneLoaded += Set;
@@ -29,10 +33,17 @@ public class SceneController : MonoBehaviour
             childToPreserve.transform.SetParent(null); // Détache l'enfant
             DontDestroyOnLoad(childToPreserve);
             //Si ça marche pas c que le script getButton récupere pas le sceneController
+
+            
         }
 
     }
 
+    private void Start()
+    {
+        //_animator = GetComponent<Animator>();
+
+    }
     #region MAINMENU
     void Set(Scene scene, LoadSceneMode mode)
     {
@@ -42,13 +53,23 @@ public class SceneController : MonoBehaviour
     }
     public void SelectLevel()
     {
+        _animatorSelect.SetTrigger("Start");
+        _animatorSelect.SetTrigger("End");
         AudioManager.Instance.PlaySfx("Confirmer");
         SceneManager.LoadScene("LevelSelection");
     }
 
+    public void Back()
+    {
+        AudioManager.Instance.PlaySfx("Confirmer");
+        SceneManager.LoadScene("LevelSelection");
+        AudioManager.Instance.PlayMusic("MainMenuMusic");
+    }
 
     public void Quit()
     {
+        _animatorQuit.SetTrigger("Start");
+        _animatorQuit.SetTrigger("End");
         AudioManager.Instance.PlaySfx("Confirmer");
 #if UNITY_EDITOR //dans l'editeur
         UnityEditor.EditorApplication.isPlaying = false;
@@ -60,6 +81,8 @@ public class SceneController : MonoBehaviour
 
     public void Play()
     {
+        _animatorPlay.SetTrigger("Start");
+        _animatorPlay.SetTrigger("End");
         AudioManager.Instance.PlaySfx("Confirmer");
         StartCoroutine(LoadLevelRoutine(SceneManager.GetActiveScene().buildIndex + 1));
     }

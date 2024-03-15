@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour, IMovementBrain
                 //Debug.Log("Deplacement demandé vers :" + tile.Coords);
                 return tile;
             }
+            AudioManager.Instance?.PlaySfx("SelectionPion");
         }
         return null;
     }  
