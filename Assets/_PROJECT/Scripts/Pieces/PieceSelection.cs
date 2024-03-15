@@ -48,6 +48,7 @@ public class PieceSelection : MonoBehaviour
         Highlights.HighlightTiles((Vector2Int)thisPiece.Coords, thisPiece.Data.Pattern, gridManager);
         OnSelected?.Invoke();
         m_OnSelected?.Invoke();
+        
     }
 
     void UnSelect(){

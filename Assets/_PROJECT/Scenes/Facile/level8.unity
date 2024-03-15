@@ -3319,6 +3319,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 713640912}
     m_Modifications:
+    - target: {fileID: 91173860890507158, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
     - target: {fileID: 1148455270099935627, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
       propertyPath: m_Name
       value: PanelVictory
@@ -3609,6 +3613,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 713640912}
     m_Modifications:
+    - target: {fileID: 3561845087165704038, guid: ffd1cda0e539be841bdecfd827404e7d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
     - target: {fileID: 6695342015408477553, guid: ffd1cda0e539be841bdecfd827404e7d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
