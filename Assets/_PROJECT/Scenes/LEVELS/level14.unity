@@ -5050,7 +5050,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &713640912
 RectTransform:
@@ -5221,7 +5221,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8731c15f867744b8cbebf9d195530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackPieces: []
+  blackPieces:
+  - {fileID: 1805582098}
   VipOuReine: {fileID: 1805582098}
   OnStartDialogue:
     m_PersistentCalls:
@@ -11777,7 +11778,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: 871a10aaeed579744b0449cefbe0904b, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1543895129
@@ -11793,7 +11794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 1
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":282,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Notre
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":239.96228,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Notre
     invit\xE9 est enfin l\xE0, accueillez-le comme il se doit !\\r\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
     ennemi\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -11802,8 +11803,8 @@ MonoBehaviour:
   DefaultFont: {fileID: 0}
   NodeSerializedDataList:
   - {fileID: 1543895128}
-  ContinueFont: {fileID: 0}
-  EndConversationFont: {fileID: 0}
+  ContinueFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+  EndConversationFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Event:
     m_PersistentCalls:
       m_Calls: []

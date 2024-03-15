@@ -5033,7 +5033,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &713640912
 RectTransform:
@@ -5148,6 +5148,7 @@ GameObject:
   - component: {fileID: 719329969}
   - component: {fileID: 719329971}
   - component: {fileID: 719329973}
+  - component: {fileID: 719329974}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -5176,7 +5177,7 @@ MonoBehaviour:
     RoiBlanc: {fileID: 715954446}
     Objectif: {fileID: 2086965033}
     tileGrid: {fileID: 23330428}
-  ruleRenforts: {fileID: 0}
+  ruleRenforts: {fileID: 719329974}
   renforts: 0
 --- !u!4 &719329967
 Transform:
@@ -5205,7 +5206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8731c15f867744b8cbebf9d195530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackPieces: []
+  blackPieces:
+  - {fileID: 2044023432}
   VipOuReine: {fileID: 2044023432}
   OnStartDialogue:
     m_PersistentCalls:
@@ -5321,6 +5323,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _successID: Cgkli7nLgfQPEAIQCA
   _pM: {fileID: 719329971}
+--- !u!114 &719329974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719329964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2bb65f604dcf5048bf05f82a21201f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piecesParent: {fileID: 0}
+  pieces: []
+  TourInactionMax: 0
 --- !u!4 &720900482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
@@ -7302,7 +7319,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 1
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: 4295abb3a26f5eb41a8bee2a3304824a, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1025682787
@@ -7321,7 +7338,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: ed74365a103485349b77dc54852da64b, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1025682788
@@ -7337,8 +7354,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 2
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":288,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bloquez
-    lui le passage, ce faux Roi ne doit pas sortir de l\xE0 vivant !\\r\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Reine\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":289,\"yPos\":149},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oui,
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":239.96228,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Bloquez
+    lui le passage, ce faux Roi ne doit pas sortir de l\xE0 vivant !\\r\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Reine\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":240.96228,\"yPos\":149},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oui,
     votre Altesse.\\r\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Tour\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -7347,8 +7364,8 @@ MonoBehaviour:
   NodeSerializedDataList:
   - {fileID: 1025682787}
   - {fileID: 1025682786}
-  ContinueFont: {fileID: 0}
-  EndConversationFont: {fileID: 0}
+  ContinueFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+  EndConversationFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Event:
     m_PersistentCalls:
       m_Calls: []
@@ -8510,6 +8527,18 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5705836474421648762, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+    - target: {fileID: 5705836474421648762, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8797554525743828148, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+    - target: {fileID: 5705836474421648762, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5783070735210925010, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -8522,6 +8551,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6522343813735484292, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+    - target: {fileID: 6522343813735484292, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8797554525743828148, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+    - target: {fileID: 6522343813735484292, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8321131203857709573, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -8532,6 +8573,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8321131203857709573, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8864625781201818268, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+    - target: {fileID: 8864625781201818268, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -8797554525743828148, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+    - target: {fileID: 8864625781201818268, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
