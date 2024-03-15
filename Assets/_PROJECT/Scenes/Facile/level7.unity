@@ -3535,7 +3535,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: f23f164c899ec2446922d0f6943cb81c, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &1051853601
@@ -3551,9 +3551,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 2
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":84,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Soldats
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":204.400024,\"yPos\":103.599991},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Soldats
     ! Nous devons traverser cette for\xEAt pour rejoindre le reste des troupes. \",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
-    D\xE9chu\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":91.2,\"yPos\":122.400009},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mais
+    D\xE9chu\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":211.600021,\"yPos\":204},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mais
     d\u2019abord\u2026 D\xE9barrassons-nous de nos opposants !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
     D\xE9chu\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -3563,8 +3563,8 @@ MonoBehaviour:
   NodeSerializedDataList:
   - {fileID: 1051853600}
   - {fileID: 1051853602}
-  ContinueFont: {fileID: 0}
-  EndConversationFont: {fileID: 0}
+  ContinueFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+  EndConversationFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Event:
     m_PersistentCalls:
       m_Calls: []
@@ -3584,7 +3584,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 1
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: f23f164c899ec2446922d0f6943cb81c, type: 3}
   Audio: {fileID: 0}
 --- !u!1 &1054952199

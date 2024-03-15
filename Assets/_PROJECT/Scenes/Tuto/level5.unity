@@ -2583,6 +2583,63 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &588891320
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4132717247517785864, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_Name
+      value: PieceAnim
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162811616698675293, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8ae6a8b2e911054c89759dd07ae6383, type: 3}
 --- !u!1001 &619551895
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2737,7 +2794,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 3
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: c7602321a670a804fa0d6da6150ea126, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &619551901
@@ -2756,7 +2813,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 2
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: ed74365a103485349b77dc54852da64b, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &619551902
@@ -2775,7 +2832,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 1
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: f23f164c899ec2446922d0f6943cb81c, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &619551903
@@ -2794,7 +2851,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
-  TMPFont: {fileID: 0}
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Icon: {fileID: 21300000, guid: ed74365a103485349b77dc54852da64b, type: 3}
   Audio: {fileID: 0}
 --- !u!114 &619551904
@@ -2810,12 +2867,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 4
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":84,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Toi
-    qui fuis devant le changement, tu dois p\xE9rir !\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Reine\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":78.3999939,\"yPos\":140},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":202.800018,\"yPos\":-131.599991},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Toi
+    qui fuis devant le changement, tu dois p\xE9rir !\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Reine\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":197.200012,\"yPos\":-13.5999908},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Tu
     es aveugl\xE9 par le pouvoir ! Ouvre les yeux ! \",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
-    D\xE9chu\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":78.3999939,\"yPos\":265.6},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Il
+    D\xE9chu\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":197.200012,\"yPos\":112.000259},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Il
     suffit ! Ta mort sera bien plus utile au royaume que cet \xE9change st\xE9rile
-    !\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Reine\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":72,\"yPos\":368},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Fuyez
+    !\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Reine\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":190.800018,\"yPos\":214.4003},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Fuyez
     mon roi ! Nous les retenons !\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Tour
     Blanche\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -2827,8 +2884,8 @@ MonoBehaviour:
   - {fileID: 619551902}
   - {fileID: 619551901}
   - {fileID: 619551900}
-  ContinueFont: {fileID: 0}
-  EndConversationFont: {fileID: 0}
+  ContinueFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+  EndConversationFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Event:
     m_PersistentCalls:
       m_Calls: []
@@ -3416,7 +3473,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &713640912
 RectTransform:
@@ -3573,8 +3630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8731c15f867744b8cbebf9d195530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackPieces: []
-  VipOuReine: {fileID: 0}
+  blackPieces:
+  - {fileID: 1987362968}
+  VipOuReine: {fileID: 1987362968}
   OnStartDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -7645,6 +7703,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7df382ce7f0251c41aa0afe4677782fe, type: 3}
+--- !u!114 &1987362968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4122473218150423313, guid: 7df382ce7f0251c41aa0afe4677782fe, type: 3}
+  m_PrefabInstance: {fileID: 1987362967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1997217416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8337,3 +8406,4 @@ SceneRoots:
   - {fileID: 713640912}
   - {fileID: 775964387}
   - {fileID: 1445346190}
+  - {fileID: 588891320}
