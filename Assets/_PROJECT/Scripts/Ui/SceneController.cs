@@ -86,7 +86,7 @@ public class SceneController : MonoBehaviour
         _animatorPlay.SetTrigger("Start");
         _animatorPlay.SetTrigger("End");
         AudioManager.Instance.PlaySfx("Confirmer");
-        StartCoroutine(LoadLevelRoutine(SceneManager.GetActiveScene().buildIndex + 1));
+        StartCoroutine(LoadLevelRoutine(SceneManager.GetActiveScene().buildIndex + 2));
     }
 
     IEnumerator LoadLevelRoutine(int levelIndex = 0, string name = null)
