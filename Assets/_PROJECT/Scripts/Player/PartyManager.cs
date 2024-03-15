@@ -55,4 +55,14 @@ public class PartyManager : MonoBehaviour
             panelLose.SetActive(true);
         }
     }
+    public void ForceWin()
+    {
+        onWin?.Invoke();
+        PanelVictory.SetActive(true);
+        vS.SetScreen(score.SetStars(tm.PlayerCounter));
+        Scene currentScene = SceneManager.GetActiveScene();
+        int index = currentScene.buildIndex - 3;
+        Debug.Log(SaveData.instance);
+        SaveData.instance.UpdateLEVEL(index, score.SetStars(tm.PlayerCounter));
+    }
 }
