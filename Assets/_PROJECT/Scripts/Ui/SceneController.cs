@@ -33,7 +33,6 @@ public class SceneController : MonoBehaviour
 
     }
 
-    #region MAINMENU
     void Set(Scene scene, LoadSceneMode mode)
     {
         if (scene.name != "LevelSelection") return;
@@ -45,24 +44,7 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("LevelSelection");
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
         OnLoadSelect?.Invoke(parent);
-        AudioManager.Instance.PlayMusic("MainMenuMusic");
-    }
-
-
-    public void Quit()
-    {
-#if UNITY_EDITOR //dans l'editeur
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();// en jeu
-#endif
-    }
-    #endregion
-
-    public void LoadNextLevel()
-    {
-        StartCoroutine(LoadLevelRoutine(SceneManager.GetActiveScene().buildIndex + 1));
-        AudioManager.Instance.PlaySfx("Confirmer");
+        //AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
     IEnumerator LoadLevelRoutine(int levelIndex = 0, string name = null)
@@ -94,26 +76,14 @@ public class SceneController : MonoBehaviour
         Debug.Log(instance);
         SceneManager.LoadScene(nameScene);
         instance.StartCoroutine(instance.LoadLevelRoutine(0,nameScene));
-        switch (nameScene)
-        {
-            case "MainMenu":
-            case "LevelSelection":
-                Debug.Log("Mainmenu music");
-                AudioManager.Instance.PlayMusic("MainMenuMusic");
-                break;
-            case "Level":
-                Debug.Log("Level music");
-                AudioManager.Instance.PlayMusic("LevelMusic");
-                break;
-            case "Victory":
-                AudioManager.Instance.PlayMusic("Victory");
-                break;
-            case "Defeat":
-                AudioManager.Instance.PlayMusic("Defeat");
-                break;
-            default:
-                break;
-        }
+        
+    }
+
+    public void BackToLevels()
+    {
+        AudioManager.Instance.PlaySfx("Confirmer");
+        SceneManager.LoadScene("LevelSelection");
+        //AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
 }
