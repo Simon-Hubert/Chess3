@@ -155,6 +155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inverted: 1
+  goodShader: {fileID: 0}
+  goodShader2: {fileID: 0}
+  goodSprite: {fileID: 0}
 --- !u!114 &23330428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,8 +562,8 @@ Transform:
   m_GameObject: {fileID: 54022636}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.544, y: 1.7717, z: 0}
-  m_LocalScale: {x: 1.1893878, y: 1.0600022, z: 1}
+  m_LocalPosition: {x: -0.0234, y: 0.0189, z: 0}
+  m_LocalScale: {x: 1.5410373, y: 1.360487, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -606,7 +609,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!4 &59040270
 Transform:
   m_ObjectHideFlags: 0
@@ -1174,7 +1176,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &177963222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,7 +1402,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &208567059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1460,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &210780376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,7 +1518,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &214210068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,7 +1660,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &216694776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,7 +1790,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &238397050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2288,7 +2284,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1001 &318162653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2607,7 +2602,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &358524821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3746,7 +3740,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &545450762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3889,7 +3882,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &549758234
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,7 +4108,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &604257049
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,7 +4418,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &700379529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4486,7 +4476,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &713640908
 GameObject:
   m_ObjectHideFlags: 0
@@ -4625,6 +4614,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 605a5d04e75038c47afa8d50d25d4db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
+  sc: {fileID: 0}
 --- !u!114 &719329966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4642,8 +4633,6 @@ MonoBehaviour:
     BlackList:
     - {fileID: 1205599142}
     RoiBlanc: {fileID: 256095432}
-  ruleDestroy:
-    RoiBlanc: {fileID: 0}
   ruleEscape:
     RoiBlanc: {fileID: 0}
     Objectif: {fileID: 0}
@@ -4723,8 +4712,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3357bc716e7dae24d9cb052b2a6064ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ruleController: {fileID: 0}
+  score: {fileID: 0}
   panelVictory: {fileID: 1730180998}
   panelLose: {fileID: 1999871843}
+  parentPiece: {fileID: 0}
+  king: {fileID: 0}
 --- !u!114 &719329972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4821,7 +4814,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &740259010
 GameObject:
   m_ObjectHideFlags: 0
@@ -4964,7 +4956,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &775964384
 GameObject:
   m_ObjectHideFlags: 0
@@ -5091,7 +5082,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &792210279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5234,7 +5224,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &844241096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5378,7 +5367,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!114 &845463895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6172,7 +6160,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &929381771
 GameObject:
   m_ObjectHideFlags: 0
@@ -6436,7 +6423,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &947220722
 GameObject:
   m_ObjectHideFlags: 0
@@ -6579,7 +6565,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &958215940
 GameObject:
   m_ObjectHideFlags: 0
@@ -7058,7 +7043,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1021664763
 GameObject:
   m_ObjectHideFlags: 0
@@ -7117,7 +7101,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1041215002
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,7 +7384,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1075506824
 GameObject:
   m_ObjectHideFlags: 0
@@ -7628,7 +7610,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1107664646
 GameObject:
   m_ObjectHideFlags: 0
@@ -8052,7 +8033,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!114 &1172204052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8325,7 +8305,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1233337255
 GameObject:
   m_ObjectHideFlags: 0
@@ -8384,7 +8363,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1240383468
 GameObject:
   m_ObjectHideFlags: 0
@@ -8779,7 +8757,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1274459058
 GameObject:
   m_ObjectHideFlags: 0
@@ -8922,7 +8899,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1323686514
 GameObject:
   m_ObjectHideFlags: 0
@@ -8981,7 +8957,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1337195016
 GameObject:
   m_ObjectHideFlags: 0
@@ -9040,7 +9015,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1358123606
 GameObject:
   m_ObjectHideFlags: 0
@@ -9434,7 +9408,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1447057817
 GameObject:
   m_ObjectHideFlags: 0
@@ -9493,7 +9466,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1459873675
 GameObject:
   m_ObjectHideFlags: 0
@@ -9636,7 +9608,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1466876794
 GameObject:
   m_ObjectHideFlags: 0
@@ -9695,7 +9666,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1478143151
 GameObject:
   m_ObjectHideFlags: 0
@@ -9838,7 +9808,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1482183945
 GameObject:
   m_ObjectHideFlags: 0
@@ -10573,7 +10542,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1602965018
 GameObject:
   m_ObjectHideFlags: 0
@@ -11214,7 +11182,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1768688587
 GameObject:
   m_ObjectHideFlags: 0
@@ -11357,7 +11324,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1803025635
 GameObject:
   m_ObjectHideFlags: 0
@@ -11416,7 +11382,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1823135953
 GameObject:
   m_ObjectHideFlags: 0
@@ -11643,7 +11608,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1899731264
 GameObject:
   m_ObjectHideFlags: 0
@@ -11702,7 +11666,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1925135568
 GameObject:
   m_ObjectHideFlags: 0
@@ -12013,7 +11976,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1970779067
 GameObject:
   m_ObjectHideFlags: 0
@@ -12256,7 +12218,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &1999871843
 GameObject:
   m_ObjectHideFlags: 0
@@ -12478,143 +12439,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2036622346
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2036622349}
-  - component: {fileID: 2036622348}
-  - component: {fileID: 2036622347}
-  - component: {fileID: 2036622350}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &2036622347
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036622346}
-  m_Enabled: 1
---- !u!20 &2036622348
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036622346}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 1
-  orthographic size: 7.5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &2036622349
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036622346}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.55, y: 1.79, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2036622350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2036622346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_AllowHDROutput: 1
-  m_UseScreenCoordOverride: 0
-  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
-  m_TaaSettings:
-    quality: 3
-    frameInfluence: 0.1
-    jitterScale: 1
-    mipBias: 0
-    varianceClampScale: 0.9
-    contrastAdaptiveSharpening: 0
 --- !u!1 &2039079862
 GameObject:
   m_ObjectHideFlags: 0
@@ -12673,7 +12497,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &2044807899
 GameObject:
   m_ObjectHideFlags: 0
@@ -12816,7 +12639,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &2051047644
 GameObject:
   m_ObjectHideFlags: 0
@@ -13008,90 +12830,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2079400874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2079400876}
-  - component: {fileID: 2079400875}
-  m_Layer: 0
-  m_Name: Square
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &2079400875
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079400874}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &2079400876
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079400874}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.47, y: -1.72, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2119708515
 GameObject:
   m_ObjectHideFlags: 0
@@ -13150,7 +12888,6 @@ MonoBehaviour:
   m_OnMovedTo:
     m_PersistentCalls:
       m_Calls: []
-  goodShader: {fileID: 2100000, guid: d2431e9a059ea9f45861d836fb8ab817, type: 2}
 --- !u!1 &2126320922
 GameObject:
   m_ObjectHideFlags: 0
@@ -13235,11 +12972,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &2757322419945130500
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429132374894451366, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589945403466697646, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
+      propertyPath: m_Name
+      value: Main Camera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 2036622349}
+  - {fileID: 2757322419945130500}
   - {fileID: 23330430}
   - {fileID: 943048689}
   - {fileID: 719329967}
@@ -13248,4 +13042,3 @@ SceneRoots:
   - {fileID: 24373040}
   - {fileID: 54022638}
   - {fileID: 850453490}
-  - {fileID: 2079400876}

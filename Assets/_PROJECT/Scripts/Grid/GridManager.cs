@@ -121,6 +121,22 @@ public class GridManager : MonoBehaviour
         return GetPieceAt(selfPos);
     }
 
+    public Piece GetActivePieceAt(Vector2Int pos){
+        Piece p = GetPieceAt(pos);
+        if(p!=null && p.IsAlive){
+            return p;
+        }
+        return null;
+    }
+
+    public Piece GetActivePieceAt(Vector3 pos){
+        Piece p = GetPieceAt(pos);
+        if(p!=null && p.IsAlive){
+            return p;
+        }
+        return null;
+    }
+
 
     public void ClearMoveToAble(){
         foreach (Tile tile in tiles)

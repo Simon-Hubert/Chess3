@@ -33,7 +33,7 @@ public class PieceSelection : MonoBehaviour
     private void LateUpdate() {
         if(Input.GetMouseButtonDown(0)){
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Piece piece = gridManager.GetPieceAt(pos);
+            Piece piece = gridManager.GetActivePieceAt(pos);
             if (piece == thisPiece){
                 Select();
             }
