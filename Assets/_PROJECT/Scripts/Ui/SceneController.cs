@@ -45,6 +45,7 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("LevelSelection");
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
         OnLoadSelect?.Invoke(parent);
+        AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
 
@@ -61,6 +62,7 @@ public class SceneController : MonoBehaviour
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevelRoutine(SceneManager.GetActiveScene().buildIndex + 1));
+        AudioManager.Instance.PlaySfx("Confirmer");
     }
 
     IEnumerator LoadLevelRoutine(int levelIndex = 0, string name = null)

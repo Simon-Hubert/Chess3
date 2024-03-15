@@ -13,6 +13,7 @@ public class MMSceneCont : MonoBehaviour
 
     IEnumerator LoadLevelRoutine()
     {
+        AudioManager.Instance.PlaySfx("Confirmer");
         _transitionAnim.SetTrigger("Start");
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_PROJECT/Scenes/Authenticate.unity
     guid: 42c76c822832c644f8b52c5167c4395b
-  - enabled: 0
+  - enabled: 1
     path: Assets/_PROJECT/Scenes/Launcher.unity
     guid: efbfa7855ad3a34419eebb45457e8fcc
   - enabled: 1

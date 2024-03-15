@@ -75,5 +75,6 @@ public class Movements : MonoBehaviour
         pos = tile;
         OnMove?.Invoke();
         m_OnMove?.Invoke();
+        AudioManager.Instance.PlaySfx("Move");
     }
 }
