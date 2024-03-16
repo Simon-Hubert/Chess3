@@ -41,6 +41,7 @@ public class SceneController : MonoBehaviour
     }
     public void SelectLevel()
     {
+        AudioManager.Instance.PlaySfx("Confirmer");
         SceneManager.LoadScene("LevelSelection");
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
         OnLoadSelect?.Invoke(parent);
