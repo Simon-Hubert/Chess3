@@ -1,0 +1,594 @@
+fileFormatVersion: 2
+guid: ecb8934a9b60632478fd77ce7bc68ed8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boutons_Noir_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 304
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e3b814f0542864cac32d7bd570d224
+      internalID: 1315875420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 304
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb1bf017bd710c4f9d61ffaadb70279
+      internalID: 189976985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 280
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c9054ef8a67384ea1df560ab00a79c
+      internalID: 813388670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 248
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd3dd301c6945643b731d0466dfa503
+      internalID: -148038586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 247
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1cc755c9940c140a764f9b64e0d54a
+      internalID: -1682783660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 216
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e634fe3b80de970439e8930d337eaaa6
+      internalID: -1226765022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 215
+        width: 62
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a441dec6715fa60439d13dd4c642a739
+      internalID: -2140959562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 185
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3649d3462a13f24b9c03a7e51456cb4
+      internalID: -155398633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 184
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4951f262580364f9ec04941b8a12c2
+      internalID: -1454911774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 152
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f31071f18be700c4ea985d44bee2a1c6
+      internalID: 1933897542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 151
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb50697f7480c19449aa9cc857fa83d2
+      internalID: 2063082448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_47
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 120
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0c401725d973c4bac9a775407f838e
+      internalID: 1535209996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_53
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 119
+        width: 96
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd3321d339b64943a2019f46928ef67
+      internalID: 1915934868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_62
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 88
+        width: 77
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06cbc851004da74ba43b8de3a9d490f
+      internalID: 569573722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_70
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 87
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243b76fe69a70164c89b4342625f2ea2
+      internalID: 777285046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_76
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 52
+        width: 67
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d71b2a2e434438240b7cc148fa9e4744
+      internalID: 1523740618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Noir_82
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 52
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22bb027fb42c7f047a34ba88dcb9a166
+      internalID: 1062010527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boutons_Noir_0: 1315875420
+      Boutons_Noir_1: 189976985
+      Boutons_Noir_10: 1711629557
+      Boutons_Noir_11: -1099108369
+      Boutons_Noir_12: 519024582
+      Boutons_Noir_13: -534745934
+      Boutons_Noir_14: -1226765022
+      Boutons_Noir_15: -1655414703
+      Boutons_Noir_16: 1563392012
+      Boutons_Noir_17: -2001848621
+      Boutons_Noir_18: 541356427
+      Boutons_Noir_19: -2140959562
+      Boutons_Noir_2: 813388670
+      Boutons_Noir_20: 70085773
+      Boutons_Noir_21: 1541665972
+      Boutons_Noir_22: -1113210363
+      Boutons_Noir_23: 158627113
+      Boutons_Noir_24: -1056727926
+      Boutons_Noir_25: 941051692
+      Boutons_Noir_26: -155398633
+      Boutons_Noir_27: 1431889587
+      Boutons_Noir_28: 645523878
+      Boutons_Noir_29: -1501100110
+      Boutons_Noir_3: -148038586
+      Boutons_Noir_30: 1147571900
+      Boutons_Noir_31: -1454911774
+      Boutons_Noir_32: -1160831819
+      Boutons_Noir_33: 1247643357
+      Boutons_Noir_34: 1889965002
+      Boutons_Noir_35: 2028987634
+      Boutons_Noir_36: 1933897542
+      Boutons_Noir_37: 1593843905
+      Boutons_Noir_38: 916408687
+      Boutons_Noir_39: 1004477890
+      Boutons_Noir_4: -1607355024
+      Boutons_Noir_40: 1584601198
+      Boutons_Noir_41: 2063082448
+      Boutons_Noir_42: -1773313566
+      Boutons_Noir_43: -954750931
+      Boutons_Noir_44: -522939274
+      Boutons_Noir_45: 126778433
+      Boutons_Noir_46: -1229263492
+      Boutons_Noir_47: 1535209996
+      Boutons_Noir_48: 1616995576
+      Boutons_Noir_49: -1162001265
+      Boutons_Noir_5: 1661630898
+      Boutons_Noir_50: 133802016
+      Boutons_Noir_51: -547784499
+      Boutons_Noir_52: 488406888
+      Boutons_Noir_53: 1915934868
+      Boutons_Noir_54: 2007811227
+      Boutons_Noir_55: 1667664270
+      Boutons_Noir_56: 1799245799
+      Boutons_Noir_57: 1047019709
+      Boutons_Noir_58: 2137339129
+      Boutons_Noir_59: -1696490914
+      Boutons_Noir_6: 1915955705
+      Boutons_Noir_60: -933395165
+      Boutons_Noir_61: -328574487
+      Boutons_Noir_62: 569573722
+      Boutons_Noir_63: -159772044
+      Boutons_Noir_64: 822732787
+      Boutons_Noir_65: -1638727774
+      Boutons_Noir_66: 1922961287
+      Boutons_Noir_67: -1370093171
+      Boutons_Noir_68: 1037179079
+      Boutons_Noir_69: 188668424
+      Boutons_Noir_7: 758630876
+      Boutons_Noir_70: 777285046
+      Boutons_Noir_71: -1796736806
+      Boutons_Noir_72: -339059321
+      Boutons_Noir_73: 899708119
+      Boutons_Noir_74: 362133815
+      Boutons_Noir_75: 719130162
+      Boutons_Noir_76: 1523740618
+      Boutons_Noir_77: -415621765
+      Boutons_Noir_78: 1461910229
+      Boutons_Noir_79: -1975900963
+      Boutons_Noir_8: -1979603847
+      Boutons_Noir_80: 1357310107
+      Boutons_Noir_81: 575492937
+      Boutons_Noir_82: 1062010527
+      Boutons_Noir_83: -1417372288
+      Boutons_Noir_9: -1682783660
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: caa1d6c20dd8c05488627a30fcf6c98f
+guid: 5d4c6b22e1e59d9408d7d51a778cc403
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -94,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BoutonsUI2_0
+      name: UI_Slider_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 1216
-        width: 192
-        height: 192
+        x: 6
+        y: 82
+        width: 58
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 695f673e4b985584085895a81f2d6cf1
-      internalID: 1330736587
+      spriteID: 687ab6b6f6178444986ba7f922c23ff2
+      internalID: 830210550
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoutonsUI2_1
+      name: UI_Slider_1
       rect:
         serializedVersion: 2
-        x: 280
-        y: 1216
-        width: 192
-        height: 192
+        x: 4
+        y: 68
+        width: 64
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40013f29ff6aa5246b2ffa13c78c4d0e
-      internalID: 1015102425
+      spriteID: 34aa3d0bfbd849b4598953f9e589c5be
+      internalID: 1088969687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoutonsUI2_2
+      name: UI_Slider_2
       rect:
         serializedVersion: 2
-        x: 1076
-        y: 1052
-        width: 296
-        height: 292
+        x: 16
+        y: 4
+        width: 45
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,71 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a0a6928fabd7b4e9f60faafd7caa48
-      internalID: -1848355636
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BoutonsUI2_8
-      rect:
-        serializedVersion: 2
-        x: 696
-        y: 996
-        width: 240
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa7a87ba1ead34841b201045e02f24f9
-      internalID: 603624353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BoutonsUI2_3
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 840
-        width: 240
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d39b997f58140654ba8bb225fce3c60d
-      internalID: 1016705876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BoutonsUI2_4
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 679
-        width: 240
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3d7cf372015ecc4e9f0b54302069680
-      internalID: -48359621
+      spriteID: a8cd9e8522d86c54e980c884ad605c11
+      internalID: -1339282692
       vertices: []
       indices: 
       edges: []
@@ -259,25 +209,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BoutonsUI2_0: 1330736587
-      BoutonsUI2_1: 1015102425
-      BoutonsUI2_10: 988405895
-      BoutonsUI2_11: 1994019757
-      BoutonsUI2_12: 1021544315
-      BoutonsUI2_13: 1476362112
-      BoutonsUI2_14: 559788243
-      BoutonsUI2_15: 964022779
-      BoutonsUI2_16: -1420224621
-      BoutonsUI2_17: 234588893
-      BoutonsUI2_18: -1490989521
-      BoutonsUI2_2: -1848355636
-      BoutonsUI2_3: 1016705876
-      BoutonsUI2_4: -48359621
-      BoutonsUI2_5: -923066822
-      BoutonsUI2_6: 168312289
-      BoutonsUI2_7: -508201650
-      BoutonsUI2_8: 603624353
-      BoutonsUI2_9: 961048859
+      UI_Slider_0: 830210550
+      UI_Slider_1: 1088969687
+      UI_Slider_2: -1339282692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
