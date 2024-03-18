@@ -1,0 +1,594 @@
+fileFormatVersion: 2
+guid: 41530781cf61b73419993d294391c77b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Boutons_Blanc_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 304
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f013ec43286f5904599e6150aa2206f9
+      internalID: -834467758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 304
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d60b0035331a404aaa576443b630ed8
+      internalID: -173486252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_2
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 280
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c9551323ed423458523c4811392339
+      internalID: 1328064037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 248
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3f138fdddf1e5448bb23fe08aff063
+      internalID: -1999719211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 247
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e6077ad13d3d242a7db7bd3e7bde84
+      internalID: -1841837418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 216
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f940faa363f6954183bc3d3d3c3414d
+      internalID: -1834323793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 215
+        width: 62
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7b100f081428242a0479f1dd2d5dfc
+      internalID: 860084624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 185
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d6dc4deedfdb64390f5b00e966e6b5
+      internalID: -389561025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 184
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd058905ca1543448d6e35cadfbf113
+      internalID: 286572901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 152
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551183fbcd3cd3b449df0fd5cc338ff7
+      internalID: -1185963819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_41
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 151
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5ac652453ecc742bcffbaffe387268
+      internalID: 222905654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_47
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 120
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deaf1e5269cd3df4faeeed07b84ec155
+      internalID: -653051385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_53
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 119
+        width: 96
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666818b1d2990784b8e27b1520ff70f5
+      internalID: -5432258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_62
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 88
+        width: 77
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79280801034b71439476ea918a677ac
+      internalID: -2138897660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_70
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 87
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3886817b23ebac84bb230907d4b2ad2f
+      internalID: -239907985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_76
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 52
+        width: 67
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9e569134e77e240848d40432930644
+      internalID: 2022667006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boutons_Blanc_82
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 52
+        width: 60
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360e28b013c3dc041bb25c999259df39
+      internalID: -437692182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Boutons_Blanc_0: -834467758
+      Boutons_Blanc_1: -173486252
+      Boutons_Blanc_10: 506691026
+      Boutons_Blanc_11: -479688617
+      Boutons_Blanc_12: -1479388006
+      Boutons_Blanc_13: 511058730
+      Boutons_Blanc_14: -1834323793
+      Boutons_Blanc_15: -2132801636
+      Boutons_Blanc_16: 1726587804
+      Boutons_Blanc_17: 889476612
+      Boutons_Blanc_18: -1306700757
+      Boutons_Blanc_19: 860084624
+      Boutons_Blanc_2: 1328064037
+      Boutons_Blanc_20: 1285568284
+      Boutons_Blanc_21: 2033029719
+      Boutons_Blanc_22: -1686592236
+      Boutons_Blanc_23: 1790731440
+      Boutons_Blanc_24: 734929809
+      Boutons_Blanc_25: -1891596725
+      Boutons_Blanc_26: -389561025
+      Boutons_Blanc_27: -1337492557
+      Boutons_Blanc_28: 2127017375
+      Boutons_Blanc_29: -295044083
+      Boutons_Blanc_3: -1999719211
+      Boutons_Blanc_30: -186072131
+      Boutons_Blanc_31: 286572901
+      Boutons_Blanc_32: -1623208446
+      Boutons_Blanc_33: 1282353032
+      Boutons_Blanc_34: -594530313
+      Boutons_Blanc_35: 541972334
+      Boutons_Blanc_36: -1185963819
+      Boutons_Blanc_37: -1854927292
+      Boutons_Blanc_38: -448553994
+      Boutons_Blanc_39: 105704157
+      Boutons_Blanc_4: -481780369
+      Boutons_Blanc_40: -1436538830
+      Boutons_Blanc_41: 222905654
+      Boutons_Blanc_42: 491745860
+      Boutons_Blanc_43: 806802107
+      Boutons_Blanc_44: -1827611183
+      Boutons_Blanc_45: -2014238211
+      Boutons_Blanc_46: 2027863153
+      Boutons_Blanc_47: -653051385
+      Boutons_Blanc_48: -682651689
+      Boutons_Blanc_49: 665801577
+      Boutons_Blanc_5: 2079043648
+      Boutons_Blanc_50: -2118801421
+      Boutons_Blanc_51: -1811756128
+      Boutons_Blanc_52: 1370938665
+      Boutons_Blanc_53: -5432258
+      Boutons_Blanc_54: -1646175980
+      Boutons_Blanc_55: 1344439233
+      Boutons_Blanc_56: 102018050
+      Boutons_Blanc_57: -552096819
+      Boutons_Blanc_58: -1519514618
+      Boutons_Blanc_59: -1245813168
+      Boutons_Blanc_6: -822587878
+      Boutons_Blanc_60: 1730262624
+      Boutons_Blanc_61: 151454794
+      Boutons_Blanc_62: -2138897660
+      Boutons_Blanc_63: 2052831972
+      Boutons_Blanc_64: 784692054
+      Boutons_Blanc_65: -576777511
+      Boutons_Blanc_66: -199037419
+      Boutons_Blanc_67: -1329077530
+      Boutons_Blanc_68: -210490944
+      Boutons_Blanc_69: -91083120
+      Boutons_Blanc_7: 1750382899
+      Boutons_Blanc_70: -239907985
+      Boutons_Blanc_71: -515768576
+      Boutons_Blanc_72: -1692688293
+      Boutons_Blanc_73: 1546800787
+      Boutons_Blanc_74: 1647139640
+      Boutons_Blanc_75: -1784751646
+      Boutons_Blanc_76: 2022667006
+      Boutons_Blanc_77: -1477003512
+      Boutons_Blanc_78: -311696122
+      Boutons_Blanc_79: 877430400
+      Boutons_Blanc_8: 581043985
+      Boutons_Blanc_80: 828899228
+      Boutons_Blanc_81: -2016742068
+      Boutons_Blanc_82: -437692182
+      Boutons_Blanc_83: 1887347226
+      Boutons_Blanc_9: -1841837418
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
