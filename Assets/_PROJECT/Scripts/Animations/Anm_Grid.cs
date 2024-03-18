@@ -25,18 +25,22 @@ public class Anm_Grid : MonoBehaviour
         foreach(Piece piece in gm.Pieces)
         {
             GameObject visual = piece.transform.Find("Visual").GetComponent<SpriteRenderer>().gameObject;
-            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
+            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 15.5f);
         }
         foreach(Tile tile in gm.Tiles)
         {
             GameObject visual = tile.transform.Find("Visuel").GetComponent<SpriteRenderer>().gameObject;
-            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
+            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 15.5f);
             tiles.Add(tile);
         }
         count = tiles.Count;
-        StartCoroutine(AnimateTiles());
+        AnimateGrid();
     }
 
+    public void AnimateGrid()
+    {
+        StartCoroutine(AnimateTiles());
+    }
     private IEnumerator AnimateTiles()
     {
         for(int i = 0; i < count; i++)
@@ -52,8 +56,8 @@ public class Anm_Grid : MonoBehaviour
         foreach (Piece piece in gm.Pieces)
         {
             GameObject visual = piece.transform.Find("Visual").GetComponent<SpriteRenderer>().gameObject;
-            Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 10.5f);
-            Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
+            Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 15.5f);
+            Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + 15.5f);
             StartCoroutine(AnimTile(startPos.y, endPos.y, visual.transform));
             yield return new WaitForSeconds(timeBetweenTiles);
         }
