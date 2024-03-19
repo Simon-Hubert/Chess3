@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PartyManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class PartyManager : MonoBehaviour
     [SerializeField] GameObject parentPiece;
     [SerializeField] GameObject king;
     public event Action onWin;
+    public UnityEvent m_onWin;
 
     public GameObject PanelVictory { get => panelVictory; }
 
@@ -42,6 +44,7 @@ public class PartyManager : MonoBehaviour
         if (ruleController.GetCurrentRule().IsWon())
         {
             onWin?.Invoke();
+            m_onWin.Invoke();
             PanelVictory.SetActive(true);
             vS.SetScreen(score.SetStars(tm.PlayerCounter));
             Scene currentScene = SceneManager.GetActiveScene();
