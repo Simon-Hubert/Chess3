@@ -63,7 +63,7 @@ public class TurnManager : MonoBehaviour
             InitPlayerTurn();
         }
         else{
-            InitEnemyTurn();
+            StartEnemyTurn();
         }
     }
 
@@ -78,6 +78,14 @@ public class TurnManager : MonoBehaviour
             m_OnTurnEnd?.Invoke();
             playerTurn = !playerTurn;
             turnEnded = true;
+        }
+    }
+
+    void StartEnemyTurn(){
+        StartCoroutine(bTurn());
+        IEnumerator bTurn(){
+            yield return new WaitForSeconds(5f);
+            InitEnemyTurn();
         }
     }
 
