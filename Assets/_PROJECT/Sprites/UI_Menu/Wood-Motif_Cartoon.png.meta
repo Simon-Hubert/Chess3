@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Wood-Motif_Cartoon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00fb72dfa49413e4eabc11d20b6f5519
+      internalID: 1128217804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-Motif_Cartoon_1
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 180
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0842dec30ff8124499aebaae83ae4bce
+      internalID: 987752877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-Motif_Cartoon_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 180
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550f73a92c05b144185acda66fa02d1c
+      internalID: 1052999816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood-Motif_Cartoon_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 180
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3bd52df844683418923d5b8275c736
+      internalID: -1159052867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +229,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wood-Motif_Cartoon_0: 1128217804
+      Wood-Motif_Cartoon_1: 987752877
+      Wood-Motif_Cartoon_2: 1052999816
+      Wood-Motif_Cartoon_3: -1159052867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
