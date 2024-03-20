@@ -43,8 +43,6 @@ public class TurnManager : MonoBehaviour
     }
 
     void BeginTurn(){
-        OnTurnBegin?.Invoke(playerTurn);
-        m_OnTurnBegin?.Invoke();
         turnEnded = false;
         if(playerTurn){
             InitPlayerTurn();
@@ -52,6 +50,8 @@ public class TurnManager : MonoBehaviour
         else{
             StartEnemyTurn();
         }
+        OnTurnBegin?.Invoke(playerTurn);
+        m_OnTurnBegin?.Invoke();
     }
 
     public void EndTurn(){
@@ -92,7 +92,6 @@ public class TurnManager : MonoBehaviour
             if(VipOuReine) VipOuReine.Movement.Myturn = true;
             else EndTurn();
         }
-        
         else EndTurn();
     }
 
