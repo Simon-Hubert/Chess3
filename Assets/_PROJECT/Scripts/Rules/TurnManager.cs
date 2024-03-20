@@ -71,7 +71,7 @@ public class TurnManager : MonoBehaviour
     void StartEnemyTurn(){
         StartCoroutine(bTurn());
         IEnumerator bTurn(){
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
             InitEnemyTurn();
         }
     }
