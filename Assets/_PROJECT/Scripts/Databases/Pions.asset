@@ -196,3 +196,4 @@ MonoBehaviour:
     _isWhite: 0
     canFuse: 0
     canBreak: 0
+  Outline: {fileID: 2100000, guid: f9b39f625857daf488f43ba926fbe0d8, type: 2}

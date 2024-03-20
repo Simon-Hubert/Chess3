@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: caa1d6c20dd8c05488627a30fcf6c98f
+guid: 95bb739916122434fb8c72b1c7707a70
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,6 +81,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -94,7 +107,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Android
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -123,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BoutonsUI2_0
+      name: Wood-Motif_Cartoon_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 1216
-        width: 192
-        height: 192
+        x: 0
+        y: 180
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 695f673e4b985584085895a81f2d6cf1
-      internalID: 1330736587
+      spriteID: 00fb72dfa49413e4eabc11d20b6f5519
+      internalID: 1128217804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoutonsUI2_1
+      name: Wood-Motif_Cartoon_1
       rect:
         serializedVersion: 2
-        x: 280
-        y: 1216
-        width: 192
-        height: 192
+        x: 180
+        y: 180
+        width: 180
+        height: 180
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40013f29ff6aa5246b2ffa13c78c4d0e
-      internalID: 1015102425
+      spriteID: 0842dec30ff8124499aebaae83ae4bce
+      internalID: 987752877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoutonsUI2_2
+      name: Wood-Motif_Cartoon_2
       rect:
         serializedVersion: 2
-        x: 1076
-        y: 1052
-        width: 296
-        height: 292
+        x: 0
+        y: 0
+        width: 180
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a0a6928fabd7b4e9f60faafd7caa48
-      internalID: -1848355636
+      spriteID: 550f73a92c05b144185acda66fa02d1c
+      internalID: 1052999816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoutonsUI2_8
+      name: Wood-Motif_Cartoon_3
       rect:
         serializedVersion: 2
-        x: 696
-        y: 996
-        width: 240
-        height: 100
+        x: 180
+        y: 0
+        width: 180
+        height: 172
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,50 +213,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa7a87ba1ead34841b201045e02f24f9
-      internalID: 603624353
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BoutonsUI2_3
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 840
-        width: 240
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d39b997f58140654ba8bb225fce3c60d
-      internalID: 1016705876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BoutonsUI2_4
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 679
-        width: 240
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3d7cf372015ecc4e9f0b54302069680
-      internalID: -48359621
+      spriteID: 3a3bd52df844683418923d5b8275c736
+      internalID: -1159052867
       vertices: []
       indices: 
       edges: []
@@ -259,25 +230,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BoutonsUI2_0: 1330736587
-      BoutonsUI2_1: 1015102425
-      BoutonsUI2_10: 988405895
-      BoutonsUI2_11: 1994019757
-      BoutonsUI2_12: 1021544315
-      BoutonsUI2_13: 1476362112
-      BoutonsUI2_14: 559788243
-      BoutonsUI2_15: 964022779
-      BoutonsUI2_16: -1420224621
-      BoutonsUI2_17: 234588893
-      BoutonsUI2_18: -1490989521
-      BoutonsUI2_2: -1848355636
-      BoutonsUI2_3: 1016705876
-      BoutonsUI2_4: -48359621
-      BoutonsUI2_5: -923066822
-      BoutonsUI2_6: 168312289
-      BoutonsUI2_7: -508201650
-      BoutonsUI2_8: 603624353
-      BoutonsUI2_9: 961048859
+      Wood-Motif_Cartoon_0: 1128217804
+      Wood-Motif_Cartoon_1: 987752877
+      Wood-Motif_Cartoon_2: 1052999816
+      Wood-Motif_Cartoon_3: -1159052867
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
