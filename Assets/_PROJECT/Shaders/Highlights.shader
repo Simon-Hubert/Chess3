@@ -14,7 +14,9 @@ Shader "Unlit/Highlights"
         Pass
         {
             Blend SrcAlpha OneMinusSrcAlpha
-
+            Cull Off
+            Lighting Off
+            ZWrite Off
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag

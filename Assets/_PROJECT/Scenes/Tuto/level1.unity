@@ -9786,6 +9786,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roi blanc
       objectReference: {fileID: 0}
+    - target: {fileID: 3599397099659267622, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221507601353019497, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5221507601353019497, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad4899c72cc5d1e41b74e0b70fd96028, type: 2}
     - target: {fileID: 5755993342296155424, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.8794458
@@ -9825,6 +9837,10 @@ PrefabInstance:
     - target: {fileID: 5755993342296155424, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5839831064570150632, guid: 54fe37f994eef5d46adc05603a8b8725, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24281,6 +24297,18 @@ PrefabInstance:
     - target: {fileID: 6465811663697469994, guid: b62e6400871890c4685d1d01d89716c1, type: 3}
       propertyPath: m_Name
       value: Pion blanc
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503745212163314975, guid: b62e6400871890c4685d1d01d89716c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112543471487129838, guid: b62e6400871890c4685d1d01d89716c1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad4899c72cc5d1e41b74e0b70fd96028, type: 2}
+    - target: {fileID: 8604937120592101541, guid: b62e6400871890c4685d1d01d89716c1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
