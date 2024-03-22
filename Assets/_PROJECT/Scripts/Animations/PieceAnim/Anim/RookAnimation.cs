@@ -24,7 +24,9 @@ public class RookAnimation : PieceAnimation
     }
     
     private void FixedUpdate() {
+        
         transform.position = UpdateMovements(thisPiece.transform.position);
+        transform.rotation = Quaternion.Euler(new Vector3(0,0,(yd.x/20)*30));
     }
 
     IEnumerator RookMovement(){
