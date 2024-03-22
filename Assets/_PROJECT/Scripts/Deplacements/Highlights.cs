@@ -38,7 +38,7 @@ public class Highlights
     {
         foreach (Tile tile in CheckMovements.Move_P(coords, distance, tileGrid))
         {
-            tile.Highlighted = true;
+            tile.HighlightThis();
         }
     }
 
@@ -46,7 +46,7 @@ public class Highlights
     {
         foreach (Tile tile in CheckMovements.Move__(coords, distance, tileGrid))
         {
-            tile.Highlighted = true;
+            tile.HighlightThis();
         }
     }
 
@@ -58,7 +58,7 @@ public class Highlights
             bool b = Mathf.Abs(tile.Coords.y - coords.y) == distance;
             bool c = Mathf.Abs(tile.Coords.x - coords.x) == distance2;
             bool d = Mathf.Abs(tile.Coords.y - coords.y) == distance2;
-            if((a&&d)||(b&&c)) tile.Highlighted = true;
+            if((a&&d)||(b&&c)) tile.HighlightThis();
         }
     }
 
@@ -66,7 +66,7 @@ public class Highlights
     {
         foreach (Tile tile in CheckMovements.Move_X(coords, distance, tileGrid))
         {
-            tile.Highlighted = true;
+            tile.HighlightThis();
         }
     }
 
@@ -74,7 +74,7 @@ public class Highlights
     {
         foreach (Tile tile in CheckMovements.Move_I(coords, distance, tileGrid))
         {
-            tile.Highlighted = true;
+            tile.HighlightThis();
         }
     }
 }

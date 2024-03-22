@@ -9065,7 +9065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &713640909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10018,11 +10018,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2824915920221802831, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2824915920221802831, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3520154535830609701, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -10046,11 +10046,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5783070735210925010, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5783070735210925010, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6078701854792263797, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_Name
@@ -16668,7 +16668,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: a3ebe801aba40964982d4139e6908e4c, type: 3}
-  m_Color: {r: 1, g: 0.34528297, b: 0.34528297, a: 0.627451}
+  m_Color: {r: 1, g: 0.34528297, b: 0.34528297, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -29909,8 +29909,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 790305269}
-  - {fileID: 23330430}
   - {fileID: 943048689}
+  - {fileID: 23330430}
   - {fileID: 713640912}
   - {fileID: 719329967}
   - {fileID: 775964387}
