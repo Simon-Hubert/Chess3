@@ -25,7 +25,7 @@ public class SceneController : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            //childToPreserve = GameObject.Find("CircleWipeTransition");
+            childToPreserve = GameObject.Find("CircleWipeTransition");
             childToPreserve.transform.SetParent(null); // Détache l'enfant
             DontDestroyOnLoad(childToPreserve);
             //Si ça marche pas c que le script getButton récupere pas le sceneController
@@ -46,6 +46,14 @@ public class SceneController : MonoBehaviour
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
         OnLoadSelect?.Invoke(parent);
         //AudioManager.Instance.PlayMusic("MainMenuMusic");
+    }
+
+    public static void LoadLevel(string nameScene)
+    {
+        Debug.Log(instance);
+        SceneManager.LoadScene(nameScene);
+        instance.StartCoroutine(instance.LoadLevelRoutine(0, nameScene));
+
     }
 
     IEnumerator LoadLevelRoutine(int levelIndex = 0, string name = null)
@@ -69,22 +77,15 @@ public class SceneController : MonoBehaviour
     {
         AudioManager.Instance.PlaySfx("Retour");
         SceneManager.LoadScene("MainMenu");
-        AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
-    public static void LoadLevel(string nameScene)
-    {
-        Debug.Log(instance);
-        SceneManager.LoadScene(nameScene);
-        instance.StartCoroutine(instance.LoadLevelRoutine(0,nameScene));
-        
-    }
+    
 
     public void BackToLevels()
     {
         AudioManager.Instance.PlaySfx("Confirmer");
         SceneManager.LoadScene("LevelSelection");
-        //AudioManager.Instance.PlayMusic("MainMenuMusic");
+        AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
 }

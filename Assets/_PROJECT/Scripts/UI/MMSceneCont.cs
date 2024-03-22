@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,10 +15,12 @@ public class MMSceneCont : MonoBehaviour
    
     public void Play()
     {
-        StartCoroutine(LoadLevelRoutine(4, "level1"));
+        _animPlay.SetTrigger("Start");
+        _animPlay.SetTrigger("End");
+        StartCoroutine(PlayFirstLevel(4, "level1"));
     }
 
-    IEnumerator LoadLevelRoutine(int levelIndex = 0, string name = null)
+    IEnumerator PlayFirstLevel(int levelIndex = 0, string name = null)
     {
         AudioManager.Instance.PlaySfx("Confirmer");
         _transitionAnim.SetTrigger("Start");
@@ -39,12 +42,20 @@ public class MMSceneCont : MonoBehaviour
         AudioManager.Instance.PlaySfx("Confirmer");
         _animQuit.SetTrigger("Start");
         _animQuit.SetTrigger("End");
-    
+        StartCoroutine(QuitCoroutine());
+
+
+    }
+
+    IEnumerator QuitCoroutine()
+    {
+        yield return new WaitForSeconds(1);
 #if UNITY_EDITOR //dans l'editeur
         UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();// en jeu
 #endif
+
     }
 
     public void SelectBtn()

@@ -2463,10 +2463,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3167541805755450245, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_Color.a
+      value: 0.67058825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547069724767258652, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToLevels
+      objectReference: {fileID: 0}
     - target: {fileID: 4680202770617527780, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: _panel
       value: 
       objectReference: {fileID: 1856332636}
+    - target: {fileID: 4680202770617527780, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: _objectiveText
+      value: 
+      objectReference: {fileID: 780386072}
     - target: {fileID: 5506502658253430407, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2581,6 +2593,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780386072 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8864625781201818268, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+  m_PrefabInstance: {fileID: 756715003}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &786025482
 GameObject:
   m_ObjectHideFlags: 0
@@ -6466,6 +6489,10 @@ PrefabInstance:
     - target: {fileID: 2357438480911869805, guid: 5a2ef353c66238b4eaf7c8a2b46da5d1, type: 3}
       propertyPath: m_text
       value: Vaincre tout les ennemis
+      objectReference: {fileID: 0}
+    - target: {fileID: 6107774186793265897, guid: 5a2ef353c66238b4eaf7c8a2b46da5d1, type: 3}
+      propertyPath: m_Color.a
+      value: 0.80784315
       objectReference: {fileID: 0}
     - target: {fileID: 8348807289341307857, guid: 5a2ef353c66238b4eaf7c8a2b46da5d1, type: 3}
       propertyPath: m_Pivot.x

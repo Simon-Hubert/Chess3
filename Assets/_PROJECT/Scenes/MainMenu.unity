@@ -2771,6 +2771,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SimpleSettingsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 6078701854792263797, guid: 5b0ea95470f3c594dac06dcf776a3a8c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7535480563019901940, guid: 5b0ea95470f3c594dac06dcf776a3a8c, type: 3}
       propertyPath: m_MinValue
       value: 0.0001
@@ -3609,6 +3613,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CircleWipeTransitionMM
       objectReference: {fileID: 0}
+    - target: {fileID: 4452948428805434141, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3348450089089148104}
+    - target: {fileID: 4452948428805434141, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4452948428805434141, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MMSceneCont, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5833950724908991520, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
       propertyPath: m_LocalScale.x
       value: 8.51
@@ -3680,37 +3696,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2323343586815989052, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8669115983655795345}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
---- !u!1 &8669115983655795342 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2323343586815989052, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
+--- !u!95 &8669115983655795345 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7602594775763856704, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
   m_PrefabInstance: {fileID: 8669115983655795341}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &8669115983655795345
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8669115983655795342}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5c52d6db8e239249a21a6afa4a3106c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!95 &8669115983655795346 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1135620173671991277, guid: 7a7580b0cf843154796d20f1e4005686, type: 3}
