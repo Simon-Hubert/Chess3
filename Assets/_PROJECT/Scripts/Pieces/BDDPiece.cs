@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class BDDPiece: ScriptableObject
 {
     public List<PieceData> pieces;
-    public Material Outline;
+    public Material outline;
 
     #if UNITY_EDITOR
     [Button]
@@ -29,25 +29,25 @@ public class BDDPiece: ScriptableObject
         GameObject piece = new GameObject(pieceData.Name);
         GameObject visual = new GameObject("Visual");
         GameObject brain = new GameObject("Brain");
-        GameObject highlight = new GameObject("Highlight");
 
         visual.transform.parent = piece.transform;
         brain.transform.parent = piece.transform;
-        highlight.transform.parent = piece.transform;
-        
-        visual.AddComponent<SpriteRenderer>().sprite = pieceData.Sprite;
-        visual.GetComponent<SpriteRenderer>().sortingOrder = 1;
-        visual.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
-        highlight.AddComponent<SpriteRenderer>().sprite = pieceData.Sprite;
-        highlight.GetComponent<SpriteRenderer>().sortingOrder = 1;
-        highlight.GetComponent<SpriteRenderer>().maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
-        highlight.GetComponent<SpriteRenderer>().material = Outline;
-        piece.AddComponent<Piece>().Data = pieceData;
-        brain.AddComponent<PieceSelection>();
 
-        highlight.SetActive(false);
+        SpriteRenderer sr = visual.AddComponent<SpriteRenderer>();
+        Piece p = piece.AddComponent<Piece>();
+        PieceSelection ps = brain.AddComponent<PieceSelection>();
+        Outline otl = visual.AddComponent<Outline>();
+        
+        otl.Ps = ps;
+        otl.Material = outline;
+        otl.ThisPiece = p;
+
+        sr.sprite = pieceData.Sprite;
+        sr.sortingOrder = 1;
+        sr.maskInteraction = SpriteMaskInteraction.VisibleOutsideMask;
+
+        p.Data = pieceData;
         //------------------ADD BRAIN SCRIPTS -------------------------------
-        piece.AddComponent<Movements>();
         if(pieceData.IsWhite)
         {
             brain.AddComponent<PlayerMovement>();
@@ -56,7 +56,7 @@ public class BDDPiece: ScriptableObject
         {
             brain.AddComponent<EnemyMovement>();
         }
-            brain.AddComponent<Eating>();
+        brain.AddComponent<Eating>();
 
 
         PrefabUtility.SaveAsPrefabAsset(piece, "Assets/_PROJECT/Prefabs/Pieces/" + piece.name + ".prefab");
