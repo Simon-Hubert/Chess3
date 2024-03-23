@@ -9081,7 +9081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnPlayedFor2Stars: 12
-  turnPlayedFor3Stars: 9
+  turnPlayedFor3Stars: 10
 --- !u!114 &719329971
 MonoBehaviour:
   m_ObjectHideFlags: 0
