@@ -14,6 +14,7 @@ public class DisplayObjective : MonoBehaviour
     [Range(0,5)] public float _displayTime = 3f;
     private float elapsedTime = 0f;
     [SerializeField] TextMeshProUGUI _objectiveText;
+    [SerializeField] TextMeshProUGUI _pauseText;
 
     private void Start()
     {
@@ -72,7 +73,29 @@ public class DisplayObjective : MonoBehaviour
             case "level17":
             case "level18":
                 _objectiveText.text = "Vaincre tout les ennemis";
+                _pauseText.text = "Vaincre tout les ennemis";
                 break;
+
+            case "level5":
+            case "level10":
+            case "level15":
+                _objectiveText.text = "Trouver la sortie";
+                _pauseText.text = "Trouver la sortie";
+                break;
+
+            case "level4":
+            case "level9":
+            case "level14":
+            case "level19":
+                _objectiveText.text = "Eliminer le Roi ennemi";
+                _pauseText.text = "Eliminer le Roi ennemi";
+                break;
+
+            case "level20":
+                _objectiveText.text = "Eliminer la Reine";
+                _pauseText.text = "Eliminer la Reine";
+                break;
+
         }
     }
 

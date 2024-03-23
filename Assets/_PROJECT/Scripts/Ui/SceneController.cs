@@ -79,12 +79,12 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    
+
 
     public void BackToLevels()
     {
         AudioManager.Instance.PlaySfx("Confirmer");
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadSceneAsync("LevelSelection");
         AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 

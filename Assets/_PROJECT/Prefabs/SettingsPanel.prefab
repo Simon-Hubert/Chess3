@@ -1723,6 +1723,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _panel: {fileID: 0}
   _displayTime: 3
+  _objectiveText: {fileID: 0}
+  _pauseText: {fileID: 0}
 --- !u!1 &6409952510001354152
 GameObject:
   m_ObjectHideFlags: 0
