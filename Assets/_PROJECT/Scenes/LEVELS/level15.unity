@@ -5033,7 +5033,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &713640912
 RectTransform:
@@ -5148,7 +5148,6 @@ GameObject:
   - component: {fileID: 719329969}
   - component: {fileID: 719329971}
   - component: {fileID: 719329973}
-  - component: {fileID: 719329974}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -5177,7 +5176,7 @@ MonoBehaviour:
     RoiBlanc: {fileID: 715954446}
     Objectif: {fileID: 2086965033}
     tileGrid: {fileID: 23330428}
-  ruleRenforts: {fileID: 719329974}
+  ruleRenforts: {fileID: 0}
   renforts: 0
 --- !u!4 &719329967
 Transform:
@@ -5271,6 +5270,9 @@ MonoBehaviour:
   panelLose: {fileID: 1900093747}
   parentPiece: {fileID: 0}
   king: {fileID: 0}
+  m_onWin:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &719329972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5323,21 +5325,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _successID: Cgkli7nLgfQPEAIQCA
   _pM: {fileID: 719329971}
---- !u!114 &719329974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 719329964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2bb65f604dcf5048bf05f82a21201f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  piecesParent: {fileID: 0}
-  pieces: []
-  TourInactionMax: 0
 --- !u!4 &720900482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8619366705241744767, guid: 522873fb75cdff148bb746cfc72c02d4, type: 3}
