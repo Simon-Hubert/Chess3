@@ -7957,6 +7957,7 @@ GameObject:
   m_Component:
   - component: {fileID: 629996469}
   - component: {fileID: 629996468}
+  - component: {fileID: 629996470}
   m_Layer: 0
   m_Name: TilesetMursDecor_0 (1)
   m_TagString: Untagged
@@ -8031,6 +8032,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2059105744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &629996470
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629996467}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1001 &656226448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18604,7 +18617,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_SortAtRoot: 0
 --- !u!1 &1351906599
 GameObject:
@@ -22119,7 +22132,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_SortAtRoot: 0
 --- !u!1 &1741189154
 GameObject:
@@ -22467,6 +22480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1757650354}
   - component: {fileID: 1757650353}
+  - component: {fileID: 1757650355}
   m_Layer: 0
   m_Name: TilesetMursDecor_0 (2)
   m_TagString: Untagged
@@ -22541,6 +22555,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2059105744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &1757650355
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757650352}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &1759296943
 GameObject:
   m_ObjectHideFlags: 0

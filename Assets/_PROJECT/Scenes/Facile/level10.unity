@@ -4848,6 +4848,7 @@ GameObject:
   - component: {fileID: 719329969}
   - component: {fileID: 719329971}
   - component: {fileID: 719329973}
+  - component: {fileID: 719329974}
   m_Layer: 0
   m_Name: MANAGERS
   m_TagString: Untagged
@@ -4876,7 +4877,7 @@ MonoBehaviour:
     RoiBlanc: {fileID: 861513567}
     Objectif: {fileID: 150694756}
     tileGrid: {fileID: 23330428}
-  ruleRenforts: {fileID: 0}
+  ruleRenforts: {fileID: 719329974}
   renforts: 0
 --- !u!4 &719329967
 Transform:
@@ -5025,6 +5026,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _successID: Cgkli7nLgfQPEAIQBw
   _pM: {fileID: 719329971}
+--- !u!114 &719329974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719329964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2bb65f604dcf5048bf05f82a21201f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piecesParent: {fileID: 0}
+  pieces: []
+  TourInactionMax: 0
 --- !u!1 &765164758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5531,6 +5547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PanelVictory
       objectReference: {fileID: 0}
+    - target: {fileID: 1148455270099935627, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3998399896503215150, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5593,11 +5613,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3998399896503215150, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -540
+      value: 9.999939
       objectReference: {fileID: 0}
     - target: {fileID: 3998399896503215150, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -960
+      value: -35.00006
       objectReference: {fileID: 0}
     - target: {fileID: 3998399896503215150, guid: 96cdbde7b30a94f4f99e566cb01e9542, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11331,11 +11351,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6695342015408477553, guid: ffd1cda0e539be841bdecfd827404e7d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -540
+      value: 9.999939
       objectReference: {fileID: 0}
     - target: {fileID: 6695342015408477553, guid: ffd1cda0e539be841bdecfd827404e7d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -960
+      value: -35.00006
       objectReference: {fileID: 0}
     - target: {fileID: 6695342015408477553, guid: ffd1cda0e539be841bdecfd827404e7d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11352,6 +11372,10 @@ PrefabInstance:
     - target: {fileID: 7566226416212419947, guid: ffd1cda0e539be841bdecfd827404e7d, type: 3}
       propertyPath: m_Name
       value: PanelDefeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566226416212419947, guid: ffd1cda0e539be841bdecfd827404e7d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
