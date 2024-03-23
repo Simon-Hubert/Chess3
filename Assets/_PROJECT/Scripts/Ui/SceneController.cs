@@ -32,7 +32,10 @@ public class SceneController : MonoBehaviour
         }
 
     }
-
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     void Set(Scene scene, LoadSceneMode mode)
     {
         if (scene.name != "LevelSelection") return;
