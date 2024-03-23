@@ -9080,7 +9080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7aa52afb118dc4aa8dd9a21fa1355d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnPlayedFor2Stars: 12
+  turnPlayedFor2Stars: 14
   turnPlayedFor3Stars: 10
 --- !u!114 &719329971
 MonoBehaviour:
