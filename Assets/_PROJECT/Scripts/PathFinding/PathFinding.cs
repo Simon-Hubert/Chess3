@@ -78,14 +78,14 @@ public class PathFinding
                                 newList.Add(currentNeighbour);
                                 Properties pro = Map[currentNeighbour.GetInstanceID()];
                                 pro.parent = current;
-                                // On recalcul les propriétés de currentNeighbour ?
+                                // On recalcul les propriï¿½tï¿½s de currentNeighbour ?
                                 float H = Vector2Int.Distance((Vector2Int)end.Coords, (Vector2Int)start.Coords);
                                 pro.ghf = new Vector3(n, H, n + H);
                                 Map[currentNeighbour.GetInstanceID()] = pro;
                             }
                             else
                             {
-                                // On recalcul les propriétés de currentNeighbour ?
+                                // On recalcul les propriï¿½tï¿½s de currentNeighbour ?
                                 if(n < Map[currentNeighbour.GetInstanceID()].ghf.x)
                                 {
                                     Properties pro = Map[currentNeighbour.GetInstanceID()];

@@ -67,7 +67,7 @@ public class GridManager : MonoBehaviour
         List<Piece> pieces = new List<Piece>();
         foreach (Piece piece in listPieces)
         {
-            if (piece.gameObject.activeSelf) pieces.Add(piece);
+            if (piece.IsAlive) pieces.Add(piece);
         }
         return pieces;
     }
@@ -119,6 +119,22 @@ public class GridManager : MonoBehaviour
     {
         Vector2Int selfPos = (Vector2Int)grid.WorldToCell(pos);
         return GetPieceAt(selfPos);
+    }
+
+    public Piece GetActivePieceAt(Vector2Int pos){
+        Piece p = GetPieceAt(pos);
+        if(p!=null && p.IsAlive){
+            return p;
+        }
+        return null;
+    }
+
+    public Piece GetActivePieceAt(Vector3 pos){
+        Piece p = GetPieceAt(pos);
+        if(p!=null && p.IsAlive){
+            return p;
+        }
+        return null;
     }
 
 

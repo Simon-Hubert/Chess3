@@ -22,10 +22,10 @@ public class Eating : MonoBehaviour
         if(pieceTarget == piece) return true;
         if (piece.Data.IsWhite != pieceTarget.Data.IsWhite)
         {
-            pieceTarget.gameObject.SetActive(false);
+            pieceTarget.Destroy();
             if(piece.Data.IsWhite && !piece.Data.CanFuse)
             {
-                gameObject.transform.parent.gameObject.SetActive(false);
+                this.piece.Destroy();
             }
             OnEat?.Invoke(pieceTarget);
             audioManager?.PlaySfx("Eat");
@@ -33,7 +33,11 @@ public class Eating : MonoBehaviour
         }
         else
         {
-            if(piece.Data.CanFuse) Fuse.Fusing(pieceTarget, piece, pieceSave);
+            if (piece.Data.CanFuse || pieceTarget.Data.CanFuse)
+            {
+                Fuse.Fusing(pieceTarget, piece, pieceSave);
+                audioManager?.PlaySfx("Fusion");
+            }
             return false;
         }
         // CHANGE LE SPRITE

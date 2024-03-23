@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,6 +13,7 @@ public class Tile : MonoBehaviour
     [SerializeField] SpriteRenderer HighlightRenderer;
     [SerializeField] Sprite whiteRenderer, blackRenderer, whiteHighlight, blackHighlight;
     [SerializeField] UnityEvent m_OnMovedTo;
+
     bool moveToAble;
 
     public event Action<GameObject> onMovedTo;
@@ -62,4 +64,11 @@ public class Tile : MonoBehaviour
         onMovedTo?.Invoke(g);
         m_OnMovedTo?.Invoke();
     }
+
+    #if UNITY_EDITOR
+    public void SetUpNewShader(Material goodShader, Material goodShader2, Sprite goodSprite){
+        HighlightRenderer.sprite = goodSprite; 
+        HighlightRenderer.material = whiteTile ? goodShader : goodShader2;
+    }
+    #endif
 }

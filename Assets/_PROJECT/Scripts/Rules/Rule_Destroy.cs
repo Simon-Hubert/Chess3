@@ -7,12 +7,12 @@ using UnityEngine;
 public class Rule_Destroy : IRules
 {
     List<Piece> allPieces = new List<Piece>();
-    [SerializeField] Piece RoiBlanc;
+    
     
 
-    public bool IsLost()
+    public bool IsLost(GameObject King)
     {
-        return !RoiBlanc.gameObject.activeSelf; // || RoiBlanc.Data.ECHEC;
+        return !King.GetComponent<Piece>().IsAlive; // || RoiBlanc.Data.ECHEC;
     }
 
     public bool IsWon()
@@ -27,7 +27,7 @@ public class Rule_Destroy : IRules
         allPieces.Clear();
         foreach (Piece piece in allObj)
         {
-            if (!piece.Data.IsWhite && piece.gameObject.activeSelf) allPieces.Add(piece);
+            if (!piece.Data.IsWhite && piece.IsAlive) allPieces.Add(piece);
         }
     }
 
