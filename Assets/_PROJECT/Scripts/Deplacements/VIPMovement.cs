@@ -32,7 +32,7 @@ public class VIPMovement : MonoBehaviour, IMovementBrain
         foreach (Tile tile in highlights)
         {
             Piece p = gm.GetPieceAt(tile.Coords);
-            if(p == roiBlanc) return tile;
+            if(p != null && p == roiBlanc) return tile;
         }
         return null;
     }
