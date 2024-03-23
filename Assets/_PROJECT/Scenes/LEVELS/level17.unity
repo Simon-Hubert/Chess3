@@ -21048,6 +21048,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8888807880116655561, guid: 712c4895487a6c748b1914e12895b295, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1999682182}
+    - targetCorrespondingSourceObject: {fileID: 8888807880116655561, guid: 712c4895487a6c748b1914e12895b295, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1999682184}
   m_SourcePrefab: {fileID: 100100000, guid: 712c4895487a6c748b1914e12895b295, type: 3}
 --- !u!224 &1999682179 stripped
 RectTransform:
@@ -21095,10 +21098,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 1
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":true,\"xPos\":213.200012,\"yPos\":128.399979},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Camarades
+  CurrentIDCounter: 3
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":190.799973,\"yPos\":148.400009},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Camarades
     ! C\u2019est notre derni\xE8re bataille, celle qui d\xE9cidera de notre avenir
-    !\\r\\nles compagnons tomb\xE9s \\r\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
+    !\\r\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
+    D\xE9chu\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":194.400024,\"yPos\":272.8},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nous
+    devons nous battre pour nos compagnons tomb\xE9s au combat !\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
     D\xE9chu\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -21106,11 +21111,31 @@ MonoBehaviour:
   DefaultFont: {fileID: 0}
   NodeSerializedDataList:
   - {fileID: 1999682182}
+  - {fileID: 1999682184}
   ContinueFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   EndConversationFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
   Event:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1999682184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999682180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 2
+  TMPFont: {fileID: 11400000, guid: 7d384b6eb130e594eb5ee173705e28ce, type: 2}
+  Icon: {fileID: 21300000, guid: f23f164c899ec2446922d0f6943cb81c, type: 3}
+  Audio: {fileID: 0}
 --- !u!1001 &2002300450
 PrefabInstance:
   m_ObjectHideFlags: 0
