@@ -11,6 +11,7 @@ public class Anm_Grid : MonoBehaviour
     [SerializeField, Range(0.01f, 0.1f)] float timeBetweenTiles = 0.01f;
     [SerializeField] GameObject piecesParent;
     List<Tile> tiles = new List<Tile>();
+
     private void OnValidate()
     {
         gm = FindObjectOfType<GridManager>();
@@ -75,5 +76,6 @@ public class Anm_Grid : MonoBehaviour
             yield return null;
         }
         obj.position = new Vector2(obj.position.x, targetPos);
+        obj.GetComponent<RookAnimation>()?.startAnimation();
     }
 }

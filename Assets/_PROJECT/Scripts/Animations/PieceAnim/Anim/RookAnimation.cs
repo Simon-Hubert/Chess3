@@ -10,6 +10,7 @@ public class RookAnimation : PieceAnimation
     Vector2 xp, y, yd;
     [SerializeField] float f, zeta, r, duration;
     float k1, k2, k3;
+    bool canAnimate = false;
 
     Piece thisPiece;
 
@@ -24,9 +25,10 @@ public class RookAnimation : PieceAnimation
     }
     
     private void FixedUpdate() {
-        
-        transform.position = UpdateMovements(thisPiece.transform.position);
-        transform.rotation = Quaternion.Euler(new Vector3(0,0,(yd.x/20)*30));
+        if(canAnimate){
+            transform.position = UpdateMovements(thisPiece.transform.position);
+            transform.rotation = Quaternion.Euler(new Vector3(0,0,(yd.x/20)*30));
+        }
     }
 
     IEnumerator RookMovement(){
@@ -52,5 +54,9 @@ public class RookAnimation : PieceAnimation
         y += T*yd;
         yd += T*(x + k3*xd - y - k1*yd)/k2;
         return y;
+    }
+
+    public void startAnimation(){
+        canAnimate = true;
     }
 }
