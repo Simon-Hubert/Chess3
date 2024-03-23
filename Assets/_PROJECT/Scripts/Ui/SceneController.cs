@@ -50,7 +50,6 @@ public class SceneController : MonoBehaviour
     public static void LoadLevel(string nameScene)
     {
         Debug.Log(instance);
-        SceneManager.LoadScene(nameScene);
         instance.StartCoroutine(instance.LoadLevelRoutine(0, nameScene));
 
     }

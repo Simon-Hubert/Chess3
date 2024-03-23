@@ -50,11 +50,6 @@ public class DisplayObjective : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        elapsedTime += Time.deltaTime;
-        //Debug.Log("Secondes écoulées: " + elapsedTime);
-    }
 
     public void ChangeText(Scene scene, LoadSceneMode mode)
     {

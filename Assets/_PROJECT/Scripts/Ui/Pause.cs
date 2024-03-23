@@ -65,6 +65,7 @@ public class Pause : MonoBehaviour
 
     public void Restart()
     {
+        AudioManager.Instance.PlaySfx("Confirmer");
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         StartCoroutine(_displayObjective.ShowObjective());
 
