@@ -5472,7 +5472,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &713640912
 RectTransform:
@@ -5696,6 +5696,9 @@ MonoBehaviour:
   panelLose: {fileID: 1455069420}
   parentPiece: {fileID: 0}
   king: {fileID: 0}
+  m_onWin:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &719329972
 MonoBehaviour:
   m_ObjectHideFlags: 0
