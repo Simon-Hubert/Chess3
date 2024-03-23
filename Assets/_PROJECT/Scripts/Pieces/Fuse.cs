@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class Fuse
@@ -20,6 +21,10 @@ public class Fuse
         
         if(piece.Data.Level == 0)
         {
+            if (pieceTarget.Data.Name == "Pion blanc")
+            {
+                piece.Data.Pattern[1] = new PieceData.deplacement(MOVES.I_, 2);
+            }
             for (int i = 0; i < pieceTarget.Data.Pattern.Count; i++)
             {
                 var m = pieceTarget.Data.Pattern[i];

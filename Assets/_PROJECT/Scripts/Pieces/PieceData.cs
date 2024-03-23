@@ -32,6 +32,11 @@ public class PieceData
         public int distance;
         [ShowIf("moves", MOVES.L), AllowNesting]public int distance2;
 
+        public deplacement(MOVES moves, int distance) : this()
+        {
+            this.moves = moves;
+            this.distance = distance;
+        }
     }
 
     [SerializeField] string _name;
