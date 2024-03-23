@@ -6940,6 +6940,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7623931367448740677, guid: d592ab7888107e74fa0adabfdb3eb678, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7623931367448740677, guid: d592ab7888107e74fa0adabfdb3eb678, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1281220786, guid: 1c652e39d8fa09149836240083073da4, type: 3}
     - target: {fileID: 8269917274292952871, guid: d592ab7888107e74fa0adabfdb3eb678, type: 3}
       propertyPath: m_Name
       value: LevelCanvas

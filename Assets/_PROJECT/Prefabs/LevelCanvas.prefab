@@ -211,8 +211,16 @@ PrefabInstance:
       value: 0.67058825
       objectReference: {fileID: 0}
     - target: {fileID: 3547069724767258652, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3805271615703442561}
+    - target: {fileID: 3547069724767258652, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: BackToLevels
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547069724767258652, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4680202770617527780, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: _panel
@@ -276,6 +284,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1159630583083879040, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
   m_PrefabInstance: {fileID: 1276893083926750718}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3805271615703442561 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2699737694383767935, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+  m_PrefabInstance: {fileID: 1276893083926750718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8762e8c80faf76b40919bb454e52d19a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7691327176135063394 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8864625781201818268, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}

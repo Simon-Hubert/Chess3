@@ -42,10 +42,9 @@ public class SceneController : MonoBehaviour
     public void SelectLevel()
     {
         AudioManager.Instance.PlaySfx("Confirmer");
-        SceneManager.LoadScene("LevelSelection");
+        SceneManager.LoadSceneAsync("LevelSelection");
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
         OnLoadSelect?.Invoke(parent);
-        //AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
     public static void LoadLevel(string nameScene)
@@ -77,15 +76,6 @@ public class SceneController : MonoBehaviour
     {
         AudioManager.Instance.PlaySfx("Retour");
         SceneManager.LoadScene("MainMenu");
-    }
-
-
-
-    public void BackToLevels()
-    {
-        AudioManager.Instance.PlaySfx("Confirmer");
-        SceneManager.LoadSceneAsync("LevelSelection");
-        AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
 }

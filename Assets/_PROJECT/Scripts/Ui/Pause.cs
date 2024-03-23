@@ -70,6 +70,13 @@ public class Pause : MonoBehaviour
 
     }
 
-    
+    public void BackToLevels()
+    {
+        AudioManager.Instance.PlaySfx("Confirmer");
+        SceneManager.LoadSceneAsync("LevelSelection");
+        AudioManager.Instance.PlayMusic("MainMenuMusic");
+    }
+
+
 
 }
