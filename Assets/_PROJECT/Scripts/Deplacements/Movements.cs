@@ -13,6 +13,7 @@ public class Movements : MonoBehaviour
     IMovementBrain brain;
     TurnManager turnManager;
     Piece thisPiece;
+    GameObject visuel;
 
     Tile target;
 
@@ -30,8 +31,8 @@ public class Movements : MonoBehaviour
         // Setup Managers
         gridManager = FindObjectOfType<GridManager>();
         turnManager = FindObjectOfType<TurnManager>();
-        
 
+        visuel = transform.Find("Visual").gameObject;
     }
 
     private void Start() {
@@ -73,7 +74,9 @@ public class Movements : MonoBehaviour
         }
         Teleporter tp = tile.GetComponent<Teleporter>();
         if(tp) tile = tp.TP.GetComponent<Tile>();
+        Vector2 save = transform.position;
         transform.position = tile.transform.position;
+        visuel.transform.position = save;
         pos = tile;
         OnMove?.Invoke();
         m_OnMove?.Invoke();
