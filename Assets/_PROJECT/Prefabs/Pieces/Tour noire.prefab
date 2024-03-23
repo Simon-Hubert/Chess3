@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2867511234383975261}
   - component: {fileID: 1383021522332868954}
   - component: {fileID: 5510869282685600026}
+  - component: {fileID: 5257104708822456831}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -100,6 +101,29 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: ad4899c72cc5d1e41b74e0b70fd96028, type: 2}
   ps: {fileID: 1826155601672659003}
   thisPiece: {fileID: 726445090568494988}
+  pa: {fileID: 0}
+--- !u!114 &5257104708822456831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4357703218142193357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1a26f95e99fbe4b9f22271875e1a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onAnimBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onAnimEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  f: 1
+  zeta: 0.6
+  r: -1.5
+  duration: 1
 --- !u!1 &5187017802436141676
 GameObject:
   m_ObjectHideFlags: 0
