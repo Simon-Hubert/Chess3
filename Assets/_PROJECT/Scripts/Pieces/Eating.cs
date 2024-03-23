@@ -28,7 +28,7 @@ public class Eating : MonoBehaviour
                 this.piece.Destroy();
             }
             OnEat?.Invoke(pieceTarget);
-            audioManager?.PlaySfx("Eat");
+            AudioManager.Instance?.PlaySfx("Eat");
             return true;
         }
         else

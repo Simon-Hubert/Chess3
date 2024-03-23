@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -25,10 +26,64 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        //PlayMusic("MainMenuMusic");
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        switch (scene.name)
+        {
+            case "MainMenu":
+                PlayMusic("MainMenuMusic");
+                break;
+
+            case "level1":
+            case "level2":
+            case "level3":
+            case "level6":
+            case "level7":
+            case "level8":
+            case "level11":
+            case "level12":
+            case "level13":
+            case "level16":
+            case "level17":
+            case "level18":
+                PlayMusic("Destroy");
+                break;
+
+            case "level4":
+            case "level9":
+            case "level14":
+            case "level19":
+                PlayMusic("Vip");
+                break;
+
+            case "level5":
+            case "level10":
+            case "level15":
+                PlayMusic("Escape");
+                break;
+
+            case "level20":
+                PlayMusic("Final");
+                break;
+
+            case "Launcher":
+                PlaySfx("Lancement");
+                break;
+            default:
+                break;
+        }
+    }
+
 
     public void PlayMusic(string name)
     {
@@ -53,8 +108,10 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            
+
             sfxSource.PlayOneShot(sound.clip);
         }
     }
+
+
 }

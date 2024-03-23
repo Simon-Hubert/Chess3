@@ -12,7 +12,7 @@ public class Laucher : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.Instance.PlaySfx("Lancement");
+        //AudioManager.Instance.PlaySfx("Lancement");
         LoadLauncher();
     }
 

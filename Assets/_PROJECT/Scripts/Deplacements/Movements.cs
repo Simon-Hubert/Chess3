@@ -17,6 +17,7 @@ public class Movements : MonoBehaviour
     Tile target;
 
     public static event Action OnMove;
+    public event Action<Vector2> OnMoveThis;
     public event Action OnTeleport;
     public UnityEvent m_OnMove;
 
@@ -67,7 +68,8 @@ public class Movements : MonoBehaviour
         if(tile != pos)
         {
             tile.OnMovedTo(gameObject);
-            Anm_piece.Move(transform.position, tile.transform.position, this.gameObject); // Play Animation
+            //Anm_piece.Move(transform.position, tile.transform.position, this.gameObject); // Play Animation
+            OnMoveThis?.Invoke(tile.transform.position);
         }
         Teleporter tp = tile.GetComponent<Teleporter>();
         if(tp) tile = tp.TP.GetComponent<Tile>();
@@ -75,5 +77,6 @@ public class Movements : MonoBehaviour
         pos = tile;
         OnMove?.Invoke();
         m_OnMove?.Invoke();
+        AudioManager.Instance?.PlaySfx("Move");
     }
 }
