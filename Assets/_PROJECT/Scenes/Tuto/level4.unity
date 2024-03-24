@@ -3980,6 +3980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 320409442}
   - component: {fileID: 320409441}
+  - component: {fileID: 320409443}
   m_Layer: 0
   m_Name: BIGtileset_46
   m_TagString: Untagged
@@ -4054,6 +4055,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1948778174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &320409443
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320409440}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &323641716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,6 +6011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 475483603}
   - component: {fileID: 475483602}
+  - component: {fileID: 475483604}
   m_Layer: 0
   m_Name: BIGtileset_25 (1)
   m_TagString: Untagged
@@ -6072,6 +6086,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1948778174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &475483604
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475483601}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &475976186
 GameObject:
   m_ObjectHideFlags: 0
@@ -7739,6 +7765,7 @@ GameObject:
   m_Component:
   - component: {fileID: 633141340}
   - component: {fileID: 633141339}
+  - component: {fileID: 633141341}
   m_Layer: 0
   m_Name: BIGtileset_3
   m_TagString: Untagged
@@ -7813,6 +7840,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1948778174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &633141341
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633141338}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1001 &639065934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14173,9 +14212,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 2
-  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":199.600021,\"yPos\":105.200012},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xC9liminer
-    ce rat qui ose se tenir devant et je vous r\xE9compenserai gracieusement.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
-    Noir\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":207.600021,\"yPos\":217.600021},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xC0
+  json: "{\"Options\":[],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":221.2,\"yPos\":84.3999939},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xC9liminer
+    ce rat qui ose se tenir devant moi et je vous r\xE9compenserai gracieusement.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Roi
+    Noir\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":229.2,\"yPos\":196.8},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xC0
     vos ordres, mon Roi.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Pion\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: 
@@ -23134,6 +23173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053356703}
   - component: {fileID: 2053356702}
+  - component: {fileID: 2053356704}
   m_Layer: 0
   m_Name: BIGtileset_4
   m_TagString: Untagged
@@ -23208,6 +23248,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1948778174}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2053356704
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053356701}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &2055042195
 GameObject:
   m_ObjectHideFlags: 0
