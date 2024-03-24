@@ -75,7 +75,7 @@ public class Anm_Grid : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        obj.position = new Vector2(obj.position.x, targetPos);
+        obj.position = obj.GetComponentInParent<Piece>().transform.position;
         obj.GetComponent<RookAnimation>()?.startAnimation();
     }
 }
