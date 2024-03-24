@@ -89,5 +89,9 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene("LevelSelection");
         //AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
+    public void Quit()
+    {
+        Application.Quit();
+    }
 
 }
