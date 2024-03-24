@@ -17,6 +17,6 @@ public class LevelAchieved : MonoBehaviour
     }
     void SetSuccess()
     {
-        PlayGamesPlatform.Instance.ReportProgress(_successID, 100.0, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
+        PlayGamesPlatform.Instance.UnlockAchievement(_successID, (bool success) => { if (success) Debug.Log("succès débloqué !"); });
     }
 }
