@@ -76,9 +76,9 @@ public class Anm_Grid : MonoBehaviour
             yield return null;
         }
         obj.position = new Vector2(obj.position.x, targetPos);
-        Tile t = transform.Find("Tile").GetComponent<Tile>();
-        if(!t){
-            obj.transform.position = GetComponentInParent<Piece>().transform.position;
+        KnightAnimation ka = obj.GetComponent<KnightAnimation>();
+        if(ka){
+            obj.transform.localPosition = new Vector3(0,0,0);
         }
         obj.GetComponent<RookAnimation>()?.startAnimation();
     }
