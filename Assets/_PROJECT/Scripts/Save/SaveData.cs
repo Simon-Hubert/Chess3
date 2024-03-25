@@ -48,12 +48,12 @@ public class SaveData: MonoBehaviour
         {
             tStars += levelData.stars;
         }
-        if(tStars >= 10 && !unlocked1)PlayGamesPlatform.Instance.UnlockAchievement("Cgkli7nLgfQPEAIQAA", (bool success) => {unlocked1 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
-        if(tStars >= 20 && !unlocked2)PlayGamesPlatform.Instance.UnlockAchievement("Cgkli7nLgfQPEAIQAQ", (bool success) => {unlocked2 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
-        if(tStars >= 30 && !unlocked3)PlayGamesPlatform.Instance.UnlockAchievement("Cgkli7nLgfQPEAIQAg", (bool success) => {unlocked3 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
-        if(tStars >= 40 && !unlocked4)PlayGamesPlatform.Instance.UnlockAchievement("Cgkli7nLgfQPEAIQAW", (bool success) => {unlocked4 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
-        if(tStars >= 50 && !unlocked5)PlayGamesPlatform.Instance.UnlockAchievement("Cgkli7nLgfQPEAIQBA", (bool success) => {unlocked5 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
-        if(tStars >= 60 && !unlocked6)PlayGamesPlatform.Instance.UnlockAchievement("Cgkli7nLgfQPEAIQBQ", (bool success) => {unlocked6 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
+        if(tStars >= 10 && !unlocked1)PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAA", 100.0f, (bool success) => {unlocked1 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
+        if(tStars >= 20 && !unlocked2)PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAQ", 100.0f, (bool success) => {unlocked2 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
+        if(tStars >= 30 && !unlocked3)PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAg", 100.0f, (bool success) => {unlocked3 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
+        if(tStars >= 40 && !unlocked4)PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQAW", 100.0f, (bool success) => {unlocked4 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
+        if(tStars >= 50 && !unlocked5)PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQBA", 100.0f, (bool success) => {unlocked5 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
+        if(tStars >= 60 && !unlocked6)PlayGamesPlatform.Instance.ReportProgress("Cgkli7nLgfQPEAIQBQ", 100.0f, (bool success) => {unlocked6 = true; if (success) Debug.Log("succ�s d�bloqu� !"); });
         Save();
     }
     public void Save()
