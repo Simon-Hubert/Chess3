@@ -8,12 +8,6 @@ using UnityEngine.Events;
 
 public class TurnManager : MonoBehaviour
 {
-    // public enum turnbase{
-    //     classicChess,
-    //     tousEnMmTemps
-    // }
-
-    // [SerializeField] turnbase _turnbase;
 
     [SerializeField] List<Piece> blackPieces;
     [SerializeField] Piece VipOuReine;
@@ -23,7 +17,6 @@ public class TurnManager : MonoBehaviour
     int counterClassic = 0;
 
     int playerCounter = 0;
-
 
     bool playerTurn = true;
     bool turnEnded = false;
@@ -38,14 +31,8 @@ public class TurnManager : MonoBehaviour
     public int PlayerCounter { get => playerCounter; set => playerCounter = value; }
 
     private void Start() {
-        //RuleController rc = GetComponent<RuleController>();
         gm = FindObjectOfType<GridManager>();
-        // if(_turnbase == turnbase.tousEnMmTemps){
-        //     MettreToutesLesPieces();
-        // }
-
         blackPieces = gm.GetAllActiveBlackPieces();
-
         whitePieces = gm.GetAllActiveWhitePieces();
         OnStartDialogue?.Invoke();
         BeginTurn();
@@ -56,15 +43,15 @@ public class TurnManager : MonoBehaviour
     }
 
     void BeginTurn(){
-        OnTurnBegin?.Invoke(playerTurn);
-        m_OnTurnBegin?.Invoke();
         turnEnded = false;
         if(playerTurn){
             InitPlayerTurn();
         }
         else{
-            InitEnemyTurn();
+            StartEnemyTurn();
         }
+        OnTurnBegin?.Invoke(playerTurn);
+        m_OnTurnBegin?.Invoke();
     }
 
     public void EndTurn(){
@@ -78,6 +65,14 @@ public class TurnManager : MonoBehaviour
             m_OnTurnEnd?.Invoke();
             playerTurn = !playerTurn;
             turnEnded = true;
+        }
+    }
+
+    void StartEnemyTurn(){
+        StartCoroutine(bTurn());
+        IEnumerator bTurn(){
+            yield return new WaitForSeconds(1f);
+            InitEnemyTurn();
         }
     }
 
@@ -97,7 +92,6 @@ public class TurnManager : MonoBehaviour
             if(VipOuReine) VipOuReine.Movement.Myturn = true;
             else EndTurn();
         }
-        
         else EndTurn();
     }
 
@@ -111,33 +105,9 @@ public class TurnManager : MonoBehaviour
     private bool CheckForActiveEnemies(){
         return gm.GetAllActiveBlackPieces().Count > 0;
     }
+
     public void ChangeReine_VIP(Piece Reine)
     {
         VipOuReine = Reine;
     }
-
-    // void ClassiChessTurn(){
-    //     if(CheckForActiveEnemies()){
-    //         Piece next = blackPlayOrder[counterClassic%blackPlayOrder.Count];
-    //         counterClassic ++;
-    //         if(next.gameObject.activeSelf) next.Movement.Myturn = true;
-    //         else ClassiChessTurn();
-    //     }
-    //     else EndTurn();
-    // }
-
-    // void TousEnMMtempsTurn(){
-    //     foreach (Piece piece in blackPlayOrder)
-    //     {
-    //         piece.Movement.Myturn = true;
-    //     }
-    // }
-
-
-
-    //[Button]
-    // void MettreToutesLesPieces(){
-    //     blackPieces = gm.GetAllActiveBlackPieces();
-    // }
-
 }

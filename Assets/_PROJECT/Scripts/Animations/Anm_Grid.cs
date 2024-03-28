@@ -11,6 +11,7 @@ public class Anm_Grid : MonoBehaviour
     [SerializeField, Range(0.01f, 0.1f)] float timeBetweenTiles = 0.01f;
     [SerializeField] GameObject piecesParent;
     List<Tile> tiles = new List<Tile>();
+
     private void OnValidate()
     {
         gm = FindObjectOfType<GridManager>();
@@ -25,18 +26,22 @@ public class Anm_Grid : MonoBehaviour
         foreach(Piece piece in gm.Pieces)
         {
             GameObject visual = piece.transform.Find("Visual").GetComponent<SpriteRenderer>().gameObject;
-            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
+            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 15.5f);
         }
         foreach(Tile tile in gm.Tiles)
         {
             GameObject visual = tile.transform.Find("Visuel").GetComponent<SpriteRenderer>().gameObject;
-            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
+            visual.transform.position = new Vector2(visual.transform.position.x, visual.transform.position.y + 15.5f);
             tiles.Add(tile);
         }
         count = tiles.Count;
-        StartCoroutine(AnimateTiles());
+        AnimateGrid();
     }
 
+    public void AnimateGrid()
+    {
+        StartCoroutine(AnimateTiles());
+    }
     private IEnumerator AnimateTiles()
     {
         for(int i = 0; i < count; i++)
@@ -52,8 +57,8 @@ public class Anm_Grid : MonoBehaviour
         foreach (Piece piece in gm.Pieces)
         {
             GameObject visual = piece.transform.Find("Visual").GetComponent<SpriteRenderer>().gameObject;
-            Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 10.5f);
-            Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + 10.5f);
+            Vector2 endPos = new Vector2(visual.transform.position.x, visual.transform.position.y - 15.5f);
+            Vector2 startPos = new Vector2(visual.transform.position.x, visual.transform.position.y + 15.5f);
             StartCoroutine(AnimTile(startPos.y, endPos.y, visual.transform));
             yield return new WaitForSeconds(timeBetweenTiles);
         }
@@ -71,5 +76,10 @@ public class Anm_Grid : MonoBehaviour
             yield return null;
         }
         obj.position = new Vector2(obj.position.x, targetPos);
+        KnightAnimation ka = obj.GetComponent<KnightAnimation>();
+        if(ka){
+            obj.transform.localPosition = new Vector3(0,0,0);
+        }
+        obj.GetComponent<RookAnimation>()?.startAnimation();
     }
 }

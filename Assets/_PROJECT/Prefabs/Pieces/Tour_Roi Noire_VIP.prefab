@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3679835932048731424}
   - component: {fileID: 8575993382934641219}
+  - component: {fileID: 1120075778999823102}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4a4ca7878089a84cb0f49c5911590ea, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!114 &1120075778999823102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030228819052951961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1a26f95e99fbe4b9f22271875e1a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onAnimBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onAnimEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  f: 1
+  zeta: 0.6
+  r: -2.5
+  duration: 1
 --- !u!1 &6140672389863075538
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,9 +185,13 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
     canBreak: 0
+  m_OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4503623012043471878
 MonoBehaviour:
   m_ObjectHideFlags: 0

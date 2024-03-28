@@ -13,10 +13,12 @@ public class Movements : MonoBehaviour
     IMovementBrain brain;
     TurnManager turnManager;
     Piece thisPiece;
+    GameObject visuel;
 
     Tile target;
 
     public static event Action OnMove;
+    public event Action<Vector2> OnMoveThis;
     public event Action OnTeleport;
     public UnityEvent m_OnMove;
 
@@ -29,8 +31,8 @@ public class Movements : MonoBehaviour
         // Setup Managers
         gridManager = FindObjectOfType<GridManager>();
         turnManager = FindObjectOfType<TurnManager>();
-        
 
+        visuel = transform.Find("Visual").gameObject;
     }
 
     private void Start() {
@@ -67,11 +69,14 @@ public class Movements : MonoBehaviour
         if(tile != pos)
         {
             tile.OnMovedTo(gameObject);
-            Anm_piece.Move(transform.position, tile.transform.position, this.gameObject); // Play Animation
+            //Anm_piece.Move(transform.position, tile.transform.position, this.gameObject); // Play Animation
+            OnMoveThis?.Invoke(tile.transform.position);
         }
         Teleporter tp = tile.GetComponent<Teleporter>();
         if(tp) tile = tp.TP.GetComponent<Tile>();
+        Vector2 save = transform.position;
         transform.position = tile.transform.position;
+        visuel.transform.position = save;
         pos = tile;
         OnMove?.Invoke();
         m_OnMove?.Invoke();

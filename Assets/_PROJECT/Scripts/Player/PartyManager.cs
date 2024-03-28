@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class PartyManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class PartyManager : MonoBehaviour
     [SerializeField] GameObject parentPiece;
     [SerializeField] GameObject king;
     public event Action onWin;
+    public UnityEvent m_onWin;
 
     public GameObject PanelVictory { get => panelVictory; }
 
@@ -42,10 +44,11 @@ public class PartyManager : MonoBehaviour
         if (ruleController.GetCurrentRule().IsWon())
         {
             onWin?.Invoke();
+            m_onWin.Invoke();
             PanelVictory.SetActive(true);
             vS.SetScreen(score.SetStars(tm.PlayerCounter));
             Scene currentScene = SceneManager.GetActiveScene();
-            int index = currentScene.buildIndex - 2;
+            int index = currentScene.buildIndex - 4;
             Debug.Log(SaveData.instance);
             SaveData.instance.UpdateLEVEL(index, score.SetStars(tm.PlayerCounter));
         }
@@ -54,5 +57,15 @@ public class PartyManager : MonoBehaviour
         {
             panelLose.SetActive(true);
         }
+    }
+    public void ForceWin()
+    {
+        onWin?.Invoke();
+        PanelVictory.SetActive(true);
+        vS.SetScreen(score.SetStars(tm.PlayerCounter));
+        Scene currentScene = SceneManager.GetActiveScene();
+        int index = currentScene.buildIndex - 3;
+        Debug.Log(SaveData.instance);
+        SaveData.instance.UpdateLEVEL(index, score.SetStars(tm.PlayerCounter));
     }
 }

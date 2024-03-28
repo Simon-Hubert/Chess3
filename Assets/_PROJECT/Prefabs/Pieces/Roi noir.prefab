@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4810878503187983521}
   - component: {fileID: 4727945788864262867}
   - component: {fileID: 4114518484421872772}
-  - component: {fileID: 7371451277656719919}
   m_Layer: 0
   m_Name: Roi noir
   m_TagString: Untagged
@@ -82,22 +81,7 @@ MonoBehaviour:
     _isWhite: 0
     canFuse: 0
     canBreak: 0
---- !u!114 &7371451277656719919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3991752724141892158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridManager: {fileID: 0}
-  pos: {fileID: 0}
-  myturn: 0
-  m_OnMove:
+  m_OnDeath:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &5717629905788790257
@@ -186,6 +170,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4771493099763327858}
   - component: {fileID: 5834988012612415888}
+  - component: {fileID: 5581224127380176551}
+  - component: {fileID: 1925846098248573669}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -260,3 +246,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!114 &5581224127380176551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711294484009428790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ba0ea85de8a9b469ad6b468fea995b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: ad4899c72cc5d1e41b74e0b70fd96028, type: 2}
+  ps: {fileID: 1801152131353208272}
+  thisPiece: {fileID: 4114518484421872772}
+  pa: {fileID: 0}
+--- !u!114 &1925846098248573669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711294484009428790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1a26f95e99fbe4b9f22271875e1a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onAnimBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onAnimEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  f: 1.5
+  zeta: 1.5
+  r: 0.5
+  duration: 1

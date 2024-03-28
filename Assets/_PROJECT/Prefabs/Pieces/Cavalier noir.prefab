@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7287894762683849563}
   - component: {fileID: 5382244154102780574}
+  - component: {fileID: 5168824851142561409}
+  - component: {fileID: 7234078604019061748}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -84,6 +86,99 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!114 &5168824851142561409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562687809948594603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ba0ea85de8a9b469ad6b468fea995b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: ad4899c72cc5d1e41b74e0b70fd96028, type: 2}
+  ps: {fileID: 156880099625282636}
+  thisPiece: {fileID: 5950365567985201904}
+  pa: {fileID: 0}
+--- !u!114 &7234078604019061748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562687809948594603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fe5863363b8cf44d9dacb6bedae2586, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onAnimBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onAnimEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  duration: 0.5
+  elevation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2
+      outSlope: -2
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  anim:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxHeight: 1
 --- !u!1 &5228089726745220129
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +266,6 @@ GameObject:
   - component: {fileID: 9034653892887029190}
   - component: {fileID: 3160939092292720613}
   - component: {fileID: 5950365567985201904}
-  - component: {fileID: 6886038572979022480}
   m_Layer: 0
   m_Name: Cavalier noir
   m_TagString: Untagged
@@ -239,21 +333,6 @@ MonoBehaviour:
     _isWhite: 0
     canFuse: 0
     canBreak: 0
---- !u!114 &6886038572979022480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8658925612912387455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridManager: {fileID: 0}
-  pos: {fileID: 0}
-  myturn: 0
-  m_OnMove:
+  m_OnDeath:
     m_PersistentCalls:
       m_Calls: []

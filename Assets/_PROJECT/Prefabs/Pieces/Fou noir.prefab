@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4855134163951490268}
   - component: {fileID: 2931493245418261084}
   - component: {fileID: 6611599004844913211}
-  - component: {fileID: 5957280321954488479}
   m_Layer: 0
   m_Name: Fou noir
   m_TagString: Untagged
@@ -79,22 +78,7 @@ MonoBehaviour:
     _isWhite: 0
     canFuse: 0
     canBreak: 0
---- !u!114 &5957280321954488479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582976971928559547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridManager: {fileID: 0}
-  pos: {fileID: 0}
-  myturn: 0
-  m_OnMove:
+  m_OnDeath:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &751665515382029426
@@ -183,6 +167,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4907123556521730379}
   - component: {fileID: 6353559614384519138}
+  - component: {fileID: 4409219719959420612}
+  - component: {fileID: 6219590937890599141}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -257,3 +243,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!114 &4409219719959420612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6531524936480803515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ba0ea85de8a9b469ad6b468fea995b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: ad4899c72cc5d1e41b74e0b70fd96028, type: 2}
+  ps: {fileID: 4772317471670936550}
+  thisPiece: {fileID: 6611599004844913211}
+  pa: {fileID: 0}
+--- !u!114 &6219590937890599141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6531524936480803515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1a26f95e99fbe4b9f22271875e1a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onAnimBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onAnimEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  f: 4
+  zeta: 0.35
+  r: 0
+  duration: 1

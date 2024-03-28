@@ -8,10 +8,12 @@ public class Eating : MonoBehaviour
     Piece piece;
     PieceData pieceSave;
 
+    AudioManager audioManager;
     public static event Action<Piece> OnEat;
     private void Awake()
     {
         piece = GetComponentInParent<Piece>();
+        audioManager = FindObjectOfType<AudioManager>();
         pieceSave = piece.Data;
     }
 
@@ -23,10 +25,10 @@ public class Eating : MonoBehaviour
             pieceTarget.Destroy();
             if(piece.Data.IsWhite && !piece.Data.CanFuse)
             {
-                gameObject.transform.parent.gameObject.SetActive(false);
+                this.piece.Destroy();
             }
             OnEat?.Invoke(pieceTarget);
-            AudioManager.Instance.PlaySfx("Eat");
+            AudioManager.Instance?.PlaySfx("Eat");
             return true;
         }
         else
@@ -34,7 +36,7 @@ public class Eating : MonoBehaviour
             if (piece.Data.CanFuse || pieceTarget.Data.CanFuse)
             {
                 Fuse.Fusing(pieceTarget, piece, pieceSave);
-                AudioManager.Instance?.PlaySfx("Fusion2");
+                audioManager?.PlaySfx("Fusion");
             }
             return false;
         }

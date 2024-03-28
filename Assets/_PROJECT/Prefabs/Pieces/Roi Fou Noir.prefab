@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 738133571137106227}
   - component: {fileID: 7953286516179808404}
+  - component: {fileID: 2991638993519553920}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da8fb1e2a625a0740b3fdd3190767c7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2991638993519553920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2789437558340097898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1a26f95e99fbe4b9f22271875e1a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onAnimBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onAnimEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  f: 4
+  zeta: 0.35
+  r: 0
+  duration: 1
 --- !u!1 &4651916942448426884
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3508a25d4800562499fb99a0ab31f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWall: 0
   _data:
     _name: Roi Fou Noir
     _level: 0
@@ -237,8 +261,13 @@ MonoBehaviour:
       distance: 50
       distance2: 0
     _sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+    _spriteFusion: {fileID: 0}
     _isWhite: 0
     canFuse: 0
+    canBreak: 0
+  m_OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7131856955736336064
 MonoBehaviour:
   m_ObjectHideFlags: 0

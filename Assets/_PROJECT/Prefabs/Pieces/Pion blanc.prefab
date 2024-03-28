@@ -87,7 +87,6 @@ GameObject:
   - component: {fileID: 2456782210585509963}
   - component: {fileID: 8297842139039737178}
   - component: {fileID: 4070911043201657531}
-  - component: {fileID: 3418935039617739774}
   m_Layer: 0
   m_Name: Pion blanc
   m_TagString: Untagged
@@ -155,22 +154,7 @@ MonoBehaviour:
     _isWhite: 1
     canFuse: 0
     canBreak: 0
---- !u!114 &3418935039617739774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6465811663697469994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c075e740af06c4aa988f87fd77d4eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridManager: {fileID: 0}
-  pos: {fileID: 0}
-  myturn: 0
-  m_OnMove:
+  m_OnDeath:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &7503745212163314975
@@ -183,6 +167,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8322839574037290204}
   - component: {fileID: 8112543471487129838}
+  - component: {fileID: 2200405418801456759}
+  - component: {fileID: 5873796226425631227}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -257,3 +243,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 2
   m_SpriteSortPoint: 0
+--- !u!114 &2200405418801456759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7503745212163314975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ba0ea85de8a9b469ad6b468fea995b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: ad4899c72cc5d1e41b74e0b70fd96028, type: 2}
+  ps: {fileID: 1082924814028984151}
+  thisPiece: {fileID: 4070911043201657531}
+  pa: {fileID: 0}
+--- !u!114 &5873796226425631227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7503745212163314975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1a26f95e99fbe4b9f22271875e1a02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_onAnimBegin:
+    m_PersistentCalls:
+      m_Calls: []
+  m_onAnimEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  f: 1.5
+  zeta: 1.5
+  r: 0.5
+  duration: 1
