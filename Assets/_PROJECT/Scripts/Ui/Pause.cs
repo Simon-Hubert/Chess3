@@ -65,9 +65,19 @@ public class Pause : MonoBehaviour
 
     public void Restart()
     {
+        AudioManager.Instance.PlaySfx("Confirmer");
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
         StartCoroutine(_displayObjective.ShowObjective());
 
     }
+
+    public void BackToLevels()
+    {
+        AudioManager.Instance.PlaySfx("Confirmer");
+        SceneManager.LoadSceneAsync("LevelSelection");
+        AudioManager.Instance.PlayMusic("MainMenuMusic");
+    }
+
+
 
 }
