@@ -46,25 +46,11 @@ public class SceneController : MonoBehaviour
     {
         AudioManager.Instance.PlaySfx("Confirmer");
         SceneManager.LoadScene("LevelSelection");
+        AudioManager.Instance.PlayMusic("MainMenuMusic");
         parent = FindObjectOfType<HorizontalLayoutGroup>().gameObject;
         OnLoadSelect?.Invoke(parent);
-        //AudioManager.Instance.PlayMusic("MainMenuMusic");
     }
 
-    IEnumerator LoadLevelRoutine(int levelIndex = 0, string name = null)
-    {
-        _transitionAnim.SetTrigger("Start");
-        yield return new WaitForSeconds(1);
-        if(levelIndex == 0)
-        {
-            SceneManager.LoadScene(name);
-        }
-        else
-        {
-            SceneManager.LoadScene(levelIndex);
-        }
-        _transitionAnim.SetTrigger("End");
-    }
 
    
 
@@ -78,9 +64,22 @@ public class SceneController : MonoBehaviour
     public static void LoadLevel(string nameScene)
     {
         Debug.Log(instance);
-        SceneManager.LoadScene(nameScene);
         instance.StartCoroutine(instance.LoadLevelRoutine(0,nameScene));
         
+    }
+    IEnumerator LoadLevelRoutine(int levelIndex = 0, string name = null)
+    {
+        _transitionAnim.SetTrigger("Start");
+        yield return new WaitForSeconds(1);
+        if(levelIndex == 0)
+        {
+            SceneManager.LoadScene(name);
+        }
+        else
+        {
+            SceneManager.LoadScene(levelIndex);
+        }
+        _transitionAnim.SetTrigger("End");
     }
 
     public void BackToLevels()
