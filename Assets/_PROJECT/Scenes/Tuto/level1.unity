@@ -9943,6 +9943,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -5.8950043
       objectReference: {fileID: 0}
+    - target: {fileID: 3547069724767258652, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 4680202770617527780, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: _panel
       value: 
@@ -9987,6 +9991,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8407202976277518381, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 769212320, guid: 3d03f4901a4cfa04bb5d1e964b10c3b2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10451,7 +10459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5423346344726842041, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
       propertyPath: orthographic size
-      value: 10.8
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 7589945403466697646, guid: 6511d680ec744c7479af02134f2565e9, type: 3}
       propertyPath: m_Name
