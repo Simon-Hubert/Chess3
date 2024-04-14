@@ -9945,7 +9945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3547069724767258652, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectLevel
+      value: BackToLevels
       objectReference: {fileID: 0}
     - target: {fileID: 4680202770617527780, guid: 0a8b102a9a974d041a7b28de5bb52019, type: 3}
       propertyPath: _panel

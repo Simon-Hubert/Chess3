@@ -19,11 +19,13 @@ public class Credits : MonoBehaviour
         _creditsPanel.SetActive(true);
         _creditsOffBtn.SetActive(true);
         _creditAnim.SetTrigger("Start");
+        AudioManager.Instance.PlaySfx("Confirmer");
     }
 
     public void HideCredits()
     {
         _creditsPanel.SetActive(false);
         _creditsOffBtn.SetActive(false);
+        AudioManager.Instance.PlaySfx("Retour");
     }
 }
